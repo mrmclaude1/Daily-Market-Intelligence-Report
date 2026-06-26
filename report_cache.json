@@ -1,0 +1,79 @@
+{
+  "meta": {
+    "last_report_date": null,
+    "report_count": 0,
+    "schema_version": "1.0"
+  },
+  "prices": {
+    "btc_usd": null,
+    "btc_change_24h_pct": null,
+    "eth_usd": null,
+    "eth_change_24h_pct": null,
+    "xrp_usd": null,
+    "xrp_change_24h_pct": null,
+    "btc_24h_high": null,
+    "btc_24h_low": null,
+    "eth_24h_high": null,
+    "xrp_24h_high": null
+  },
+  "macro": {
+    "fed_funds_rate_upper": null,
+    "fed_funds_rate_lower": null,
+    "pce_inflation_2026_pct": null,
+    "may_cpi_yoy_pct": null,
+    "prime_rate": null,
+    "rate_hike_on_table": null,
+    "cuts_projected_2026": null,
+    "iran_war_active": null,
+    "iran_ceasefire_confirmed": null,
+    "oil_trend": null
+  },
+  "markets": {
+    "sp500_level": null,
+    "sp500_change_24h_pct": null,
+    "nasdaq_level": null,
+    "nasdaq_change_24h_pct": null,
+    "nasdaq_consecutive_down_days": null,
+    "vix": null,
+    "market_posture": null
+  },
+  "real_estate": {
+    "mortgage_30yr_fixed_pct": null,
+    "housing_inventory_yoy_pct": null,
+    "listing_price_yoy_pct": null
+  },
+  "crypto_etf": {
+    "btc_spot_etf_weekly_flow_bn": null,
+    "btc_spot_etf_total_outflow_4wk_bn": null,
+    "eth_etf_weekly_flow_bn": null
+  },
+  "regulation": {
+    "clarity_act_polymarket_odds_pct": null,
+    "clarity_act_prior_peak_odds_pct": null,
+    "xrp_etf_approved": null
+  },
+  "top_signals": [],
+  "elevated_risks": [],
+  "watchlist": {
+    "btc_200wk_ma_level": null,
+    "btc_200wk_ma_status": null,
+    "xrp_key_support": null,
+    "xrp_downside_target": null,
+    "ascendex_warning_active": null
+  },
+  "congressional_trades": {
+    "month": null,
+    "most_traded_sectors": [],
+    "notable_tickers": [],
+    "pattern_flags": []
+  },
+  "sector_scores": {
+    "crypto": null,
+    "macro": null,
+    "public_markets": null,
+    "ai_sector": null,
+    "defense": null,
+    "real_estate": null,
+    "business_acquisitions": null
+  }
+}

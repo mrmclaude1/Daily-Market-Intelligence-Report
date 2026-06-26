@@ -20,7 +20,7 @@ fetch_cache() {
   fi
 
   local RESPONSE
-  RESPONSE=$(curl -sS \
+  RESPONSE=$(curl -sS --noproxy "api.github.com" \
     -H "Authorization: token ${TOKEN}" \
     -H "Accept: application/vnd.github.v3+json" \
     "${CACHE_API}" 2>&1)
@@ -104,7 +104,7 @@ print(json.dumps(payload))
   fi
 
   local RESPONSE
-  RESPONSE=$(curl -sS -X PUT \
+  RESPONSE=$(curl -sS -X PUT --noproxy "api.github.com" \
     -H "Authorization: token ${TOKEN}" \
     -H "Accept: application/vnd.github.v3+json" \
     -H "Content-Type: application/json" \

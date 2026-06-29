@@ -1,79 +1,101 @@
 {
   "meta": {
-    "last_report_date": null,
-    "report_count": 0,
+    "last_report_date": "2026-06-29",
+    "report_count": 1,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": null,
-    "btc_change_24h_pct": null,
-    "eth_usd": null,
-    "eth_change_24h_pct": null,
-    "xrp_usd": null,
-    "xrp_change_24h_pct": null,
-    "btc_24h_high": null,
-    "btc_24h_low": null,
-    "eth_24h_high": null,
-    "xrp_24h_high": null
+    "btc_usd": 60033.41,
+    "btc_change_24h_pct": -0.09,
+    "eth_usd": 1576.83,
+    "eth_change_24h_pct": 0.1,
+    "xrp_usd": 1.0501,
+    "xrp_change_24h_pct": 0.27,
+    "btc_24h_high": 60255.0,
+    "btc_24h_low": 58819.0,
+    "eth_24h_high": 1587.0,
+    "xrp_24h_high": 1.054
   },
   "macro": {
-    "fed_funds_rate_upper": null,
-    "fed_funds_rate_lower": null,
-    "pce_inflation_2026_pct": null,
+    "fed_funds_rate_upper": 3.75,
+    "fed_funds_rate_lower": 3.5,
+    "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": null,
-    "prime_rate": null,
-    "rate_hike_on_table": null,
-    "cuts_projected_2026": null,
-    "iran_war_active": null,
-    "iran_ceasefire_confirmed": null,
-    "oil_trend": null
+    "prime_rate": 6.75,
+    "rate_hike_on_table": true,
+    "cuts_projected_2026": 0,
+    "iran_war_active": true,
+    "iran_ceasefire_confirmed": true,
+    "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": null,
-    "sp500_change_24h_pct": null,
-    "nasdaq_level": null,
-    "nasdaq_change_24h_pct": null,
-    "nasdaq_consecutive_down_days": null,
+    "sp500_level": 7354.02,
+    "sp500_change_24h_pct": -0.05,
+    "nasdaq_level": 25297.62,
+    "nasdaq_change_24h_pct": -0.24,
+    "nasdaq_consecutive_down_days": 5,
     "vix": null,
-    "market_posture": null
+    "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": null,
+    "mortgage_30yr_fixed_pct": 6.549,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": null,
-    "btc_spot_etf_total_outflow_4wk_bn": null,
+    "btc_spot_etf_weekly_flow_bn": -1.67,
+    "btc_spot_etf_total_outflow_4wk_bn": -7.2,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
     "clarity_act_polymarket_odds_pct": null,
     "clarity_act_prior_peak_odds_pct": null,
-    "xrp_etf_approved": null
+    "xrp_etf_approved": true
   },
-  "top_signals": [],
-  "elevated_risks": [],
+  "top_signals": [
+    "BTC Q2 close below 60K third consecutive quarterly loss",
+    "Iran-US ceasefire v2 Qatar talks driving pre-market rally",
+    "Fed locked no 2026 cuts dot plot 3.8%",
+    "MiCA July 1 deadline EU unlicensed CASPs wind-down",
+    "OpenAI IPO delay to 2027 AI valuation repricing"
+  ],
+  "elevated_risks": [
+    "Iran ceasefire collapses Hormuz disrupted again",
+    "Bitcoin breaks 58800 path to 45K",
+    "Fed forced to hike if Iran reignites inflation",
+    "AI capex ROI failure NVDA AMD multiple compression",
+    "XRP breaks 1.00 cascades to 0.88-0.96"
+  ],
   "watchlist": {
     "btc_200wk_ma_level": null,
     "btc_200wk_ma_status": null,
-    "xrp_key_support": null,
-    "xrp_downside_target": null,
+    "xrp_key_support": 1.0,
+    "xrp_downside_target": 0.96,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
-    "month": null,
-    "most_traded_sectors": [],
-    "notable_tickers": [],
+    "month": "June 2026",
+    "most_traded_sectors": [
+      "Technology",
+      "AI Infrastructure",
+      "Defense"
+    ],
+    "notable_tickers": [
+      "NVDA",
+      "AMD",
+      "MSFT",
+      "AAPL",
+      "GOOGL"
+    ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": null,
-    "macro": null,
-    "public_markets": null,
-    "ai_sector": null,
-    "defense": null,
-    "real_estate": null,
-    "business_acquisitions": null
+    "crypto": 4.5,
+    "macro": 4.0,
+    "public_markets": 5.0,
+    "ai_sector": 5.5,
+    "defense": 7.5,
+    "real_estate": 4.5,
+    "business_acquisitions": 5.0
   }
 }

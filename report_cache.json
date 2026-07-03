@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_report_date": "2026-07-02",
-    "report_count": 3,
+    "last_report_date": "2026-07-03",
+    "report_count": 4,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 61269.69,
-    "btc_change_24h_pct": 4.44,
-    "eth_usd": 1647.21,
-    "eth_change_24h_pct": 4.72,
-    "xrp_usd": 1.08,
-    "xrp_change_24h_pct": 3.81,
-    "btc_24h_high": 61441.62,
-    "btc_24h_low": 58322.01,
-    "eth_24h_high": 1651.9,
-    "xrp_24h_high": 1.0817
+    "btc_usd": 61774.44,
+    "btc_change_24h_pct": 0.82,
+    "eth_usd": 1737.3,
+    "eth_change_24h_pct": 5.46,
+    "xrp_usd": 1.1038,
+    "xrp_change_24h_pct": 2.2,
+    "btc_24h_high": 62210.8,
+    "btc_24h_low": 61122.18,
+    "eth_24h_high": 1740.0,
+    "xrp_24h_high": 1.1126
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.6,
+    "pce_inflation_2026_pct": 4.2,
     "may_cpi_yoy_pct": null,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
@@ -29,42 +29,42 @@
     "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7499.36,
-    "sp500_change_24h_pct": 0.67,
-    "nasdaq_level": 26040.03,
-    "nasdaq_change_24h_pct": -0.66,
-    "nasdaq_consecutive_down_days": 1,
-    "vix": 17.2,
+    "sp500_level": 7469.37,
+    "sp500_change_24h_pct": -0.4,
+    "nasdaq_level": 25519.23,
+    "nasdaq_change_24h_pct": -2.01,
+    "nasdaq_consecutive_down_days": 2,
+    "vix": 16.15,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.51,
+    "mortgage_30yr_fixed_pct": 6.4,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.3,
+    "btc_spot_etf_weekly_flow_bn": -0.296,
     "btc_spot_etf_total_outflow_4wk_bn": -8.15,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 39.0,
+    "clarity_act_polymarket_odds_pct": 40.0,
     "clarity_act_prior_peak_odds_pct": null,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "BTC reclaims 61K Warsh inflation risks easing whale accumulation 270K BTC",
-    "MiCA July 1 hard enforcement active 230 EU licenses EU market restructuring begins",
-    "CLARITY Act Senate vote delayed late July Senate holiday returns July 13",
-    "Oil below 69 Brent Iran ceasefire holds supply glut building falls 20pct June",
-    "XRP ETF 8-week inflow streak ends June 30 first outflow AUM 1B 7 ETFs"
+    "June NFP 57K vs 110K miss Fed hike odds fall to 10pct jobs shock",
+    "BTC loss vs profit crossover 10.83M BTC at loss first time this cycle capitulation signal",
+    "ETH surges 5.46pct vs BTC 0.82pct major divergence watch driver",
+    "AI rotation SOXX minus 6.4pct PLTR META CSCO up 8-10pct software wins hardware loses",
+    "CLARITY Act 40pct Polymarket stalled from 74pct peak must pass before August recess"
   ],
   "elevated_risks": [
-    "BTC needs weekly close above 61K to confirm 200wk MA recovery July 14 CPI key",
-    "Fed hike 18pct July 29 FOMC probability CPI July 14 hot print could spike to 35pct",
-    "CLARITY Act Senate floor vote uncertain 7 Dem votes not secured fails kills 2026 timeline",
-    "Iran ceasefire breaks Hormuz redisrupted oil spikes to 90plus reverses all disinflation",
-    "MiCA enforcement creates EU liquidity crunch USDT delistings cascade non-compliant firms exit"
+    "July 14 CPI hot print could spike hike odds back to 18-35pct and reverse all jobs-miss risk-on",
+    "Token unlocks 1.9B July HYPE 630M July 6 Rain 812M July 11 selling pressure risk",
+    "CLARITY Act fails Senate recess August drops odds to 20pct crypto regulatory vacuum 2026",
+    "BTC fails 58K weekly close on hot CPI bear cycle extends to 50K",
+    "Iran ceasefire breaks Hormuz redisrupted oil spikes to 90plus kills disinflation"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 58000.0,
@@ -76,26 +76,24 @@
   "congressional_trades": {
     "month": "July 2026",
     "most_traded_sectors": [
-      "Defense",
       "Technology",
-      "AI Semiconductors"
+      "Defense",
+      "Healthcare"
     ],
     "notable_tickers": [
-      "LMT",
-      "RTX",
-      "NOC",
-      "NVDA",
-      "AMD"
+      "PLTR",
+      "LHX",
+      "GD"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 5.0,
-    "macro": 4.0,
-    "public_markets": 6.0,
+    "crypto": 5.5,
+    "macro": 5.0,
+    "public_markets": 5.5,
     "ai_sector": 7.5,
-    "defense": 7.5,
-    "real_estate": 4.5,
+    "defense": 8.0,
+    "real_estate": 5.0,
     "business_acquisitions": 5.5
   }
 }

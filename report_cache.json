@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_report_date": "2026-07-03",
-    "report_count": 4,
+    "last_report_date": "2026-07-04",
+    "report_count": 5,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 61774.44,
-    "btc_change_24h_pct": 0.82,
-    "eth_usd": 1737.3,
-    "eth_change_24h_pct": 5.46,
-    "xrp_usd": 1.1038,
-    "xrp_change_24h_pct": 2.2,
-    "btc_24h_high": 62210.8,
-    "btc_24h_low": 61122.18,
-    "eth_24h_high": 1740.0,
-    "xrp_24h_high": 1.1126
+    "btc_usd": 62490.0,
+    "btc_change_24h_pct": 1.14,
+    "eth_usd": 1759.17,
+    "eth_change_24h_pct": 1.17,
+    "xrp_usd": 1.1383,
+    "xrp_change_24h_pct": 3.14,
+    "btc_24h_high": 62960.87,
+    "btc_24h_low": 61695.6,
+    "eth_24h_high": 1775.98,
+    "xrp_24h_high": 1.1497
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 4.2,
+    "pce_inflation_2026_pct": 3.41,
     "may_cpi_yoy_pct": null,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
@@ -29,22 +29,22 @@
     "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7469.37,
-    "sp500_change_24h_pct": -0.4,
-    "nasdaq_level": 25519.23,
-    "nasdaq_change_24h_pct": -2.01,
-    "nasdaq_consecutive_down_days": 2,
-    "vix": 16.15,
+    "sp500_level": 7483.24,
+    "sp500_change_24h_pct": 0.19,
+    "nasdaq_level": 25832.67,
+    "nasdaq_change_24h_pct": -0.8,
+    "nasdaq_consecutive_down_days": 1,
+    "vix": 16.59,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.4,
+    "mortgage_30yr_fixed_pct": 6.54,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.296,
-    "btc_spot_etf_total_outflow_4wk_bn": -8.15,
+    "btc_spot_etf_weekly_flow_bn": 0.221,
+    "btc_spot_etf_total_outflow_4wk_bn": -7.929,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
@@ -53,47 +53,46 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "June NFP 57K vs 110K miss Fed hike odds fall to 10pct jobs shock",
-    "BTC loss vs profit crossover 10.83M BTC at loss first time this cycle capitulation signal",
-    "ETH surges 5.46pct vs BTC 0.82pct major divergence watch driver",
-    "AI rotation SOXX minus 6.4pct PLTR META CSCO up 8-10pct software wins hardware loses",
-    "CLARITY Act 40pct Polymarket stalled from 74pct peak must pass before August recess"
+    "CLARITY Act July 4 signing missed Polymarket 40pct Senate floor vote late July or August critical window",
+    "BTC ETF outflow streak broken 221M inflows July 3 FBTC leads IBIT still outflowing divergence signal",
+    "June CPI July 14 release May at 4.17pct YoY hot print could spike hike odds from 10 to 25plus pct",
+    "XRP 3.14pct surge RLUSD XRPL exceeds Ethereum 810M first time 8 weeks consecutive ETF inflows 1.47B",
+    "SpaceX SPCX congressional trades Meuser Financial Services Cisneros Armed Services committee conflicts flagged"
   ],
   "elevated_risks": [
-    "July 14 CPI hot print could spike hike odds back to 18-35pct and reverse all jobs-miss risk-on",
-    "Token unlocks 1.9B July HYPE 630M July 6 Rain 812M July 11 selling pressure risk",
-    "CLARITY Act fails Senate recess August drops odds to 20pct crypto regulatory vacuum 2026",
-    "BTC fails 58K weekly close on hot CPI bear cycle extends to 50K",
-    "Iran ceasefire breaks Hormuz redisrupted oil spikes to 90plus kills disinflation"
+    "June CPI July 14 hot print spikes hike odds triggers multi-sector selloff all asset classes",
+    "CLARITY Act fails August recess crypto regulatory vacuum 2026 odds fall to 20pct",
+    "Iran ceasefire breaks Hormuz disrupted oil spikes 90plus re-accelerates inflation",
+    "BTC fails 58K 200wk MA on hot CPI bear cycle extends to 50K",
+    "Rain token unlock 812M July 11 HYPE 1.9B July selling pressure cross-market de-risk"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 58000.0,
     "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.04,
+    "xrp_key_support": 1.1,
     "xrp_downside_target": 0.96,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
     "month": "July 2026",
     "most_traded_sectors": [
-      "Technology",
       "Defense",
-      "Healthcare"
+      "Space",
+      "Technology"
     ],
     "notable_tickers": [
-      "PLTR",
-      "LHX",
-      "GD"
+      "SPCX",
+      "SPCX"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 5.5,
-    "macro": 5.0,
+    "crypto": 6.0,
+    "macro": 4.5,
     "public_markets": 5.5,
     "ai_sector": 7.5,
     "defense": 8.0,
-    "real_estate": 5.0,
+    "real_estate": 4.5,
     "business_acquisitions": 5.5
   }
 }

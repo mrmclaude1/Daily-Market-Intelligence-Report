@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_report_date": "2026-07-04",
-    "report_count": 5,
+    "last_report_date": "2026-07-05",
+    "report_count": 6,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 62490.0,
-    "btc_change_24h_pct": 1.14,
-    "eth_usd": 1759.17,
-    "eth_change_24h_pct": 1.17,
-    "xrp_usd": 1.1383,
-    "xrp_change_24h_pct": 3.14,
-    "btc_24h_high": 62960.87,
-    "btc_24h_low": 61695.6,
-    "eth_24h_high": 1775.98,
-    "xrp_24h_high": 1.1497
+    "btc_usd": 62675.14,
+    "btc_change_24h_pct": 0.3,
+    "eth_usd": 1759.39,
+    "eth_change_24h_pct": 0.01,
+    "xrp_usd": 1.1282,
+    "xrp_change_24h_pct": -0.88,
+    "btc_24h_high": 63470.39,
+    "btc_24h_low": 62432.16,
+    "eth_24h_high": 1807.38,
+    "xrp_24h_high": 1.1842
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.41,
+    "pce_inflation_2026_pct": 4.2,
     "may_cpi_yoy_pct": null,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
@@ -30,21 +30,21 @@
   },
   "markets": {
     "sp500_level": 7483.24,
-    "sp500_change_24h_pct": 0.19,
+    "sp500_change_24h_pct": 0.01,
     "nasdaq_level": 25832.67,
     "nasdaq_change_24h_pct": -0.8,
     "nasdaq_consecutive_down_days": 1,
-    "vix": 16.59,
+    "vix": 16.14,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.54,
+    "mortgage_30yr_fixed_pct": 6.43,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.221,
-    "btc_spot_etf_total_outflow_4wk_bn": -7.929,
+    "btc_spot_etf_weekly_flow_bn": 0.222,
+    "btc_spot_etf_total_outflow_4wk_bn": -3.5,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
@@ -53,22 +53,22 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "CLARITY Act July 4 signing missed Polymarket 40pct Senate floor vote late July or August critical window",
-    "BTC ETF outflow streak broken 221M inflows July 3 FBTC leads IBIT still outflowing divergence signal",
-    "June CPI July 14 release May at 4.17pct YoY hot print could spike hike odds from 10 to 25plus pct",
-    "XRP 3.14pct surge RLUSD XRPL exceeds Ethereum 810M first time 8 weeks consecutive ETF inflows 1.47B",
-    "SpaceX SPCX congressional trades Meuser Financial Services Cisneros Armed Services committee conflicts flagged"
+    "BTC testing 200wk MA at 62600 hold vs break binary outcome July 14 CPI critical",
+    "June NFP 57K miss vs 115K expected softens hike odds enabled July 3 ETF inflow reversal",
+    "CLARITY Act delayed Senate returns July 13 odds 39-42pct defense bill priority blocking floor vote",
+    "BTC ETF 10-day streak broken 221.7M FBTC 166M ARKB 92M IBIT still outflowing structural divergence",
+    "XRP ETF week 8 consecutive inflows 1.47B cumulative 970M XRP locked price disconnected downward"
   ],
   "elevated_risks": [
-    "June CPI July 14 hot print spikes hike odds triggers multi-sector selloff all asset classes",
-    "CLARITY Act fails August recess crypto regulatory vacuum 2026 odds fall to 20pct",
-    "Iran ceasefire breaks Hormuz disrupted oil spikes 90plus re-accelerates inflation",
-    "BTC fails 58K 200wk MA on hot CPI bear cycle extends to 50K",
-    "Rain token unlock 812M July 11 HYPE 1.9B July selling pressure cross-market de-risk"
+    "BTC fails 200wk MA 62600 bear cycle confirmation target 50-55K",
+    "June CPI July 14 hot print re-accelerates hike odds multi-sector selloff",
+    "CLARITY Act fails 2026 61pct Polymarket odds crypto regulatory vacuum extends",
+    "Iran ceasefire breaks oil spikes back above 90 re-accelerates CPI",
+    "July NFP August release if also misses 50K recession odds spike to 20pct"
   ],
   "watchlist": {
-    "btc_200wk_ma_level": 58000.0,
-    "btc_200wk_ma_status": "above",
+    "btc_200wk_ma_level": 62600.0,
+    "btc_200wk_ma_status": "testing",
     "xrp_key_support": 1.1,
     "xrp_downside_target": 0.96,
     "ascendex_warning_active": null
@@ -88,7 +88,7 @@
   },
   "sector_scores": {
     "crypto": 6.0,
-    "macro": 4.5,
+    "macro": 5.0,
     "public_markets": 5.5,
     "ai_sector": 7.5,
     "defense": 8.0,

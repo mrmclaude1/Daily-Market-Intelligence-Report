@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_report_date": "2026-07-05",
-    "report_count": 6,
+    "last_report_date": "2026-07-06",
+    "report_count": 7,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 62675.14,
-    "btc_change_24h_pct": 0.3,
-    "eth_usd": 1759.39,
-    "eth_change_24h_pct": 0.01,
-    "xrp_usd": 1.1282,
-    "xrp_change_24h_pct": -0.88,
-    "btc_24h_high": 63470.39,
-    "btc_24h_low": 62432.16,
-    "eth_24h_high": 1807.38,
-    "xrp_24h_high": 1.1842
+    "btc_usd": 62956.91,
+    "btc_change_24h_pct": 0.45,
+    "eth_usd": 1770.62,
+    "eth_change_24h_pct": 0.64,
+    "xrp_usd": 1.1433,
+    "xrp_change_24h_pct": 1.34,
+    "btc_24h_high": 63999.0,
+    "btc_24h_low": 62562.12,
+    "eth_24h_high": 1808.78,
+    "xrp_24h_high": 1.1697
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 4.2,
+    "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": null,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
@@ -34,7 +34,7 @@
     "nasdaq_level": 25832.67,
     "nasdaq_change_24h_pct": -0.8,
     "nasdaq_consecutive_down_days": 1,
-    "vix": 16.14,
+    "vix": 15.81,
     "market_posture": "mixed"
   },
   "real_estate": {
@@ -43,32 +43,32 @@
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.222,
-    "btc_spot_etf_total_outflow_4wk_bn": -3.5,
+    "btc_spot_etf_weekly_flow_bn": 0.221,
+    "btc_spot_etf_total_outflow_4wk_bn": -3.3,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 40.0,
+    "clarity_act_polymarket_odds_pct": 39.0,
     "clarity_act_prior_peak_odds_pct": null,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "BTC testing 200wk MA at 62600 hold vs break binary outcome July 14 CPI critical",
-    "June NFP 57K miss vs 115K expected softens hike odds enabled July 3 ETF inflow reversal",
-    "CLARITY Act delayed Senate returns July 13 odds 39-42pct defense bill priority blocking floor vote",
-    "BTC ETF 10-day streak broken 221.7M FBTC 166M ARKB 92M IBIT still outflowing structural divergence",
-    "XRP ETF week 8 consecutive inflows 1.47B cumulative 970M XRP locked price disconnected downward"
+    "BTC reclaims 200wk MA 61K after late-June breakdown status now above not testing",
+    "BTC ETF 221M inflow July 3 ends 10-day outflow streak June was 4B bleed worst month ever",
+    "Fed October rate hike 44pct Polymarket zero cuts 79pct structural macro shift crystallizing",
+    "NVIDIA data center 75B revenue 92pct YoY Vera Rubin H2 2026 launch AI capex supercycle",
+    "Ripple joins Open USD Visa Mastercard Stripe BlackRock RLUSD 2.5B XRPL settlement July 1"
   ],
   "elevated_risks": [
-    "BTC fails 200wk MA 62600 bear cycle confirmation target 50-55K",
-    "June CPI July 14 hot print re-accelerates hike odds multi-sector selloff",
-    "CLARITY Act fails 2026 61pct Polymarket odds crypto regulatory vacuum extends",
-    "Iran ceasefire breaks oil spikes back above 90 re-accelerates CPI",
-    "July NFP August release if also misses 50K recession odds spike to 20pct"
+    "July 14 CPI hot print re-accelerates October hike odds multi-asset selloff trigger",
+    "BTC re-breaks below 200wk MA 61K bear cycle confirmation target 50-55K",
+    "CLARITY Act 39pct falling from 74pct peak Senate calendar blocked regulatory vacuum extending",
+    "Iran 60-day ceasefire expires mid-August oil spikes above 85 CPI re-accelerates",
+    "XRP fails 1.10 support ETF inflow momentum stalling price-inflow disconnect worsening"
   ],
   "watchlist": {
-    "btc_200wk_ma_level": 62600.0,
-    "btc_200wk_ma_status": "testing",
+    "btc_200wk_ma_level": 61000.0,
+    "btc_200wk_ma_status": "above",
     "xrp_key_support": 1.1,
     "xrp_downside_target": 0.96,
     "ascendex_warning_active": null
@@ -76,18 +76,19 @@
   "congressional_trades": {
     "month": "July 2026",
     "most_traded_sectors": [
-      "Defense",
-      "Space",
-      "Technology"
+      "Technology",
+      "Aerospace",
+      "Defense"
     ],
     "notable_tickers": [
-      "SPCX",
-      "SPCX"
+      "SPCE",
+      "NVDA",
+      "AMD"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 6.0,
+    "crypto": 6.5,
     "macro": 5.0,
     "public_markets": 5.5,
     "ai_sector": 7.5,

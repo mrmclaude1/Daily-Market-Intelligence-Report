@@ -1,75 +1,75 @@
 {
   "meta": {
-    "last_report_date": "2026-07-07",
-    "report_count": 8,
+    "last_report_date": "2026-07-08",
+    "report_count": 9,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 63267.82,
-    "btc_change_24h_pct": 0.54,
-    "eth_usd": 1776.76,
-    "eth_change_24h_pct": 0.43,
-    "xrp_usd": 1.1244,
-    "xrp_change_24h_pct": -1.6,
-    "btc_24h_high": 64700.99,
-    "btc_24h_low": 61305.94,
-    "eth_24h_high": 1833.53,
-    "xrp_24h_high": 1.165
+    "btc_usd": 62136.4,
+    "btc_change_24h_pct": -1.78,
+    "eth_usd": 1741.61,
+    "eth_change_24h_pct": -1.95,
+    "xrp_usd": 1.0838,
+    "xrp_change_24h_pct": -3.61,
+    "btc_24h_high": 64252.69,
+    "btc_24h_low": 61738.29,
+    "eth_24h_high": 1812.85,
+    "xrp_24h_high": 1.1352
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.6,
+    "pce_inflation_2026_pct": 3.4,
     "may_cpi_yoy_pct": null,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
-    "iran_ceasefire_confirmed": true,
-    "oil_trend": "stable"
+    "iran_ceasefire_confirmed": false,
+    "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7537.43,
-    "sp500_change_24h_pct": 0.72,
-    "nasdaq_level": 26121.16,
-    "nasdaq_change_24h_pct": 1.12,
-    "nasdaq_consecutive_down_days": 0,
-    "vix": 15.88,
-    "market_posture": "risk-on"
+    "sp500_level": 7503.85,
+    "sp500_change_24h_pct": -0.45,
+    "nasdaq_level": 25818.69,
+    "nasdaq_change_24h_pct": -1.16,
+    "nasdaq_consecutive_down_days": 1,
+    "vix": 15.57,
+    "market_posture": "risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.664,
+    "mortgage_30yr_fixed_pct": 6.635,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.221,
-    "btc_spot_etf_total_outflow_4wk_bn": -2.5,
+    "btc_spot_etf_weekly_flow_bn": 0.746,
+    "btc_spot_etf_total_outflow_4wk_bn": -1.8,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 48.0,
+    "clarity_act_polymarket_odds_pct": 47.0,
     "clarity_act_prior_peak_odds_pct": null,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "AI-led equity rally Nasdaq plus1.12pct S&P plus0.72pct risk-on shift July 7",
-    "CLARITY Act 48pct odds 3-week Senate window critical binary crypto catalyst",
-    "BTC holds above 200wk MA 62667 buffer only 600 dollars key inflection point",
-    "Iran ceasefire Islamabad MOU 60-day window expires Aug 16 weekend US strikes reported",
-    "Mortgage rate surges to 6.664pct from 6.43pct hawkish June Fed pushing rates higher"
+    "BTC breaks 200WK MA 62667 intraday bear cycle confirmation risk",
+    "Iran ceasefire collapses US strikes oil license revoked Brent plus5pct",
+    "DeepSeek AI chip triggers semiconductor selloff Nasdaq minus1.16pct",
+    "Fed rate hike odds hit 54pct CPI July 14 binary event",
+    "CLARITY Act 47pct odds Senate returns July 13 final 3-week window"
   ],
   "elevated_risks": [
-    "July 14 CPI hot print triggers October hike pull-forward multi-asset selloff",
-    "CLARITY Act fails Senate before August recess regulatory vacuum extends through 2027",
-    "Iran ceasefire collapses post-US-strikes oil spikes CPI re-accelerates",
-    "BTC breaks below 200wk MA 62667 bear cycle confirmation target 57-59K",
-    "XRP fails 1.10 support slides to 0.96 downside target ETF inflows stalling"
+    "BTC weekly close below 200WK MA confirms bear cycle target 57-59K",
+    "July 14 CPI hot print triggers hike pull-forward multi-asset selloff",
+    "Iran ceasefire fully collapses Strait Hormuz oil spikes stagflation",
+    "DeepSeek AI chip production reduces US semiconductor demand structurally",
+    "CLARITY Act misses August recess regulatory vacuum extends through 2027"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62667.0,
-    "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.1,
+    "btc_200wk_ma_status": "testing",
+    "xrp_key_support": 1.05,
     "xrp_downside_target": 0.96,
     "ascendex_warning_active": null
   },
@@ -81,19 +81,17 @@
       "Healthcare"
     ],
     "notable_tickers": [
-      "NVDA",
-      "LMT",
-      "RTX"
+      "Various"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 6.5,
-    "macro": 5.0,
-    "public_markets": 7.0,
-    "ai_sector": 7.5,
-    "defense": 8.0,
-    "real_estate": 4.0,
-    "business_acquisitions": 5.0
+    "crypto": 5.5,
+    "macro": 4.5,
+    "public_markets": 6.0,
+    "ai_sector": 6.0,
+    "defense": 8.5,
+    "real_estate": 4.5,
+    "business_acquisitions": 5.5
   }
 }

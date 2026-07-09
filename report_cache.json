@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_report_date": "2026-07-08",
-    "report_count": 9,
+    "last_report_date": "2026-07-09",
+    "report_count": 10,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 62136.4,
-    "btc_change_24h_pct": -1.78,
-    "eth_usd": 1741.61,
-    "eth_change_24h_pct": -1.95,
-    "xrp_usd": 1.0838,
-    "xrp_change_24h_pct": -3.61,
-    "btc_24h_high": 64252.69,
-    "btc_24h_low": 61738.29,
-    "eth_24h_high": 1812.85,
-    "xrp_24h_high": 1.1352
+    "btc_usd": 62952.5,
+    "btc_change_24h_pct": 1.28,
+    "eth_usd": 1754.02,
+    "eth_change_24h_pct": 0.71,
+    "xrp_usd": 1.0947,
+    "xrp_change_24h_pct": 0.99,
+    "btc_24h_high": 63283.9,
+    "btc_24h_low": 61537.84,
+    "eth_24h_high": 1762.16,
+    "xrp_24h_high": 1.1029
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.4,
+    "pce_inflation_2026_pct": 2.9,
     "may_cpi_yoy_pct": null,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
@@ -29,46 +29,46 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7503.85,
-    "sp500_change_24h_pct": -0.45,
-    "nasdaq_level": 25818.69,
-    "nasdaq_change_24h_pct": -1.16,
-    "nasdaq_consecutive_down_days": 1,
-    "vix": 15.57,
-    "market_posture": "risk-off"
+    "sp500_level": 7482.71,
+    "sp500_change_24h_pct": -0.28,
+    "nasdaq_level": 25870.0,
+    "nasdaq_change_24h_pct": 0.2,
+    "nasdaq_consecutive_down_days": 0,
+    "vix": 16.2,
+    "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.635,
+    "mortgage_30yr_fixed_pct": 6.56,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.746,
-    "btc_spot_etf_total_outflow_4wk_bn": -1.8,
+    "btc_spot_etf_weekly_flow_bn": 0.28,
+    "btc_spot_etf_total_outflow_4wk_bn": -1.52,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 47.0,
+    "clarity_act_polymarket_odds_pct": 44.0,
     "clarity_act_prior_peak_odds_pct": null,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "BTC breaks 200WK MA 62667 intraday bear cycle confirmation risk",
-    "Iran ceasefire collapses US strikes oil license revoked Brent plus5pct",
-    "DeepSeek AI chip triggers semiconductor selloff Nasdaq minus1.16pct",
-    "Fed rate hike odds hit 54pct CPI July 14 binary event",
-    "CLARITY Act 47pct odds Senate returns July 13 final 3-week window"
+    "Iran ceasefire collapse oil plus5pct Brent 78 naval blockade Hormuz",
+    "NVIDIA OpenAI 10GW AI data center 100B investment Vera Rubin",
+    "CLARITY Act 44pct July4 deadline missed 3 unresolved disputes 3 weeks left",
+    "BTC recovers 200WK MA 62952 vs 62667 marginal bull reversal signal",
+    "July14 CPI binary macro event Fed hike odds 19pct rising"
   ],
   "elevated_risks": [
-    "BTC weekly close below 200WK MA confirms bear cycle target 57-59K",
-    "July 14 CPI hot print triggers hike pull-forward multi-asset selloff",
-    "Iran ceasefire fully collapses Strait Hormuz oil spikes stagflation",
-    "DeepSeek AI chip production reduces US semiconductor demand structurally",
-    "CLARITY Act misses August recess regulatory vacuum extends through 2027"
+    "Iran Hormuz oil stagflation Fed hike pull-forward multi-asset selloff",
+    "July14 CPI hot print hike acceleration 30yr yield spike risk-asset cascade",
+    "CLARITY Act August recess failure regulatory vacuum extends through 2027",
+    "DeepSeek inference chip structural NVDA demand destruction inference layer",
+    "BTC weekly close below 200WK MA 62667 bear cycle confirmation target 57-59K"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62667.0,
-    "btc_200wk_ma_status": "testing",
+    "btc_200wk_ma_status": "above",
     "xrp_key_support": 1.05,
     "xrp_downside_target": 0.96,
     "ascendex_warning_active": null
@@ -78,20 +78,22 @@
     "most_traded_sectors": [
       "Technology",
       "Defense",
-      "Healthcare"
+      "Financials"
     ],
     "notable_tickers": [
-      "Various"
+      "GOOGL",
+      "NVDA",
+      "RF"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 5.5,
-    "macro": 4.5,
-    "public_markets": 6.0,
-    "ai_sector": 6.0,
-    "defense": 8.5,
+    "crypto": 6.0,
+    "macro": 4.0,
+    "public_markets": 5.5,
+    "ai_sector": 6.5,
+    "defense": 9.0,
     "real_estate": 4.5,
-    "business_acquisitions": 5.5
+    "business_acquisitions": 5.0
   }
 }

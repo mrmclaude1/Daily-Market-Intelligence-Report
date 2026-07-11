@@ -6,6 +6,12 @@ Every scheduled run reads `report_cache.json` at start (for diffs) and writes it
 at the end (via GitHub API). The cache is what makes Section 2 (Daily Change Log)
 show real before/after comparisons instead of "New Signal / Baseline" every time.
 
+Every run **also updates the published Artifact in place** — see
+[Update the Published Artifact](#mandatory-update-the-published-artifact). Persisting the
+cache alone is not enough: the cache is data, the Artifact is what the user reads. A run
+that skips the Artifact step leaves the report frozen on an old date even though the
+numbers were refreshed.
+
 ---
 
 ## Network Architecture — Know This First
@@ -186,6 +192,48 @@ else:
     print('❌ Push failed:', d.get('message','unknown'))
 "
 ```
+
+---
+
+## MANDATORY: Update the Published Artifact
+
+**This is the step that was missing.** Pushing `report_cache.json` to GitHub only
+persists the numbers — it does **not** update the visual report the user actually reads.
+The report is a Claude Artifact, and it must be **updated in place on every run** so the
+user always sees today's date and today's data instead of a stale snapshot.
+
+### The stable Artifact URL — always update THIS one, never mint a new one
+```
+https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601
+```
+
+### Procedure (run at the very end, after the cache push)
+1. **Load the design skill first:** invoke the `artifact-design` skill (required before
+   any `Artifact` publish).
+2. **Write today's report** as a single self-contained HTML file (inline all CSS/JS —
+   the Artifact CSP blocks external hosts). Populate every section from today's values.
+   Set `<title>Daily Market Intelligence — <Month DD, YYYY></title>`.
+3. **Publish with the `Artifact` tool, passing the stable URL above as the `url`
+   parameter.** This updates the existing artifact in place and keeps the same link.
+
+   > ⚠️ If you omit `url`, a scheduled/fresh session that did not originally publish this
+   > artifact will **mint a brand-new artifact** instead of updating the user's — which is
+   > exactly why the report appeared frozen on an old date. Always pass `url`.
+
+   Recommended call parameters:
+   - `file_path`: your HTML file
+   - `url`: `https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601`
+   - `favicon`: `📈` (keep stable across runs)
+   - `description`: `Daily Market Intelligence Report for <Month DD, YYYY> …`
+   - `label`: a short date tag, e.g. `jul-11-2026`
+
+4. **Confirm** the tool response echoes the same `1374ff45…` URL. If it returns a
+   *different* URL, you minted a new artifact by mistake — do not leave it; re-publish
+   with the `url` parameter set.
+
+**If the URL above ever 404s or the artifact was deleted:** run `Artifact` with
+`action: "list"` to find the current "Daily Market Intelligence" artifact URL, use that
+one going forward, and update this file with the new ID.
 
 ---
 

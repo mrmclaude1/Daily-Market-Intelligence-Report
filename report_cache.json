@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_report_date": "2026-07-11",
-    "report_count": 12,
+    "last_report_date": "2026-07-12",
+    "report_count": 13,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64168.0,
-    "btc_change_24h_pct": -0.39,
-    "eth_usd": 1798.0,
-    "eth_change_24h_pct": -0.07,
-    "xrp_usd": 1.1077,
-    "xrp_change_24h_pct": -0.78,
-    "btc_24h_high": 64698.0,
-    "btc_24h_low": 63653.0,
-    "eth_24h_high": 1812.0,
-    "xrp_24h_high": 1.1174
+    "btc_usd": 63889.55,
+    "btc_change_24h_pct": -0.46,
+    "eth_usd": 1800.18,
+    "eth_change_24h_pct": 0.09,
+    "xrp_usd": 1.0946,
+    "xrp_change_24h_pct": -1.34,
+    "btc_24h_high": 64520.04,
+    "btc_24h_low": 63631.85,
+    "eth_24h_high": 1830.64,
+    "xrp_24h_high": 1.1196
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 4.2,
+    "pce_inflation_2026_pct": 2.9,
     "may_cpi_yoy_pct": null,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
@@ -34,7 +34,7 @@
     "nasdaq_level": 26281.61,
     "nasdaq_change_24h_pct": 0.28,
     "nasdaq_consecutive_down_days": 0,
-    "vix": 15.4,
+    "vix": 15.84,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
@@ -48,47 +48,47 @@
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 46.0,
+    "clarity_act_polymarket_odds_pct": 43.0,
     "clarity_act_prior_peak_odds_pct": null,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "June CPI July14 binary May 4.2pct hot print triggers July29 hike cascade",
-    "CLARITY Act 59pct to 46pct Senate July13 3wk window to August recess",
-    "Iran oil volatile Trump July8 ceasefire over Brent 78 Hormuz 33pct normal",
-    "GENIUS Act stablecoin final rules July18 six agencies OCC FDIC FinCEN",
-    "BTC ETF 510M 3day reversal ends 8wk streak YTD still minus5.4B"
+    "June CPI July14 3.9pct consensus hot print above 4pct triggers July29 hike cascade",
+    "XRP broke 1.10 key support 1.0946 next levels 1.05 and 0.96 downside",
+    "CLARITY Act Senate returns July13 43pct Polymarket 3wk window before August recess",
+    "GENIUS Act stablecoin July18 six agency final rules 120day clock starts",
+    "BTC ETF 510M reversal 3days ended 8wk streak NATO Ankara 57B defense procurement"
   ],
   "elevated_risks": [
-    "Hot CPI July14 above 4.2pct July29 hike probability surges above 50pct",
-    "CLARITY Act Senate fail regulatory vacuum extends through 2027",
-    "Iran Hormuz re-escalation oil above 85 stagflation forced hike",
-    "BTC ETF reversal one-week noise not structural YTD minus5.4B",
-    "XRP 1.10 support at risk SWIFT narrative vs fundamentals"
+    "Hot CPI July14 above 4pct July29 hike probability surges above 50pct",
+    "XRP 1.10 support broken 1.05 next key level 0.96 downside target",
+    "CLARITY Act Senate fail regulatory vacuum extends 2027",
+    "Iran Hormuz re-escalation Brent above 85 stagflation forced hike",
+    "Strategy BTC sales resume largest holder now actively monetizing"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62667.0,
     "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.1,
+    "xrp_key_support": 1.05,
     "xrp_downside_target": 0.96,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
     "month": "July 2026",
     "most_traded_sectors": [
+      "Defense",
       "Technology",
-      "Energy",
-      "Defense"
+      "AI"
     ],
     "notable_tickers": [
-      "NVDA",
+      "PLTR",
       "RTX",
-      "LMT"
+      "NVDA"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 7.0,
+    "crypto": 6.5,
     "macro": 3.5,
     "public_markets": 6.5,
     "ai_sector": 7.5,

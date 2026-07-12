@@ -6,6 +6,12 @@ Every scheduled run reads `report_cache.json` at start (for diffs) and writes it
 at the end (via GitHub API). The cache is what makes Section 2 (Daily Change Log)
 show real before/after comparisons instead of "New Signal / Baseline" every time.
 
+Every run **also updates the published Artifact in place** — see
+[Update the Published Artifact](#mandatory-update-the-published-artifact). Persisting the
+cache alone is not enough: the cache is data, the Artifact is what the user reads. A run
+that skips the Artifact step leaves the report frozen on an old date even though the
+numbers were refreshed.
+
 ---
 
 ## Network Architecture — Know This First
@@ -186,6 +192,88 @@ else:
     print('❌ Push failed:', d.get('message','unknown'))
 "
 ```
+
+---
+
+## MANDATORY: Update the Published Artifact
+
+**This is the step that was missing.** Pushing `report_cache.json` to GitHub only
+persists the numbers — it does **not** update the visual report the user actually reads.
+The report is a Claude Artifact, and it must be **updated in place on every run** so the
+user always sees today's date and today's data instead of a stale snapshot.
+
+### The stable Artifact URL — always update THIS one, never mint a new one
+```
+https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601
+```
+
+### Use the canonical template — do NOT improvise a layout
+`report_template.html` (repo root) is the **required** structure and design system for
+the report. It defines the masthead (ticker strip → headline thesis → meta line →
+sector-score grid → alert callout) and **all 19 numbered sections (0–18)**:
+
+| # | Section | # | Section |
+|---|---------|---|---------|
+| 0 | Local Weather (30080) | 10 | Business Acquisition Analysis |
+| 1 | Executive Summary | 11 | Polymarket / Prediction Markets |
+| 2 | Daily Change Log | 12 | Congressional Trade Disclosures |
+| 3 | Top 5 Market Signals | 13 | Opportunity Ranking |
+| 4 | Crypto Analysis | 14 | Risk Review |
+| 5 | Macro Analysis | 15 | Research Queue |
+| 6 | Public Markets Analysis | 16 | Sources |
+| 7 | AI Sector Analysis | 17 | Confidence Score |
+| 8 | Defense & Aerospace | 18 | What Might Be Wrong |
+| 9 | Real Estate Analysis | | |
+
+The committed template is populated with the **July 9, 2026 report (#10)** as the reference
+example so the expected depth per section is unambiguous. **Reproduce this exact layout every
+run — never drop sections and never rebuild a thinner report from `report_cache.json` alone.**
+The cache exists only to power Section 2's before/after diffs; it is not a substitute for the
+report's content.
+
+### A full LIVE DATA PASS is mandatory before writing the report
+Every section must be filled from **today's** live research, not from the cache:
+- **Crypto prices/news** → crypto MCP tools (Crypto.com `get_market_*`, CoinDesk when authed)
+- **Macro, equities, rates, oil, regulation, prediction-market odds, AI/defense/RE news,
+  congressional trades** → `WebSearch` (and `WebFetch` where the site allows it)
+- **Weather (30080)** → `WebSearch` per the Data Sources section
+- Then compute Section 2 diffs by comparing today's live values to the prior cache.
+
+A cache-only rebuild (skipping the live pass) is what produced a thin, low-information
+report — do not repeat it.
+
+### Publish procedure (run at the very end, after the cache push)
+1. **Load the design skill first:** invoke the `artifact-design` skill (required before
+   any `Artifact` publish).
+2. **Copy `report_template.html` and replace every value** with today's live figures:
+   ticker strip, headline thesis, meta line (date · Report # · generated · prior report ·
+   posture), all 7 sector scores, the alert callout, and all 19 sections. Update
+   `<title>` to `Daily Market Intelligence — <Month DD, YYYY>`. Keep the structure, class
+   names, and dark theme intact — only the content changes.
+3. **Publish with the `Artifact` tool, passing the stable URL above as the `url`
+   parameter.** This updates the existing artifact in place and keeps the same link.
+
+   > ⚠️ If you omit `url`, a scheduled/fresh session that did not originally publish this
+   > artifact will **mint a brand-new artifact** instead of updating the user's — which is
+   > exactly why the report appeared frozen on an old date. Always pass `url`.
+
+   Recommended call parameters:
+   - `file_path`: your populated HTML file
+   - `url`: `https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601`
+   - `favicon`: `📈` (keep stable across runs)
+   - `description`: `Daily Market Intelligence Report for <Month DD, YYYY> …`
+   - `label`: a short date tag, e.g. `jul-11-2026`
+
+4. **Confirm** the tool response echoes the same `1374ff45…` URL. If it returns a
+   *different* URL, you minted a new artifact by mistake — do not leave it; re-publish
+   with the `url` parameter set.
+
+**If the URL above ever 404s or the artifact was deleted:** run `Artifact` with
+`action: "list"` to find the current "Daily Market Intelligence" artifact URL, use that
+one going forward, and update this file with the new ID.
+
+**If the layout/design ever needs to change,** edit `report_template.html` — it is the
+single source of truth for how the report looks.
 
 ---
 

@@ -1,40 +1,40 @@
 {
   "meta": {
-    "last_report_date": "2026-07-19",
-    "report_count": 20,
+    "last_report_date": "2026-07-20",
+    "report_count": 21,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64635.0,
-    "btc_change_24h_pct": 0.96,
-    "eth_usd": 1868.0,
-    "eth_change_24h_pct": 1.2,
-    "xrp_usd": 1.0955,
-    "xrp_change_24h_pct": 0.74,
-    "btc_24h_high": 65100.0,
-    "btc_24h_low": 63850.0,
-    "eth_24h_high": 1885.0,
-    "xrp_24h_high": 1.105
+    "btc_usd": 64226.0,
+    "btc_change_24h_pct": -0.58,
+    "eth_usd": 1867.0,
+    "eth_change_24h_pct": 0.0,
+    "xrp_usd": 1.0922,
+    "xrp_change_24h_pct": -0.26,
+    "btc_24h_high": 65064.0,
+    "btc_24h_low": 63712.0,
+    "eth_24h_high": 1891.0,
+    "xrp_24h_high": 1.1077
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.6,
+    "pce_inflation_2026_pct": 3.2,
     "may_cpi_yoy_pct": null,
-    "prime_rate": 7.0,
-    "rate_hike_on_table": true,
-    "cuts_projected_2026": 1,
+    "prime_rate": 6.75,
+    "rate_hike_on_table": false,
+    "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7457.0,
+    "sp500_level": 7457.69,
     "sp500_change_24h_pct": -1.01,
-    "nasdaq_level": 25520.0,
+    "nasdaq_level": 25520.24,
     "nasdaq_change_24h_pct": -1.4,
     "nasdaq_consecutive_down_days": 2,
-    "vix": 18.5,
+    "vix": 18.7,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
@@ -44,57 +44,56 @@
   },
   "crypto_etf": {
     "btc_spot_etf_weekly_flow_bn": 0.62,
-    "btc_spot_etf_total_outflow_4wk_bn": 2.8,
+    "btc_spot_etf_total_outflow_4wk_bn": -5.4,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 43.0,
+    "clarity_act_polymarket_odds_pct": 32.0,
     "clarity_act_prior_peak_odds_pct": null,
-    "xrp_etf_approved": false
+    "xrp_etf_approved": true
   },
   "top_signals": [
-    "CLARITY Act floor vote week of July 20 — binary event",
-    "Iran conflict Day 141+ drives Brent to 88 per barrel",
-    "FOMC + Big Tech earnings collision July 29-30",
-    "SBA loan limit doubled to 10M — business acquisition window",
-    "BTC holds above 200WMA as geopolitical hedge bid"
+    "Brent breaches $90 Iran Day 142 Hormuz closed",
+    "CLARITY Act 32% record low floor vote this week",
+    "June CPI +3.5% YoY positive surprise hike risk eliminated",
+    "SBA $10M limit doubles biz acq opportunity",
+    "Iranian FM Baghaei diplomatic signal watch ceasefire"
   ],
   "elevated_risks": [
-    "Fed rate hike now 54% probability — markets under-pricing",
-    "Iran conflict escalation — Kuwait infrastructure struck",
-    "Big Tech earnings disappointment + FOMC hawkish surprise",
-    "CLARITY Act fails floor vote — XRP/crypto sentiment reversal",
-    "Real estate demand destruction at 6.55% mortgage rates"
+    "CLARITY Act failure August 7 recess deadline",
+    "Brent $90 July-August CPI re-acceleration",
+    "Iran FM ceasefire signal defense sector reversal risk",
+    "GENIUS Act OCC rules missed deadline stablecoin uncertainty",
+    "AI model price war output token cost collapse SaaS margins"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62500.0,
     "btc_200wk_ma_status": "above",
     "xrp_key_support": 1.05,
-    "xrp_downside_target": 0.95,
+    "xrp_downside_target": 0.97,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
     "month": "July 2026",
     "most_traded_sectors": [
-      "Energy",
-      "Semiconductors",
-      "Defense"
+      "Defense",
+      "AI/Technology",
+      "Energy"
     ],
     "notable_tickers": [
-      "AESI",
       "NVDA",
-      "QCOM",
-      "LMT"
+      "AESI",
+      "AMD"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 6.5,
-    "macro": 3.0,
-    "public_markets": 4.0,
-    "ai_sector": 7.0,
-    "defense": 9.0,
+    "crypto": 6.0,
+    "macro": 4.0,
+    "public_markets": 4.5,
+    "ai_sector": 7.5,
+    "defense": 9.5,
     "real_estate": 3.5,
-    "business_acquisitions": 8.0
+    "business_acquisitions": 8.5
   }
 }

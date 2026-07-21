@@ -227,9 +227,14 @@ sector-score grid → alert callout) and **all 20 numbered sections (0–19)**:
 
 **Section 15 — Sports content policy.** Priority order, most detail first:
 **College Football (SEC, then Alabama first)** › **NFL** › **Basketball** › **Baseball**
-› **Golf** › **Soccer** › everything else. Give **Alabama men's sports** real depth
-(schedule, rankings, recruiting, QB/roster news, key games); keep other major sports
-**high-level** (a few lines each); surface **niche/other sports only on major news**.
+› **Golf** › **Soccer** › everything else. Give **Alabama men's sports** real depth.
+- **Alabama table = the NEXT 3 GAMES** (rolling — it advances each week as the season
+  progresses; in the offseason it shows the first games of the upcoming season). Include
+  a **betting-line / odds column** (early/lookahead spreads in the offseason, live spreads
+  in-season; mark estimated lines with `*`) plus a short per-game Note column.
+- **Big SEC news goes deeper.** SEC Media Days, CFP seeding, major coaching/QB moves move
+  the whole conference — give those more room. Other major sports get a few lines each.
+- Keep the section **tight — not a news dump.** Niche/other sports only on major news.
 Do a live pass for this section too (see Data Sources → Sports).
 
 The committed template is populated with the **July 9, 2026 report (#10)** as the reference

@@ -210,7 +210,7 @@ https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601
 ### Use the canonical template — do NOT improvise a layout
 `report_template.html` (repo root) is the **required** structure and design system for
 the report. It defines the masthead (ticker strip → headline thesis → meta line →
-sector-score grid → alert callout) and **all 19 numbered sections (0–18)**:
+sector-score grid → alert callout) and **all 20 numbered sections (0–19)**:
 
 | # | Section | # | Section |
 |---|---------|---|---------|
@@ -219,11 +219,18 @@ sector-score grid → alert callout) and **all 19 numbered sections (0–18)**:
 | 2 | Daily Change Log | 12 | Congressional Trade Disclosures |
 | 3 | Top 5 Market Signals | 13 | Opportunity Ranking |
 | 4 | Crypto Analysis | 14 | Risk Review |
-| 5 | Macro Analysis | 15 | Research Queue |
-| 6 | Public Markets Analysis | 16 | Sources |
-| 7 | AI Sector Analysis | 17 | Confidence Score |
-| 8 | Defense & Aerospace | 18 | What Might Be Wrong |
-| 9 | Real Estate Analysis | | |
+| 5 | Macro Analysis | 15 | Sports (SEC Football first) |
+| 6 | Public Markets Analysis | 16 | Research Queue |
+| 7 | AI Sector Analysis | 17 | Sources |
+| 8 | Defense & Aerospace | 18 | Confidence Score |
+| 9 | Real Estate Analysis | 19 | What Might Be Wrong |
+
+**Section 15 — Sports content policy.** Priority order, most detail first:
+**College Football (SEC, then Alabama first)** › **NFL** › **Basketball** › **Baseball**
+› **Golf** › **Soccer** › everything else. Give **Alabama men's sports** real depth
+(schedule, rankings, recruiting, QB/roster news, key games); keep other major sports
+**high-level** (a few lines each); surface **niche/other sports only on major news**.
+Do a live pass for this section too (see Data Sources → Sports).
 
 The committed template is populated with the **July 9, 2026 report (#10)** as the reference
 example so the expected depth per section is unambiguous. **Reproduce this exact layout every
@@ -247,7 +254,7 @@ report — do not repeat it.
    any `Artifact` publish).
 2. **Copy `report_template.html` and replace every value** with today's live figures:
    ticker strip, headline thesis, meta line (date · Report # · generated · prior report ·
-   posture), all 7 sector scores, the alert callout, and all 19 sections. Update
+   posture), all 7 sector scores, the alert callout, and all 20 sections. Update
    `<title>` to `Daily Market Intelligence — <Month DD, YYYY>`. Keep the structure, class
    names, and dark theme intact — only the content changes.
 3. **Publish with the `Artifact` tool, passing the stable URL above as the `url`
@@ -305,6 +312,15 @@ Use WebSearch:
 Use MCP tools (load via ToolSearch):
 - `mcp__CoinDesk__fetch_index_tick` → BTC-USD, ETH-USD, XRP-USD
 - `mcp__CoinDesk__fetch_news` → latest crypto news (limit 30)
+
+### Sports (Section 15)
+Use WebSearch (priority order — spend the most queries at the top):
+- `"Alabama Crimson Tide football [CURRENT MONTH] [YEAR]"` — schedule, ranking, recruiting, QB/roster news
+- `"SEC football rankings news [CURRENT MONTH] [YEAR]"`
+- `"college football AP top 25 [CURRENT MONTH] [YEAR]"` · `"NFL news [CURRENT MONTH] [YEAR]"`
+- `"Alabama basketball Nate Oats [YEAR]"` · `"NBA news [CURRENT MONTH] [YEAR]"`
+- `"MLB standings trade [CURRENT MONTH] [YEAR]"` · `"PGA golf [CURRENT MONTH] [YEAR]"` · `"soccer [CURRENT MONTH] [YEAR]"`
+- Only search other/niche sports if a major storyline surfaces. Sites: espn.com, al.com, on3.com, cbssports.com.
 
 ### Everything Else
 Use WebSearch and WebFetch — financial news sites are accessible server-side.

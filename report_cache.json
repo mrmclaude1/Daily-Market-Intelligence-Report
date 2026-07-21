@@ -1,40 +1,40 @@
 {
   "meta": {
-    "last_report_date": "2026-07-20",
-    "report_count": 21,
+    "last_report_date": "2026-07-21",
+    "report_count": 22,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64226.0,
-    "btc_change_24h_pct": -0.58,
-    "eth_usd": 1867.0,
-    "eth_change_24h_pct": 0.0,
-    "xrp_usd": 1.0922,
-    "xrp_change_24h_pct": -0.26,
-    "btc_24h_high": 65064.0,
-    "btc_24h_low": 63712.0,
-    "eth_24h_high": 1891.0,
-    "xrp_24h_high": 1.1077
+    "btc_usd": 66415.56,
+    "btc_change_24h_pct": 3.33,
+    "eth_usd": 1943.6,
+    "eth_change_24h_pct": 4.04,
+    "xrp_usd": 1.1338,
+    "xrp_change_24h_pct": 3.67,
+    "btc_24h_high": 66427.36,
+    "btc_24h_low": 64074.59,
+    "eth_24h_high": 1953.09,
+    "xrp_24h_high": 1.1385
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
     "pce_inflation_2026_pct": 3.2,
     "may_cpi_yoy_pct": null,
-    "prime_rate": 6.75,
-    "rate_hike_on_table": false,
+    "prime_rate": 7.0,
+    "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "rising"
+    "oil_trend": "stable"
   },
   "markets": {
-    "sp500_level": 7457.69,
-    "sp500_change_24h_pct": -1.01,
-    "nasdaq_level": 25520.24,
-    "nasdaq_change_24h_pct": -1.4,
-    "nasdaq_consecutive_down_days": 2,
-    "vix": 18.7,
+    "sp500_level": 7443.0,
+    "sp500_change_24h_pct": -0.19,
+    "nasdaq_level": 25508.0,
+    "nasdaq_change_24h_pct": -0.05,
+    "nasdaq_consecutive_down_days": 3,
+    "vix": 18.65,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
@@ -43,28 +43,28 @@
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.62,
-    "btc_spot_etf_total_outflow_4wk_bn": -5.4,
+    "btc_spot_etf_weekly_flow_bn": 0.076,
+    "btc_spot_etf_total_outflow_4wk_bn": -2.5,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 32.0,
+    "clarity_act_polymarket_odds_pct": 43.0,
     "clarity_act_prior_peak_odds_pct": null,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Brent breaches $90 Iran Day 142 Hormuz closed",
-    "CLARITY Act 32% record low floor vote this week",
-    "June CPI +3.5% YoY positive surprise hike risk eliminated",
-    "SBA $10M limit doubles biz acq opportunity",
-    "Iranian FM Baghaei diplomatic signal watch ceasefire"
+    "CLARITY Act 43% recovered Senate floor vote this week",
+    "BTC 66K 5-day ETF inflow streak",
+    "Fed hike odds 46.5% CME July 29 FOMC live risk",
+    "Iran 10-day ceasefire proposal submitted not accepted",
+    "GENIUS Act OCC rules missed July 18 deadline"
   ],
   "elevated_risks": [
+    "Fed hike July 29 46.5% CME multi-asset selloff risk",
+    "Iran ceasefire rejection oil back to 92",
     "CLARITY Act failure August 7 recess deadline",
-    "Brent $90 July-August CPI re-acceleration",
-    "Iran FM ceasefire signal defense sector reversal risk",
-    "GENIUS Act OCC rules missed deadline stablecoin uncertainty",
-    "AI model price war output token cost collapse SaaS margins"
+    "Big Tech AI capex guidance miss July 22 earnings",
+    "GENIUS Act stablecoin regulatory limbo January 2027"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62500.0,
@@ -76,23 +76,23 @@
   "congressional_trades": {
     "month": "July 2026",
     "most_traded_sectors": [
+      "AI/Semiconductors",
       "Defense",
-      "AI/Technology",
-      "Energy"
+      "Technology"
     ],
     "notable_tickers": [
       "NVDA",
-      "AESI",
-      "AMD"
+      "QCOM",
+      "GOOGL"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 6.0,
-    "macro": 4.0,
-    "public_markets": 4.5,
+    "crypto": 6.5,
+    "macro": 3.5,
+    "public_markets": 5.0,
     "ai_sector": 7.5,
-    "defense": 9.5,
+    "defense": 9.0,
     "real_estate": 3.5,
     "business_acquisitions": 8.5
   }

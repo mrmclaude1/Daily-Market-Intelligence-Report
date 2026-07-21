@@ -229,9 +229,10 @@ sector-score grid → alert callout) and **all 20 numbered sections (0–19)**:
 **College Football (SEC, then Alabama first)** › **NFL** › **Basketball** › **Baseball**
 › **Golf** › **Soccer** › everything else. Give **Alabama men's sports** real depth.
 - **Alabama table = the NEXT 3 GAMES** (rolling — it advances each week as the season
-  progresses; in the offseason it shows the first games of the upcoming season). Include
-  a **betting-line / odds column** (early/lookahead spreads in the offseason, live spreads
-  in-season; mark estimated lines with `*`) plus a short per-game Note column.
+  progresses; in the offseason it shows the first games of the upcoming season). Columns:
+  Date, **Time** (kickoff, local CT), **TV** (network), Site, **Early Line** (betting
+  spread — early/lookahead in the offseason, live in-season; mark estimated lines with
+  `*`), and a short per-game Note.
 - **Big SEC news goes deeper.** SEC Media Days, CFP seeding, major coaching/QB moves move
   the whole conference — give those more room. Other major sports get a few lines each.
 - Keep the section **tight — not a news dump.** Niche/other sports only on major news.

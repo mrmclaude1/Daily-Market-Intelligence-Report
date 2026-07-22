@@ -1,50 +1,50 @@
 {
   "meta": {
-    "last_report_date": "2026-07-21",
-    "report_count": 22,
+    "last_report_date": "2026-07-22",
+    "report_count": 23,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 66415.56,
-    "btc_change_24h_pct": 3.33,
-    "eth_usd": 1943.6,
-    "eth_change_24h_pct": 4.04,
-    "xrp_usd": 1.1338,
-    "xrp_change_24h_pct": 3.67,
-    "btc_24h_high": 66427.36,
-    "btc_24h_low": 64074.59,
-    "eth_24h_high": 1953.09,
-    "xrp_24h_high": 1.1385
+    "btc_usd": 65930.0,
+    "btc_change_24h_pct": -0.68,
+    "eth_usd": 1926.71,
+    "eth_change_24h_pct": -0.83,
+    "xrp_usd": 1.1365,
+    "xrp_change_24h_pct": 0.28,
+    "btc_24h_high": 66925.0,
+    "btc_24h_low": 65634.0,
+    "eth_24h_high": 1944.0,
+    "xrp_24h_high": 1.1641
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.2,
+    "pce_inflation_2026_pct": 3.6,
     "may_cpi_yoy_pct": null,
-    "prime_rate": 7.0,
+    "prime_rate": 6.75,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "stable"
+    "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7443.0,
-    "sp500_change_24h_pct": -0.19,
-    "nasdaq_level": 25508.0,
-    "nasdaq_change_24h_pct": -0.05,
-    "nasdaq_consecutive_down_days": 3,
-    "vix": 18.65,
-    "market_posture": "mixed-risk-off"
+    "sp500_level": 7509.0,
+    "sp500_change_24h_pct": 0.89,
+    "nasdaq_level": 25837.0,
+    "nasdaq_change_24h_pct": 1.29,
+    "nasdaq_consecutive_down_days": 0,
+    "vix": 17.5,
+    "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.55,
+    "mortgage_30yr_fixed_pct": 6.74,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.076,
-    "btc_spot_etf_total_outflow_4wk_bn": -2.5,
+    "btc_spot_etf_weekly_flow_bn": 0.505,
+    "btc_spot_etf_total_outflow_4wk_bn": -2.0,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
@@ -53,18 +53,18 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "CLARITY Act 43% recovered Senate floor vote this week",
-    "BTC 66K 5-day ETF inflow streak",
-    "Fed hike odds 46.5% CME July 29 FOMC live risk",
-    "Iran 10-day ceasefire proposal submitted not accepted",
-    "GENIUS Act OCC rules missed July 18 deadline"
+    "Fed hike odds 46.5% to 16.6% CME July 29 FOMC hold expected",
+    "CLARITY Act 43% July 23 ethics deadline binary event",
+    "GOOGL TSLA Q2 earnings AI capex test 190B Alphabet after close",
+    "Iran ceasefire over WTI 75 +4% Hormuz 6-week high",
+    "BTC ETF 5-day streak 505M IBIT BlackRock institutional bid"
   ],
   "elevated_risks": [
-    "Fed hike July 29 46.5% CME multi-asset selloff risk",
-    "Iran ceasefire rejection oil back to 92",
-    "CLARITY Act failure August 7 recess deadline",
-    "Big Tech AI capex guidance miss July 22 earnings",
-    "GENIUS Act stablecoin regulatory limbo January 2027"
+    "Iran oil WTI 75 August CPI spike Sep FOMC hike risk",
+    "CLARITY Act failure Aug 7 recess deadline XRP regulatory limbo",
+    "GOOGL AI capex miss reprices NVDA MSFT AMD AI sector",
+    "BTC 200wk MA 62500 break risk on combined risk-off",
+    "Mortgage rate 6.74% rising toward 7.0% if Sep FOMC hikes"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62500.0,
@@ -76,24 +76,24 @@
   "congressional_trades": {
     "month": "July 2026",
     "most_traded_sectors": [
-      "AI/Semiconductors",
       "Defense",
+      "AI",
       "Technology"
     ],
     "notable_tickers": [
       "NVDA",
-      "QCOM",
-      "GOOGL"
+      "LMT",
+      "RTX"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 6.5,
-    "macro": 3.5,
-    "public_markets": 5.0,
-    "ai_sector": 7.5,
+    "crypto": 7.0,
+    "macro": 4.5,
+    "public_markets": 6.5,
+    "ai_sector": 8.0,
     "defense": 9.0,
-    "real_estate": 3.5,
+    "real_estate": 3.0,
     "business_acquisitions": 8.5
   }
 }

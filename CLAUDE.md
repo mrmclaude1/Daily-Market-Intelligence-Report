@@ -193,6 +193,11 @@ else:
 "
 ```
 
+> **Note:** if the `curl` PUT above returns `Write access ... not permitted through this
+> proxy`, push the cache with the GitHub MCP tool instead
+> (`mcp__github__create_or_update_file`, path `report_cache.json`, with the file's blob
+> `sha`). MCP writes go through a separate authenticated path that the egress proxy allows.
+
 ---
 
 ## MANDATORY: Update the Published Artifact
@@ -210,20 +215,39 @@ https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601
 ### Use the canonical template — do NOT improvise a layout
 `report_template.html` (repo root) is the **required** structure and design system for
 the report. It defines the masthead (ticker strip → headline thesis → meta line →
-sector-score grid → alert callout) and **all 19 numbered sections (0–18)**:
+sector-score grid → alert callout) and **all numbered sections (0, 0A, 1–18)**:
 
 | # | Section | # | Section |
 |---|---------|---|---------|
 | 0 | Local Weather (30080) | 10 | Business Acquisition Analysis |
-| 1 | Executive Summary | 11 | Polymarket / Prediction Markets |
-| 2 | Daily Change Log | 12 | Congressional Trade Disclosures |
-| 3 | Top 5 Market Signals | 13 | Opportunity Ranking |
-| 4 | Crypto Analysis | 14 | Risk Review |
-| 5 | Macro Analysis | 15 | Research Queue |
-| 6 | Public Markets Analysis | 16 | Sources |
-| 7 | AI Sector Analysis | 17 | Confidence Score |
-| 8 | Defense & Aerospace | 18 | What Might Be Wrong |
+| 0A | **Sports — SEC Football First** | 11 | Polymarket / Prediction Markets |
+| 1 | Executive Summary | 12 | Congressional Trade Disclosures |
+| 2 | Daily Change Log | 13 | Opportunity Ranking |
+| 3 | Top 5 Market Signals | 14 | Risk Review |
+| 4 | Crypto Analysis | 15 | Research Queue |
+| 5 | Macro Analysis | 16 | Sources |
+| 6 | Public Markets Analysis | 17 | Confidence Score |
+| 7 | AI Sector Analysis | 18 | What Might Be Wrong |
+| 8 | Defense & Aerospace | | |
 | 9 | Real Estate Analysis | | |
+
+**Section 0A (Sports Digest) is MANDATORY — "Sports — SEC Football First".** It appears every run
+and follows this fixed structure and priority order (see `report_template.html` for the exact markup):
+
+**Priority order:** College Football (SEC/Alabama) › NFL › Basketball › Baseball › Golf › Soccer › other.
+Alabama men's sports carry the most detail; other majors are kept high-level; niche sports appear only on major news.
+
+1. **Lead card — Alabama Crimson Tide football** (green `.panel g`): the top Alabama CFB story (QB battle,
+   camp/coaching news, DeBoer), plus a "Preseason reality check" line with ESPN FPI win projection, Playoff/
+   national-title odds, and Vegas futures (win total, +SEC title, +national title).
+2. **Second card — SEC & CFB Landscape**: ESPN FPI top teams, SEC representation in the top 25, and Alabama's
+   season-defining matchups to watch (with dates).
+3. **"Next 3 Games" table** (rolling — advances each week): columns Date · Time · TV · Site · **Early Line**
+   (betting spread, `*` if derived from ESPN win prob) · Note. Alabama's next three games with betting lines.
+4. **Six-panel grid**: NFL · Basketball (lead with Alabama/Nate Oats, then NBA) · Baseball (lead with MLB, then
+   Alabama) · Golf · Soccer · Everything Else (niche sports only on major news).
+
+Do NOT rebuild this as an Atlanta-teams digest — the required focus is **SEC/Alabama football first**, then national majors.
 
 The committed template is populated with the **July 9, 2026 report (#10)** as the reference
 example so the expected depth per section is unambiguous. **Reproduce this exact layout every
@@ -236,6 +260,7 @@ Every section must be filled from **today's** live research, not from the cache:
 - **Crypto prices/news** → crypto MCP tools (Crypto.com `get_market_*`, CoinDesk when authed)
 - **Macro, equities, rates, oil, regulation, prediction-market odds, AI/defense/RE news,
   congressional trades** → `WebSearch` (and `WebFetch` where the site allows it)
+- **Sports (SEC Football First)** → `WebSearch` per the Data Sources section (Alabama/SEC football first, then national majors)
 - **Weather (30080)** → `WebSearch` per the Data Sources section
 - Then compute Section 2 diffs by comparing today's live values to the prior cache.
 
@@ -245,26 +270,34 @@ report — do not repeat it.
 ### Publish procedure (run at the very end, after the cache push)
 1. **Load the design skill first:** invoke the `artifact-design` skill (required before
    any `Artifact` publish).
-2. **Copy `report_template.html` and replace every value** with today's live figures:
+2. **WebFetch the stable URL first** — this is REQUIRED or the publish will fail with
+   "This session hasn't viewed the latest version of the artifact":
+   ```
+   WebFetch(url="https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601",
+            prompt="Return the title tag content and report date so I can confirm the current version.")
+   ```
+   Do this even if you think you know the current version. The Artifact tool requires
+   it on every fresh session.
+3. **Copy `report_template.html` and replace every value** with today's live figures:
    ticker strip, headline thesis, meta line (date · Report # · generated · prior report ·
-   posture), all 7 sector scores, the alert callout, and all 19 sections. Update
+   posture), all 7 sector scores, the alert callout, and all sections (0, 0A, 1–18). Update
    `<title>` to `Daily Market Intelligence — <Month DD, YYYY>`. Keep the structure, class
    names, and dark theme intact — only the content changes.
-3. **Publish with the `Artifact` tool, passing the stable URL above as the `url`
-   parameter.** This updates the existing artifact in place and keeps the same link.
+4. **Publish with the `Artifact` tool**, passing both `url` and `force: true`:
 
-   > ⚠️ If you omit `url`, a scheduled/fresh session that did not originally publish this
-   > artifact will **mint a brand-new artifact** instead of updating the user's — which is
-   > exactly why the report appeared frozen on an old date. Always pass `url`.
+   > ⚠️ If you omit `url`, a scheduled/fresh session will **mint a brand-new artifact**
+   > instead of updating the user's. Always pass `url`. Pass `force: true` to overwrite
+   > the prior day's version without conflict errors.
 
    Recommended call parameters:
    - `file_path`: your populated HTML file
    - `url`: `https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601`
+   - `force`: `true`
    - `favicon`: `📈` (keep stable across runs)
    - `description`: `Daily Market Intelligence Report for <Month DD, YYYY> …`
    - `label`: a short date tag, e.g. `jul-11-2026`
 
-4. **Confirm** the tool response echoes the same `1374ff45…` URL. If it returns a
+5. **Confirm** the tool response echoes the same `1374ff45…` URL. If it returns a
    *different* URL, you minted a new artifact by mistake — do not leave it; re-publish
    with the `url` parameter set.
 
@@ -288,6 +321,16 @@ single source of truth for how the report looks.
 ---
 
 ## Data Sources by Category
+
+### Sports (Section 0A) — "SEC Football First" — ESPN, On3, SI, and league sites are accessible server-side
+Use WebSearch, in priority order (Alabama/SEC football first):
+- `"Alabama Crimson Tide football news [CURRENT MONTH YEAR]"` (QB battle, DeBoer, camp, results)
+- `"Alabama football schedule odds win total ESPN FPI [YEAR]"` (for the reality-check + Next-3 lines)
+- `"SEC football FPI rankings top 25 [YEAR]"` (landscape card)
+- `"Alabama basketball Nate Oats recruiting [YEAR]"` (basketball panel)
+- `"NFL training camp news [TODAY'S DATE]"` · `"MLB trade deadline [YEAR]"` (NFL / Baseball panels)
+- `"golf major result [current week]"` · `"soccer World Cup / Champions League [current week]"` (Golf / Soccer panels)
+- Betting lines/spreads: FanDuel, BetMGM, ESPN FPI, On3/247Sports for the Next-3-Games table.
 
 ### Congressional Trades (capitoltrades.com and unusualwhales.com block server-side fetches)
 Use WebSearch:

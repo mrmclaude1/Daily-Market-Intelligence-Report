@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-07-22",
-    "report_count": 23,
+    "last_report_date": "2026-07-23",
+    "report_count": 24,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 65930.0,
-    "btc_change_24h_pct": -0.68,
-    "eth_usd": 1926.71,
-    "eth_change_24h_pct": -0.83,
+    "btc_usd": 65772.0,
+    "btc_change_24h_pct": -0.3,
+    "eth_usd": 1929.0,
+    "eth_change_24h_pct": 0.06,
     "xrp_usd": 1.1365,
-    "xrp_change_24h_pct": 0.28,
-    "btc_24h_high": 66925.0,
-    "btc_24h_low": 65634.0,
-    "eth_24h_high": 1944.0,
-    "xrp_24h_high": 1.1641
+    "xrp_change_24h_pct": -0.05,
+    "btc_24h_high": 66396.0,
+    "btc_24h_low": 65347.0,
+    "eth_24h_high": 1957.0,
+    "xrp_24h_high": 1.1572
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -22,49 +22,49 @@
     "pce_inflation_2026_pct": 3.6,
     "may_cpi_yoy_pct": null,
     "prime_rate": 6.75,
-    "rate_hike_on_table": true,
+    "rate_hike_on_table": false,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7509.0,
-    "sp500_change_24h_pct": 0.89,
-    "nasdaq_level": 25837.0,
-    "nasdaq_change_24h_pct": 1.29,
-    "nasdaq_consecutive_down_days": 0,
-    "vix": 17.5,
+    "sp500_level": 7499.0,
+    "sp500_change_24h_pct": -0.14,
+    "nasdaq_level": 25691.0,
+    "nasdaq_change_24h_pct": -0.57,
+    "nasdaq_consecutive_down_days": 1,
+    "vix": 17.2,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.74,
+    "mortgage_30yr_fixed_pct": 6.61,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.505,
-    "btc_spot_etf_total_outflow_4wk_bn": -2.0,
+    "btc_spot_etf_weekly_flow_bn": 0.3,
+    "btc_spot_etf_total_outflow_4wk_bn": -1.5,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 43.0,
+    "clarity_act_polymarket_odds_pct": 53.0,
     "clarity_act_prior_peak_odds_pct": null,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Fed hike odds 46.5% to 16.6% CME July 29 FOMC hold expected",
-    "CLARITY Act 43% July 23 ethics deadline binary event",
-    "GOOGL TSLA Q2 earnings AI capex test 190B Alphabet after close",
-    "Iran ceasefire over WTI 75 +4% Hormuz 6-week high",
-    "BTC ETF 5-day streak 505M IBIT BlackRock institutional bid"
+    "CLARITY Act 53% July 23 ethics deadline binary event",
+    "WTI 90 Iran escalation Hormuz 9% July 31 stagflation risk",
+    "GOOGL Cloud 82% capex 205B AI capex cycle locked in",
+    "FOMC hold 83.4% July 29 relief rally catalyst",
+    "ServiceNow AI ACV 1B enterprise monetization confirmed"
   ],
   "elevated_risks": [
-    "Iran oil WTI 75 August CPI spike Sep FOMC hike risk",
+    "WTI 90 Iran Aug CPI hot Sep FOMC hike repricing risk",
     "CLARITY Act failure Aug 7 recess deadline XRP regulatory limbo",
-    "GOOGL AI capex miss reprices NVDA MSFT AMD AI sector",
-    "BTC 200wk MA 62500 break risk on combined risk-off",
-    "Mortgage rate 6.74% rising toward 7.0% if Sep FOMC hikes"
+    "GOOGL FCF negative capex overrun risk AI sector repricing",
+    "BTC 200wk MA 62500 above but monthly close risk",
+    "Mortgage 6.61% oil CPI reversal toward 7.0%"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62500.0,
@@ -81,19 +81,19 @@
       "Technology"
     ],
     "notable_tickers": [
+      "RTX",
       "NVDA",
-      "LMT",
-      "RTX"
+      "MSFT"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 7.0,
-    "macro": 4.5,
-    "public_markets": 6.5,
-    "ai_sector": 8.0,
-    "defense": 9.0,
-    "real_estate": 3.0,
+    "crypto": 8.0,
+    "macro": 3.5,
+    "public_markets": 5.5,
+    "ai_sector": 9.0,
+    "defense": 9.5,
+    "real_estate": 3.5,
     "business_acquisitions": 8.5
   }
 }

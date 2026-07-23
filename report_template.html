@@ -321,33 +321,69 @@
     <p class="note src">Sources: NWS Atlanta (weather.gov/ffc), AccuWeather 30080, AJC Atlanta weather. 10-day table based on confirmed NWS data + Atlanta July climate norms. ±3°F precision on outer days.</p>
   </section>
 
-  <!-- ===================== SECTION 0A — SPORTS ===================== -->
+  <!-- ===================== SECTION 0A — SPORTS: SEC FOOTBALL FIRST ===================== -->
+  <!-- Priority order: College Football (SEC/Alabama) › NFL › Basketball › Baseball › Golf › Soccer › other.
+       Alabama men's sports carry the most detail. Lead card = Alabama CFB (green .panel g);
+       second card = SEC/CFB landscape; then a rolling "Next 3 Games" line table; then a 6-panel
+       grid (NFL, Basketball, Baseball, Golf, Soccer, Everything Else). Replace every [bracket]. -->
   <section>
     <div class="eyebrow">Sports Digest</div>
-    <h2>Sports — Atlanta &amp; National Headlines</h2>
+    <h2>Sports — SEC Football First</h2>
     <div class="cards c2">
-      <div class="panel">
-        <div class="plbl">Atlanta Braves (MLB) — [RECORD e.g. 51–42]</div>
-        <p><b style="color:var(--text)">[Last game result: opponent, score, W/L]</b> — [1-2 sentences on key performance, starter, HR, etc.]</p>
-        <p style="margin-top:6px"><b style="color:var(--text)">Next:</b> [Opponent, date/time, location]</p>
+      <div class="panel g">
+        <div class="plbl">Alabama Crimson Tide — College Football</div>
+        <div class="big" style="font-size:19px">[Lead hook e.g. SEC Media Days / Fall Camp] <span class="up">[Date]</span> <span style="font-size:13px;color:var(--muted)">| DeBoer, Year 3</span></div>
+        <p style="margin-top:6px"><b style="color:var(--text)">[Top Alabama CFB story]</b> — [key players, QB battle, roster/coaching news, 1-3 sentences].</p>
+        <p style="margin-top:6px"><b style="color:var(--text)">Preseason reality check:</b> [SEC media poll ranking, ESPN FPI win projection + Playoff/national-title odds, Vegas futures: win total, +SEC title, +national title].</p>
+        <div class="pills-row" style="margin-top:8px"><span class="pill p-amber">[Event · Location · Date]</span><span class="pill p-gray">[Camp/season status]</span></div>
       </div>
       <div class="panel">
-        <div class="plbl">Atlanta Falcons (NFL) — [Preseason/Season Status]</div>
-        <p>[Latest news: roster move, injury update, camp note, or last game result] — [1-2 sentences of context]</p>
-        <p style="margin-top:6px"><b style="color:var(--text)">Next:</b> [Opponent/game date or "Training Camp underway"]</p>
-      </div>
-      <div class="panel">
-        <div class="plbl">Atlanta Hawks (NBA) — [Record or Off-season status]</div>
-        <p>[Trade news, free agency move, summer league result, or season status] — [1-2 sentences]</p>
-        <p style="margin-top:6px"><b style="color:var(--text)">Draft/FA note:</b> [Key offseason move or pick if relevant]</p>
-      </div>
-      <div class="panel">
-        <div class="plbl">National Sports &amp; Business</div>
-        <p>[Major sports story relevant to the week: media rights deal, team valuation news, sports betting market update, or marquee sporting event (MLB trade deadline, NFL preseason start, Olympics, major golf/tennis, etc.)]</p>
-        <p style="margin-top:6px">[Second item if relevant — e.g., DraftKings/Penn stock note, sports media rights deal, or Atlanta United result]</p>
+        <div class="plbl">SEC &amp; CFB Landscape</div>
+        <p><b style="color:var(--text)">ESPN FPI, [year]:</b> [top teams; SEC representation in top 25; where Alabama/LSU land].</p>
+        <p style="margin-top:6px"><b style="color:var(--text)">Watch:</b> [Alabama's key SEC games / Playoff-deciding matchups with dates].</p>
+        <p class="note src" style="margin-top:6px">[Season timing note].</p>
       </div>
     </div>
-    <p class="note src">Sources: ESPN, MLB.com, NFL.com, NBA.com, AJC sports section, The Athletic Atlanta. Use WebSearch: "Atlanta Braves game today", "Atlanta Falcons news [DATE]", "NBA free agency July 2026".</p>
+    <div class="tw" style="margin-top:12px">
+      <table style="min-width:720px">
+        <thead><tr><th>Next 3 Games</th><th>Date</th><th>Time</th><th>TV</th><th>Site</th><th>Early Line</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>[vs./at Opponent]</td><td class="num">[Date]</td><td class="num">[Time]</td><td>[TV]</td><td>[Site]</td><td class="num">[Bama ±line]</td><td>[Note / ESPN win prob]</td></tr>
+          <tr><td>[vs./at Opponent]</td><td class="num">[Date]</td><td class="num">[Time]</td><td>[TV]</td><td>[Site]</td><td class="num">[Bama ±line]</td><td>[Note]</td></tr>
+          <tr><td>[vs./at Opponent]</td><td class="num">[Date]</td><td class="num">[Time]</td><td>[TV]</td><td>[Site]</td><td class="num">[Bama ±line]</td><td>[Note]</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note src">Rolling next-3 — advances each week as the season progresses. Early/lookahead lines move often; * derived from ESPN win probability (no posted line yet). Sources: FanDuel, BetMGM, ESPN FPI, On3/247Sports TV assignments.</p>
+    <div class="cards c3" style="margin-top:12px">
+      <div class="panel">
+        <div class="plbl">NFL</div>
+        <p>[League-wide storylines: camp/preseason/season status, notable signings, injuries, key QB battles.]</p>
+      </div>
+      <div class="panel">
+        <div class="plbl">Basketball</div>
+        <p><b style="color:var(--text)">Alabama (Nate Oats):</b> [recruiting class / roster / results].</p>
+        <p class="note src" style="margin-top:5px">[NBA status: offseason, playoffs, or notable news.]</p>
+      </div>
+      <div class="panel">
+        <div class="plbl">Baseball</div>
+        <p><b style="color:var(--text)">MLB:</b> [lead storyline — trade deadline, standings, playoff race, key deals.]</p>
+        <p class="note src" style="margin-top:5px">[Alabama baseball status.]</p>
+      </div>
+      <div class="panel">
+        <div class="plbl">Golf</div>
+        <p>[Latest major/tour result or upcoming event.]</p>
+      </div>
+      <div class="panel">
+        <div class="plbl">Soccer <span class="pill p-violet">Major</span></div>
+        <p>[Major result/news — World Cup, Champions League, USMNT/USWNT, transfer.]</p>
+      </div>
+      <div class="panel">
+        <div class="plbl">Everything Else</div>
+        <p class="note src">[Niche sports only on major news — tennis majors, cycling grand tours, Olympics, motorsport. Otherwise "Nothing else rising to major."]</p>
+      </div>
+    </div>
+    <p class="note src">Priority: College Football (SEC/Alabama) › NFL › Basketball › Baseball › Golf › Soccer › other. Alabama men's sports carry added detail; other majors kept high-level; niche sports only on major news. Sources: On3, Sports Illustrated, ESPN FPI, NFL.com, MLB.com, Golf Channel, NPR.</p>
   </section>
 
   <!-- ===================== SECTION 1 — EXECUTIVE SUMMARY ===================== -->

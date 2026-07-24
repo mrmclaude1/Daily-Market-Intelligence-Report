@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_report_date": "2026-07-24",
-    "report_count": 24,
+    "report_count": 25,
     "schema_version": "1.0"
   },
   "prices": {
@@ -49,20 +49,20 @@
   },
   "regulation": {
     "clarity_act_polymarket_odds_pct": 37.0,
-    "clarity_act_prior_peak_odds_pct": 43.0,
+    "clarity_act_prior_peak_odds_pct": 53.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "AI capex selloff erases 800B Mag7 GOOGL TSLA earnings",
-    "Iran ceasefire collapse WTI 91.74 +6% Brent 100",
-    "CLARITY Act odds 43% to 37% Senate ethics deadlock",
+    "CLARITY Act odds crash 53% to 37% overnight sharpest reversal this month",
+    "AI capex selloff confirmed at Thursday close S&P -1.21% Nasdaq -2.15%",
+    "Oil continues grind higher WTI 91.74 Brent above 100",
     "BTC ETF 7-day 1B inflow streak first positive July since April",
-    "House passes Stop Insider Trading Act 232-198"
+    "FOMC hold probability steady 83-85% into Jul 28-29 decision"
   ],
   "elevated_risks": [
-    "Oil driven CPI surprise into Jul 29 FOMC hawkish repricing",
-    "AI capex ROI skepticism spreads to MSFT META AMZN earnings",
     "CLARITY Act fails before Aug 8 recess crypto regulatory vacuum",
+    "Oil driven CPI surprise into Jul 29 FOMC hawkish repricing",
+    "AI capex ROI skepticism spreads to MSFT META AMZN earnings next week",
     "Iran Hormuz escalation becomes structural not episodic",
     "BTC ETF inflow streak reverses on renewed risk-off"
   ],
@@ -89,11 +89,11 @@
   },
   "sector_scores": {
     "crypto": 6.5,
-    "macro": 3.5,
+    "macro": 3.2,
     "public_markets": 5.0,
-    "ai_sector": 6.5,
-    "defense": 9.0,
-    "real_estate": 2.8,
-    "business_acquisitions": 8.3
+    "ai_sector": 7.5,
+    "defense": 9.5,
+    "real_estate": 3.3,
+    "business_acquisitions": 8.4
   }
 }

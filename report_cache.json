@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-07-26",
-    "report_count": 27,
+    "last_report_date": "2026-07-27",
+    "report_count": 28,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64543.49,
-    "btc_change_24h_pct": 0.86,
-    "eth_usd": 1887.01,
-    "eth_change_24h_pct": 1.61,
-    "xrp_usd": 1.1009,
-    "xrp_change_24h_pct": 0.99,
-    "btc_24h_high": 64599.23,
-    "btc_24h_low": 63992.03,
-    "eth_24h_high": 1889.31,
-    "xrp_24h_high": 1.1079
+    "btc_usd": 64573.43,
+    "btc_change_24h_pct": -0.36,
+    "eth_usd": 1929.87,
+    "eth_change_24h_pct": 0.83,
+    "xrp_usd": 1.0891,
+    "xrp_change_24h_pct": -1.3,
+    "btc_24h_high": 65739.31,
+    "btc_24h_low": 64409.84,
+    "eth_24h_high": 1982.74,
+    "xrp_24h_high": 1.1166
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -26,45 +26,45 @@
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "rising"
+    "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7411.98,
-    "sp500_change_24h_pct": 0.05,
-    "nasdaq_level": 24975.82,
-    "nasdaq_change_24h_pct": -0.64,
-    "nasdaq_consecutive_down_days": 2,
-    "vix": 18.58,
+    "sp500_level": 7410.0,
+    "sp500_change_24h_pct": 0.0,
+    "nasdaq_level": 24900.0,
+    "nasdaq_change_24h_pct": -0.3,
+    "nasdaq_consecutive_down_days": 3,
+    "vix": 19.0,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.58,
+    "mortgage_30yr_fixed_pct": 6.65,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.225,
-    "btc_spot_etf_total_outflow_4wk_bn": -5.2,
+    "btc_spot_etf_weekly_flow_bn": 0.0,
+    "btc_spot_etf_total_outflow_4wk_bn": -5.0,
     "eth_etf_weekly_flow_bn": null
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 44.0,
+    "clarity_act_polymarket_odds_pct": 38.0,
     "clarity_act_prior_peak_odds_pct": 53.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "FOMC Jul 28-29 hike odds near 38pct on renewed Iran-driven inflation",
-    "Oil reverses falling-to-rising as Iran conflict re-escalates WTI near 92 dollars",
-    "Big Tech earnings week MSFT Jul 29 same day as FOMC decision",
-    "BTC ETF 7-day inflow streak snaps with 225M dollar outflow Jul 24",
-    "Defense NATO 57B dollar procurement plus Lockheed 3.45B dollar Ultra Maritime deal"
+    "FOMC Wed lands same day as MSFT/META earnings with hike still 30-36pct priced",
+    "Iran-US strikes pause 2nd day but WTI down 7.6pct relief is fragile not confirmed ceasefire",
+    "Semiconductor rout SMH down 4pct AMD Teradyne down 8pct Intel down 7.9pct despite beat overshadows relief rally",
+    "CLARITY Act odds fall to ~38pct Thune says bill misses recess window",
+    "Lockheed beats and raises guidance Oracle wins first Pentagon-wide 7B dollar IDIQ"
   ],
   "elevated_risks": [
-    "FOMC Jul 29 hike or hawkish hold compounding with MSFT earnings",
-    "Iran conflict re-escalation drives sustained oil-led inflation",
-    "BTC ETF outflow reversal proves durable not one-day blip",
-    "CLARITY Act stalls past August recess window",
-    "Defense sector valuation risk on surprise Iran de-escalation"
+    "Wednesday binary event pile-up FOMC hike risk plus Big Tech earnings same window",
+    "Iran pause fragile re-escalation would reverse oil move overnight",
+    "CLARITY Act failure extends crypto regulatory vacuum into 2027",
+    "Semiconductor rout could signal structural AI capex re-rating not one-day noise",
+    "XRP bearish momentum plus falling regulatory odds compound into support test"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62500.0,
@@ -76,24 +76,24 @@
   "congressional_trades": {
     "month": "July 2026",
     "most_traded_sectors": [
-      "Technology",
+      "Semiconductors/AI",
       "Defense",
-      "Financials"
+      "Big Tech/Mag7"
     ],
     "notable_tickers": [
-      "GOOGL",
       "NVDA",
-      "AMD"
+      "PLTR",
+      "RTX"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 5.8,
-    "macro": 2.5,
-    "public_markets": 4.3,
-    "ai_sector": 6.8,
-    "defense": 9.5,
-    "real_estate": 3.0,
-    "business_acquisitions": 7.5
+    "crypto": 5.5,
+    "macro": 3.5,
+    "public_markets": 4.0,
+    "ai_sector": 6.0,
+    "defense": 9.2,
+    "real_estate": 2.8,
+    "business_acquisitions": 7.2
   }
 }

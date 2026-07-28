@@ -1,16 +1,16 @@
 {
   "meta": {
     "last_report_date": "2026-07-28",
-    "report_count": 29,
+    "report_count": 30,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 63425.5,
-    "btc_change_24h_pct": -2.94,
-    "eth_usd": 1877.82,
-    "eth_change_24h_pct": -4.58,
-    "xrp_usd": 1.0552,
-    "xrp_change_24h_pct": -4.79,
+    "btc_usd": 63517.08,
+    "btc_change_24h_pct": -2.82,
+    "eth_usd": 1880.24,
+    "eth_change_24h_pct": -4.48,
+    "xrp_usd": 1.0561,
+    "xrp_change_24h_pct": -4.7,
     "btc_24h_high": 65724.22,
     "btc_24h_low": 63054.1,
     "eth_24h_high": 1978.0,
@@ -29,47 +29,47 @@
     "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7411.98,
-    "sp500_change_24h_pct": 0.05,
-    "nasdaq_level": 24975.82,
-    "nasdaq_change_24h_pct": -0.6,
-    "nasdaq_consecutive_down_days": 0,
-    "vix": 18.58,
+    "sp500_level": 7400.0,
+    "sp500_change_24h_pct": -0.17,
+    "nasdaq_level": 24850.0,
+    "nasdaq_change_24h_pct": -0.5,
+    "nasdaq_consecutive_down_days": 1,
+    "vix": 18.92,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.8,
-    "housing_inventory_yoy_pct": null,
-    "listing_price_yoy_pct": null
+    "mortgage_30yr_fixed_pct": 6.76,
+    "housing_inventory_yoy_pct": 3.6,
+    "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.034,
-    "btc_spot_etf_total_outflow_4wk_bn": 0.23,
+    "btc_spot_etf_weekly_flow_bn": 0.274,
+    "btc_spot_etf_total_outflow_4wk_bn": -0.23,
     "eth_etf_weekly_flow_bn": 0.104
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 38.5,
+    "clarity_act_polymarket_odds_pct": 38.0,
     "clarity_act_prior_peak_odds_pct": 53.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "FOMC decision Wed lands same day as MSFT/META earnings with hike odds jumping +9.7pp to ~27pct",
-    "Chip rout enters fourth session as TSMC/ASML signal AI capex deceleration AMD -8pct NVDA -5pct",
-    "Crypto slides 3-5pct across the board XRP breaks below 1.08 key support",
-    "Anduril wins 20B Army deal plus reported 100B valuation talks Palantir plus24pct on Nvidia sovereign AI tie-up",
-    "Oil extends slide to 83 as June CPI confirms cooling to 3.5pct YoY"
+    "Nvidia 250B circular AI financing revives dot-com fears amid 4th-day chip rout tied to China DUV lithography claim",
+    "FOMC decision collides with MSFT/META earnings Wed with hike odds risen to 27-38pct",
+    "Defense re-rates higher LMT+10.6pct RTX+7.7pct on record backlogs Anduril in talks for 100B valuation",
+    "XRP ETF demand decelerating sharply to just 12.3M in July vs 59M June while price stuck below 1.08 support",
+    "Sen Armstrong 700-trade STOCK Act scandal surfaces same week House passes stock trading ban"
   ],
   "elevated_risks": [
-    "FOMC hike surprise Wednesday compounding with chip and crypto selloffs",
-    "Semiconductor capex deceleration signal could be structural not one-quarter noise",
-    "XRP support break opens 0.98 downside target amid fading ETF momentum",
-    "Iran strike pause not a confirmed ceasefire Iran says not negotiating",
-    "Mortgage rate reversal higher undermines fragile real estate improvement"
+    "Nvidia circular AI financing structure carries dot-com style bubble risk if confirmed",
+    "FOMC hike surprise Jul29 compounding fragile chip and crypto complex",
+    "China DUV lithography claim unverified but if real is structural multi-year ASML moat threat",
+    "BTC weekly close below 200wk MA would confirm bear cycle already signaled by June close below 60K",
+    "Mortgage rate reversal to 1yr high compounding real estate distress from insurance and tax costs"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62500.0,
     "btc_200wk_ma_status": "testing",
-    "xrp_key_support": 1.08,
+    "xrp_key_support": 1.05,
     "xrp_downside_target": 0.98,
     "ascendex_warning_active": null
   },
@@ -77,23 +77,25 @@
     "month": "July 2026",
     "most_traded_sectors": [
       "Semiconductors/AI",
-      "Energy/Midstream",
-      "Financials/Consumer"
+      "Energy",
+      "Financials"
     ],
     "notable_tickers": [
       "WMB",
       "NVDA",
       "QCOM"
     ],
-    "pattern_flags": []
+    "pattern_flags": [
+      "Sen. Alan Armstrong (R-OK) disclosed ~700 trades >45 days late incl $5-25M sale of former employer WMB"
+    ]
   },
   "sector_scores": {
-    "crypto": 5.0,
+    "crypto": 4.5,
     "macro": 4.0,
-    "public_markets": 3.5,
-    "ai_sector": 5.0,
-    "defense": 9.0,
-    "real_estate": 2.5,
-    "business_acquisitions": 7.4
+    "public_markets": 3.0,
+    "ai_sector": 4.5,
+    "defense": 9.2,
+    "real_estate": 2.3,
+    "business_acquisitions": 7.3
   }
 }

@@ -1,26 +1,26 @@
 {
   "meta": {
-    "last_report_date": "2026-07-27",
-    "report_count": 28,
+    "last_report_date": "2026-07-28",
+    "report_count": 29,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64573.43,
-    "btc_change_24h_pct": -0.36,
-    "eth_usd": 1929.87,
-    "eth_change_24h_pct": 0.83,
-    "xrp_usd": 1.0891,
-    "xrp_change_24h_pct": -1.3,
-    "btc_24h_high": 65739.31,
-    "btc_24h_low": 64409.84,
-    "eth_24h_high": 1982.74,
-    "xrp_24h_high": 1.1166
+    "btc_usd": 63425.5,
+    "btc_change_24h_pct": -2.94,
+    "eth_usd": 1877.82,
+    "eth_change_24h_pct": -4.58,
+    "xrp_usd": 1.0552,
+    "xrp_change_24h_pct": -4.79,
+    "btc_24h_high": 65724.22,
+    "btc_24h_low": 63054.1,
+    "eth_24h_high": 1978.0,
+    "xrp_24h_high": 1.114
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.4,
-    "may_cpi_yoy_pct": 4.2,
+    "pce_inflation_2026_pct": 2.6,
+    "may_cpi_yoy_pct": 3.5,
     "prime_rate": 7.5,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
@@ -29,46 +29,46 @@
     "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7410.0,
-    "sp500_change_24h_pct": 0.0,
-    "nasdaq_level": 24900.0,
-    "nasdaq_change_24h_pct": -0.3,
-    "nasdaq_consecutive_down_days": 3,
-    "vix": 19.0,
-    "market_posture": "mixed"
+    "sp500_level": 7411.98,
+    "sp500_change_24h_pct": 0.05,
+    "nasdaq_level": 24975.82,
+    "nasdaq_change_24h_pct": -0.6,
+    "nasdaq_consecutive_down_days": 0,
+    "vix": 18.58,
+    "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.65,
+    "mortgage_30yr_fixed_pct": 6.8,
     "housing_inventory_yoy_pct": null,
     "listing_price_yoy_pct": null
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.0,
-    "btc_spot_etf_total_outflow_4wk_bn": -5.0,
-    "eth_etf_weekly_flow_bn": null
+    "btc_spot_etf_weekly_flow_bn": 0.034,
+    "btc_spot_etf_total_outflow_4wk_bn": 0.23,
+    "eth_etf_weekly_flow_bn": 0.104
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 38.0,
+    "clarity_act_polymarket_odds_pct": 38.5,
     "clarity_act_prior_peak_odds_pct": 53.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "FOMC Wed lands same day as MSFT/META earnings with hike still 30-36pct priced",
-    "Iran-US strikes pause 2nd day but WTI down 7.6pct relief is fragile not confirmed ceasefire",
-    "Semiconductor rout SMH down 4pct AMD Teradyne down 8pct Intel down 7.9pct despite beat overshadows relief rally",
-    "CLARITY Act odds fall to ~38pct Thune says bill misses recess window",
-    "Lockheed beats and raises guidance Oracle wins first Pentagon-wide 7B dollar IDIQ"
+    "FOMC decision Wed lands same day as MSFT/META earnings with hike odds jumping +9.7pp to ~27pct",
+    "Chip rout enters fourth session as TSMC/ASML signal AI capex deceleration AMD -8pct NVDA -5pct",
+    "Crypto slides 3-5pct across the board XRP breaks below 1.08 key support",
+    "Anduril wins 20B Army deal plus reported 100B valuation talks Palantir plus24pct on Nvidia sovereign AI tie-up",
+    "Oil extends slide to 83 as June CPI confirms cooling to 3.5pct YoY"
   ],
   "elevated_risks": [
-    "Wednesday binary event pile-up FOMC hike risk plus Big Tech earnings same window",
-    "Iran pause fragile re-escalation would reverse oil move overnight",
-    "CLARITY Act failure extends crypto regulatory vacuum into 2027",
-    "Semiconductor rout could signal structural AI capex re-rating not one-day noise",
-    "XRP bearish momentum plus falling regulatory odds compound into support test"
+    "FOMC hike surprise Wednesday compounding with chip and crypto selloffs",
+    "Semiconductor capex deceleration signal could be structural not one-quarter noise",
+    "XRP support break opens 0.98 downside target amid fading ETF momentum",
+    "Iran strike pause not a confirmed ceasefire Iran says not negotiating",
+    "Mortgage rate reversal higher undermines fragile real estate improvement"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62500.0,
-    "btc_200wk_ma_status": "above",
+    "btc_200wk_ma_status": "testing",
     "xrp_key_support": 1.08,
     "xrp_downside_target": 0.98,
     "ascendex_warning_active": null
@@ -77,23 +77,23 @@
     "month": "July 2026",
     "most_traded_sectors": [
       "Semiconductors/AI",
-      "Defense",
-      "Big Tech/Mag7"
+      "Energy/Midstream",
+      "Financials/Consumer"
     ],
     "notable_tickers": [
+      "WMB",
       "NVDA",
-      "PLTR",
-      "RTX"
+      "QCOM"
     ],
     "pattern_flags": []
   },
   "sector_scores": {
-    "crypto": 5.5,
-    "macro": 3.5,
-    "public_markets": 4.0,
-    "ai_sector": 6.0,
-    "defense": 9.2,
-    "real_estate": 2.8,
-    "business_acquisitions": 7.2
+    "crypto": 5.0,
+    "macro": 4.0,
+    "public_markets": 3.5,
+    "ai_sector": 5.0,
+    "defense": 9.0,
+    "real_estate": 2.5,
+    "business_acquisitions": 7.4
   }
 }

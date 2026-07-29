@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-07-28",
-    "report_count": 31,
+    "last_report_date": "2026-07-29",
+    "report_count": 32,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 63470.83,
-    "btc_change_24h_pct": -2.35,
-    "eth_usd": 1890.36,
-    "eth_change_24h_pct": -3.36,
-    "xrp_usd": 1.0541,
-    "xrp_change_24h_pct": -4.46,
-    "btc_24h_high": 65724.22,
-    "btc_24h_low": 63054.1,
-    "eth_24h_high": 1978.0,
-    "xrp_24h_high": 1.114
+    "btc_usd": 64613.99,
+    "btc_change_24h_pct": 1.89,
+    "eth_usd": 1918.73,
+    "eth_change_24h_pct": 2.21,
+    "xrp_usd": 1.0868,
+    "xrp_change_24h_pct": 3.01,
+    "btc_24h_high": 64753.24,
+    "btc_24h_low": 62726.8,
+    "eth_24h_high": 1930.57,
+    "xrp_24h_high": 1.0936
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -29,13 +29,13 @@
     "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7395.0,
-    "sp500_change_24h_pct": -0.24,
-    "nasdaq_level": 24700.0,
-    "nasdaq_change_24h_pct": -0.9,
-    "nasdaq_consecutive_down_days": 2,
-    "vix": 19.3,
-    "market_posture": "mixed-risk-off"
+    "sp500_level": 7428.78,
+    "sp500_change_24h_pct": 0.21,
+    "nasdaq_level": 24876.91,
+    "nasdaq_change_24h_pct": -0.22,
+    "nasdaq_consecutive_down_days": 1,
+    "vix": 18.67,
+    "market_posture": "mixed"
   },
   "real_estate": {
     "mortgage_30yr_fixed_pct": 6.82,
@@ -43,31 +43,31 @@
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.3,
-    "btc_spot_etf_total_outflow_4wk_bn": -0.5,
-    "eth_etf_weekly_flow_bn": 0.104
+    "btc_spot_etf_weekly_flow_bn": 0.034,
+    "btc_spot_etf_total_outflow_4wk_bn": -0.2,
+    "eth_etf_weekly_flow_bn": 0.105
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 38.0,
+    "clarity_act_polymarket_odds_pct": 37.0,
     "clarity_act_prior_peak_odds_pct": 53.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "FOMC decision Jul29 - prediction markets spike hike odds +9.7pp to 27pct in 24h even as base case holds 73pct",
-    "Korean memory chip rout deepens - Kospi -10.8pct Samsung -13.4pct SK Hynix -14.7pct on Nvidia-OpenAI circular financing fears",
-    "LMT+10.6pct RTX+7.7pct beat-and-raise on record 230B/289B backlogs; Anduril in talks for 100B valuation",
-    "BTC grinding at 200-week MA for second straight week after June first-ever weekly close below it",
-    "Sen Armstrong 700-trade STOCK Act scandal deepens same week House-passed trading ban stalls in Senate"
+    "FOMC decision 2pm ET today - CME hike odds 31.5pct up from ~19pct weeks ago even as hold remains base case",
+    "NVIDIA in talks to backstop up to 250B (deal could total ~500B) for OpenAI 10GW Ohio data center",
+    "Defense earnings supercycle - LMT+10.6pct RTX+7.7pct on record 230B/289B backlogs; FY2027 budget seeks 44pct increase to ~1.5T",
+    "BTC/ETH/XRP rally into Fed vote (+1.89/+2.21/+3.01pct) reversing prior-day selloff",
+    "CLARITY Act odds keep sliding - Galaxy Research cut estimate 60pct to 30pct with Aug8 recess 10 days out"
   ],
   "elevated_risks": [
-    "FOMC hike surprise Jul29 - prediction markets pricing meaningfully higher odds than a week ago",
-    "AI circular-financing contagion could deepen chip rout into US mega-cap tech before MSFT/META earnings",
-    "BTC weekly close below 200wk MA would extend the bear-cycle signal already triggered in late June",
-    "Georgia foreclosure filings +52pct y/y ATTOM - regional real estate distress building beneath calm Atlanta headline prices",
-    "CLARITY Act faces hard Aug 8 recess deadline with cloture votes still short - crypto regulatory vacuum risk into 2027"
+    "Fed surprise hike today - odds highest of this cycle would hit crypto Nasdaq real estate and biz-acq financing simultaneously",
+    "AI circular-financing contagion - Nasdaq-100 ~9.7pct off highs SOX in bear-market territory on hyperscaler capex doubts",
+    "Iran conflict re-escalation - Ahvaz strikes Jul24 Jordan missile attack Jul23 Hormuz traffic still ~80pct below normal",
+    "BTC 200-week MA reclaim still unconfirmed after first-ever weekly close below it in June",
+    "Georgia foreclosure filings +52pct YoY ATTOM - regional distress building beneath calm Atlanta headline prices"
   ],
   "watchlist": {
-    "btc_200wk_ma_level": 62800.0,
+    "btc_200wk_ma_level": 62500.0,
     "btc_200wk_ma_status": "testing",
     "xrp_key_support": 1.05,
     "xrp_downside_target": 0.98,
@@ -81,21 +81,22 @@
       "Financials"
     ],
     "notable_tickers": [
+      "Williams Companies (WMB)",
       "Corning",
-      "General Dynamics",
-      "Lockheed Martin"
+      "Lockheed Martin",
+      "General Dynamics"
     ],
     "pattern_flags": [
       "Sen. Alan Armstrong (R-OK) disclosed ~700 trades >45 days late incl $5-25M sale of former employer WMB"
     ]
   },
   "sector_scores": {
-    "crypto": 4.0,
-    "macro": 3.6,
-    "public_markets": 2.8,
-    "ai_sector": 4.0,
-    "defense": 9.3,
-    "real_estate": 2.2,
-    "business_acquisitions": 7.2
+    "crypto": 5.0,
+    "macro": 3.4,
+    "public_markets": 3.0,
+    "ai_sector": 4.2,
+    "defense": 9.2,
+    "real_estate": 2.3,
+    "business_acquisitions": 7.0
   }
 }

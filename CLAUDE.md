@@ -210,7 +210,8 @@ https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601
 ### Use the canonical template — do NOT improvise a layout
 `report_template.html` (repo root) is the **required** structure and design system for
 the report. It defines the masthead (ticker strip → headline thesis → meta line →
-sector-score grid → alert callout) and **all 19 numbered sections (0–18)**:
+sector-score grid → alert callout) and **all 20 numbered sections (0–19)**, including the
+Sports section required by the scheduled task prompt:
 
 | # | Section | # | Section |
 |---|---------|---|---------|
@@ -219,17 +220,17 @@ sector-score grid → alert callout) and **all 19 numbered sections (0–18)**:
 | 2 | Daily Change Log | 12 | Congressional Trade Disclosures |
 | 3 | Top 5 Market Signals | 13 | Opportunity Ranking |
 | 4 | Crypto Analysis | 14 | Risk Review |
-| 5 | Macro Analysis | 15 | Research Queue |
-| 6 | Public Markets Analysis | 16 | Sources |
-| 7 | AI Sector Analysis | 17 | Confidence Score |
-| 8 | Defense & Aerospace | 18 | What Might Be Wrong |
-| 9 | Real Estate Analysis | | |
+| 5 | Macro Analysis | 15 | Sports (15A Alabama/SEC, 15B Other Sports, 15C Change Log) |
+| 6 | Public Markets Analysis | 16 | Research Queue |
+| 7 | AI Sector Analysis | 17 | Sources |
+| 8 | Defense & Aerospace | 18 | Confidence Score |
+| 9 | Real Estate Analysis | 19 | What Might Be Wrong |
 
-The committed template is populated with the **July 9, 2026 report (#10)** as the reference
+The committed template is populated with the **July 31, 2026 report (#34)** as the reference
 example so the expected depth per section is unambiguous. **Reproduce this exact layout every
-run — never drop sections and never rebuild a thinner report from `report_cache.json` alone.**
-The cache exists only to power Section 2's before/after diffs; it is not a substitute for the
-report's content.
+run — never drop sections (including Sports) and never rebuild a thinner report from
+`report_cache.json` alone.** The cache exists only to power Section 2's before/after diffs; it
+is not a substitute for the report's content.
 
 ### A full LIVE DATA PASS is mandatory before writing the report
 Every section must be filled from **today's** live research, not from the cache:

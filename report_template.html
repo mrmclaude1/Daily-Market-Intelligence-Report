@@ -4,19 +4,29 @@
   ============================================================================
   This file defines the REQUIRED structure and design system for the published
   Artifact. Every scheduled run MUST reproduce this exact layout — masthead,
-  all 19 numbered sections (0–18), and footer — replacing every data value with
-  the current day's figures from a FULL LIVE DATA PASS (WebSearch + crypto MCP).
+  all 20 numbered sections (0–19, including Section 15 Sports), and footer —
+  replacing every data value with the current day's figures from a FULL LIVE
+  DATA PASS (WebSearch + crypto MCP).
 
-  It is populated with the July 9, 2026 report (#10) as the reference example so
-  the expected DEPTH per section is unambiguous. Do not drop sections. Do not
-  rebuild a thinner report from report_cache.json alone — the cache is for
-  Section 2 diffs only, not a substitute for the live pass.
+  It is populated with the July 31, 2026 report (#34) as the reference example
+  so the expected DEPTH per section is unambiguous. Do not drop sections,
+  including Sports (15A/15B/15C). Do not rebuild a thinner report from
+  report_cache.json alone — the cache is for Section 2 diffs only, not a
+  substitute for the live pass.
+
+  Section numbering (0-indexed, do not renumber):
+  0 Weather · 1 Executive Summary · 2 Daily Change Log · 3 Top 5 Signals ·
+  4 Crypto · 5 Macro · 6 Public Markets · 7 AI Sector · 8 Defense ·
+  9 Real Estate · 10 Business Acquisitions · 11 Prediction Markets ·
+  12 Congressional Trades (12A/12B/12C) · 13 Opportunity Ranking ·
+  14 Risk Review · 15 Sports (15A Alabama/SEC, 15B Other Sports, 15C Change Log) ·
+  16 Research Queue · 17 Sources · 18 Confidence Score · 19 What Might Be Wrong
 
   Dark-only terminal aesthetic is intentional (single committed visual world).
   Inline all CSS/JS — the Artifact CSP blocks external hosts.
   ============================================================================
 -->
-<title>Daily Market Intelligence — July 9, 2026</title>
+<title>Daily Market Intelligence — July 31, 2026</title>
 <style>
   :root {
     --bg:        #0a0e14;
@@ -57,7 +67,6 @@
   }
   .wrap { max-width: 1040px; margin: 0 auto; padding: 26px 22px 80px; }
 
-  /* ---------- Ticker strip ---------- */
   .ticker {
     display: flex; flex-wrap: wrap; gap: 4px 22px; align-items: baseline;
     font-family: var(--mono); font-size: 12px; letter-spacing: .02em;
@@ -69,7 +78,6 @@
   .up { color: var(--green); }
   .down { color: var(--red); }
 
-  /* ---------- Masthead ---------- */
   .masthead { padding: 26px 0 6px; }
   .masthead h1 {
     font-family: var(--serif); font-weight: 700;
@@ -89,7 +97,6 @@
   }
   .rule { height: 1px; background: var(--gold); opacity: .5; margin: 18px 0 26px; }
 
-  /* ---------- Score cards ---------- */
   .scores { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
   @media (max-width: 860px) { .scores { grid-template-columns: repeat(4, 1fr); } }
   @media (max-width: 520px) { .scores { grid-template-columns: repeat(2, 1fr); } }
@@ -102,7 +109,6 @@
   .score .val { font-family: var(--mono); font-size: 28px; font-weight: 600;
     font-variant-numeric: tabular-nums; }
 
-  /* ---------- Alert callout ---------- */
   .alert {
     margin-top: 22px; background: var(--panel); border: 1px solid var(--border-2);
     border-left: 3px solid var(--gold); border-radius: 8px; padding: 16px 18px;
@@ -111,7 +117,6 @@
   .alert b, .alert strong { color: var(--text); }
   .alert .warn { color: var(--amber); }
 
-  /* ---------- Section frame ---------- */
   section { margin-top: 46px; }
   .eyebrow {
     display: flex; align-items: center; gap: 14px;
@@ -123,8 +128,8 @@
     font-family: var(--serif); font-weight: 600; font-size: 27px;
     letter-spacing: -.01em; margin: 0 0 20px; color: #cdd8e6; text-wrap: balance;
   }
+  h3.sub { font-family: var(--serif); font-weight: 600; font-size: 18px; color: #cdd8e6; margin: 26px 0 12px; }
 
-  /* ---------- Panels ---------- */
   .cards { display: grid; gap: 12px; }
   .c2 { grid-template-columns: 1fr 1fr; }
   .c3 { grid-template-columns: repeat(3, 1fr); }
@@ -147,7 +152,6 @@
   .panel .line { font-size: 13px; color: var(--muted); line-height: 1.7; }
   .panel .line b { color: var(--text); font-weight: 600; }
 
-  /* ---------- Tables ---------- */
   .tw { overflow-x: auto; border: 1px solid var(--border); border-radius: 8px; }
   table { width: 100%; border-collapse: collapse; font-size: 13px; min-width: 560px; }
   thead th {
@@ -162,7 +166,6 @@
   tbody tr:hover { background: rgba(255,255,255,.015); }
   td .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
 
-  /* ---------- Pills ---------- */
   .pill {
     display: inline-block; font-family: var(--mono); font-size: 10px;
     font-weight: 600; letter-spacing: .04em; padding: 2px 8px; border-radius: 4px;
@@ -174,7 +177,6 @@
   .p-violet { background: var(--violet-bg); color: var(--violet); }
   .p-gray { background: #1a222d; color: var(--muted); }
 
-  /* ---------- Numbered signal / risk cards ---------- */
   .items { display: grid; gap: 12px; }
   .item {
     display: grid; grid-template-columns: 30px 1fr; gap: 14px;
@@ -198,7 +200,6 @@
   .prio .sc { color: var(--text); font-size: 12px; font-weight: 600; }
   .sev { display: flex; gap: 6px; margin-left: auto; }
 
-  /* ---------- Weather grid ---------- */
   .wgrid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; margin-top: 12px; }
   @media (max-width: 820px) { .wgrid { grid-template-columns: repeat(3, 1fr); } }
   @media (max-width: 480px) { .wgrid { grid-template-columns: repeat(2, 1fr); } }
@@ -212,7 +213,6 @@
   .day .pp { font-family: var(--mono); font-size: 10px; color: var(--blue); margin-top: 4px; }
   .day .cpi { color: var(--gold); }
 
-  /* ---------- Confidence ---------- */
   .conf-top { text-align: center; margin: 6px 0 26px; }
   .conf-top .big { font-family: var(--serif); font-size: 58px; color: var(--gold); font-weight: 700; line-height: 1; }
   .conf-top .cl { font-family: var(--mono); font-size: 10px; letter-spacing: .16em;
@@ -227,13 +227,11 @@
   .cbox .m i { display: block; height: 100%; background: var(--green); }
   .cbox .v { font-family: var(--mono); font-size: 12px; font-weight: 600; color: var(--text); }
 
-  /* ---------- misc text blocks ---------- */
   .note { font-size: 13px; color: var(--muted); line-height: 1.7; margin-top: 14px; }
   .note b, .note strong { color: var(--text); }
   .note.src { font-size: 11.5px; color: var(--label); }
   .pills-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 
-  /* ---------- footer ---------- */
   footer { margin-top: 60px; padding-top: 18px; border-top: 1px solid var(--gold); border-top-color: color-mix(in srgb, var(--gold) 40%, transparent); }
   .fmeta { display: flex; flex-wrap: wrap; gap: 6px 24px; font-family: var(--mono);
     font-size: 11px; color: var(--gold); letter-spacing: .03em; margin-bottom: 12px; }
@@ -245,46 +243,49 @@
 
   <!-- ===================== TICKER STRIP ===================== -->
   <div class="ticker">
-    <span><b>BTC</b><span class="v">$62,952</span> <span class="up">+1.28%</span> · 200WMA</span>
-    <span><b>ETH</b><span class="v">$1,754</span> <span class="up">+0.71%</span></span>
-    <span><b>XRP</b><span class="v">$1.0947</span> <span class="up">+0.99%</span></span>
-    <span><b>S&amp;P</b><span class="v">7,482</span> <span class="down">-0.28%</span></span>
-    <span><b>NDX</b><span class="v">25,870</span> <span class="up">+0.20%</span></span>
-    <span><b>10YR</b><span class="v">4.58%</span></span>
-    <span><b>WTI</b><span class="v">$73+</span> <span class="up">Iran +5%</span></span>
-    <span><b>VIX</b><span class="v">~16.2</span></span>
+    <span><b>BTC</b><span class="v">$63,876</span> <span class="down">-1.1%</span> · 200WMA testing</span>
+    <span><b>ETH</b><span class="v">$1,888</span> <span class="down">-1.6%</span></span>
+    <span><b>XRP</b><span class="v">$1.073</span> <span class="down">-0.7%</span></span>
+    <span><b>S&amp;P</b><span class="v">7,438</span> <span class="up">+1.7%</span></span>
+    <span><b>NDX</b><span class="v">25,122</span> <span class="up">+2.8%</span></span>
+    <span><b>10YR</b><span class="v">4.67%</span></span>
+    <span><b>WTI</b><span class="v">~$84</span> <span class="up">Iran risk</span></span>
+    <span><b>VIX</b><span class="v">~18.0</span></span>
   </div>
 
   <!-- ===================== MASTHEAD ===================== -->
   <header class="masthead">
-    <h1>Iran Ceasefire Collapses, NVIDIA Commits $100B to AI Infrastructure, BTC Tests 200-Week MA</h1>
+    <h1>Amazon Soars, Meta Stumbles as AI Capex Split Widens — Markets Rally Through a Historically Hawkish Fed Hold as CLARITY Act's Final Week Begins</h1>
     <div class="meta">
-      <span>July 9, 2026</span><span class="sep">·</span>
-      <span>Report #10</span><span class="sep">·</span>
-      <span>Generated ~10:40 UTC</span><span class="sep">·</span>
-      <span>Prior report: July 8, 2026</span>
-      <span class="posture">Mixed-Risk-Off</span>
+      <span>July 31, 2026</span><span class="sep">·</span>
+      <span>Report #34</span><span class="sep">·</span>
+      <span>Generated ~10:45 UTC</span><span class="sep">·</span>
+      <span>Prior report: July 30, 2026</span>
+      <span class="posture">Mixed</span>
     </div>
   </header>
   <div class="rule"></div>
 
   <!-- ===================== SECTOR SCORES ===================== -->
   <div class="scores">
-    <div class="score"><div class="lbl">Crypto</div><div class="val" style="color:var(--amber)">6.0</div></div>
-    <div class="score"><div class="lbl">Macro</div><div class="val" style="color:var(--red)">4.0</div></div>
-    <div class="score"><div class="lbl">Markets</div><div class="val" style="color:var(--amber)">5.5</div></div>
-    <div class="score"><div class="lbl">AI</div><div class="val" style="color:var(--green)">6.5</div></div>
-    <div class="score"><div class="lbl">Defense</div><div class="val" style="color:var(--green)">9.0</div></div>
-    <div class="score"><div class="lbl">Real Estate</div><div class="val" style="color:var(--red)">4.5</div></div>
-    <div class="score"><div class="lbl">Biz Acq</div><div class="val" style="color:var(--amber)">5.0</div></div>
+    <div class="score"><div class="lbl">Crypto</div><div class="val" style="color:var(--amber)">5.0</div></div>
+    <div class="score"><div class="lbl">Macro</div><div class="val" style="color:var(--red)">3.6</div></div>
+    <div class="score"><div class="lbl">Markets</div><div class="val" style="color:var(--amber)">5.8</div></div>
+    <div class="score"><div class="lbl">AI</div><div class="val" style="color:var(--amber)">4.8</div></div>
+    <div class="score"><div class="lbl">Defense</div><div class="val" style="color:var(--green)">8.7</div></div>
+    <div class="score"><div class="lbl">Real Estate</div><div class="val" style="color:var(--red)">2.8</div></div>
+    <div class="score"><div class="lbl">Biz Acq</div><div class="val" style="color:var(--green)">7.0</div></div>
   </div>
 
   <!-- ===================== TOP ALERT ===================== -->
   <div class="alert">
-    <span class="warn">⚠ July 14 CPI is the single most important near-term event.</span>
-    Iran ceasefire collapsed July 8 — Brent <b>+5%</b> to ~$78/bbl in one session. Oil is driving
-    <b>&gt;60%</b> of monthly CPI increases. A hot June print (<b>≥4.5% YoY</b>) will reprice Fed hike
-    odds and trigger a multi-asset selloff. <b>Position before July 13 EOD.</b>
+    <span class="warn">⚠ CLARITY Act's do-or-die week: Senate recess begins Aug 7–10.</span>
+    Polymarket odds sit near <b>28%</b> (vs. a 53% cycle peak and roughly flat to the July 30 baseline of 30%) after
+    an ethics dispute over administration crypto profits reopened the fight. If Majority Leader Thune doesn't file
+    cloture before recess, market-structure legislation is effectively dead until 2027. Layer on top: the Fed just
+    delivered its first 3-way hawkish dissent since 2016 (held 3.50–3.75%, but Hammack/Kashkari/Logan wanted a hike)
+    even as equities ripped higher on cooling PCE and Amazon's blowout quarter — a market that isn't pricing the two
+    signals consistently. <b>Position for two-sided volatility into the September 15–16 FOMC.</b>
   </div>
 
   <!-- ===================== SECTION 0 — WEATHER ===================== -->
@@ -294,31 +295,33 @@
     <div class="cards c2">
       <div class="panel">
         <div class="plbl">Current Conditions</div>
-        <div class="big"><span class="down">~95°F</span> <span style="font-size:14px;color:var(--muted)">| Heat Index <b style="color:var(--text)">103°F</b></span></div>
-        <p>Mostly sunny · East wind 5 mph · Humidity ~72%</p>
-        <p class="warn" style="color:var(--amber)">⚠ NWS Heat Advisory Active</p>
+        <div class="big"><span class="down">~90°F</span> <span style="font-size:14px;color:var(--muted)">| RealFeel <b style="color:var(--text)">91°F</b></span></div>
+        <p>Mostly sunny, hazy skies · Humidity 35% · Wind light ~4 mph · UV Index 3</p>
+        <p style="color:var(--muted)">No active NWS alerts for Cobb County / metro Atlanta</p>
       </div>
       <div class="panel">
         <div class="plbl">Next 24-Hour Forecast</div>
-        <p><b style="color:var(--text)">Morning:</b> 88°F, sunny, 5% precip</p>
-        <p><b style="color:var(--text)">Afternoon:</b> 97°F, isolated T-storm possible, 20%</p>
-        <p><b style="color:var(--text)">Evening:</b> 91°F, partly cloudy, 15%</p>
-        <p><b style="color:var(--text)">Overnight:</b> 78°F, mostly clear</p>
+        <p><b style="color:var(--text)">Morning:</b> upper 70s–mid 80s, sun/haze clearing, 5% precip</p>
+        <p><b style="color:var(--text)">Afternoon:</b> ~90°F, sun and clouds mixed, hazy, 2%</p>
+        <p><b style="color:var(--text)">Evening:</b> low-mid 80s cooling, mostly clear, 5–10%</p>
+        <p><b style="color:var(--text)">Overnight:</b> ~72°F, clear to partly cloudy, &lt;5%</p>
       </div>
     </div>
     <div class="wgrid">
-      <div class="day"><div class="d">Thu Jul 9</div><div class="t"><span class="hi">97°</span> <span class="lo">/ 78°</span></div><div class="cond">Sunny, Heat Advisory</div><div class="pp">20% T-storm</div></div>
-      <div class="day"><div class="d">Fri Jul 10</div><div class="t"><span class="hi">96°</span> <span class="lo">/ 77°</span></div><div class="cond">Partly cloudy</div><div class="pp">30% PM storms</div></div>
-      <div class="day"><div class="d">Sat Jul 11</div><div class="t"><span class="hi">94°</span> <span class="lo">/ 76°</span></div><div class="cond">PM T-storms</div><div class="pp">40%</div></div>
-      <div class="day"><div class="d">Sun Jul 12</div><div class="t"><span class="hi">92°</span> <span class="lo">/ 75°</span></div><div class="cond">Partly cloudy</div><div class="pp">30%</div></div>
-      <div class="day"><div class="d">Mon Jul 13</div><div class="t"><span class="hi">93°</span> <span class="lo">/ 75°</span></div><div class="cond">Mostly sunny</div><div class="pp">20%</div></div>
-      <div class="day"><div class="d">Tue Jul 14</div><div class="t"><span class="hi">96°</span> <span class="lo">/ 77°</span></div><div class="cond">Hot, sunny</div><div class="pp cpi">CPI Day · 20%</div></div>
-      <div class="day"><div class="d">Wed Jul 15</div><div class="t"><span class="hi">97°</span> <span class="lo">/ 78°</span></div><div class="cond">Mostly sunny</div><div class="pp">10%</div></div>
-      <div class="day"><div class="d">Thu Jul 16</div><div class="t"><span class="hi">96°</span> <span class="lo">/ 77°</span></div><div class="cond">Partly cloudy</div><div class="pp">20%</div></div>
-      <div class="day"><div class="d">Fri Jul 17</div><div class="t"><span class="hi">94°</span> <span class="lo">/ 75°</span></div><div class="cond">PM T-storms</div><div class="pp">30%</div></div>
-      <div class="day"><div class="d">Sat Jul 18</div><div class="t"><span class="hi">93°</span> <span class="lo">/ 74°</span></div><div class="cond">Partly cloudy</div><div class="pp">30%</div></div>
+      <div class="day"><div class="d">Fri Jul 31</div><div class="t"><span class="hi">90°</span> <span class="lo">/ 72°</span></div><div class="cond">Sun/clouds, hazy</div><div class="pp">2%</div></div>
+      <div class="day"><div class="d">Sat Aug 1</div><div class="t"><span class="hi">91°</span> <span class="lo">/ 72°</span></div><div class="cond">Rain chances rising</div><div class="pp">30-40%</div></div>
+      <div class="day"><div class="d">Sun Aug 2</div><div class="t"><span class="hi">90°</span> <span class="lo">/ 72°</span></div><div class="cond">Showers/storms possible</div><div class="pp">40-50%</div></div>
+      <div class="day"><div class="d">Mon Aug 3</div><div class="t"><span class="hi">89°</span> <span class="lo">/ 72°</span></div><div class="cond">Scattered storms</div><div class="pp">40-50%</div></div>
+      <div class="day"><div class="d">Tue Aug 4</div><div class="t"><span class="hi">89°</span> <span class="lo">/ 72°</span></div><div class="cond">Storm chance</div><div class="pp">40%</div></div>
+      <div class="day"><div class="d">Wed Aug 5</div><div class="t"><span class="hi">90°</span> <span class="lo">/ 72°</span></div><div class="cond">Summer p.m. storms (climate norm)</div><div class="pp">~35%</div></div>
+      <div class="day"><div class="d">Thu Aug 6</div><div class="t"><span class="hi">90°</span> <span class="lo">/ 73°</span></div><div class="cond">Elevated flood/heavy-rain risk</div><div class="pp">40-50%</div></div>
+      <div class="day"><div class="d">Fri Aug 7</div><div class="t"><span class="hi">89°</span> <span class="lo">/ 72°</span></div><div class="cond">Afternoon storms (climate norm)</div><div class="pp">~35%</div></div>
+      <div class="day"><div class="d">Sat Aug 8</div><div class="t"><span class="hi">88°</span> <span class="lo">/ 71°</span></div><div class="cond">Isolated storms (climate norm)</div><div class="pp">~30%</div></div>
+      <div class="day"><div class="d">Sun Aug 9</div><div class="t"><span class="hi">89°</span> <span class="lo">/ 71°</span></div><div class="cond">Isolated storms (climate norm)</div><div class="pp">~30%</div></div>
     </div>
-    <p class="note src">Sources: NWS Atlanta (weather.gov/ffc), AccuWeather 30080, AJC Atlanta weather. 10-day table based on confirmed NWS data + Atlanta July climate norms. ±3°F precision on outer days.</p>
+    <p class="note"><b>Severe weather:</b> No active watches/warnings/advisories as of this afternoon. NWS Peachtree City (issued Jul 30) flags a wetter pattern building Sat Aug 1 through early next week; a regional flash-flood/heavy-rain risk is flagged around Aug 6 (unconfirmed for Smyrna specifically — treat as a regional risk to monitor). 2026 Atlantic hurricane season remains forecast below-normal (NOAA: 8-14 named storms); no organized system currently tracking toward Georgia.</p>
+    <p class="note"><b>Travel/outdoor impact:</b> Good today — hot but dry, low precip risk. Plan weekend/early-week outdoor activity for mornings as afternoon storm chances build; monitor low-lying/poor-drainage areas for localized flash flooding into next week.</p>
+    <p class="note src">Sources: NWS Peachtree City (weather.gov/ffc), AccuWeather Atlanta/Smyrna, AJC, NOAA hurricane outlook. Aug 5, 7-9 rows are Atlanta climate-norm estimates, explicitly labeled, not confirmed NWS forecasts.</p>
   </section>
 
   <!-- ===================== SECTION 1 — EXECUTIVE SUMMARY ===================== -->
@@ -326,26 +329,27 @@
     <div class="eyebrow">Section 1</div>
     <h2>Executive Summary</h2>
     <div class="cards c2">
-      <div class="panel"><div class="plbl">Dominant Theme</div><p>Iran ceasefire collapse — oil +5%, Brent ~$78, naval blockade of Strait of Hormuz reinstated July 8. Stagflation risk rises; defense maximally catalyzed.</p></div>
-      <div class="panel"><div class="plbl">Strongest Opportunity</div><p><b style="color:var(--text)">Defense sector</b> — Iran escalation + $839B FY2026 budget (+17% YoY) + Golden Dome $13.4B. Durable multi-year catalyst. Near-term: LMT, RTX, NOC, KTOS.</p></div>
-      <div class="panel"><div class="plbl">Largest Risk</div><p><b style="color:var(--text)">July 14 CPI print.</b> May CPI was +4.2% YoY; oil added further pressure in June. Hot print triggers Fed hike repricing across all asset classes simultaneously.</p></div>
+      <div class="panel"><div class="plbl">Dominant Theme</div><p>AI capex ROI divergence has split Big Tech open: Amazon's AWS-driven blowout (+8%+ AH) against Meta's first EPS miss in 6 quarters and FCF collapse to $784M. Equities shrugged off both a historically hawkish Fed dissent and Iran-driven oil strength to rally hard.</p></div>
+      <div class="panel"><div class="plbl">Strongest Opportunity</div><p><b style="color:var(--text)">Defense</b> — LMT, RTX, and NOC all posted record backlogs ($230B, $289B, $104.7B) and raised 2026 guidance same week; Golden Dome and NSSL awards keep flowing. Second: AWS reacceleration validates the hyperscaler capex thesis Meta just called into question.</p></div>
+      <div class="panel"><div class="plbl">Largest Risk</div><p><b style="color:var(--text)">CLARITY Act's Aug 7–10 recess deadline.</b> Failure = crypto regulatory vacuum into 2027. Close second: Fed's first 3-way hawkish dissent since 2016, with September hike odds still ~53-57% even after today's rally.</p></div>
       <div class="panel"><div class="plbl">What Changed vs. Prior Report</div>
-        <p class="line">BTC +1.28% (was -1.78%) · ETH +0.71% · XRP +0.99%<br>
-        Iran: ceasefire fully collapsed (confirmed)<br>
-        CLARITY Act: 47%→44% · Deadline missed<br>
-        NVIDIA-OpenAI $100B deal (new signal)<br>
-        DeepSeek inference chip (new risk)<br>
-        Mortgage: 6.635%→6.56% (minor relief)</p>
+        <p class="line">S&amp;P +1.7% / Nasdaq Composite +2.8% (was -1.52%/-1.74%) · VIX 20.66→~18.0<br>
+        BTC -1.1%, ETH -1.6%, XRP -0.7% (all pulled back)<br>
+        Fed hike odds (Sept): ~75%→~53-57%, but 9-3 hawkish-dissent hold confirmed<br>
+        BTC ETF flows: 3 straight positive weeks (was "very weak")<br>
+        Mortgage 30yr: 6.58%→6.66% (highest in a year)<br>
+        Meta FCF collapse / Amazon AWS surge (new signals)<br>
+        CFTC prediction-market rulemaking proposed (new signal)</p>
       </div>
     </div>
     <div class="panel" style="margin-top:12px">
       <div class="plbl">Immediate Follow-Up Required</div>
       <div class="pills-row">
-        <span class="pill p-amber">Jul 14 CPI 8:30 ET</span>
-        <span class="pill p-amber">CLARITY Act Senate Jul 13+</span>
-        <span class="pill p-amber">BTC weekly close Friday UTC</span>
-        <span class="pill p-amber">Iran Hormuz tanker traffic</span>
-        <span class="pill p-amber">GENIUS Act OCC rules Jul 18</span>
+        <span class="pill p-amber">CLARITY Act cloture before Aug 7-10</span>
+        <span class="pill p-amber">MLB trade deadline Aug 3, 6pm ET</span>
+        <span class="pill p-amber">BTC weekly close vs 200WMA</span>
+        <span class="pill p-amber">Sept 15-16 FOMC</span>
+        <span class="pill p-amber">Alabama fall camp / Sept 5 opener</span>
       </div>
     </div>
   </section>
@@ -355,17 +359,19 @@
     <div class="eyebrow">Section 2</div>
     <h2>Daily Change Log</h2>
     <div class="tw">
-      <table style="min-width:760px">
+      <table style="min-width:820px">
         <thead><tr><th>Item</th><th>Category</th><th>Status</th><th>What Changed</th><th>Why It Matters</th></tr></thead>
         <tbody>
-          <tr><td>Iran / Ceasefire</td><td>Macro / Geo</td><td><span class="pill p-red">↑ Risk</span></td><td>Ceasefire over — US struck ~90 Iranian targets Jul 8; 3 ships hit in Strait; naval blockade reinstated</td><td>Oil supply disruption now structural; stagflation risk; forces Fed hawkish</td></tr>
-          <tr><td>Oil Price</td><td>Macro</td><td><span class="pill p-red">↑ Risk</span></td><td>WTI $72–75/bbl; Brent ~$78 (+5% in one session)</td><td>Energy driving &gt;60% of monthly CPI; June print will be affected</td></tr>
-          <tr><td>NVIDIA-OpenAI Deal</td><td>AI</td><td><span class="pill p-green">↑ Opp.</span></td><td>10GW AI data centers; NVIDIA investing up to $100B progressively; Vera Rubin H2 2026</td><td>Largest AI infrastructure commitment in history; durable demand for power, chips, data centers</td></tr>
-          <tr><td>CLARITY Act</td><td>Crypto / Reg</td><td><span class="pill p-red">↓ Opp.</span></td><td>Odds 47%→44%; July 4 deadline missed; 3 unresolved disputes</td><td>Window narrowing to 3 weeks before Aug recess; failure risk rising</td></tr>
-          <tr><td>DeepSeek Inference Chip</td><td>AI / Semi</td><td><span class="pill p-red">↑ Risk</span></td><td>DeepSeek confirmed developing custom inference chip; NVDA fell ~2% on news</td><td>Structural reduction in China inference demand; joins Alibaba, Baidu in vertical integration</td></tr>
-          <tr><td>BTC Price</td><td>Crypto</td><td><span class="pill p-green">↑ Opp.</span></td><td>+1.28% to $62,952; marginal above 200WK MA (~$62,667) after -1.78% prior day</td><td>Technical recovery above key long-term MA; short-term bull signal if weekly close holds</td></tr>
-          <tr><td>S&amp;P 500</td><td>Markets</td><td><span class="pill p-red">↑ Risk</span></td><td>Fell to 7,482.71 (-0.28%) from 7,503.85; Dow down ~1%</td><td>Continued broad market weakness; Iran/oil/Fed minutes weighing on sentiment</td></tr>
-          <tr><td>GENIUS Act Stablecoins</td><td>Crypto / Reg</td><td><span class="pill p-violet">New Signal</span></td><td>OCC/Treasury rules due July 18; effective Jan 18, 2027</td><td>First concrete US stablecoin federal framework; major for Circle (USDC), Tether (USDT)</td></tr>
+          <tr><td>S&amp;P 500 / Nasdaq</td><td>Markets</td><td><span class="pill p-green">↓ Risk</span></td><td>S&amp;P 7316.15(-1.52%)→~7,437.6(+1.7%); Nasdaq Composite 24,442.94(-1.74%)→~25,122(+2.8%); VIX 20.66→~18.0</td><td>Sharp reversal of the July 29 Fed-dissent selloff on cooling PCE + Amazon earnings; breadth still narrow (AAPL fell on guidance)</td></tr>
+          <tr><td>Fed Hike Odds (Sept FOMC)</td><td>Macro</td><td><span class="pill p-green">↓ Risk</span></td><td>~75% baseline → CME 57.2% / Kalshi 54% / Polymarket ~53%</td><td>Still historically elevated for a "hold" cycle, but market has partially de-risked the hawkish-dissent shock</td></tr>
+          <tr><td>Meta Earnings</td><td>AI</td><td><span class="pill p-red">New Signal</span></td><td>Rev $60.8B beat, but EPS $6.18 missed $7.22 est (first miss in 6 qtrs); FCF collapsed to $784M, lowest in ~4 yrs; stock fell up to 10% AH</td><td>First hard crack in the "infinite AI capex" narrative from a hyperscaler itself</td></tr>
+          <tr><td>Amazon Earnings</td><td>AI / Markets</td><td><span class="pill p-green">Upgraded Opp.</span></td><td>Rev $200.61B (+20%) beat; AWS reaccelerated; stock +12.3%/soared &gt;8% AH</td><td>Directly counters the Meta-driven capex-ROI-doubt narrative; single biggest positive move of the week</td></tr>
+          <tr><td>BTC Spot ETF Flows</td><td>Crypto</td><td><span class="pill p-green">Upgraded Opp.</span></td><td>Weekly $0.0338B / 4wk -$0.3B → July 30 daily +$233M (IBIT +$183M); 3 consecutive positive weeks</td><td>Meaningful improvement from "very weak" baseline, though YTD flows remain net -$5.2B</td></tr>
+          <tr><td>CLARITY Act</td><td>Crypto / Reg</td><td><span class="pill p-amber">No Material Change</span></td><td>Odds ~28% (from 30%), but swung 43%→38%→28% intra-month; Aug 7-10 recess deadline now hard-confirmed</td><td>Deadline urgency has sharpened even though the headline odds number is roughly flat</td></tr>
+          <tr><td>Mortgage 30yr</td><td>Real Estate</td><td><span class="pill p-red">↑ Risk</span></td><td>6.58% → 6.66% (Freddie Mac), highest in a year; 15yr 5.96%→6.04%</td><td>Reverses the minor relief noted in the prior report; housing affordability pressure resuming</td></tr>
+          <tr><td>Defense Backlogs</td><td>Defense</td><td><span class="pill p-green">Upgraded Opp.</span></td><td>LMT $230B, RTX $289B, NOC $104.7B — all record, all raised 2026 guidance this week</td><td>Confirms durability of the defense thesis independent of the Iran catalyst</td></tr>
+          <tr><td>Congressional SpaceX Cluster</td><td>Congress / Reg</td><td><span class="pill p-violet">New Signal</span></td><td>6 House members bought SpaceX within days of its June 12 IPO; 5 of 6 sit on defense/oversight-relevant committees</td><td>Highest-quality committee-overlap cluster of the month; House passed Stop Insider Trading Act Jul 22 partly in response to this pattern</td></tr>
+          <tr><td>Oil (WTI/Brent)</td><td>Macro</td><td><span class="pill p-red">No Material Change</span></td><td>Still elevated: WTI ~$84, Brent ~$90; on track for biggest monthly gain since March</td><td>Iran conflict remains unresolved (no ceasefire); energy CPI pressure risk persists into Sept data</td></tr>
         </tbody>
       </table>
     </div>
@@ -377,34 +383,34 @@
     <h2>Top 5 Market Signals</h2>
     <div class="items">
       <div class="item"><div class="n">1</div><div>
-        <div class="cat">Macro / Geopolitical</div>
-        <h3>Iran ceasefire collapse — Strait of Hormuz disruption, Brent +5%, naval blockade</h3>
-        <p>US struck ~90 Iranian targets July 8 after Iran hit 3 commercial ships. Ceasefire confirmed over. Naval blockade reinstated. Oil supply disruption now structural; prediction markets say Strait won't normalize until 2027. <b>Opportunity:</b> Long defense (LMT, RTX, NOC, KTOS), long energy (XOM, CVX). <b>Risk:</b> Fed hike pull-forward; stagflation feedback loop.</p>
-        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:93%"></i></span> <span class="sc">9.3</span></div><div class="sev"><span class="pill p-green">Opportunity</span><span class="pill p-red">Risk</span><span class="pill p-gray">Confidence: High</span></div></div>
+        <div class="cat">Macro / Rates</div>
+        <h3>Fed's first 3-way hawkish dissent since 2016 — held 3.50-3.75%, but markets rallied anyway</h3>
+        <p>Cleveland's Hammack, Minneapolis's Kashkari, and Dallas's Logan all dissented in favor of a 25bp hike at the July 28-29 FOMC — the first three-dissent hawkish split in a decade. Chair Warsh declined to call it a "pause." Yet equities rallied sharply into July 30-31 on cooler June PCE (core +3.3% y/y, down from 3.4%). <b>Opportunity:</b> the divergence between a hawkish Fed and a relief rally is itself the trade — short-duration hedges are cheap while equities are pricing calm. <b>Risk:</b> September 15-16 FOMC hike odds still ~53-57%, well above pre-dissent norms.</p>
+        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:91%"></i></span> <span class="sc">9.1</span></div><div class="sev"><span class="pill p-red">Risk</span><span class="pill p-green">Opportunity</span><span class="pill p-gray">Confidence: High</span></div></div>
       </div></div>
       <div class="item"><div class="n">2</div><div>
-        <div class="cat">Macro / Rates</div>
-        <h3>July 14 CPI — binary macro event; Fed hike as tail risk at 19.4% probability</h3>
-        <p>May CPI was +4.2% YoY with energy +23.5% YoY. June will include Brent's surge. If CPI ≥4.5%, hike odds surge past 30%, 30yr yield spikes, risk assets sell off across crypto/equities/real estate simultaneously. <b>Action:</b> Position defensively before July 13 EOD. Short duration (TBT). Reduce leveraged crypto.</p>
-        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:90%"></i></span> <span class="sc">9.0</span></div><div class="sev"><span class="pill p-red">Critical Risk</span><span class="pill p-amber">Deadline: Jul 14 8:30 ET</span></div></div>
+        <div class="cat">Crypto / Regulation</div>
+        <h3>CLARITY Act hits its final week — Aug 7-10 Senate recess is the hard deadline</h3>
+        <p>Polymarket odds sit near 28%, having round-tripped 43%→38%→28% this month on a reopened ethics dispute over administration officials' crypto profits. If Majority Leader Thune does not file cloture before recess, the market-structure bill is effectively dead until 2027. <b>Watch:</b> Senate floor schedule daily through Aug 7. <b>Risk:</b> failure extends the regulatory vacuum for XRP, ETH, and stablecoins.</p>
+        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:88%"></i></span> <span class="sc">8.8</span></div><div class="sev"><span class="pill p-red">Critical Risk</span><span class="pill p-amber">Deadline: Aug 7-10</span></div></div>
       </div></div>
       <div class="item"><div class="n">3</div><div>
-        <div class="cat">AI / Infrastructure</div>
-        <h3>NVIDIA-OpenAI 10GW / $100B AI data center commitment</h3>
-        <p>OpenAI to deploy at least 10 gigawatts of AI data centers using NVIDIA systems; NVIDIA investing up to $100B progressively per GW deployed. First GW on Vera Rubin platform H2 2026. 10GW = ~2x current US data center capacity. <b>Beneficiaries:</b> NVDA, power utilities (CEG, VST), data center REITs (EQIX, DLR), copper (FCX), networking (ANET).</p>
-        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:87%"></i></span> <span class="sc">8.7</span></div><div class="sev"><span class="pill p-green">Durable Opportunity</span><span class="pill p-gray">Confidence: High</span></div></div>
+        <div class="cat">AI / Earnings</div>
+        <h3>Amazon vs. Meta: the AI-capex-ROI question just got its first real earnings-day answer, and it split down the middle</h3>
+        <p>Amazon's AWS reacceleration drove an 8%+ after-hours surge on $200.6B revenue (+20%); Meta missed EPS for the first time in six quarters as a $2.4B legal charge and $1.18B severance crushed FCF to $784M — its lowest in ~4 years — sending shares down as much as 10% AH. Combined hyperscaler 2026 capex still tracking ~$600-630B. <b>Durable beneficiary:</b> AWS/cloud infra. <b>At-risk narrative:</b> capex-heavy players without near-term monetization (Meta).</p>
+        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:86%"></i></span> <span class="sc">8.6</span></div><div class="sev"><span class="pill p-green">Opportunity</span><span class="pill p-red">Risk</span><span class="pill p-gray">Confidence: High</span></div></div>
       </div></div>
       <div class="item"><div class="n">4</div><div>
-        <div class="cat">Crypto / Regulation</div>
-        <h3>CLARITY Act odds falling to 44%; July 4 deadline missed; 3 weeks until August recess</h3>
-        <p>Odds fell from peak 73–75% → 47% (prior report) → 44% today. Three unresolved disputes: (1) crypto ethics/insider trading disclosures triggered by Trump's $1.4B crypto income; (2) Coinbase USDC yield ($1.35B/yr at risk); (3) third unresolved fight. Senate returns July 13. <b>Failure risk:</b> regulatory vacuum for XRP, ETH, stablecoins through 2027.</p>
-        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:82%"></i></span> <span class="sc">8.2</span></div><div class="sev"><span class="pill p-red">Downside Risk</span><span class="pill p-amber">Watch: Senate Jul 13</span></div></div>
+        <div class="cat">Defense / Earnings</div>
+        <h3>LMT, RTX, and NOC all post record backlogs and raise guidance in the same week</h3>
+        <p>Lockheed's backlog hit $230B (book-to-bill 3.2:1), RTX's hit $289B (+22% YoY, $119B defense), and Northrop's hit $104.7B ($20B in Q2 net awards alone). All three raised 2026 guidance. Golden Dome and NSSL awards ($1.75B in satellite contracts, NSSL ceiling tripled to $17B) continue independent of the Iran catalyst. <b>Opportunity:</b> defense is now a multi-driver thesis (budget + Golden Dome + Iran), not a single-catalyst trade.</p>
+        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:84%"></i></span> <span class="sc">8.4</span></div><div class="sev"><span class="pill p-green">Durable Opportunity</span><span class="pill p-gray">Confidence: High</span></div></div>
       </div></div>
       <div class="item"><div class="n">5</div><div>
-        <div class="cat">Crypto / Technical</div>
-        <h3>BTC tests 200-week MA ($62,667); weekly close is the make-or-break signal</h3>
-        <p>BTC reclaimed the 200WMA (+1.28% to $62,952) but sits only ~$285 above it; intraday low $61,538 broke it briefly. A weekly close above holds the bull structure toward $65,600–$70K; a close below is historically the most reliable bear-cycle trigger, opening $57–59K. <b>Stop:</b> exit on close below $61,500.</p>
-        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:80%"></i></span> <span class="sc">8.0</span></div><div class="sev"><span class="pill p-amber">Deadline: Fri close UTC</span><span class="pill p-gray">Confidence: Med-High</span></div></div>
+        <div class="cat">Crypto / ETF Flows</div>
+        <h3>BTC spot ETF flows turn positive for a third straight week even as BTC itself slides toward the 200-week MA</h3>
+        <p>July 30 alone brought +$233M net inflow (IBIT +$183.4M, 78.7% of flow); three consecutive positive weeks reverse an 8-week outflow streak, though YTD flows remain net -$5.2B. Meanwhile spot BTC fell 1.1% to $63,876, continuing to test the 200-week MA ($61K-$63K band) it broke below in late June for the first time since 2022. <b>Divergence to watch:</b> institutional ETF demand improving while spot price technicals stay fragile.</p>
+        <div class="foot"><div class="prio">Priority <span class="bar"><i style="width:79%"></i></span> <span class="sc">7.9</span></div><div class="sev"><span class="pill p-amber">Mixed Signal</span><span class="pill p-gray">Confidence: Med-High</span></div></div>
       </div></div>
     </div>
   </section>
@@ -414,22 +420,25 @@
     <div class="eyebrow">Section 4</div>
     <h2>Crypto Analysis</h2>
     <div class="cards c3">
-      <div class="panel"><div class="plbl">BTC / USDT</div><div class="big up">$62,952</div><p><span class="up">+1.28%</span> (24h)</p><p class="note src" style="margin-top:7px">H: $63,284 · L: $61,538</p><div class="pills-row" style="margin-top:8px"><span class="pill p-green">Above 200WMA</span></div></div>
-      <div class="panel"><div class="plbl">ETH / USDT</div><div class="big up">$1,754</div><p><span class="up">+0.71%</span> (24h)</p><p class="note src" style="margin-top:7px">H: $1,762 · L: $1,713</p></div>
-      <div class="panel"><div class="plbl">XRP / USDT</div><div class="big up">$1.0947</div><p><span class="up">+0.99%</span> (24h)</p><p class="note src" style="margin-top:7px">H: $1.1029 · L: $1.0692</p></div>
+      <div class="panel"><div class="plbl">BTC / USDT</div><div class="big down">$63,876</div><p><span class="down">-1.1%</span> (24h)</p><p class="note src" style="margin-top:7px">H: $65,411 · L: $63,606</p><div class="pills-row" style="margin-top:8px"><span class="pill p-amber">Testing 200WMA ($61-63K)</span></div></div>
+      <div class="panel"><div class="plbl">ETH / USDT</div><div class="big down">$1,888</div><p><span class="down">-1.6%</span> (24h)</p><p class="note src" style="margin-top:7px">H: $1,938 · L: $1,878</p></div>
+      <div class="panel"><div class="plbl">XRP / USDT</div><div class="big down">$1.073</div><p><span class="down">-0.7%</span> (24h)</p><p class="note src" style="margin-top:7px">H: $1.095 · L: $1.071</p></div>
     </div>
     <div class="tw" style="margin-top:12px">
       <table style="min-width:720px">
-        <thead><tr><th>Asset</th><th>Bull Case</th><th>Bear Case</th><th>Key Level</th><th>Stop</th></tr></thead>
+        <thead><tr><th>Asset</th><th>Bull Case</th><th>Bear Case</th><th>Key Level</th><th>Watch</th></tr></thead>
         <tbody>
-          <tr><td>BTC</td><td>Weekly close &gt;$62,667; ETF flows sustained; CLARITY Act passes → $65,600–$70K target</td><td>Hot CPI Jul 14 → breaks 200WMA → bear cycle target $57–59K</td><td>Support: $62,667 (200WMA), $61,538 (today low)</td><td class="num">$61,500</td></tr>
-          <tr><td>ETH</td><td>BTC macro recovery lifts ETH; CLARITY Act commodity clarity</td><td>No independent catalyst; underperforms BTC in risk-off</td><td>Support $1,713; Resistance $1,762, $1,800</td><td class="num">$1,680</td></tr>
-          <tr><td>XRP</td><td>Holds $1.05 support; ETF AUM →$2B; CLARITY Act certainty</td><td>CPI risk-off drops below $1.05 → $0.96 downside target; escrow supply overhang</td><td>Support: $1.05 key; Resistance $1.10, $1.15</td><td class="num">$1.03</td></tr>
+          <tr><td>BTC</td><td>ETF flows positive 3 straight weeks; exchange reserves at all-time low (~2.76M BTC); CLARITY Act pass</td><td>Weekly close below 200WMA (~$61-63K) confirms bear-cycle signal already triggered once in June</td><td>200WMA $61-63K band</td><td class="num">Weekly close</td></tr>
+          <tr><td>ETH</td><td>ETF flows strongest since April (three weeks of $100M+ inflows in mid-July)</td><td>July 24 saw a combined BTC+ETH outflow of $310.6M — momentum already choppy again</td><td>Support ~$1,878; Resistance ~$1,938</td><td class="num">Flow consistency</td></tr>
+          <tr><td>XRP</td><td>7 ETFs, $1.5B cumulative inflows, ~$1B AUM, 981.4M XRP locked; Ripple/SEC matter fully resolved, classified a "utility-based commodity"</td><td>CLARITY Act failure prolongs regulatory ambiguity for exchange/custody buildout; daily ETF flows choppy</td><td>Support ~$1.00-1.05; Resistance ~$1.10-1.13</td><td class="num">CLARITY Act vote</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note"><b>BTC ETF Flows:</b> 10-day outflow streak ended July 2–3 ($221.7M inflow; Fidelity FBTC led +$165.96M). BlackRock IBIT turned positive July 5–6 (+$54.8M after 11 consecutive redemption sessions). June was the worst month on record — $4.5B outflows; YTD net approximately <b>-$5.4B</b>. Citi cut 12-month inflow forecast to zero. The streak ending is encouraging but requires sustained validation.</p>
-    <p class="note"><b>XRP ETF:</b> 7 spot XRP ETFs trading (Bitwise, Canary, Franklin Templeton, Grayscale and others); combined AUM ~$1B and building. XRP ETF approval confirmed. Watch weekly flow rate for acceleration toward $2B AUM.</p>
+    <p class="note"><b>BTC ETF flows:</b> July 30 daily inflow of +$233M (IBIT +$183.4M, FBTC +$15.5M, BITB +$20.7M) capped a third consecutive positive week, reversing an 8-week outflow streak that started the month. Total BTC ETF AUM ~$78.76B; IBIT lifetime cumulative inflows ~$60.35B. YTD flows remain net negative ~-$5.2B — the recovery is real but has not offset the year's damage.</p>
+    <p class="note"><b>ETH ETF flows:</b> Best stretch since April — $105M (7/13-17), $196.4M (7/14-21), $103.9M (week ending 7/24) — before a combined BTC+ETH outflow of $310.6M on July 24 interrupted the streak. Treat as improving but not yet a clean trend.</p>
+    <p class="note"><b>Stablecoins:</b> Total market cap ~$313B (USDT $184.7B/59% share, USDC $73.8B/24%). USDC has overtaken USDT in transaction volume (~70% vs. ~25% of H1 2026 adjusted volume) even as USDT leads in outstanding supply. Record $1.79T stablecoin volume in June. GENIUS Act turned one year old July 18; OCC/FDIC/Treasury/FinCEN/OFAC/NCUA are still finalizing implementing rules — OCC has set a $5M capital floor and FDIC confirmed no deposit insurance applies to stablecoin holdings.</p>
+    <p class="note"><b>Regulation:</b> SEC Chair Atkins has three crypto rulemakings targeted for this window (token offerings, broker-dealer custody, a market-structure "Regulation Crypto"), moving independently of the Senate's CLARITY Act process. The CFTC separately proposed new crypto-linked market-structure rules today (July 31) plus a first-ever formal prediction-market framework (Reg 40.11/Appendix F) that would bar event contracts on war, terrorism, and assassinations — see Section 11.</p>
+    <p class="note warn" style="color:var(--amber)"><b>Data flag:</b> Iran ceasefire status could not be confirmed as current in this pass — the clearest recent reporting places the ceasefire's collapse in early-to-mid July with no subsequent normalization confirmed; treat as unresolved/stale and prioritize in the research queue.</p>
   </section>
 
   <!-- ===================== SECTION 5 — MACRO ANALYSIS ===================== -->
@@ -437,26 +446,27 @@
     <div class="eyebrow">Section 5</div>
     <h2>Macro Analysis</h2>
     <div class="cards c2">
-      <div class="panel"><div class="plbl">Fed Policy</div><p class="line"><b>Rate:</b> 3.50–3.75% (4th hold, June 17)<br><b>Chair:</b> Kevin Warsh (new)<br><b>Next FOMC:</b> July 28–29<br>Hike prob: <span class="down">19.4%</span> · Hold: 79.5% · Cut: 1%<br>9/24 officials favor ≥1 hike in 2026<br>Year-end rate range revised to 3.6–4.1%</p></div>
-      <div class="panel"><div class="plbl">Inflation &amp; CPI</div><p class="line"><b>May CPI:</b> +4.2% YoY, +0.5% MoM<br><b>Core CPI:</b> +2.9% YoY<br><b>Energy:</b> +23.5% YoY (Iran-driven)<br>Energy driving &gt;60% of monthly increases<br><span style="color:var(--gold)">June CPI: July 14 at 8:30 ET</span><br>Consensus unknown; Iran spike = upside risk</p></div>
-      <div class="panel"><div class="plbl">Rates &amp; Yields</div><p class="line"><b>10-Year Treasury:</b> 4.58%<br><b>30-Year mortgage:</b> 6.56%<br>Trend: rising (Iran/inflation channel)<br>Sustained &gt;4.5% compresses equity multiples, growth/tech, and real estate cap rates</p></div>
-      <div class="panel"><div class="plbl">Oil &amp; Energy</div><p class="line"><b>WTI:</b> $72–75/bbl (↑ from ~$68–69)<br><b>Brent:</b> ~$78 (+5% on July 8 alone)<br>Driver: Iran license revoked; Hormuz ships struck; naval blockade<br><span style="color:var(--gold)">Prediction market: Hormuz doesn't normalize until 2027</span></p></div>
+      <div class="panel"><div class="plbl">Fed Policy</div><p class="line"><b>Rate:</b> 3.50-3.75% (5th hold, Jul 28-29 FOMC)<br><b>Vote:</b> 9-3, first 3-way hawkish dissent since 2016 (Hammack, Kashkari, Logan)<br><b>Chair:</b> Kevin Warsh<br><b>Next FOMC:</b> Sep 15-16<br>Sept hike odds: CME 57.2% · Kalshi 54% · Polymarket ~53% (down from ~75% baseline)</p></div>
+      <div class="panel"><div class="plbl">Inflation</div><p class="line"><b>June CPI:</b> +3.5% YoY headline, core +2.6% YoY, core flat 0% m/m<br><b>June PCE (Fed's gauge):</b> headline +3.7% YoY (down from 4.1%); core +3.3% YoY (down from 3.4%)<br>Modest cooling trend, but Warsh says it did not weigh heavily on the hold decision — hawks focused on trend, not one print</p></div>
+      <div class="panel"><div class="plbl">Rates, Yields &amp; Dollar</div><p class="line"><b>10-Year Treasury:</b> 4.67%<br><b>2-Year:</b> ~4.26%<br>2s10s narrowly positive; 3m10y flipped negative again — classic late-cycle mixed signal<br><b>DXY:</b> ~100.12, -0.76% on the day<br><b>30yr mortgage:</b> 6.66%, highest in a year</p></div>
+      <div class="panel"><div class="plbl">Oil, Labor &amp; Credit</div><p class="line"><b>WTI:</b> ~$84 · <b>Brent:</b> ~$90 — on track for biggest monthly gain since March<br><b>Iran:</b> still active, no durable ceasefire confirmed<br><b>June jobs:</b> +57K (weak, vs. 115K consensus); unemployment 4.2%; participation 61.5% (lowest since Mar 2021)<br><b>IG credit spreads:</b> ~74bp (historically tight); private credit/subprime stress emerging as a watch item</p></div>
     </div>
     <div class="tw" style="margin-top:12px">
       <table>
-        <thead><tr><th>Asset Class</th><th>Iran / Oil Impact</th><th>Fed Hike Impact</th><th>Net Posture</th></tr></thead>
+        <thead><tr><th>Asset Class</th><th>Rate/Inflation Impact</th><th>Oil/Iran Impact</th><th>Net Posture</th></tr></thead>
         <tbody>
-          <tr><td>Bitcoin</td><td class="num" style="color:var(--muted)">Mixed (stagflation bear; dollar-hedge bull)</td><td class="down">Bearish</td><td style="color:var(--muted)">Neutral</td></tr>
+          <tr><td>Bitcoin</td><td class="down">Bearish (hike odds still elevated)</td><td style="color:var(--muted)">Neutral/mixed</td><td class="down">Negative-to-neutral</td></tr>
           <tr><td>Ethereum</td><td class="down">Bearish (risk asset)</td><td class="down">Bearish</td><td class="down">Negative</td></tr>
           <tr><td>XRP</td><td class="down">Bearish (risk asset)</td><td class="down">Bearish</td><td class="down">Negative</td></tr>
-          <tr><td>Stablecoins</td><td class="up">Positive (flight to stable)</td><td style="color:var(--muted)">Neutral</td><td class="up">Positive</td></tr>
-          <tr><td>Growth/Tech Stocks</td><td class="down">Bearish</td><td class="down">Bearish</td><td class="down">Negative</td></tr>
-          <tr><td>Defense</td><td class="up">Strongly Bullish</td><td style="color:var(--muted)">Neutral</td><td class="up">Strongly Positive</td></tr>
-          <tr><td>Real Estate</td><td class="down">Bearish (yields rising)</td><td class="down">Bearish</td><td class="down">Negative</td></tr>
-          <tr><td>Small Biz Acquisitions</td><td class="down">Bearish (costs)</td><td class="down">Bearish</td><td class="down">Negative</td></tr>
+          <tr><td>Stablecoins</td><td style="color:var(--muted)">Neutral</td><td class="up">Positive (flight to stable)</td><td class="up">Positive</td></tr>
+          <tr><td>Growth/Tech Stocks</td><td style="color:var(--muted)">Mixed (cooling PCE helps)</td><td class="down">Bearish (energy cost)</td><td style="color:var(--muted)">Mixed</td></tr>
+          <tr><td>Defense</td><td style="color:var(--muted)">Neutral</td><td class="up">Strongly Bullish</td><td class="up">Strongly Positive</td></tr>
+          <tr><td>Real Estate</td><td class="down">Bearish (mortgage rates rising)</td><td class="down">Bearish</td><td class="down">Negative</td></tr>
+          <tr><td>Small Biz Acquisitions</td><td class="down">Bearish (SBA rates ~9-11.5%)</td><td class="down">Bearish (input costs)</td><td class="down">Negative</td></tr>
         </tbody>
       </table>
     </div>
+    <p class="note"><b>Global macro risks:</b> US-Iran confrontation remains dominant; new US tariffs on European autos/steel disrupting supply chains; Ukraine war described as in a "critical phase"; Venezuela humanitarian crisis also flagged. None show signs of near-term resolution.</p>
   </section>
 
   <!-- ===================== SECTION 6 — PUBLIC MARKETS ===================== -->
@@ -464,21 +474,21 @@
     <div class="eyebrow">Section 6</div>
     <h2>Public Markets Analysis</h2>
     <div class="cards c2">
-      <div class="panel"><div class="plbl">S&amp;P 500 (Jul 8 Close)</div><div class="big"><span class="down">7,482.71</span> <span style="font-size:14px" class="down">-0.28%</span></div><p>Prior: 7,503.85 · Trend: Lower</p></div>
-      <div class="panel"><div class="plbl">Nasdaq (Jul 8 Est.)</div><div class="big"><span class="up">~25,870</span> <span style="font-size:14px" class="up">+0.20%</span></div><p>Prior: 25,818 · Partial recovery from -1.16%</p></div>
-      <div class="panel"><div class="plbl">VIX</div><div class="big">~16.2 <span style="font-size:13px;color:var(--muted)">(est., prior 15.57)</span></div><p>Iran escalation adding risk premium</p></div>
-      <div class="panel"><div class="plbl">Key Divergence</div><p>Nasdaq +0.2% while Dow -1% (Jul 8) — narrow mega-cap tech leadership. Breadth divergence is a warning signal. Energy/Defense leading; Consumer Discretionary trailing.</p></div>
+      <div class="panel"><div class="plbl">S&amp;P 500</div><div class="big"><span class="up">~7,437.6</span> <span style="font-size:14px" class="up">+1.7%</span></div><p>Prior: 7,316.15 · Sharp rebound from Jul 29 rout</p></div>
+      <div class="panel"><div class="plbl">Nasdaq Composite</div><div class="big"><span class="up">~25,122</span> <span style="font-size:14px" class="up">+2.8%</span></div><p>Prior: 24,442.94 · Nasdaq-100 +3.4% intraday on earnings</p></div>
+      <div class="panel"><div class="plbl">VIX</div><div class="big">~18.0 <span style="font-size:13px;color:var(--muted)">(prior 20.66)</span></div><p>Vol crush on cooling PCE + AMZN beat</p></div>
+      <div class="panel"><div class="plbl">Key Divergence</div><p>Jul 29 Dow -1,100pts (Fed dissent + yield spike + oil) fully reversed Jul 30-31. AMZN +8%+ AH vs AAPL -7.3% premarket on soft guidance — breadth remains narrow and earnings-driven, not broad-based.</p></div>
     </div>
     <div class="tw" style="margin-top:12px">
       <table>
         <thead><tr><th>Sector</th><th>Posture</th><th>Catalyst</th><th>Key Names</th></tr></thead>
         <tbody>
-          <tr><td>Energy</td><td class="up">Bullish</td><td>Iran/Hormuz oil spike; Brent +5%</td><td class="num">XOM, CVX, PSX</td></tr>
-          <tr><td>Defense</td><td class="up">Strongly Bullish</td><td>Iran + $839B budget + 17% YoY spending</td><td class="num">LMT, RTX, NOC, GD, KTOS</td></tr>
-          <tr><td>Technology / AI</td><td class="up">Defensively Strong</td><td>NVIDIA-OpenAI deal; MSFT AI $37B run rate</td><td class="num">NVDA, MSFT, ANET, VRT</td></tr>
-          <tr><td>Financials</td><td style="color:var(--muted)">Mixed</td><td>Higher-for-longer rates benefit NIMs</td><td class="num">JPM, GS, BAC</td></tr>
-          <tr><td>Consumer Disc.</td><td class="down">Bearish</td><td>Oil = consumer tax; Iran uncertainty</td><td style="color:var(--muted)">Underweight</td></tr>
-          <tr><td>REITs</td><td class="down">Bearish</td><td>Yields rising; cap rate pressure</td><td style="color:var(--muted)">Underweight</td></tr>
+          <tr><td>Defense</td><td class="up">Strongly Bullish</td><td>Record backlogs, raised guidance, Golden Dome/NSSL awards</td><td class="num">LMT, RTX, NOC, KTOS, AVAV</td></tr>
+          <tr><td>Cloud / AI Infra</td><td class="up">Bullish</td><td>AWS reacceleration; MSFT FQ4 beat</td><td class="num">AMZN, MSFT</td></tr>
+          <tr><td>AI Capex-Heavy / Social</td><td class="down">Bearish</td><td>Meta FCF collapse, EPS miss; capex-ROI scrutiny</td><td class="num">META</td></tr>
+          <tr><td>Semiconductors</td><td class="down">Bearish</td><td>SK Hynix miss triggered broader chip selloff; China low-cost model (Kimi K3) reignited overspend debate</td><td class="num">NVDA, AMD</td></tr>
+          <tr><td>Energy</td><td class="up">Bullish</td><td>Iran/Hormuz risk premium; WTI/Brent near cycle highs</td><td class="num">XOM, CVX</td></tr>
+          <tr><td>REITs / Rate-Sensitive</td><td class="down">Bearish</td><td>10yr at 4.67%; mortgage rates at a 1-year high</td><td style="color:var(--muted)">Underweight</td></tr>
         </tbody>
       </table>
     </div>
@@ -488,21 +498,24 @@
   <section>
     <div class="eyebrow">Section 7</div>
     <h2>AI Sector Analysis</h2>
-    <div class="panel g"><p><span class="up">▲ NVIDIA + OpenAI: 10GW / $100B</span> — OpenAI to deploy at least 10 gigawatts of AI data centers using NVIDIA systems. NVIDIA investing up to $100B progressively as each GW deploys. First GW on Vera Rubin platform H2 2026. 10GW ≈ 2× current US data center capacity. <b>Largest confirmed AI infrastructure commitment in history.</b></p></div>
+    <div class="cards c2">
+      <div class="panel g"><div class="plbl">Amazon (Bull Signal)</div><p>Rev $200.61B (+20% YoY) beat; AWS reaccelerated for the 5th straight quarter; stock soared &gt;8% AH. TTM FCF still negative (-$7.6B) on ~$200B committed 2026 AI capex, but the growth reacceleration is the strongest evidence yet that infra spend is converting to revenue.</p></div>
+      <div class="panel" style="border-left:3px solid var(--red)"><div class="plbl">Meta (Bear Signal)</div><p>Rev $60.8B (+28%) beat, but EPS $6.18 missed $7.22 est — first miss in 6 quarters — on a $2.4B legal charge + $1.18B severance. FCF collapsed to $784M, lowest in ~4 years. Zuckerberg floated a new cloud-computing business citing "well above cost" inbound demand for spare capacity — itself a tell that capex has outrun internal use cases.</p></div>
+    </div>
     <div class="tw" style="margin-top:12px">
-      <table style="min-width:720px">
+      <table style="min-width:760px">
         <thead><tr><th>Theme</th><th>Signal</th><th>Durable?</th><th>Beneficiaries</th></tr></thead>
         <tbody>
-          <tr><td>AI Training Infra</td><td>NVIDIA-OpenAI $100B deal; Microsoft $37B AI run rate +123% YoY</td><td class="up">Yes — multi-year locked</td><td class="num">NVDA, MSFT, data center REITs</td></tr>
-          <tr><td>Power Demand</td><td>10GW = ~10 nuclear reactors equivalent; power is the binding constraint</td><td class="up">Yes — decade-long buildout</td><td class="num">CEG, VST, AES, NRG; copper (FCX)</td></tr>
-          <tr><td>Enterprise AI</td><td>Microsoft Frontier Company: $2.5B unit, 6,000 engineers embedded with clients</td><td class="up">Yes — RPO $627B</td><td class="num">MSFT, CRM, NOW</td></tr>
-          <tr><td>DeepSeek Inference Chip</td><td>Custom chip in development; NVDA -2% on news; Huawei Ascend already in use</td><td class="down">Risk — multi-year</td><td>Reduces NVDA's China inference TAM</td></tr>
-          <tr><td>AI Software Apps</td><td>Revenue lagging hype; most enterprise spend going to infrastructure</td><td style="color:var(--amber)">Overhyped near-term</td><td>Selective; avoid pure-play AI SaaS at &gt;30x revenue</td></tr>
+          <tr><td>Hyperscaler Capex</td><td>GOOGL raised to $195-205B; MSFT ~$190B (FY27 watch: $255-260B); META $130-145B; AMZN ~$200B — combined ~$600-630B 2026</td><td style="color:var(--amber)">Contested — market now questioning ROI timeline</td><td class="num">NVDA, MSFT, AMZN (infra); power/cooling</td></tr>
+          <tr><td>Power / Grid Constraint</td><td>PJM will curtail power to data centers ≥50MW starting Jun 2027; 2 emergency grid alerts this month; demand 23GW(2023)→42GW(2026)</td><td class="up">Yes — multi-year buildout</td><td class="num">CEG, VST, AES, NRG; copper (FCX)</td></tr>
+          <tr><td>Semiconductors</td><td>NVDA ~$196.84 (+13% YTD, lagging AMD's ~150%); SK Hynix miss triggered chip-wide selloff; Kospi hit circuit breakers 2 days</td><td class="down">Volatile — one earnings miss anywhere in the chain moves the whole complex</td><td>NVDA, AMD; risk from China's low-cost models</td></tr>
+          <tr><td>China Competition / Export Controls</td><td>Moonshot AI's "Kimi K3" reignited overspend debate; NVDA began limited H200 shipments to China under tight compliance controls (partisan controversy)</td><td class="down">Risk — multi-year</td><td>Pressures NVDA's China TAM narrative</td></tr>
+          <tr><td>Enterprise AI Adoption</td><td>MSFT deployed 6,000 employees under a $2.5B adoption initiative; Gartner projects AI spend to $2.59T in 2026 (+47% YoY)</td><td class="up">Yes</td><td class="num">MSFT, CRM, NOW</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note"><b>Regulatory note:</b> GPT-5.6 full public launch delayed — US government requested early access and additional oversight. Sam Altman proposed transferring ~5% of OpenAI equity (~$42.6B) to a US government-linked vehicle. Both signal extraordinary strategic government attention on frontier AI. OpenAI valuation: $852B.</p>
-    <p class="note"><b>Second-order beneficiaries of 10GW AI buildout:</b> Power utilities with nuclear licenses (CEG, VST), copper miners (FCX, SCCO), liquid cooling (Vertiv VRT), networking (ANET), fiber optic (LUMN), memory (Samsung, SK Hynix).</p>
+    <p class="note"><b>Overhyped vs. durable:</b> The Amazon/Meta split is the clearest real-time test case yet — infrastructure with a monetization path (AWS) is being rewarded; infrastructure spend without one (Meta's core apps) is being punished, even amid strong top-line growth. Bear case: market P/E10 sits at 39.8 vs. 17.7 historical average. Bull case: unlike dot-com, the leaders remain genuinely profitable — NVDA delivered $215.94B FY2026 revenue (+65% YoY).</p>
+    <p class="note"><b>Second-order beneficiaries:</b> Power utilities with dispatchable/nuclear capacity (CEG, VST), copper (FCX), liquid cooling (VRT), networking (ANET) — all still exposed to the capex thesis regardless of which hyperscaler wins the ROI argument.</p>
   </section>
 
   <!-- ===================== SECTION 8 — DEFENSE ===================== -->
@@ -510,26 +523,25 @@
     <div class="eyebrow">Section 8</div>
     <h2>Defense and Aerospace Analysis</h2>
     <div class="cards c2">
-      <div class="panel"><div class="plbl">FY2026 Budget</div><div class="big">$839.2B</div><p>+17% YoY defense spending</p></div>
-      <div class="panel"><div class="plbl">Golden Dome</div><div class="big">$13.4B <span style="font-size:13px" class="up">funded</span></div><p>Integrated missile defense</p></div>
-      <div class="panel"><div class="plbl">Space Force</div><p class="line"><b>$36.1B</b> funded<br>11 NSSL missions<br>$4B missile warning/tracking</p></div>
-      <div class="panel"><div class="plbl">Iran Catalyst</div><p class="line">US struck ~90 Iranian targets Jul 8<br>Naval blockade reinstated<br>Every exchange = new contract demand</p></div>
+      <div class="panel"><div class="plbl">RTX Backlog</div><div class="big">$289B <span style="font-size:13px" class="up">+22% YoY</span></div><p>$119B defense + $170B commercial; $43B new bookings this quarter</p></div>
+      <div class="panel"><div class="plbl">Lockheed Backlog</div><div class="big">$230B <span style="font-size:13px" class="up">record</span></div><p>+$65B Q2 orders; book-to-bill 3.2:1</p></div>
+      <div class="panel"><div class="plbl">Northrop Backlog</div><div class="big">$104.7B <span style="font-size:13px" class="up">record</span></div><p>$20.0B net awards in Q2 alone</p></div>
+      <div class="panel"><div class="plbl">Golden Dome</div><p class="line">Gen. Guetlein confirmed Jul 17 to lead program<br>Total program could exceed <b>$175B</b><br>$1.75B in dual satellite contracts Jul 14</p></div>
     </div>
     <div class="tw" style="margin-top:12px">
-      <table style="min-width:720px">
-        <thead><tr><th>Program</th><th>Funding</th><th>Contractors</th><th>Iran Demand Driver</th></tr></thead>
+      <table style="min-width:760px">
+        <thead><tr><th>Program</th><th>Award / Ceiling</th><th>Contractors</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>Golden Dome</td><td class="num" style="color:var(--blue)">$13.4B</td><td class="num">RTX, NOC, L3Harris</td><td>Missile intercepts; integrated defense</td></tr>
-          <tr><td>Space Force / NSSL</td><td class="num" style="color:var(--blue)">$36.1B</td><td class="num">ULA, SpaceX, NOC</td><td>ISR satellites; missile warning</td></tr>
-          <tr><td>F-47, B-21, Sentinel ICBM</td><td style="color:var(--blue)">Funded</td><td class="num">LMT, NOC</td><td>Strategic deterrence</td></tr>
-          <tr><td>Precision Munitions</td><td style="color:var(--blue)">High demand / burn</td><td class="num">RTX (PAC-3, Hellfire), LMT</td><td>Direct consumption in Iran strikes</td></tr>
-          <tr><td>Compass Call (EW)</td><td class="num" style="color:var(--blue)">$474M (2 aircraft)</td><td class="num">L3Harris, Boeing</td><td>Electronic warfare vs Iran</td></tr>
-          <tr><td>Drones / ISR</td><td style="color:var(--blue)">Growing rapidly</td><td class="num">KTOS, AVAV, AeroVironment</td><td>Iran theater; low-cost munitions</td></tr>
-          <tr><td>Cyber / EW</td><td style="color:var(--blue)">Embedded throughout</td><td class="num">CRWD, PANW, Booz Allen</td><td>Iranian cyber retaliation expected</td></tr>
+          <tr><td>Golden Dome Satellites</td><td class="num" style="color:var(--blue)">$955M / $798M</td><td class="num">L3Harris (18 sats) / Sierra Space (18 sats)</td><td>Refines prior "L3Harris 18 satellites" line — $955M specifically</td></tr>
+          <tr><td>NSSL Phase 3 Lane 1</td><td class="num" style="color:var(--blue)">Ceiling tripled to $17B</td><td class="num">SpaceX, Impulse Space (new prime)</td><td>Total NSSL program ceiling now $30B</td></tr>
+          <tr><td>SpaceX SBST Launches</td><td class="num" style="color:var(--blue)">$1.6B</td><td class="num">SpaceX</td><td>18 Falcon 9 launches through 2027, sensing/targeting sats</td></tr>
+          <tr><td>Missile Range Instrumentation</td><td class="num" style="color:var(--blue)">$2B</td><td class="num">TOTE Services, Hanwha Philly Shipyard</td><td>Two tracking ships replacing 1960s-era vessels</td></tr>
+          <tr><td>Counter-Drone</td><td style="color:var(--blue)">Unveiled Jul 20</td><td class="num">Lockheed Martin (MORFIUS X-Rotor)</td><td>Neutralizes 50+ drones per flight, reusable</td></tr>
+          <tr><td>Small Drone Fielding</td><td class="num" style="color:var(--blue)">$1.1B</td><td style="color:var(--blue)">Pentagon initiative</td><td>300,000+ one-way-attack drones targeted by 2027</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note"><b>Risk:</b> Some defense contractors already at 20–25x forward earnings with elevated Iran risk premium. A ceasefire surprise would be a sharp sector reversal. Production capacity for precision munitions (PAC-3, Hellfire) is at maximum; delivery timelines extending — a supply-side constraint that limits short-term revenue recognition even with high orders.</p>
+    <p class="note"><b>Geopolitical backdrop:</b> Trump and Netanyahu reportedly discussed "all paths" on Iran's nuclear program, including force; a joint US-Saudi strike hit pro-Iranian militias in Iraq this week; no ceasefire confirmed. NATO/Canada allied defense spending ~$634B (2.53% of GDP) in 2026, with a new 5.0%-of-GDP-by-2035 target agreed. <b>Risk:</b> LMT/RTX/NOC are increasingly treated as "bond proxies" on record backlogs — a genuine Iran de-escalation would remove one leg of the thesis, though budget and Golden Dome demand would remain.</p>
   </section>
 
   <!-- ===================== SECTION 9 — REAL ESTATE ===================== -->
@@ -537,22 +549,22 @@
     <div class="eyebrow">Section 9</div>
     <h2>Real Estate Analysis</h2>
     <div class="cards c2">
-      <div class="panel"><div class="plbl">30-Year Fixed</div><div class="big">6.56% <span style="font-size:13px" class="up">↓ from 6.635%</span></div><p>15yr: 5.893% · Jumbo: 6.558%</p><p class="warn" style="color:var(--amber)">Iran escalation may reverse this gain</p></div>
-      <div class="panel"><div class="plbl">Housing Market</div><p class="line"><b>Median price:</b> ~$429,300 (+1.3% YoY)<br><b>Inventory:</b> ~4.5 months supply<br>Goldman: +0.8% Dec/Dec forecast<br>"Tepid" H2 demand</p></div>
+      <div class="panel"><div class="plbl">30-Year Fixed</div><div class="big">6.66% <span style="font-size:13px" class="down">↑ from 6.58%</span></div><p>15yr: 6.04% (from 5.96%) · Highest 30yr level in a year</p></div>
+      <div class="panel"><div class="plbl">Housing Market (June, latest hard data)</div><p class="line"><b>Median price:</b> $440,600 (+1.8% YoY)<br><b>Inventory:</b> 1.56M units, 4.6 months' supply<br>Foreclosure filings +21% YoY H1 2026; GA/FL among highest-rate states</p></div>
     </div>
     <div class="tw" style="margin-top:12px">
-      <table style="min-width:640px">
+      <table style="min-width:680px">
         <thead><tr><th>Strategy</th><th>Posture</th><th>Notes</th></tr></thead>
         <tbody>
-          <tr><td>STR / Vacation Rental</td><td class="down">Caution</td><td>Cap rates compressed with 6.5%+ financing; most new acquisitions cash-flow negative without significant equity/cash</td></tr>
-          <tr><td>Lake/Mountain (SE)</td><td style="color:var(--muted)">Neutral</td><td>Lake Lanier, Allatoona near 30080 holding value; buyer pool narrowing; patient cash buyers have leverage</td></tr>
-          <tr><td>Small Multifamily (2–4)</td><td class="down">Caution</td><td>Cap rate compression at $429K median + 6.5% rates = negative cash flow in most markets without legacy purchase</td></tr>
-          <tr><td>Owner-Occupied 2nd Home</td><td style="color:var(--amber)">Selective</td><td>Attractive if equity/cash; 10% down jumbo at 6.56% is expensive but soft markets offer inventory leverage</td></tr>
-          <tr><td>Atlanta MSA (30080)</td><td class="up">Relative Strength</td><td>Employment base (Delta, Fortune 500, tech migration) supports demand; Smyrna/Vinings corridor near Cumberland employment</td></tr>
+          <tr><td>STR / Vacation Rental</td><td class="down">Caution</td><td>Occupancy ~50% (down from ~57% in 2024) as post-COVID oversupply markets find equilibrium; ADR still resilient +1-2%/yr</td></tr>
+          <tr><td>Multifamily (2-4 unit)</td><td class="down">Caution</td><td>Cap rates flat at 5.7% for 7 straight quarters; vacancy readings conflict widely (4.8%-8.8% across CBRE/CoStar/Apartment List) — rent growth soft, -1.1% YoY per Apartment List</td></tr>
+          <tr><td>Atlanta MSA (30080)</td><td class="down">Softening</td><td>Metro inventory +9.8% YoY to 34,000+ listings (3rd-highest increase among top-40 metros); median price flat YoY ~$410,000; market rebalancing toward buyers</td></tr>
+          <tr><td>Owner-Occupied 2nd Home</td><td style="color:var(--amber)">Selective</td><td>Rate rise to 6.66% raises the bar; soft/rebalancing markets offer buyer leverage for patient cash-heavy buyers</td></tr>
+          <tr><td>CRE / Multifamily Refi</td><td class="down">Watch</td><td>~$875B in CRE/multifamily mortgages mature in 2026, many originated at lower rates — refinancing equity-gap risk; banks eased CRE underwriting in Jan 2026 SLOOS for the first time since Q2 2022</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note"><b>Key risk:</b> Hot CPI July 14 → 30yr rates spike toward 6.8–7.0% → housing market further freezes. West Coast and Sun Belt seeing price declines from construction glut. Rising insurance premiums in Southeast (climate repricing) and Georgia property tax increases are emerging headwinds for existing holders.</p>
+    <p class="note"><b>Key risk:</b> MBA's Mortgage Credit Availability Index fell to 105.8 in June — the most significant tightening move of 2026 — driven by a pullback in Government/FHA-VA high-LTV, low-credit programs. Georgia insurance premiums (~$2,640/yr statewide, ~$3,420/yr Atlanta) rose 8.6% in 2025 and are up ~39.7% cumulatively since 2021, with another ~10% increase projected for 2026 on Hurricane Helene inland-flood loss pressure — a compounding headwind on top of rate-driven affordability strain.</p>
   </section>
 
   <!-- ===================== SECTION 10 — BUSINESS ACQUISITION ===================== -->
@@ -560,19 +572,18 @@
     <div class="eyebrow">Section 10</div>
     <h2>Business Acquisition Analysis</h2>
     <div class="tw">
-      <table style="min-width:720px">
-        <thead><tr><th>Category</th><th>Posture</th><th>Thesis</th><th>Multiple (EBITDA)</th></tr></thead>
+      <table style="min-width:760px">
+        <thead><tr><th>Category</th><th>Posture</th><th>Thesis</th><th>Multiple</th></tr></thead>
         <tbody>
-          <tr><td>HVAC / Plumbing / Electrical</td><td class="up">Buy</td><td>Non-discretionary; labor shortage = pricing power; essential in Atlanta heat; recession-resistant</td><td class="num">2.5–3.5×</td></tr>
-          <tr><td>Defense Sub-contractors (&lt;$5M rev)</td><td class="up">Buy</td><td>Iran + $839B budget = long-term contract pipeline; off-market; few buyers in this segment</td><td class="num">3–5×</td></tr>
-          <tr><td>Healthcare Services</td><td class="up">Buy</td><td>Non-discretionary; insurance reimbursements stable; dental, optometry, PT</td><td class="num">3–5×</td></tr>
-          <tr><td>Commercial Cleaning / Facilities</td><td class="up">Buy</td><td>Stable cash flows; recession-resistant; scalable regionally with minimal capex</td><td class="num">2–3×</td></tr>
-          <tr><td>Restaurant / Retail</td><td class="down">Avoid</td><td>Oil → food/delivery cost pressure; consumer discretionary weakness; structural Amazon threat</td><td style="color:var(--muted)">—</td></tr>
-          <tr><td>Transportation / Logistics</td><td class="down">Avoid</td><td>Oil price volatility; margin compression; no pricing protection</td><td style="color:var(--muted)">—</td></tr>
+          <tr><td>HVAC / Plumbing / Electrical</td><td class="up">Buy</td><td>~800 companies acquired since 2022; Apollo's Apex Service Partners deal (~$2B/~$10B valuation, May 2026) shows top-of-market pricing for scaled platforms; non-discretionary demand</td><td class="num">4-6x entry / 7-10x premium platforms</td></tr>
+          <tr><td>Healthcare Services</td><td class="up">Buy</td><td>Non-discretionary, insurance-reimbursement stability; highest multiples in lower-middle-market home-services-adjacent space</td><td class="num">5-9x EBITDA</td></tr>
+          <tr><td>Commercial Cleaning / Facilities</td><td class="up">Buy</td><td>Recurring, contracted revenue commands a premium over project-heavy books</td><td class="num">3-4x (project) / 6-7x (85%+ contracted)</td></tr>
+          <tr><td>Defense Sub-contractors (&lt;$5M rev)</td><td class="up">Buy</td><td>Record prime-contractor backlogs (LMT/RTX/NOC) cascade into sub-tier demand; still off-market, few buyers</td><td class="num">3-5x</td></tr>
+          <tr><td>Restaurant / Retail</td><td class="down">Avoid</td><td>Commodity inflation ~7% in 2026 (coffee +30%, beef +17%); 60-80% of acquired restaurants underperform seller projections within 18 months</td><td class="num">as low as 1.4x SDE (distressed)</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note"><b>Financing environment:</b> SBA 7(a) at ~9–10% effective rate; seller financing essential (push for 20–30% seller note at 4–5%). Multiples slightly compressed from 2024: 2.5–3.5× vs. 3–4×. Distressed seller pool rising — PPP/EIDL recipients from 2020–2021 facing full repayment + higher operating costs. <b>Opportunity:</b> Seller-financed deals with below-market seller notes are effectively subsidized acquisitions in this rate environment.</p>
+    <p class="note"><b>Financing environment:</b> WSJ Prime ~6.75%; SBA 7(a) variable at Prime + 2.25-4.75% (~9-11.5% APR effective), fixed caps 9.5-13.5%. Overall small-business median sits at 2.6-2.7x SDE (BizBuySell Q1 2026, ~9,500 closed deals). Seller financing typically 10-30% of price at 6-9%, 5-7yr amortization — increasingly used as deal grease alongside non-bank/private-credit capital now reaching smaller deals. <b>Structural tailwind:</b> the "Silver Tsunami" — 6M SMBs projected to change hands by 2035 (~$5T cumulative value), fewer than half with formal succession plans. <b>Mid-market signal:</b> H1 2026 deal volume +5%, deal value +14% YoY even as broader PE deal count fell 34% — capital concentrating into fewer, higher-conviction bets.</p>
   </section>
 
   <!-- ===================== SECTION 11 — PREDICTION MARKETS ===================== -->
@@ -580,38 +591,57 @@
     <div class="eyebrow">Section 11</div>
     <h2>Polymarket and Prediction Market Signals</h2>
     <div class="tw">
-      <table style="min-width:820px">
-        <thead><tr><th>Market</th><th>Platform</th><th>Current Odds</th><th>24h Change</th><th>Investment Implication</th><th>Confidence</th></tr></thead>
+      <table style="min-width:860px">
+        <thead><tr><th>Market</th><th>Platform</th><th>Current Odds</th><th>Recent Change</th><th>Investment Implication</th><th>Confidence</th></tr></thead>
         <tbody>
-          <tr><td>CLARITY Act signed into law 2026?</td><td>Polymarket</td><td class="num">44–45% YES</td><td class="num down">-3% (from 47%)</td><td>Bearish for institutional crypto deployment 2026; each point below 40% = incremental de-risk signal</td><td class="up">High</td></tr>
-          <tr><td>Fed hike 25bps at Jul 28–29?</td><td>Kalshi/Poly</td><td class="num">19.4% YES</td><td class="num up">+4% est. (oil/Iran)</td><td>If crosses 30%, expect BTC -10%, Nasdaq -5% preemptive; long-dated bonds bearish</td><td class="up">High</td></tr>
-          <tr><td>Fed no-change Jul FOMC</td><td>Kalshi</td><td class="num">79.5%</td><td class="down">Slight decline</td><td>Baseline; further Iran/oil escalation narrows this toward 70%</td><td class="up">High</td></tr>
-          <tr><td>Strait of Hormuz normalizes in 2026?</td><td>Polymarket</td><td class="num">~15% YES</td><td class="down">Declining</td><td>Structural oil disruption priced in; long energy for 12+ months justified</td><td style="color:var(--amber)">Medium</td></tr>
-          <tr><td>Nasdaq-100 above 30,000 by end 2026?</td><td>Polymarket</td><td class="num">~45–50%</td><td style="color:var(--muted)">—</td><td>Market not pricing full AI bull recovery; NVDA-OpenAI deal is upside catalyst</td><td style="color:var(--amber)">Medium</td></tr>
+          <tr><td>CLARITY Act signed into law 2026?</td><td>Polymarket</td><td class="num">~28% YES</td><td class="num down">Round-tripped 43%→38%→28% this month</td><td>Failure risk still material into the Aug 7-10 recess deadline; each point below 30% is an incremental crypto de-risk signal</td><td class="up">High</td></tr>
+          <tr><td>Fed hike Sep 15-16 FOMC?</td><td>Kalshi/Poly/CME</td><td class="num">53-57% YES</td><td class="num down">Down from ~75% baseline, still historically elevated</td><td>A cross above 60% would likely trigger renewed equity/crypto de-risking despite this week's rally</td><td class="up">High</td></tr>
+          <tr><td>Fed hike at Jul 28-29 FOMC (resolved)</td><td>Polymarket/CME</td><td class="num">Resolved: No hike</td><td class="num up">Spiked 5x pre-meeting (5%→25-27%)</td><td>Confirms markets are now genuinely pricing hawkish tail risk, not dismissing it as noise</td><td class="up">High</td></tr>
+          <tr><td>CFTC prediction-market framework (Reg 40.11/Appendix F)</td><td>CFTC rulemaking</td><td style="color:var(--muted)">Proposed Jul 31</td><td style="color:var(--muted)">New</td><td>Would formally define "gaming" and prohibit event contracts on war/terrorism/assassinations — a structural change to what Polymarket/Kalshi can list</td><td style="color:var(--amber)">Medium</td></tr>
+          <tr><td>Nasdaq-100 above 30,000 by end 2026?</td><td>Polymarket</td><td class="num">~45-50%</td><td style="color:var(--muted)">Roughly stable</td><td>Market still not pricing a full AI-bull recovery scenario even after this week's rally</td><td style="color:var(--amber)">Medium</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note"><b>Key divergence signal:</b> Consensus equity analysts do NOT price a Fed hike; Kalshi/Polymarket at 19.4% hike probability. If CPI prints hot July 14, equity markets face a sharp repricing not in analyst models. This gap is a high-value trading signal — the prediction market is telling you the analyst community is complacent.</p>
-    <p class="note"><b>Market activity:</b> Kalshi hit $30B+ trading volume in June 2026 (FIFA World Cup driven); $1B/day. Polymarket holds CFTC license; now legal in all 50 US states. Platform accuracy &gt;94% correct a full month before outcomes known. Both platforms are increasingly treated as real-time sentiment indicators by institutional desks.</p>
+    <p class="note"><b>Key divergence signal:</b> Equity markets rallied hard into July 30-31 even as prediction markets kept September hike odds at 53-57% — a genuinely mixed signal rather than a clean "risk-on" read. The gap between a still-elevated hike probability and a euphoric AI-earnings-driven equity bounce is itself tradeable information.</p>
+    <p class="note"><b>Regulatory note:</b> The CFTC's same-day (Jul 31) proposal to formalize a prediction-market regulatory framework is a new development worth tracking — it would legitimize the asset class further (a positive for Polymarket/Kalshi as institutional-grade venues) while narrowing the content they can list around war/conflict outcomes, ironically right as Iran-related contracts have been among the most closely watched markets this year.</p>
   </section>
 
   <!-- ===================== SECTION 12 — CONGRESSIONAL TRADES ===================== -->
   <section>
     <div class="eyebrow">Section 12</div>
     <h2>Congressional Trade Disclosures</h2>
+
+    <h3 class="sub">12A. New Disclosures — Last 24-72 Hours</h3>
     <div class="tw">
-      <table style="min-width:820px">
-        <thead><tr><th>Member</th><th>Party/Chamber</th><th>Ticker</th><th>Action</th><th>Amount</th><th>Sector</th><th>Flag</th></tr></thead>
+      <table style="min-width:900px">
+        <thead><tr><th>Member</th><th>Party/Chmbr</th><th>Trade / Disclosed</th><th>Ticker</th><th>Action</th><th>Amount</th><th>Sector</th><th>Flag</th></tr></thead>
         <tbody>
-          <tr><td>Ro Khanna</td><td>D · House</td><td class="num">Multiple (~84 trades)</td><td>Mixed</td><td>Various</td><td>Technology / AI</td><td><span class="pill p-amber">Armed Services Committee</span></td></tr>
-          <tr><td>Neal P. Dunn</td><td>R · House</td><td class="num">RF (Regions Financial)</td><td class="up">Buy</td><td class="num">~$75,000</td><td>Financials</td><td><span class="pill p-gray">Energy &amp; Commerce Cmte</span></td></tr>
-          <tr><td>Julia Letlow</td><td>R · House</td><td>Various</td><td>Various</td><td>210+ late filings</td><td>Mixed</td><td><span class="pill p-red">STOCK Act Violation (210+ late)</span></td></tr>
-          <tr><td>4 Members (unidentified)</td><td>Mixed · Both</td><td class="num">GOOGL</td><td>Mixed</td><td>Various</td><td>Technology</td><td><span class="pill p-amber">DOJ antitrust case ongoing</span></td></tr>
+          <tr><td>Rep. Sam Liccardo</td><td>D · House</td><td>Jul 21 / late Jul</td><td class="num">NVDA</td><td>Sell (100 sh)</td><td class="num">$20,401-$20,865</td><td>Tech/AI semis</td><td><span class="pill p-gray">First trade since taking office</span></td></tr>
+          <tr><td>Sen. Alan Armstrong</td><td>R · Senate</td><td>Mar-Jun / Jul 24</td><td class="num">WMB + 700 trades</td><td>Mostly Sell</td><td class="num">$3.24M-$16.05M total</td><td>Energy/pipelines</td><td><span class="pill p-red">STOCK Act violation — 2+ months late</span></td></tr>
+          <tr><td>Rep. Dan Crenshaw</td><td>R · House</td><td>Apr 28/May 5 / late Jul</td><td class="num">META options</td><td>Buy then Sell</td><td class="num">~$15,000/leg</td><td>Tech</td><td><span class="pill p-red">Repeat STOCK Act violator</span></td></tr>
+          <tr><td>Rep. Laurel Lee (spouse)</td><td>R · House</td><td>~mid-Jun / late Jul</td><td class="num">NOK</td><td>Sell</td><td class="num">up to $50,000</td><td>Telecom/tech</td><td><span class="pill p-amber">Late disclosure (~2 wks)</span></td></tr>
+          <tr><td>6 House members</td><td>Mixed · House</td><td>Jun 15-21 / Jul 28</td><td class="num">SpaceX</td><td>Buy</td><td class="num">$83,000-$245,000 combined</td><td>Aerospace/Defense</td><td><span class="pill p-amber">5 of 6 on defense/oversight committees; timed to Jun 12 IPO</span></td></tr>
         </tbody>
       </table>
     </div>
-    <p class="note"><b>July 2026 month-to-date summary:</b> 51 members with disclosed activity; 15,088 individual trades tracked YTD. Most active filer: Ro Khanna (~84 trades). Most traded July ticker: GOOGL (4 separate members). Pattern: congressional buying in AI infrastructure (NVDA, AMD); selling in social media (META — anticipating regulation). Top sectors: Technology, Defense, Financials.</p>
-    <p class="note"><b>Signal assessment:</b> Mixed to low quality. AI infrastructure buying (NVDA, AMD) reflects widely available public information — not committee-specific knowledge. GOOGL trading by multiple members while DOJ antitrust proceedings active is the highest-signal cluster; Judiciary committee overlap warrants follow-up. Khanna's 84 trades in two weeks is atypically high for review. <b>45-day lag caveat:</b> Trades filed in July are dated late May to mid-June; those returns are already priced in — use for sector direction signals only, not individual trade following.</p>
+    <p class="note">The SpaceX cluster is the highest-quality signal of the window: Reps. William Timmons (Oversight's Military &amp; Foreign Affairs subcommittee chair, largest buy at $50,001-$100,000), John McGuire, Daniel Meuser, Gil Cisneros (Armed Services), Jared Moskowitz, and John James all bought within six days of the June 12 IPO. Reporting stresses no evidence of insider trading and all filings were within STOCK Act timing — but the committee overlap and timing cluster warrant continued tracking. Rep. Tim Moore's reported Intel purchase ahead of government-stake news carries the strongest insider-trading-adjacent optics of any single trade found, but search results returned internally inconsistent 2025-vs-2026 dating — <b>flagged as unconfirmed pending primary EFD filing verification.</b></p>
+
+    <h3 class="sub">12B. Monthly Running Tracker — July 2026</h3>
+    <p class="note">Comprehensive July-specific trade counts were not fully retrievable (Capitol Trades/Unusual Whales block server-side access); the following is reconstructed from secondary reporting and should be treated as directional.</p>
+    <div class="pills-row">
+      <span class="pill p-gray">Most active: Ro Khanna (D)</span>
+      <span class="pill p-gray">Alan Armstrong (R) — largest single batch</span>
+      <span class="pill p-gray">Daniel Meuser (R) — repeat NVDA seller</span>
+      <span class="pill p-gray">Dan Crenshaw (R)</span>
+      <span class="pill p-gray">Gil Cisneros (D)</span>
+    </div>
+    <p class="note"><b>Top sectors this month:</b> (1) Technology/AI semiconductors — NVDA (Meuser, Whitehouse, Liccardo), QCOM (Sara Jacobs), INTC; (2) Aerospace/Defense — the SpaceX cluster plus recurring Armed Services Committee activity; (3) Energy/Industrials — Armstrong's WMB/DVN/HON liquidation.</p>
+    <p class="note"><b>Notable clusters:</b> SpaceX (6 members, tightest timing cluster of the cycle); NVDA (traded across at least 3 members this window, several with AI-policy committee overlap).</p>
+    <p class="note"><b>Largest disclosed positions:</b> 1) Armstrong/WMB $5M-$25M; 2) Armstrong aggregate batch $3.24M-$16.05M; 3) Sara Jacobs/QCOM ~$1M-$2M; 4) William Timmons/SpaceX $50,001-$100,000; 5) Sheldon Whitehouse/NVDA up to $500,000.</p>
+    <p class="note"><b>Pattern flags:</b> Sara Jacobs (Armed Services + Foreign Affairs) sold up to $2M in QCOM (family founding-company stock) amid active China semiconductor export-control fights her committees oversee. Gil Cisneros (Armed Services) is a recurring defense-stock buyer. The clearest structural driver of this month's disclosure surge: the House passed the Stop Insider Trading Act on July 22 (232-198, 13 Democrats crossing over), which appears to have prompted a wave of "last trades before the ban" reporting.</p>
+
+    <h3 class="sub">12C. Investment Signal Assessment</h3>
+    <p class="note">Signal quality is <b>mixed-to-low</b> for most of this month's disclosures — NVDA selling by multiple members largely reflects publicly available AI-valuation debate, not committee-specific knowledge. The <b>SpaceX cluster is the highest-value signal</b>: 6 members, concentrated timing around a single IPO, majority on relevant oversight committees. Reminder: STOCK Act allows up to a 45-day disclosure lag — Armstrong's and Crenshaw's disclosures are 60-120+ days stale relative to trade date and should be read as compliance-violation stories, not fresh trading signals; those returns are already fully priced in.</p>
   </section>
 
   <!-- ===================== SECTION 13 — OPPORTUNITY RANKING ===================== -->
@@ -619,19 +649,19 @@
     <div class="eyebrow">Section 13</div>
     <h2>Opportunity Ranking</h2>
     <div class="tw">
-      <table style="min-width:820px">
+      <table style="min-width:860px">
         <thead><tr><th>Rank</th><th>Opportunity</th><th>Category</th><th>Horizon</th><th>Expected Upside</th><th>Key Risk</th><th>Score</th></tr></thead>
         <tbody>
-          <tr><td class="num">1</td><td>Long defense: LMT, RTX, NOC, KTOS</td><td>Defense</td><td>0–7 days</td><td class="num">5–15%</td><td>Iran ceasefire surprise</td><td class="num" style="color:var(--gold)">9.2</td></tr>
-          <tr><td class="num">2</td><td>Long energy: XOM, CVX on Iran oil spike</td><td>Energy</td><td>0–7 days</td><td class="num">5–10%</td><td>Diplomatic resolution</td><td class="num" style="color:var(--gold)">8.8</td></tr>
-          <tr><td class="num">3</td><td>AI infrastructure: NVDA, power utilities (CEG, VST)</td><td>AI</td><td>1–3 months</td><td class="num">15–25%</td><td>DeepSeek inference chip; macro</td><td class="num" style="color:var(--gold)">8.7</td></tr>
-          <tr><td class="num">4</td><td>Microsoft long: AI RPO $627B lock-in</td><td>AI/Cloud</td><td>1–3 months</td><td class="num">10–20%</td><td>AI spending plateau</td><td class="num" style="color:var(--gold)">8.5</td></tr>
-          <tr><td class="num">5</td><td>Short duration (TBT) into CPI</td><td>Rates</td><td>0–7 days</td><td class="num">3–8%</td><td>Soft CPI print</td><td class="num" style="color:var(--gold)">8.0</td></tr>
-          <tr><td class="num">6</td><td>Stablecoin rails: Circle (USDC) on GENIUS Act</td><td>Crypto</td><td>1–3 months</td><td class="num">10–20%</td><td>Yield-restriction rules</td><td class="num" style="color:var(--gold)">7.6</td></tr>
-          <tr><td class="num">7</td><td>BTC long on weekly close &gt;$62,667</td><td>Crypto</td><td>0–14 days</td><td class="num">6–12%</td><td>Hot CPI breaks 200WMA</td><td class="num" style="color:var(--gold)">7.4</td></tr>
-          <tr><td class="num">8</td><td>Copper / cooling: FCX, VRT on AI power buildout</td><td>AI/Materials</td><td>3–12 months</td><td class="num">12–20%</td><td>AI capex pause</td><td class="num" style="color:var(--gold)">7.2</td></tr>
-          <tr><td class="num">9</td><td>HVAC / plumbing acquisition — Atlanta / SE</td><td>Biz Acq</td><td>3–12 months</td><td class="num">20–35% IRR</td><td>SBA rate environment</td><td class="num" style="color:var(--gold)">6.8</td></tr>
-          <tr><td class="num">10</td><td>Microsoft long: AI RPO $627B lock-in</td><td>AI/Cloud</td><td>1–3 months</td><td class="num">10–20%</td><td>AI spending plateau</td><td class="num" style="color:var(--gold)">8.5</td></tr>
+          <tr><td class="num">1</td><td>Long defense: LMT, RTX, NOC on record backlogs + raised guidance</td><td>Defense</td><td>1-3 months</td><td class="num">8-15%</td><td>Iran de-escalation surprise</td><td class="num" style="color:var(--gold)">9.0</td></tr>
+          <tr><td class="num">2</td><td>AWS/cloud infra long: AMZN post-beat momentum</td><td>AI/Cloud</td><td>0-7 days</td><td class="num">5-12%</td><td>Broader AI-capex sentiment reversal</td><td class="num" style="color:var(--gold)">8.6</td></tr>
+          <tr><td class="num">3</td><td>Short duration into Sept FOMC (hike odds still 53-57%)</td><td>Rates</td><td>0-7 weeks</td><td class="num">3-8%</td><td>Continued disinflation surprise</td><td class="num" style="color:var(--gold)">8.2</td></tr>
+          <tr><td class="num">4</td><td>Long energy: XOM, CVX on sustained Iran/Hormuz risk premium</td><td>Energy</td><td>0-7 days</td><td class="num">5-10%</td><td>Diplomatic resolution</td><td class="num" style="color:var(--gold)">8.0</td></tr>
+          <tr><td class="num">5</td><td>BTC ETF-flow-driven long on continued institutional accumulation</td><td>Crypto</td><td>1-3 months</td><td class="num">10-20%</td><td>Weekly close below 200WMA</td><td class="num" style="color:var(--gold)">7.6</td></tr>
+          <tr><td class="num">6</td><td>Stablecoin rails: Circle (USDC) on GENIUS Act implementation + volume-share lead</td><td>Crypto</td><td>1-3 months</td><td class="num">10-20%</td><td>Final rule yield-restriction risk</td><td class="num" style="color:var(--gold)">7.4</td></tr>
+          <tr><td class="num">7</td><td>Copper / cooling / power: FCX, VRT, CEG on data-center power constraint</td><td>AI/Materials</td><td>3-12 months</td><td class="num">12-20%</td><td>AI capex pause</td><td class="num" style="color:var(--gold)">7.2</td></tr>
+          <tr><td class="num">8</td><td>HVAC/plumbing/electrical roll-up acquisition — Atlanta/SE</td><td>Biz Acq</td><td>3-12 months</td><td class="num">20-35% IRR</td><td>SBA rate environment</td><td class="num" style="color:var(--gold)">6.8</td></tr>
+          <tr><td class="num">9</td><td>Healthcare services acquisition (lower-middle-market)</td><td>Biz Acq</td><td>3-12 months</td><td class="num">15-30% IRR</td><td>Reimbursement policy risk</td><td class="num" style="color:var(--gold)">6.4</td></tr>
+          <tr><td class="num">10</td><td>XRP long on CLARITY Act passage scenario</td><td>Crypto</td><td>0-14 days</td><td class="num">15-25%</td><td>Bill fails Aug 7-10 recess deadline</td><td class="num" style="color:var(--gold)">6.0</td></tr>
         </tbody>
       </table>
     </div>
@@ -643,143 +673,210 @@
     <h2>Risk Review</h2>
     <div class="items">
       <div class="item risk"><div class="n">1</div><div>
-        <h3>July 14 CPI hot print (≥4.5% YoY) → Fed hike repricing → multi-asset selloff</h3>
-        <p>Oil spike adds to June energy component. All risk assets correlated in hike scenario: BTC, Nasdaq, REITs, high-yield bonds all sell simultaneously with no safe harbor. <b>Trigger:</b> BLS release 8:30 ET July 14.</p>
+        <h3>CLARITY Act fails the Aug 7-10 recess window → crypto regulatory vacuum through 2027</h3>
+        <p>Odds sit near 28% after round-tripping this month on an ethics dispute over administration crypto profits. 60 votes needed; core dispute unresolved. Failure means no institutional deployment roadmap for XRP, ETH, and stablecoins until at least 2027. <b>Trigger:</b> Senate floor schedule through Aug 7.</p>
         <div class="foot"><div class="sev" style="margin-left:0"><span class="pill p-amber">Med-High</span><span class="pill p-red">Severity: Critical</span></div></div>
       </div></div>
       <div class="item risk"><div class="n">2</div><div>
-        <h3>Iran Strait of Hormuz full blockade → structural oil supply crisis → stagflation → forced hike</h3>
-        <p>Each new Iran exchange compounds: tanker insurance rising, oil rerouting adds 2+ weeks to delivery times, energy CPI component locks in at elevated levels for months. Prediction markets say no normalization until 2027. <b>Hedge:</b> Long XOM, CVX; long defense.</p>
-        <div class="foot"><div class="sev" style="margin-left:0"><span class="pill p-gray">Medium</span><span class="pill p-red">Severity: Critical</span></div></div>
+        <h3>Fed hawkish dissent hardens into a September hike → equity/crypto repricing</h3>
+        <p>First 3-way hawkish dissent since 2016; September odds still 53-57% even after this week's rally. A confirmed hike would likely reverse the AMZN/PCE-driven relief rally across risk assets simultaneously. <b>Trigger:</b> Sept 15-16 FOMC; any hawkish Fed-speaker commentary between now and then.</p>
+        <div class="foot"><div class="sev" style="margin-left:0"><span class="pill p-amber">Med-High</span><span class="pill p-red">Severity: Critical</span></div></div>
       </div></div>
       <div class="item risk"><div class="n">3</div><div>
-        <h3>CLARITY Act fails August recess window → crypto regulatory vacuum through 2027</h3>
-        <p>Senate needs 60 votes; 7–9 Democratic crossovers required. Three active disputes. Window closes ~August 1. Failure means no institutional deployment roadmap for XRP, ETH, stablecoins. Prediction market already reflecting this at 44%. <b>Watch:</b> Senate floor schedule July 13.</p>
-        <div class="foot"><div class="sev" style="margin-left:0"><span class="pill p-amber">Med-High</span><span class="pill p-red">Severity: High</span></div></div>
-      </div></div>
-      <div class="item risk"><div class="n">4</div><div>
-        <h3>BTC weekly close below 200-week MA ($62,667) → bear cycle confirmation → target $57–59K</h3>
-        <p>BTC is only $285 above the 200WMA today. Today's intraday low of $61,537 already broke it briefly. A confirmed weekly close below the 200WMA is historically the most reliable bear cycle signal in Bitcoin's history. <b>Stop:</b> Exit on close below $61,500.</p>
+        <h3>BTC weekly close below the 200-week MA ($61-63K) confirms bear-cycle signal already triggered once in June</h3>
+        <p>BTC fell 1.1% to $63,876, continuing to test the band it broke below in late June for the first time since 2022. ETF flows are improving but spot price technicals remain fragile. <b>Trigger:</b> Friday weekly candle close (UTC).</p>
         <div class="foot"><div class="sev" style="margin-left:0"><span class="pill p-gray">Medium</span><span class="pill p-red">Severity: High</span></div></div>
       </div></div>
+      <div class="item risk"><div class="n">4</div><div>
+        <h3>AI capex ROI scrutiny broadens beyond Meta — a genuine hyperscaler capex pause is now a live scenario</h3>
+        <p>Meta's FCF collapse to $784M and EPS miss is the first crack in the "infinite AI capex" thesis from inside the group itself. If Microsoft's FY2027 guidance ($255-260B watched) disappoints, or if AWS's reacceleration proves a one-quarter blip, the entire semiconductor/data-center complex (NVDA, AMD already volatile on SK Hynix's miss) is exposed.</p>
+        <div class="foot"><div class="sev" style="margin-left:0"><span class="pill p-amber">Med-High</span><span class="pill p-red">Severity: High</span></div></div>
+      </div></div>
       <div class="item risk"><div class="n">5</div><div>
-        <h3>DeepSeek inference chip maturation → structural NVDA demand destruction in inference layer</h3>
-        <p>DeepSeek's chip targets inference (not training) — the stage where models generate outputs. Already using Huawei Ascend; joins Alibaba and Baidu in vertical integration. Long-term structural reduction of NVDA's China inference TAM, though multi-year to materialize.</p>
-        <div class="foot"><div class="sev" style="margin-left:0"><span class="pill p-gray">Low-Med</span><span class="pill p-red">Severity: High (LT)</span></div></div>
+        <h3>Iran/Hormuz risk remains unresolved and understated in this cycle's data</h3>
+        <p>No ceasefire confirmed; WTI/Brent near cycle highs and on track for the biggest monthly gain since March. Oil-driven energy-CPI pressure is a live risk into the next inflation print and could reinforce the Fed's hawkish dissenters ahead of September. <b>Hedge:</b> long XOM/CVX, long defense.</p>
+        <div class="foot"><div class="sev" style="margin-left:0"><span class="pill p-gray">Medium</span><span class="pill p-red">Severity: High</span></div></div>
       </div></div>
     </div>
   </section>
 
-  <!-- ===================== SECTION 15 — RESEARCH QUEUE ===================== -->
+  <!-- ===================== SECTION 15 — SPORTS ===================== -->
   <section>
     <div class="eyebrow">Section 15</div>
+    <h2>Sports — SEC Football First</h2>
+
+    <h3 class="sub">15A. Alabama Crimson Tide — Current Focus</h3>
+    <div class="cards c2">
+      <div class="panel"><div class="plbl">Program Status</div><p class="line">SEC Media Days: Jul 20-22, Tampa (Alabama's day: Jul 22) — HC Kalen DeBoer + Zabien Brown, Ryan Coleman-Williams, Bray Hubbard<br>Fall camp: opened ~Jul 30<br><b>Season opener:</b> Sep 5 vs. East Carolina, Bryant-Denny, 11am ET, ABC</p></div>
+      <div class="panel"><div class="plbl">QB / Roster</div><p class="line">QB battle unresolved: Sr. Austin Mack vs. Soph. Keelon Russell (Ty Simpson left early for NFL Draft)<br>Portal adds (defense-heavy): DL Devan Thompkins (USC), LB Caleb Woodson (Va Tech), CB Carmelo O'Neal (Mercer), OL Kaden Strayhorn (Michigan), TE Josh Ford (Okla St)<br>Lost: RB target Hollywood Smothers flipped to Texas</p></div>
+    </div>
+    <div class="cards c2" style="margin-top:12px">
+      <div class="panel"><div class="plbl">Rankings &amp; Odds</div><p class="line"><b>AP Preseason:</b> No. 8 national<br><b>SEC Media Poll:</b> No. 6 in conference<br><b>ESPN FPI:</b> No. 8; proj. 8.6-3.6 wins; 41.3% CFP odds; 3.7% title odds<br><b>SEC title (sportsbook):</b> +850 (tied w/ LSU) — Texas favored +300, Georgia +330<br><b>Win total (sportsbook o/u):</b> 8.5</p></div>
+      <div class="panel"><div class="plbl">SEC Landscape</div><p class="line">Preseason poll: Georgia &amp; Texas top 2<br>6 new HCs incl. Lane Kiffin (LSU, from Ole Miss), Jon Sumrall (Florida), Alex Golesh (Auburn)<br>LSU landed SEC's #1 transfer class (OT Jordan Seaton, QB Sam Leavitt, EDGE Princewill Umanmielen)</p></div>
+    </div>
+    <div class="tw" style="margin-top:12px">
+      <table style="min-width:760px">
+        <thead><tr><th>Next 3 Games</th><th>Date</th><th>Time</th><th>TV</th><th>Site</th><th>Line / Win Prob.</th><th>Note</th></tr></thead>
+        <tbody>
+          <tr><td>East Carolina</td><td class="num">Sep 5</td><td class="num">11:00 AM ET</td><td>ABC</td><td>Home</td><td class="num">Alabama -25.5, ML -4500/+1700, O/U 54.5 <span class="pill p-gray">Covers.com sportsbook line</span></td><td>Season opener, heavy favorite</td></tr>
+          <tr><td>at Kentucky</td><td class="num">Sep 12</td><td class="num">2:30 PM ET</td><td>ABC</td><td>Away</td><td style="color:var(--muted)">TBD</td><td>First SEC game of the season</td></tr>
+          <tr><td>Florida State</td><td class="num">Sep 19</td><td class="num">2:30 PM ET</td><td>ABC</td><td>Home</td><td style="color:var(--muted)">TBD</td><td>Marquee non-conference matchup</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>Alabama Outlook:</b> Analysts describe the Tide as "flying under the radar" for 2026 given QB and OL uncertainty; oddsmakers explicitly advise against betting Alabama to win the SEC this year. <b>Biggest strength:</b> secondary (Bray Hubbard, Keon Sabb, Zabien Brown — graded 2nd-best nationally by one analyst) and defensive line (SEC's 5th-best). <b>Biggest unresolved weakness:</b> offensive line cohesion under new coach Adrian Klemm (~61st nationally) compounding the open QB competition (~38th). <b>SEC/CFP implications:</b> a 41.3% CFP probability and 8.5-win sportsbook total put Alabama solidly in playoff-contention range but well behind Georgia/Texas as conference favorites. <b>Confidence:</b> Medium — roster uncertainty (QB, OL) is the swing factor and won't resolve until fall camp reps are graded.</p>
+
+    <h3 class="sub">15B. Other Sports Snapshot</h3>
+    <div class="tw">
+      <table style="min-width:860px">
+        <thead><tr><th>Sport</th><th>Top Development</th><th>Why It Matters</th><th>Atlanta/Alabama Relevance</th><th>Next Event</th><th>Confidence</th></tr></thead>
+        <tbody>
+          <tr><td>NFL</td><td>Falcons' Michael Penix Jr. (ACL, ~4 wks from clearance) vs. Tua Tagovailoa (back flare-up) QB competition; RT Kaleb McGary carted off camp with leg injury; RB Bijan Robinson not practicing amid contract talks</td><td>QB1 uncertainty entering the season; McGary injury threatens O-line stability</td><td>Direct — Atlanta Falcons</td><td>Preseason opener</td><td class="up">High</td></tr>
+          <tr><td>Basketball</td><td>Alabama MBB lost Labaron Philon (NBA Draft), Latrell Wrightsell; added transfers Brandon Garrison (Kentucky), Jamarion Davis-Fleming (Miss St), Cole Cloer (NC State); NBA: Giannis traded MIL→MIA</td><td>Bama needs a lead guard; Aden Holloway legal matter/Amari Allen draft decision unresolved</td><td>Direct — Alabama MBB</td><td>Nov season tip-off</td><td style="color:var(--amber)">Medium</td></tr>
+          <tr><td>Baseball</td><td>MLB trade deadline Aug 3, 6pm ET; Tarik Skubal top chip; Braves seeking SP help, Waldrep velocity scare, Strider injury concern, Acuña Jr. return announced</td><td>Deadline activity will reshape NL/AL contender fields</td><td>Direct — Atlanta Braves</td><td>Aug 3 deadline</td><td class="up">High</td></tr>
+          <tr><td>Golf</td><td>Ryan Fox won The Open at Royal Birkdale (Jul 16-19); FedEx Cup Playoffs ahead (St. Jude Aug 13-16, BMW Aug 20-23, Tour Championship Aug 27-30 at East Lake, Atlanta, $25M bonus)</td><td>Tour Championship lands in Atlanta in late August</td><td>Direct — East Lake, Atlanta</td><td>FedEx St. Jude, Aug 13</td><td class="up">High</td></tr>
+          <tr><td>Soccer</td><td>2026 World Cup concluded Jul 19 — Spain beat Argentina 1-0 at MetLife; Atlanta United signed CB Paulo Díaz &amp; F Sergio Santos, traded Saba Lobjanidze to RSL</td><td>Confirms Spain's global favorite status; ATL UTD retooling roster before Sept 2 transfer deadline</td><td>Direct — Atlanta United</td><td>Transfer window closes Sep 2</td><td class="up">High</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3 class="sub">15C. Sports Change Log and Watchlist</h3>
+    <div class="tw">
+      <table style="min-width:760px">
+        <thead><tr><th>Item</th><th>Sport</th><th>Status</th><th>What Changed</th><th>Why It Matters</th><th>Next Trigger</th></tr></thead>
+        <tbody>
+          <tr><td>Alabama QB Battle</td><td>CFB</td><td><span class="pill p-gray">No Material Change</span></td><td>Mack vs. Russell still unresolved after Media Days</td><td>Determines offensive identity heading into Sep 5 opener</td><td>Fall camp scrimmage reports</td></tr>
+          <tr><td>Falcons QB Situation</td><td>NFL</td><td><span class="pill p-red">Increased Risk</span></td><td>Both Penix (ACL) and Tagovailoa (back) have camp availability question marks</td><td>Raises risk of a Week 1 start from an unproven/unhealthy QB room</td><td>Preseason snap counts</td></tr>
+          <tr><td>MLB Trade Deadline</td><td>MLB</td><td><span class="pill p-violet">New Development</span></td><td>Deadline moved to Aug 3, 6pm ET; Braves actively shopping for pitching</td><td>Direct near-term Braves roster/postseason-odds impact</td><td>Aug 3 6pm ET</td></tr>
+          <tr><td>SEC Coaching Turnover</td><td>CFB</td><td><span class="pill p-violet">New Development</span></td><td>6 new SEC head coaches, incl. Kiffin (LSU) and Sumrall (Florida)</td><td>Reshapes Alabama's conference competition immediately</td><td>Season openers, early Sept</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note"><b>Top 3 stories to watch next:</b> (1) Alabama's QB competition resolving in fall camp before Sep 5; (2) Falcons' QB health/competition resolving before Week 1; (3) MLB trade deadline (Aug 3) reshaping the Braves' rotation and NL wild-card odds.</p>
+    <p class="note"><b>Upcoming dates (next 7-14 days):</b> MLB trade deadline Aug 3 · FedEx St. Jude Championship begins Aug 13 · Alabama continues fall camp through late August · SEC additional media/practice reports expected weekly.</p>
+    <p class="note src"><b>Source-quality note:</b> Alabama's Kentucky/Florida State betting lines are unconfirmed and marked TBD per source instructions. The Tim Moore/Intel congressional-trade item (Section 12) carries unconfirmed date sourcing and is not a sports item but is flagged here for consistency with this report's confirmed-vs-unconfirmed labeling standard.</p>
+  </section>
+
+  <!-- ===================== SECTION 16 — RESEARCH QUEUE ===================== -->
+  <section>
+    <div class="eyebrow">Section 16</div>
     <h2>Research Queue</h2>
     <div class="items">
       <div class="item"><div class="n" style="font-size:0"></div><div>
-        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">July 14 CPI — scenario analysis for each outcome</h3><span class="pill p-red" style="margin-left:auto">CRITICAL · Before Jul 13</span></div>
-        <p>What portfolio positioning is correct at CPI &lt;4.0%, 4.0–4.5%, and ≥4.5% YoY? Need Bloomberg consensus; Fed minutes language; energy contribution to June. Sources: BLS.gov, Bloomberg Economics, CNBC Fed coverage.</p>
+        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">CLARITY Act — Senate floor schedule through Aug 7 recess</h3><span class="pill p-red" style="margin-left:auto">CRITICAL · Daily through Aug 7</span></div>
+        <p>Has Thune filed cloture? What is the crossover whip count on the ethics-dispute sticking point? Sources: Senate.gov floor schedule, Politico Playbook, The Hill crypto beat.</p>
       </div></div>
       <div class="item"><div class="n" style="font-size:0"></div><div>
-        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">CLARITY Act — Senate floor vote schedule after July 13 return</h3><span class="pill p-amber" style="margin-left:auto">HIGH · Jul 13</span></div>
-        <p>Has Majority Leader scheduled cloture or floor vote? What is the Democratic crossover whip count? Sources: Senate.gov floor schedule, Politico Playbook, The Hill crypto reporter beat.</p>
+        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">Iran ceasefire / Strait of Hormuz status — current, verified</h3><span class="pill p-red" style="margin-left:auto">CRITICAL · Ongoing</span></div>
+        <p>This pass could not confirm current ceasefire status with high confidence — the most-cited recent reporting is stale relative to today. What is the verified, current state of hostilities and tanker traffic? Sources: Reuters/AP wire, MarineTraffic.com, State Dept briefings.</p>
+      </div></div>
+      <div class="item"><div class="n" style="font-size:0"></div><div>
+        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">Microsoft FY2027 capex guidance ($255-260B watched figure)</h3><span class="pill p-amber" style="margin-left:auto">HIGH · Next MSFT earnings call</span></div>
+        <p>Is this figure confirmed guidance or an analyst estimate? A confirmation or disappointment here is the next major swing factor for the AI-capex-ROI debate opened by Meta's miss. Sources: Microsoft investor relations, earnings call transcript.</p>
       </div></div>
       <div class="item"><div class="n" style="font-size:0"></div><div>
         <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">BTC weekly candle close vs. 200-week MA</h3><span class="pill p-amber" style="margin-left:auto">HIGH · Friday midnight UTC</span></div>
-        <p>Does BTC close above or below $62,667? Confirms or rejects the technical recovery signal. Sources: Bitbo.io/ma-200w, TradingView, Glassnode Studio.</p>
+        <p>Does BTC close above or below the $61-63K band this week? Confirms or extends the June bear-cycle-signal trigger. Sources: Bitbo.io/ma-200w, TradingView, Glassnode.</p>
       </div></div>
       <div class="item"><div class="n" style="font-size:0"></div><div>
-        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">GENIUS Act OCC/Treasury implementing rules (July 18)</h3><span class="pill p-amber" style="margin-left:auto">HIGH · Jul 18</span></div>
-        <p>What do the rules require for stablecoin reserve composition, yield restrictions, and foreign issuer compliance? Impact on Tether (USDT) US distribution and Circle (USDC) yield programs. Sources: federalregister.gov, occ.gov, Circle investor communications.</p>
+        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">Rep. Tim Moore / Intel trade — verify primary EFD filing date</h3><span class="pill p-amber" style="margin-left:auto">HIGH · Before next report</span></div>
+        <p>Search results conflict on whether this is a 2025 or 2026 event. Confirm against disclosures.house.gov before treating as a fresh congressional-trading signal.</p>
       </div></div>
       <div class="item"><div class="n" style="font-size:0"></div><div>
         <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">XRP ETF weekly flow rate — accelerating, decelerating, or plateauing?</h3><span class="pill p-gray" style="margin-left:auto">MEDIUM · Weekly</span></div>
-        <p>Track per-ETF AUM and weekly flows for all 7 XRP ETFs. Is the $1B AUM growing toward $2B or stalling? Sources: theblock.co, xrp-insights.com, SEC 13F filings for GXRP, XRPC, XRP, XRPZ, XRPR, TOXR, BITW.</p>
+        <p>Track per-ETF AUM and weekly flows across all 7 XRP ETFs. Is the $1.5B cumulative-inflow figure still growing at pace? Sources: theblock.co, SoSoValue, SEC 13F filings.</p>
       </div></div>
       <div class="item"><div class="n" style="font-size:0"></div><div>
-        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">Ripple escrow release schedule — next monthly release date and market impact history</h3><span class="pill p-gray" style="margin-left:auto">MEDIUM · Monthly</span></div>
-        <p>When is the next Ripple monthly XRP escrow release? Historical analysis of release-date price impact. Sources: xrpscan.com escrow account, XRPL.org, historical price data vs. release dates.</p>
-      </div></div>
-      <div class="item"><div class="n" style="font-size:0"></div><div>
-        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">Iran Strait of Hormuz tanker traffic — current throughput vs. normal</h3><span class="pill p-amber" style="margin-left:auto">HIGH · Ongoing</span></div>
-        <p>What percentage of normal Strait traffic is operational? Which oil companies have rerouted? Tanker insurance rates. Sources: MarineTraffic.com, IEA emergency release data, Lloyd's of London, S&amp;P Global Platts shipping data.</p>
+        <div class="foot" style="margin:0 0 8px"><h3 style="margin:0">Alabama QB battle resolution — Mack vs. Russell</h3><span class="pill p-gray" style="margin-left:auto">MEDIUM · Through fall camp</span></div>
+        <p>Which QB wins the job, and by how clear a margin? This is the single biggest swing factor on Alabama's 8.5-win total and playoff odds. Sources: RollTide.com, AL.com fall-camp beat reporters.</p>
       </div></div>
     </div>
+    <p class="note"><b>Dedicated XRP research queue:</b> (1) Ripple vs. XRP vs. XRP Ledger distinction remains a recurring source of confused reporting — verify each claimed catalyst is tied to token demand, not to Ripple-the-company. (2) XRP liquidity/exchange depth — no fresh data this cycle. (3) CLARITY Act passage scenario analysis specific to XRP's commodity classification. (4) XRPL tokenization/custody/stablecoin (RLUSD) adoption metrics. (5) Escrow release schedule and historical price-impact analysis.</p>
   </section>
 
-  <!-- ===================== SECTION 16 — SOURCES ===================== -->
+  <!-- ===================== SECTION 17 — SOURCES ===================== -->
   <section>
-    <div class="eyebrow">Section 16</div>
+    <div class="eyebrow">Section 17</div>
     <h2>Sources</h2>
     <div class="tw">
-      <table style="min-width:640px">
+      <table style="min-width:680px">
         <thead><tr><th>Source</th><th>Date</th><th>Type</th><th>Reliability</th></tr></thead>
         <tbody>
-          <tr><td>Crypto.com Exchange (MCP)</td><td class="num">Jul 9, 2026 ~10:36 UTC</td><td style="color:var(--blue)">Live market data</td><td class="num up">9/10</td></tr>
-          <tr><td>BLS CPI News Release (May 2026)</td><td class="num">Jun 10, 2026</td><td style="color:var(--blue)">Government / Primary</td><td class="num up">10/10</td></tr>
-          <tr><td>Federal Reserve FOMC Statement</td><td class="num">Jun 17, 2026</td><td style="color:var(--blue)">Government / Primary</td><td class="num up">10/10</td></tr>
-          <tr><td>US Treasury Par Yield Curve</td><td class="num">Jul 9, 2026</td><td style="color:var(--blue)">Government / Primary</td><td class="num up">10/10</td></tr>
-          <tr><td>Congress.gov — FY2026 Defense Appropriations</td><td class="num">2026</td><td style="color:var(--blue)">Government / Primary</td><td class="num up">10/10</td></tr>
-          <tr><td>NWS Atlanta / weather.gov/ffc</td><td class="num">Jul 9, 2026</td><td style="color:var(--blue)">Government / Primary</td><td class="num up">9/10</td></tr>
-          <tr><td>NVIDIA Newsroom — OpenAI partnership</td><td class="num">~Jul 3, 2026</td><td style="color:var(--blue)">Company / Primary</td><td class="num up">10/10</td></tr>
-          <tr><td>CNN / CBS / NPR / NBC — Iran war updates</td><td class="num">Jul 8, 2026</td><td style="color:var(--blue)">Major media</td><td class="num">8/10</td></tr>
-          <tr><td>CoinDesk — BTC ETF flows, $221M inflow</td><td class="num">Jul 3, 2026</td><td style="color:var(--blue)">Industry media</td><td class="num">8/10</td></tr>
-          <tr><td>Yahoo Finance — CLARITY Act status</td><td class="num">Jul 7–8, 2026</td><td style="color:var(--blue)">Media</td><td class="num">8/10</td></tr>
-          <tr><td>Polymarket / Kalshi — odds data</td><td class="num">Jul 8–9, 2026</td><td style="color:var(--blue)">Prediction markets</td><td class="num">8/10</td></tr>
-          <tr><td>Semafor — DeepSeek chip plans</td><td class="num">Jul 7, 2026</td><td style="color:var(--blue)">Media</td><td class="num">8/10</td></tr>
-          <tr><td>Fortune — mortgage rates Jul 9</td><td class="num">Jul 9, 2026</td><td style="color:var(--blue)">Media / market data</td><td class="num">8/10</td></tr>
-          <tr><td>Federal Register — OCC GENIUS Act</td><td class="num">Mar 2026</td><td style="color:var(--blue)">Government / Primary</td><td class="num up">10/10</td></tr>
-          <tr><td>Quiver Quantitative / Capitol Trades</td><td class="num">Jul 6–7, 2026</td><td style="color:var(--blue)">Data aggregator</td><td class="num">7/10</td></tr>
-          <tr><td>Fortune — BTC, ETH, oil prices</td><td class="num">Jul 7–8, 2026</td><td style="color:var(--blue)">Media / market data</td><td class="num">8/10</td></tr>
-          <tr><td>StealthEX / The Block — XRP ETF data</td><td class="num">2026</td><td style="color:var(--blue)">Industry / data</td><td class="num">7–8/10</td></tr>
+          <tr><td>Crypto.com Exchange (MCP)</td><td class="num">Jul 31, 2026 ~10:37 UTC</td><td style="color:var(--blue)">Live market data</td><td class="num up">9/10</td></tr>
+          <tr><td>CNBC / Fox Business — Fed decision</td><td class="num">Jul 29, 2026</td><td style="color:var(--blue)">Media / Primary quotes</td><td class="num up">9/10</td></tr>
+          <tr><td>Advisor Perspectives / CNN — Core PCE</td><td class="num">Jul 30, 2026</td><td style="color:var(--blue)">Government-sourced / Media</td><td class="num up">9/10</td></tr>
+          <tr><td>BLS Employment Situation (June)</td><td class="num">Jul 2, 2026</td><td style="color:var(--blue)">Government / Primary</td><td class="num up">10/10</td></tr>
+          <tr><td>Bloomberg — oil/markets recap</td><td class="num">Jul 30-31, 2026</td><td style="color:var(--blue)">Media / market data</td><td class="num up">9/10</td></tr>
+          <tr><td>Fortune / Motley Fool / 9to5Mac — Big Tech earnings</td><td class="num">Jul 29-30, 2026</td><td style="color:var(--blue)">Media / company reports</td><td class="num up">9/10</td></tr>
+          <tr><td>DataCenterDynamics / Benzinga — hyperscaler capex</td><td class="num">Jul 26-31, 2026</td><td style="color:var(--blue)">Industry media</td><td class="num">8/10</td></tr>
+          <tr><td>defence-industry.eu — LMT/RTX/NOC backlogs</td><td class="num">Jul 26, 2026</td><td style="color:var(--blue)">Industry media</td><td class="num">8/10</td></tr>
+          <tr><td>Washington Times / Breaking Defense / SatNews — Golden Dome, NSSL</td><td class="num">Jul 14-21, 2026</td><td style="color:var(--blue)">Media / trade press</td><td class="num">8/10</td></tr>
+          <tr><td>CoinDesk — CLARITY Act odds, GENIUS Act</td><td class="num">Jul 17-21, 2026</td><td style="color:var(--blue)">Industry media</td><td class="num">8/10</td></tr>
+          <tr><td>CryptoTimes / Akin Gump — CFTC rulemaking</td><td class="num">Jul 31, 2026</td><td style="color:var(--blue)">Media / legal analysis</td><td class="num">8/10</td></tr>
+          <tr><td>Freddie Mac PMMS — mortgage rates</td><td class="num">Week of Jul 30, 2026</td><td style="color:var(--blue)">Primary / survey</td><td class="num up">10/10</td></tr>
+          <tr><td>NAR — existing home sales (June)</td><td class="num">Jul 2026</td><td style="color:var(--blue)">Government-adjacent / Primary</td><td class="num up">9/10</td></tr>
+          <tr><td>ATTOM — foreclosure data</td><td class="num">H1 2026</td><td style="color:var(--blue)">Data aggregator</td><td class="num">8/10</td></tr>
+          <tr><td>BizBuySell — SMB multiples</td><td class="num">Q1 2026</td><td style="color:var(--blue)">Industry data</td><td class="num">8/10</td></tr>
+          <tr><td>NOTUS / Benzinga / CNBC / 24/7 Wall St — congressional trades</td><td class="num">Jul 22-28, 2026</td><td style="color:var(--blue)">Media / secondary aggregation</td><td class="num">6-7/10</td></tr>
+          <tr><td>NWS Peachtree City / AccuWeather — weather</td><td class="num">Jul 30-31, 2026</td><td style="color:var(--blue)">Government / aggregator</td><td class="num">8/10</td></tr>
+          <tr><td>RollTide.com / SI.com / On3 / AL.com — Alabama football</td><td class="num">Jul 20-30, 2026</td><td style="color:var(--blue)">Official / beat media</td><td class="num">8/10</td></tr>
+          <tr><td>ESPN / Yahoo Sports / MLB.com — other sports</td><td class="num">Jul 2026</td><td style="color:var(--blue)">Major media</td><td class="num">8/10</td></tr>
         </tbody>
       </table>
     </div>
   </section>
 
-  <!-- ===================== SECTION 17 — CONFIDENCE SCORE ===================== -->
+  <!-- ===================== SECTION 18 — CONFIDENCE SCORE ===================== -->
   <section>
-    <div class="eyebrow">Section 17</div>
+    <div class="eyebrow">Section 18</div>
     <h2>Confidence Score</h2>
-    <div class="conf-top"><div class="big">7.6</div><div class="cl">Overall Confidence / 10</div></div>
+    <div class="conf-top"><div class="big">7.5</div><div class="cl">Overall Confidence / 10</div></div>
     <div class="cgrid">
       <div class="cbox"><div class="cl">Crypto Prices</div><div class="row"><span class="m"><i style="width:90%"></i></span><span class="v">9.0</span></div></div>
       <div class="cbox"><div class="cl">Bitcoin Analysis</div><div class="row"><span class="m"><i style="width:75%"></i></span><span class="v">7.5</span></div></div>
       <div class="cbox"><div class="cl">Ethereum Analysis</div><div class="row"><span class="m"><i style="width:70%"></i></span><span class="v">7.0</span></div></div>
-      <div class="cbox"><div class="cl">XRP Analysis</div><div class="row"><span class="m"><i style="width:75%"></i></span><span class="v">7.5</span></div></div>
+      <div class="cbox"><div class="cl">XRP Analysis</div><div class="row"><span class="m"><i style="width:70%"></i></span><span class="v">7.0</span></div></div>
       <div class="cbox"><div class="cl">Macro / Fed</div><div class="row"><span class="m"><i style="width:85%"></i></span><span class="v">8.5</span></div></div>
-      <div class="cbox"><div class="cl">Iran / Geopolitical</div><div class="row"><span class="m"><i style="width:85%"></i></span><span class="v">8.5</span></div></div>
-      <div class="cbox"><div class="cl">Public Markets</div><div class="row"><span class="m"><i style="width:75%"></i></span><span class="v">7.5</span></div></div>
+      <div class="cbox"><div class="cl">Iran / Geopolitical</div><div class="row"><span class="m"><i style="width:45%;background:var(--amber)"></i></span><span class="v">4.5</span></div></div>
+      <div class="cbox"><div class="cl">Public Markets</div><div class="row"><span class="m"><i style="width:80%"></i></span><span class="v">8.0</span></div></div>
       <div class="cbox"><div class="cl">AI Sector</div><div class="row"><span class="m"><i style="width:85%"></i></span><span class="v">8.5</span></div></div>
       <div class="cbox"><div class="cl">Defense</div><div class="row"><span class="m"><i style="width:85%"></i></span><span class="v">8.5</span></div></div>
       <div class="cbox"><div class="cl">Real Estate</div><div class="row"><span class="m"><i style="width:75%"></i></span><span class="v">7.5</span></div></div>
       <div class="cbox"><div class="cl">Prediction Markets</div><div class="row"><span class="m"><i style="width:75%"></i></span><span class="v">7.5</span></div></div>
       <div class="cbox"><div class="cl">Congressional Trades</div><div class="row"><span class="m"><i style="width:55%;background:var(--amber)"></i></span><span class="v">5.5</span></div></div>
       <div class="cbox"><div class="cl">Weather</div><div class="row"><span class="m"><i style="width:80%"></i></span><span class="v">8.0</span></div></div>
-      <div class="cbox"><div class="cl">Business Acquisitions</div><div class="row"><span class="m"><i style="width:65%;background:var(--amber)"></i></span><span class="v">6.5</span></div></div>
+      <div class="cbox"><div class="cl">Business Acquisitions</div><div class="row"><span class="m"><i style="width:70%"></i></span><span class="v">7.0</span></div></div>
+      <div class="cbox"><div class="cl">Sports</div><div class="row"><span class="m"><i style="width:75%"></i></span><span class="v">7.5</span></div></div>
     </div>
   </section>
 
-  <!-- ===================== SECTION 18 — WHAT MIGHT BE WRONG ===================== -->
+  <!-- ===================== SECTION 19 — WHAT MIGHT BE WRONG ===================== -->
   <section>
-    <div class="eyebrow">Section 18</div>
+    <div class="eyebrow">Section 19</div>
     <h2>What Might Be Wrong</h2>
     <div class="tw">
-      <table style="min-width:680px">
+      <table style="min-width:720px">
         <thead><tr><th>Weakness</th><th>Category</th><th>Severity</th><th>Mitigation</th></tr></thead>
         <tbody>
-          <tr><td>Markets not closed at report time</td><td>Data gap</td><td><span class="pill p-amber">Medium</span></td><td>S&amp;P/Nasdaq data is July 8 close. VIX is interpolated (~16.2), not confirmed July 9 reading. Check EOD.</td></tr>
-          <tr><td>Congressional trade data incomplete</td><td>Data gap</td><td><span class="pill p-amber">Medium</span></td><td>capitoltrades.com/unusualwhales.com blocked server-side access. Verify manually at capitoltrades.com and quiverquant.com/congresstrading.</td></tr>
-          <tr><td>BTC 200-week MA level uncertain</td><td>Conflicting</td><td><span class="pill p-amber">Medium</span></td><td>Sources cite 200WMA between $59K–$62.7K. Prior cache used $62,667. Need direct TradingView/Glassnode confirmation before treating the level as a hard line.</td></tr>
+          <tr><td>Iran ceasefire status unverified</td><td>Data gap</td><td><span class="pill p-red">High</span></td><td>Multiple research passes returned conflicting/stale dates on ceasefire status. Treat all Iran-driven oil/risk framing as directionally right but not confirmed as of today. Verify via wire services before acting.</td></tr>
+          <tr><td>Congressional trade data incomplete</td><td>Data gap</td><td><span class="pill p-amber">Medium</span></td><td>Capitol Trades / Unusual Whales block server-side access; July-specific trade counts are reconstructed from secondary coverage, not primary EFD/House disclosure filings. Verify directly before individual-trade-following decisions.</td></tr>
+          <tr><td>Markets/VIX levels partially estimated</td><td>Data gap</td><td><span class="pill p-amber">Medium</span></td><td>S&amp;P/Nasdaq/VIX figures blend July 30 confirmed closes with July 31 intraday commentary; exact July 31 closing prints were not independently confirmed at report time.</td></tr>
+          <tr><td>Rep. Tim Moore/Intel trade date conflict</td><td>Conflicting</td><td><span class="pill p-amber">Medium</span></td><td>Search results place this event in both 2025 and 2026; excluded from confirmed-signal tables in Section 12, flagged in research queue instead.</td></tr>
+          <tr><td>Alabama betting lines incomplete</td><td>Data gap</td><td><span class="pill p-gray">Low</span></td><td>Kentucky and Florida State game lines not yet posted/found; marked TBD rather than estimated.</td></tr>
+          <tr><td>Multifamily vacancy rate dispersion</td><td>Conflicting</td><td><span class="pill p-amber">Medium</span></td><td>CBRE (4.8%), Apartment List (7.2%), and CoStar (8.8% projected) diverge meaningfully by methodology — treat any single vacancy figure as directional, not precise.</td></tr>
         </tbody>
       </table>
     </div>
+    <p class="note"><b>Narrative-vs-evidence risk:</b> The "AI capex ROI split" framing (Amazon good, Meta bad) is compelling but is based on a single earnings cycle — one more quarter of AWS deceleration or Meta stabilization would materially change the read. Similarly, "markets shrugged off the hawkish Fed" may simply reflect earnings-week noise rather than genuine hike-risk complacency; the prediction-market data (Section 11) suggests the market has not actually dismissed hike risk, which argues against reading the equity rally as a clean signal.</p>
+    <p class="note"><b>Sports caveats:</b> Alabama fall-camp injury/depth-chart reports, recruiting rankings, and all sportsbook lines are subject to rapid change and are explicitly labeled by type in Section 15. Falcons QB-health timelines are unofficial team/reporter estimates, not confirmed medical clearances.</p>
+    <p class="note"><b>Congressional trades caveat:</b> STOCK Act disclosures carry up to a 45-day lag; several trades featured in Section 12 are 60-120+ days stale relative to trade date and should be read as compliance stories, not live trading signals — those returns are already priced in.</p>
   </section>
 
   <!-- ===================== FOOTER ===================== -->
   <footer>
     <div class="fmeta">
-      <span>Daily Market Intelligence Report · July 9, 2026 · Report #10</span>
-      <span class="g">Cache updated · Commit ad3c1de · mrmclaude1/Daily-Market-Intelligence-Report</span>
+      <span>Daily Market Intelligence Report · July 31, 2026 · Report #34</span>
+      <span class="g">mrmclaude1/Daily-Market-Intelligence-Report</span>
     </div>
     <p>This report is for informational purposes only and does not constitute investment advice. All data sourced from publicly available information as of report time. Verify all figures before acting. Confidence scores and price targets represent analytical estimates, not guarantees.</p>
   </footer>

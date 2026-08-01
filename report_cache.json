@@ -1,27 +1,27 @@
 {
   "meta": {
-    "last_report_date": "2026-07-31",
-    "report_count": 34,
+    "last_report_date": "2026-08-01",
+    "report_count": 35,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 63876.44,
-    "btc_change_24h_pct": -1.08,
-    "eth_usd": 1887.9,
-    "eth_change_24h_pct": -1.63,
-    "xrp_usd": 1.0728,
-    "xrp_change_24h_pct": -0.69,
-    "btc_24h_high": 65411.23,
-    "btc_24h_low": 63606.3,
-    "eth_24h_high": 1937.97,
-    "xrp_24h_high": 1.095
+    "btc_usd": 63043.47,
+    "btc_change_24h_pct": -1.27,
+    "eth_usd": 1864.82,
+    "eth_change_24h_pct": -1.22,
+    "xrp_usd": 1.063,
+    "xrp_change_24h_pct": -0.9,
+    "btc_24h_high": 64017.07,
+    "btc_24h_low": 62454.0,
+    "eth_24h_high": 1890.67,
+    "xrp_24h_high": 1.076
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
     "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": 3.5,
-    "prime_rate": 6.75,
+    "prime_rate": 7.5,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
@@ -29,13 +29,13 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7437.64,
-    "sp500_change_24h_pct": 1.66,
-    "nasdaq_level": 25122.18,
-    "nasdaq_change_24h_pct": 2.78,
+    "sp500_level": 7489.72,
+    "sp500_change_24h_pct": 0.7,
+    "nasdaq_level": 25373.85,
+    "nasdaq_change_24h_pct": 1.0,
     "nasdaq_consecutive_down_days": 0,
-    "vix": 18.0,
-    "market_posture": "mixed"
+    "vix": 16.42,
+    "market_posture": "mixed-risk-off"
   },
   "real_estate": {
     "mortgage_30yr_fixed_pct": 6.66,
@@ -43,46 +43,46 @@
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.233,
-    "btc_spot_etf_total_outflow_4wk_bn": 0.5,
+    "btc_spot_etf_weekly_flow_bn": 0.204,
+    "btc_spot_etf_total_outflow_4wk_bn": 0.438,
     "eth_etf_weekly_flow_bn": 0.1039
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 28.0,
-    "clarity_act_prior_peak_odds_pct": 53.0,
+    "clarity_act_polymarket_odds_pct": 25.0,
+    "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Fed 9-3 hawkish dissent first since 2016 despite equity rally",
-    "CLARITY Act Aug 7-10 recess deadline with odds near 28%",
-    "Amazon AWS surge vs Meta FCF collapse splits AI capex ROI thesis",
-    "LMT/RTX/NOC record backlogs with raised 2026 guidance",
-    "BTC ETF flows positive 3 straight weeks even as BTC tests 200-week MA"
+    "Fed Sept hike odds jump to 53-60% vs only 32% priced in SOFR futures",
+    "CLARITY Act confirmed dead before Aug 7-10 recess (odds ~24-25%)",
+    "Semiconductor bear market deepens (SOX -25% from June highs) even as AWS/Azure reaccelerate",
+    "GD Electric Boat wins $76.6B submarine contract atop record LMT/RTX/NOC backlogs",
+    "Iran announces unilateral halt to offensive operations Aug 1 (unconfirmed durability)"
   ],
   "elevated_risks": [
-    "September FOMC hike odds still 53-57% despite this week's rally",
-    "CLARITY Act failure risk into Aug 7-10 recess",
-    "BTC weekly close below 200wk MA would confirm bear-cycle signal",
-    "AI capex ROI scrutiny broadening beyond Meta to the wider hyperscaler complex",
-    "Iran/Hormuz oil risk unresolved and pushing WTI/Brent toward cycle highs"
+    "Fed hike prediction-market/SOFR-futures divergence unresolved into Sept 15-16 FOMC",
+    "CLARITY Act pushed into a lower-momentum September session",
+    "AI capex ROI scrutiny broadening into a full semiconductor bear market",
+    "BTC weekly close vs estimated 200WMA ($59-62K) remains fragile",
+    "Iran pause unconfirmed as durable after July ceasefire breakdown"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 62000.0,
-    "btc_200wk_ma_status": "testing",
+    "btc_200wk_ma_status": "above",
     "xrp_key_support": 1.05,
-    "xrp_downside_target": 0.975,
+    "xrp_downside_target": 0.9,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
-    "month": "July 2026",
+    "month": "August 2026",
     "most_traded_sectors": [
-      "Technology/AI Semiconductors",
-      "Aerospace/Defense",
-      "Energy/Industrials"
+      "Semiconductors/AI",
+      "Defense/Aerospace",
+      "Energy-to-Tech Rotation"
     ],
     "notable_tickers": [
-      "NVDA",
-      "SpaceX",
+      "MU",
+      "LHX",
       "WMB"
     ],
     "pattern_flags": [
@@ -90,12 +90,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 5.0,
-    "macro": 3.6,
-    "public_markets": 5.8,
-    "ai_sector": 4.8,
-    "defense": 8.7,
-    "real_estate": 2.8,
-    "business_acquisitions": 7.0
+    "crypto": 4.6,
+    "macro": 3.3,
+    "public_markets": 4.8,
+    "ai_sector": 4.4,
+    "defense": 8.8,
+    "real_estate": 2.9,
+    "business_acquisitions": 6.8
   }
 }

@@ -204,8 +204,12 @@ user always sees today's date and today's data instead of a stale snapshot.
 
 ### The stable Artifact URL — always update THIS one, never mint a new one
 ```
-https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601
+https://claude.ai/code/artifact/44d3813a-980b-4964-a58e-53e52744bb21
 ```
+(Updated 2026-08-01: the prior URL, `1374ff45-4ab8-4e2a-b764-bb755082b601`, became inaccessible to this
+account — `Artifact action:"list"` no longer showed it as owned or shared, and `WebFetch` returned "not
+found." Per the fallback procedure below, a new artifact was published and this file was updated with the
+new ID. If this ever recurs, repeat the same fallback and update this file again.)
 
 ### Use the canonical template — do NOT improvise a layout
 `report_template.html` (repo root) is the **required** structure and design system for
@@ -260,12 +264,12 @@ report — do not repeat it.
 
    Recommended call parameters:
    - `file_path`: your populated HTML file
-   - `url`: `https://claude.ai/code/artifact/1374ff45-4ab8-4e2a-b764-bb755082b601`
+   - `url`: `https://claude.ai/code/artifact/44d3813a-980b-4964-a58e-53e52744bb21`
    - `favicon`: `📈` (keep stable across runs)
    - `description`: `Daily Market Intelligence Report for <Month DD, YYYY> …`
    - `label`: a short date tag, e.g. `jul-11-2026`
 
-4. **Confirm** the tool response echoes the same `1374ff45…` URL. If it returns a
+4. **Confirm** the tool response echoes the same `44d3813a…` URL. If it returns a
    *different* URL, you minted a new artifact by mistake — do not leave it; re-publish
    with the `url` parameter set.
 

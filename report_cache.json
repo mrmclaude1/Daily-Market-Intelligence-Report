@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-03",
-    "report_count": 37,
+    "last_report_date": "2026-08-04",
+    "report_count": 38,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 62679.37,
-    "btc_change_24h_pct": -0.81,
-    "eth_usd": 1847.0,
-    "eth_change_24h_pct": -1.13,
-    "xrp_usd": 1.0691,
-    "xrp_change_24h_pct": -1.06,
-    "btc_24h_high": 63802.43,
-    "btc_24h_low": 62295.78,
-    "eth_24h_high": 1898.86,
-    "xrp_24h_high": 1.0932
+    "btc_usd": 63469.61,
+    "btc_change_24h_pct": 1.26,
+    "eth_usd": 1855.64,
+    "eth_change_24h_pct": 0.47,
+    "xrp_usd": 1.0711,
+    "xrp_change_24h_pct": 0.19,
+    "btc_24h_high": 64250.65,
+    "btc_24h_low": 62441.68,
+    "eth_24h_high": 1876.51,
+    "xrp_24h_high": 1.0872
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -26,83 +26,76 @@
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "elevated"
+    "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7489.72,
-    "sp500_change_24h_pct": 0.7,
+    "sp500_level": 7600.5,
+    "sp500_change_24h_pct": 1.48,
     "nasdaq_level": 25373.85,
-    "nasdaq_change_24h_pct": 1.0,
+    "nasdaq_change_24h_pct": 1.8,
     "nasdaq_consecutive_down_days": 0,
     "vix": 15.99,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.78,
+    "mortgage_30yr_fixed_pct": 6.66,
     "housing_inventory_yoy_pct": 3.6,
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.0615,
+    "btc_spot_etf_weekly_flow_bn": 0.1701,
     "btc_spot_etf_total_outflow_4wk_bn": 0.172,
     "eth_etf_weekly_flow_bn": 0.084
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 28.0,
+    "clarity_act_polymarket_odds_pct": 27.5,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "CLARITY Act confirmed dead into September - Thune won't file for pre-recess vote",
-    "Fed-vs-market hike odds diverge 21+ points (53-59% vs 32% SOFR futures) into Aug 7 jobs report",
-    "Amazon AWS +37% YoY and SOX +8.19% round-trip validate cloud-infra leg of AI capex thesis",
-    "BTC ETF flows flip to -$61.5M outflow entering historically worst month plus $89M Coldcard exploit",
-    "Record $1.5T FY2027 defense budget and $135B single-day Pentagon awards vs defense ETF down 12% since Iran war began"
+    "CLARITY Act final 72 hours - Aug5 cloture filing/Aug7 vote/Aug10 recess",
+    "Coldcard hardware wallet exploit tops 100M",
+    "Dow record close on unconfirmed Iran de-escalation hope",
+    "September Fed hike odds cross 50pct for first time this cycle",
+    "AWS plus37pct and Google Cloud plus63pct YoY reaffirm AI capex thesis vs AI-infra equipment selloff"
   ],
   "elevated_risks": [
-    "CLARITY Act failure extends crypto regulatory vacuum into September at earliest",
-    "21-point Fed hike-odds gap between prediction markets and SOFR futures unresolved into Aug 7 jobs report",
-    "BTC ETF outflows resume entering Bitcoin's historically weakest month (median -7%)",
-    "Iran/Hormuz risk live and contradicts improving longer-dated ceasefire prediction-market odds",
-    "Real estate affordability keeps deteriorating as mortgage rates approach 1-year high (~6.78%)"
+    "Equities pricing Iran de-escalation Iran government denies",
+    "CLARITY Act fails Aug5-10 deadline sequence",
+    "September Fed hike odds now majority-priced",
+    "BTC testing 200-week MA plus Coldcard hack hits confidence",
+    "AI-infra equipment selloff signals capex trade bifurcating"
   ],
   "watchlist": {
-    "btc_200wk_ma_level": 61000.0,
-    "btc_200wk_ma_status": "above",
+    "btc_200wk_ma_level": 63770.0,
+    "btc_200wk_ma_status": "testing",
     "xrp_key_support": 1.05,
-    "xrp_downside_target": 0.9,
+    "xrp_downside_target": 0.95,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Defense/Aerospace",
-      "Technology/AI",
-      "Palantir/Defense-tech"
+      "Aerospace/Defense",
+      "Technology/AI Semiconductors",
+      "Diversified Defense/Tech"
     ],
     "notable_tickers": [
-      "PLTR",
-      "LHX",
-      "NOC",
-      "BA",
-      "LMT",
       "SpaceX",
-      "NVDA",
-      "AAPL",
-      "GOOGL",
-      "AMZN"
+      "TSM",
+      "QCOM"
     ],
     "pattern_flags": [
       "Sen. Alan Armstrong (R-OK) disclosed ~700 trades >45 days late incl $5-25M sale of former employer WMB"
     ]
   },
   "sector_scores": {
-    "crypto": 4.2,
-    "macro": 3.0,
-    "public_markets": 5.1,
-    "ai_sector": 5.3,
-    "defense": 8.6,
-    "real_estate": 2.6,
-    "business_acquisitions": 6.9
+    "crypto": 4.4,
+    "macro": 3.4,
+    "public_markets": 6.4,
+    "ai_sector": 5.6,
+    "defense": 8.5,
+    "real_estate": 2.9,
+    "business_acquisitions": 6.8
   }
 }

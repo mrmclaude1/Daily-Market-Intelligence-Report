@@ -1,70 +1,70 @@
 {
   "meta": {
-    "last_report_date": "2026-08-06",
-    "report_count": 40,
+    "last_report_date": "2026-08-08",
+    "report_count": 42,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64654.98,
-    "btc_change_24h_pct": 0.74,
-    "eth_usd": 1904.11,
-    "eth_change_24h_pct": 1.66,
-    "xrp_usd": 1.0461,
-    "xrp_change_24h_pct": -1.61,
-    "btc_24h_high": 65044.22,
-    "btc_24h_low": 63867.98,
-    "eth_24h_high": 1928.16,
-    "xrp_24h_high": 1.0733
+    "btc_usd": 65021.17,
+    "btc_change_24h_pct": 0.2,
+    "eth_usd": 1921.12,
+    "eth_change_24h_pct": 0.36,
+    "xrp_usd": 1.0375,
+    "xrp_change_24h_pct": 0.17,
+    "btc_24h_high": 65396.97,
+    "btc_24h_low": 64518.64,
+    "eth_24h_high": 1943.8,
+    "xrp_24h_high": 1.043
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.4,
+    "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": 3.5,
     "prime_rate": 7.5,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "falling"
+    "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7723.55,
-    "sp500_change_24h_pct": -0.17,
-    "nasdaq_level": 26363.44,
-    "nasdaq_change_24h_pct": -0.83,
-    "nasdaq_consecutive_down_days": 1,
-    "vix": 15.48,
-    "market_posture": "mixed"
+    "sp500_level": 7758.0,
+    "sp500_change_24h_pct": 0.62,
+    "nasdaq_level": 26691.0,
+    "nasdaq_change_24h_pct": 1.3,
+    "nasdaq_consecutive_down_days": 0,
+    "vix": 14.9,
+    "market_posture": "risk-on"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.71,
+    "mortgage_30yr_fixed_pct": 6.69,
     "housing_inventory_yoy_pct": 3.6,
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.06,
-    "btc_spot_etf_total_outflow_4wk_bn": 0.15,
+    "btc_spot_etf_weekly_flow_bn": 0.626,
+    "btc_spot_etf_total_outflow_4wk_bn": 0.626,
     "eth_etf_weekly_flow_bn": 0.084
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 20.0,
+    "clarity_act_polymarket_odds_pct": 13.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "CLARITY Act confirmed dead this session-no Senate floor vote before Aug7 recess",
-    "Nasdaq snaps win streak as Dow hits fresh record-tech/semi rotation into defensives",
-    "Fed Sept hike-odds divergence widens further into Jul jobs report",
-    "Coldcard hardware wallet exploit grows past 116-130M still unresolved",
-    "76.6B Navy submarine award plus LMT/RTX/NOC guidance raises"
+    "July payrolls fall 23K vs +83K expected sending S&P to record high",
+    "CLARITY Act pushed to Sept 14 Senate return odds fall to 13pct",
+    "DoD triples Patriot quadruples THAAD production with LMT/NOC",
+    "BTC spot ETFs post zero-outflow August with 626M 3-day inflow",
+    "Coldcard exploit holds near 116-130M still unresolved"
   ],
   "elevated_risks": [
-    "CLARITY Act dead until Congress returns from Aug10 recess",
-    "Fed hike odds diverging 47pct to 82pct across venues into Sept FOMC",
-    "Coldcard exploit still unresolved and climbing",
-    "AI capex ROI scrutiny bifurcating hyperscaler vs enterprise level",
-    "Iran Hormuz normalization odds just 13.5pct despite reopened Oman talks"
+    "July jobs weakness could prove structural not noise reversing the rally",
+    "CLARITY Act Sept 14 return may still produce no floor vote",
+    "Coldcard exploit unresolved climbing losses",
+    "Oil trend reversal to rising complicates Aug12 CPI read",
+    "AI data center power strain damaging equipment faster than expected"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -81,8 +81,8 @@
       "Diversified/Industrials"
     ],
     "notable_tickers": [
-      "SPCX",
       "NVDA",
+      "SPCX",
       "MSFT"
     ],
     "pattern_flags": [
@@ -90,12 +90,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 4.5,
-    "macro": 3.7,
-    "public_markets": 6.5,
-    "ai_sector": 6.2,
-    "defense": 8.2,
-    "real_estate": 3.0,
+    "crypto": 5.0,
+    "macro": 4.3,
+    "public_markets": 7.4,
+    "ai_sector": 6.6,
+    "defense": 8.3,
+    "real_estate": 2.9,
     "business_acquisitions": 7.0
   }
 }

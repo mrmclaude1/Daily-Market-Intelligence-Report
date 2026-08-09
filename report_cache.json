@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_report_date": "2026-08-09",
-    "report_count": 41,
+    "report_count": 43,
     "schema_version": "1.0"
   },
   "prices": {
@@ -53,18 +53,18 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "July jobs report -23K crashes Fed hike odds and sends S&P/Dow to record highs",
-    "BTC ETF flows turn decisively positive - 5 straight inflow days zero August outflows",
-    "Oil reverses to rising trend as Iran/Hormuz talks intensify without a confirmed ceasefire",
-    "Ripple wins SEC bad actor waiver Aug8 even as XRP ETF flows collapse 93pct WoW",
-    "Thune files procedural cloture on CLARITY Act Aug8 queuing a Sept15 vote"
+    "BTC ETF flows extend to 5 straight August inflow days, zero outflow days this month",
+    "CLARITY Act odds bounce off 13pct low as Thune files cloture for a Sept15 vote",
+    "AMD beats on revenue and EPS but falls 7-8.8pct on a margin miss - AI trade margin scrutiny spreading",
+    "Iran Hormuz terms come into focus - vessel ban and 5-7pct transit fees demanded, still no ceasefire",
+    "XRP ETF weekly inflows collapse 93pct WoW to 1.01M even as Ripple wins SEC bad actor waiver"
   ],
   "elevated_risks": [
-    "July payrolls contract -23K with -103K revisions - labor market cracking beneath record highs",
+    "XRP institutional demand fading sharply -93pct WoW ETF flows even as legal overhang clears",
     "Iran Hormuz war remains active with no confirmed ceasefire despite a conditional deal floated",
-    "XRP ETF weekly inflows collapsed to 1.01M -93pct WoW diverging from BTC ETF recovery",
-    "AMD fell 7-8.8pct despite an earnings beat on a gross margin miss - AI trade priced for perfection risk spreading",
-    "CLARITY Act still needs 7+ Democratic votes for a Sept15 cloture vote Democrats already call doomed"
+    "AI trade margin scrutiny spreading beyond Meta/Alphabet to AMD - beat and drop on margin miss",
+    "CLARITY Act still needs 7+ Democratic votes for a Sept15 cloture vote Democrats already call doomed",
+    "report_cache.json on GitHub main is 3 reports stale - draft cache PRs pile up unmerged, needs human review"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63800.0,

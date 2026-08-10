@@ -1,7 +1,7 @@
 {
   "meta": {
     "last_report_date": "2026-08-10",
-    "report_count": 41,
+    "report_count": 44,
     "schema_version": "1.0"
   },
   "prices": {
@@ -53,18 +53,18 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "CLARITY Act missed hard Aug10 recess deadline entirely",
-    "July jobs shock -23K splits Sept Fed pricing 3 ways",
-    "Pentagon gives LMT/RTX/Boeing 21 days to accelerate production",
-    "BTC/ETH ETF flows reverse sharply positive despite CLARITY Act failure",
-    "Oil trend reverses to rising as Hormuz blockade intensifies"
+    "Pentagon gives LMT/RTX/Boeing 21 days to accelerate production; LMT wins $58.6B PAC-3 contract",
+    "CLARITY Act tracking toward Sept15 cloture vote at ~17-20% odds; Dems call it doomed without 7+ crossover votes",
+    "BTC spot ETF inflow streak continues into a 5th+ August day, zero outflow days this month",
+    "XRP ETF flows remain weak after a 93% WoW collapse; $1.00 support under test",
+    "Georgia foreclosures +52% YoY, concentrating Southeast real estate distress"
   ],
   "elevated_risks": [
-    "CLARITY Act regulatory vacuum extends past Sept14 likely into 2027",
-    "Two-sided Fed-path risk into Wed Aug12 CPI print",
-    "Iran Hormuz blockade intensifying oil-driven inflation risk",
-    "AI hyperscaler capex/FCF scrutiny broadening beyond one company",
-    "Georgia real estate foreclosures up 52pct YoY"
+    "Two-sided Fed-path risk into Wed Aug12 CPI print; prediction markets diverge sharply from futures pricing",
+    "Iran Hormuz blockade still intensifying (44 vessels redirected), no ceasefire confirmed",
+    "CLARITY Act Sept 15 cloture vote seen as likely doomed absent Democratic crossover votes",
+    "AI hyperscaler capex/FCF margin scrutiny persisting (AMD gross-margin miss, Alphabet negative FCF)",
+    "XRP institutional demand fading sharply even as its legal overhang has cleared"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,

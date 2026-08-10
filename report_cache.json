@@ -1,101 +1,100 @@
 {
   "meta": {
-    "last_report_date": "2026-08-06",
-    "report_count": 40,
+    "last_report_date": "2026-08-10",
+    "report_count": 41,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64654.98,
-    "btc_change_24h_pct": 0.74,
-    "eth_usd": 1904.11,
-    "eth_change_24h_pct": 1.66,
-    "xrp_usd": 1.0461,
-    "xrp_change_24h_pct": -1.61,
-    "btc_24h_high": 65044.22,
-    "btc_24h_low": 63867.98,
-    "eth_24h_high": 1928.16,
-    "xrp_24h_high": 1.0733
+    "btc_usd": 64671.08,
+    "btc_change_24h_pct": -0.84,
+    "eth_usd": 1890.57,
+    "eth_change_24h_pct": -1.77,
+    "xrp_usd": 1.0269,
+    "xrp_change_24h_pct": -1.46,
+    "btc_24h_high": 65512.99,
+    "btc_24h_low": 64504.05,
+    "eth_24h_high": 1938.09,
+    "xrp_24h_high": 1.0478
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.4,
+    "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": 3.5,
-    "prime_rate": 7.5,
+    "prime_rate": 6.75,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "falling"
+    "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7723.55,
-    "sp500_change_24h_pct": -0.17,
-    "nasdaq_level": 26363.44,
-    "nasdaq_change_24h_pct": -0.83,
+    "sp500_level": 7762.0,
+    "sp500_change_24h_pct": 0.1,
+    "nasdaq_level": 26661.0,
+    "nasdaq_change_24h_pct": -0.1,
     "nasdaq_consecutive_down_days": 1,
-    "vix": 15.48,
+    "vix": 15.1,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.71,
+    "mortgage_30yr_fixed_pct": 6.69,
     "housing_inventory_yoy_pct": 3.6,
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.06,
-    "btc_spot_etf_total_outflow_4wk_bn": 0.15,
-    "eth_etf_weekly_flow_bn": 0.084
+    "btc_spot_etf_weekly_flow_bn": 853.5,
+    "btc_spot_etf_total_outflow_4wk_bn": 0.85,
+    "eth_etf_weekly_flow_bn": 244.9
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 20.0,
+    "clarity_act_polymarket_odds_pct": 17.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "CLARITY Act confirmed dead this session-no Senate floor vote before Aug7 recess",
-    "Nasdaq snaps win streak as Dow hits fresh record-tech/semi rotation into defensives",
-    "Fed Sept hike-odds divergence widens further into Jul jobs report",
-    "Coldcard hardware wallet exploit grows past 116-130M still unresolved",
-    "76.6B Navy submarine award plus LMT/RTX/NOC guidance raises"
+    "CLARITY Act missed hard Aug10 recess deadline entirely",
+    "July jobs shock -23K splits Sept Fed pricing 3 ways",
+    "Pentagon gives LMT/RTX/Boeing 21 days to accelerate production",
+    "BTC/ETH ETF flows reverse sharply positive despite CLARITY Act failure",
+    "Oil trend reverses to rising as Hormuz blockade intensifies"
   ],
   "elevated_risks": [
-    "CLARITY Act dead until Congress returns from Aug10 recess",
-    "Fed hike odds diverging 47pct to 82pct across venues into Sept FOMC",
-    "Coldcard exploit still unresolved and climbing",
-    "AI capex ROI scrutiny bifurcating hyperscaler vs enterprise level",
-    "Iran Hormuz normalization odds just 13.5pct despite reopened Oman talks"
+    "CLARITY Act regulatory vacuum extends past Sept14 likely into 2027",
+    "Two-sided Fed-path risk into Wed Aug12 CPI print",
+    "Iran Hormuz blockade intensifying oil-driven inflation risk",
+    "AI hyperscaler capex/FCF scrutiny broadening beyond one company",
+    "Georgia real estate foreclosures up 52pct YoY"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
     "btc_200wk_ma_status": "above",
     "xrp_key_support": 1.0,
-    "xrp_downside_target": 0.9,
+    "xrp_downside_target": 0.95,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Aerospace/Defense/Space",
-      "Big Tech/AI",
-      "Diversified/Industrials"
+      "Defense/Nuclear",
+      "Consumer Staples",
+      "Unspecified"
     ],
     "notable_tickers": [
-      "SPCX",
-      "NVDA",
-      "MSFT"
+      "BWXT",
+      "KO"
     ],
     "pattern_flags": [
       "Sen. Alan Armstrong (R-OK) disclosed ~700 trades >45 days late incl $5-25M sale of former employer WMB"
     ]
   },
   "sector_scores": {
-    "crypto": 4.5,
-    "macro": 3.7,
-    "public_markets": 6.5,
-    "ai_sector": 6.2,
-    "defense": 8.2,
-    "real_estate": 3.0,
-    "business_acquisitions": 7.0
+    "crypto": 4.8,
+    "macro": 3.6,
+    "public_markets": 6.8,
+    "ai_sector": 6.0,
+    "defense": 8.6,
+    "real_estate": 2.9,
+    "business_acquisitions": 7.1
   }
 }

@@ -175,23 +175,42 @@ python3 /tmp/update_cache.py \
   --score-realestate SCORE \
   --score-bizacq SCORE
 
-# Step 2: Push updated cache to GitHub (proxy handles auth — no token needed)
-SHA=$(cat /tmp/cache_sha.txt)
-CONTENT=$(base64 -w 0 < /tmp/report_cache_updated.json)
-DATE_TODAY=$(date -u +"%Y-%m-%d")
-curl -s -X PUT "https://api.github.com/repos/mrmclaude1/Daily-Market-Intelligence-Report/contents/report_cache.json" \
-  -H "Accept: application/vnd.github.v3+json" \
-  -H "Content-Type: application/json" \
-  -d "{\"message\": \"cache: ${DATE_TODAY}\", \"content\": \"${CONTENT}\", \"sha\": \"${SHA}\"}" \
-  | python3 -c "
-import json, sys
-d = json.load(sys.stdin)
-if 'content' in d:
-    print('✅ Cache pushed:', d['content']['sha'][:8])
-else:
-    print('❌ Push failed:', d.get('message','unknown'))
-"
+# Step 2: Push updated cache to GitHub
 ```
+
+**⚠️ Do NOT use `curl -X PUT` for this step — confirmed broken as of 2026-08-10.**
+The proxy blocks write access to the GitHub Contents API from Bash/curl entirely:
+`curl` returns `{"message": "Write access to this GitHub API path is not permitted
+through this proxy."}` on every attempt, regardless of auth. This silently stranded
+three consecutive days of cache updates (reports #41–43, Aug 7–9) as unmerged draft
+PRs (#11, #12, #13) that nobody was watching — `report_cache.json` on `main` sat stale
+at Aug 6 (#40) for four days while the published Artifact kept advancing daily, and
+every one of those sessions built its "prior report" diff from the live Artifact
+instead, because the cache was useless. Don't repeat this.
+
+**Use the GitHub MCP server's `create_or_update_file` tool instead** — it writes
+directly to `main` and is not subject to the same block:
+
+- `owner`: `mrmclaude1`, `repo`: `Daily-Market-Intelligence-Report`
+- `path`: `report_cache.json`, `branch`: `main`
+- `sha`: the blob SHA of the current `report_cache.json` on `main` (fetch fresh with
+  `mcp__github__get_file_contents` right before pushing — don't reuse a SHA from the
+  start-of-run fetch if anything else may have touched the file since; if the SHA is
+  stale the call 409s and you must re-fetch and retry)
+- `content`: the full updated JSON as a plain string (the tool base64-encodes it
+  itself — do not pre-encode)
+- `message`: `cache: YYYY-MM-DD`
+
+Confirm the response's `commit.sha` — that means it landed on `main` directly, no PR
+needed. **If `main`'s cache SHA doesn't match what the start-of-run fetch expected**
+(i.e., someone/something else wrote to the file since), don't blind-overwrite: re-fetch
+first, and if the report_count on `main` is *higher* than what today's session expected
+as "prior," that means the cache had already caught up (or moved past) since your
+start-of-run fetch — treat `main`'s current value as authoritative for numbering, not
+your stale start-of-run snapshot. If a scheduled/fresh session ever finds the cache
+more than one report behind the live Artifact again, the Artifact is the source of
+truth for the diff, not the cache — read it directly (WebFetch the stable Artifact URL)
+before writing Section 2.
 
 ---
 
@@ -330,8 +349,10 @@ and the prompt kept recurring, which is the proof that the repo file isn't the l
 - **Repo:** `mrmclaude1/Daily-Market-Intelligence-Report`
 - **Cache file:** `report_cache.json` at repo root
 - **Auth:** Proxy-injected automatically — NO token env var required
-- **Mechanism:** GitHub Contents API via curl — no git clone needed
-- **api.github.com is reachable** directly from the container
+- **Mechanism:** GitHub Contents API — curl for **reads** (start-of-run fetch), the
+  **GitHub MCP `create_or_update_file` tool for writes** (curl PUT is proxy-blocked,
+  see End-of-Run Protocol above) — no git clone needed
+- **api.github.com is reachable** directly from the container for reads
 
 ---
 

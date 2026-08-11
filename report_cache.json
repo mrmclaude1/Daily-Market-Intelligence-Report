@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-10",
-    "report_count": 44,
+    "last_report_date": "2026-08-11",
+    "report_count": 45,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64671.08,
-    "btc_change_24h_pct": -0.84,
-    "eth_usd": 1890.57,
-    "eth_change_24h_pct": -1.77,
-    "xrp_usd": 1.0269,
-    "xrp_change_24h_pct": -1.46,
-    "btc_24h_high": 65512.99,
-    "btc_24h_low": 64504.05,
-    "eth_24h_high": 1938.09,
-    "xrp_24h_high": 1.0478
+    "btc_usd": 63985.01,
+    "btc_change_24h_pct": -1.62,
+    "eth_usd": 1875.09,
+    "eth_change_24h_pct": -2.09,
+    "xrp_usd": 1.0123,
+    "xrp_change_24h_pct": -1.97,
+    "btc_24h_high": 65395.94,
+    "btc_24h_low": 63810.74,
+    "eth_24h_high": 1931.72,
+    "xrp_24h_high": 1.0409
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -29,13 +29,13 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7762.0,
-    "sp500_change_24h_pct": 0.1,
-    "nasdaq_level": 26661.0,
-    "nasdaq_change_24h_pct": -0.1,
-    "nasdaq_consecutive_down_days": 1,
-    "vix": 15.1,
-    "market_posture": "mixed"
+    "sp500_level": 7753.11,
+    "sp500_change_24h_pct": -0.06,
+    "nasdaq_level": 26614.0,
+    "nasdaq_change_24h_pct": -0.3,
+    "nasdaq_consecutive_down_days": 2,
+    "vix": 15.45,
+    "market_posture": "mixed-risk-off"
   },
   "real_estate": {
     "mortgage_30yr_fixed_pct": 6.69,
@@ -43,32 +43,32 @@
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 853.5,
-    "btc_spot_etf_total_outflow_4wk_bn": 0.85,
-    "eth_etf_weekly_flow_bn": 244.9
+    "btc_spot_etf_weekly_flow_bn": 0.85354,
+    "btc_spot_etf_total_outflow_4wk_bn": 0.85354,
+    "eth_etf_weekly_flow_bn": 0.244
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 17.0,
+    "clarity_act_polymarket_odds_pct": 16.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Pentagon gives LMT/RTX/Boeing 21 days to accelerate production; LMT wins $58.6B PAC-3 contract",
-    "CLARITY Act tracking toward Sept15 cloture vote at ~17-20% odds; Dems call it doomed without 7+ crossover votes",
-    "BTC spot ETF inflow streak continues into a 5th+ August day, zero outflow days this month",
-    "XRP ETF flows remain weak after a 93% WoW collapse; $1.00 support under test",
-    "Georgia foreclosures +52% YoY, concentrating Southeast real estate distress"
+    "Fed Chair Warsh reportedly hike-ready for Sept FOMC if CPI/PCE run hot; CME prices 56.7% odds of a hike",
+    "July NFP cratered to -23,000 vs +83,000 expected, sharpest dovish counterweight of the cycle",
+    "Iran hardens Hormuz reopening terms (full US withdrawal, sanctions relief, compensation demanded); WTI +4.2% to $81.44",
+    "BTC 200-week MA status downgraded from 'above' to 'testing' - price $63,985 vs MA ~$63,770, only ~$215 cushion",
+    "Pentagon 21-day memo produces concrete follow-through: RTX Tomahawk capacity to 16x, LMT tripling PAC-3 production"
   ],
   "elevated_risks": [
-    "Two-sided Fed-path risk into Wed Aug12 CPI print; prediction markets diverge sharply from futures pricing",
-    "Iran Hormuz blockade still intensifying (44 vessels redirected), no ceasefire confirmed",
-    "CLARITY Act Sept 15 cloture vote seen as likely doomed absent Democratic crossover votes",
-    "AI hyperscaler capex/FCF margin scrutiny persisting (AMD gross-margin miss, Alphabet negative FCF)",
-    "XRP institutional demand fading sharply even as its legal overhang has cleared"
+    "Hot Aug 12 CPI print lands on a Fed chair already primed to hike - two-sided risk sharpened, not resolved",
+    "BTC's first live 200-week MA test with minimal cushion left; Friday weekly close is the trigger",
+    "Iran/Hormuz standoff hardened further, sustaining oil-driven inflation pressure into the CPI print",
+    "Hyperscaler negative FCF broadening (AMZN -$7.6B TTM, GOOGL -$5.9B Q2) against rising 2026 capex guidance",
+    "XRP trading directly on $1.00 support with choppy/thin ETF flows; $0.95 is the downside target if it fails"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
-    "btc_200wk_ma_status": "above",
+    "btc_200wk_ma_status": "testing",
     "xrp_key_support": 1.0,
     "xrp_downside_target": 0.95,
     "ascendex_warning_active": null
@@ -76,25 +76,27 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Defense/Nuclear",
-      "Consumer Staples",
-      "Unspecified"
+      "Technology/Semiconductors",
+      "Defense/Aerospace",
+      "Diversified/Industrials"
     ],
     "notable_tickers": [
-      "BWXT",
-      "KO"
+      "TSM",
+      "INTC",
+      "AAPL"
     ],
     "pattern_flags": [
-      "Sen. Alan Armstrong (R-OK) disclosed ~700 trades >45 days late incl $5-25M sale of former employer WMB"
+      "Rep. Lisa McClain (spouse) bought private defense firm Saronic Technologies 1 day before TX announced its $3.25B shipyard for the company",
+      "Rep. Julie Johnson disclosed 76 trades months late ($76,076-$1.14M aggregate), a clear STOCK Act violation"
     ]
   },
   "sector_scores": {
-    "crypto": 4.8,
-    "macro": 3.6,
-    "public_markets": 6.8,
-    "ai_sector": 6.0,
+    "crypto": 4.5,
+    "macro": 3.3,
+    "public_markets": 6.5,
+    "ai_sector": 5.8,
     "defense": 8.6,
-    "real_estate": 2.9,
+    "real_estate": 2.7,
     "business_acquisitions": 7.1
   }
 }

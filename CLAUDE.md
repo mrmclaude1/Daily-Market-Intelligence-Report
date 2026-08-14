@@ -255,17 +255,43 @@ run — never drop sections (including Sports) and never rebuild a thinner repor
 `report_cache.json` alone.** The cache exists only to power Section 2's before/after diffs; it
 is not a substitute for the report's content.
 
-### Sports section depth — Alabama first, but depth follows news, not habit
-Alabama/SEC football (15A) is the **priority topic**, not a **fixed depth quota**. Before
-writing 15A, check whether anything about Alabama has materially changed since the prior
-report (roster/injury/depth-chart move, ranking or odds shift, schedule/TV update, a game
-result, a coaching development). If yes, give it the fullest treatment as usual. **If there is
-genuinely nothing new** (e.g., mid-offseason lull, bye week, no fresh reporting), say so in one
-or two lines — do not pad 15A with restated old information, speculation, or filler just to
-look thorough — and shift the freed depth into 15B for whichever other sport had the most
-consequential development that cycle (a trade, an injury to a star player, a playoff-race swing,
-a major result). The dedicated-depth rule for 15B (extra detail on Alabama MBB, extra attention
-to the Falcons/Braves) still applies regardless of how 15A reads that day.
+### Sports section — freshness first, then Alabama, then the SEC
+**The recurring failure here is staleness: the sports section reading nearly the same as
+yesterday's.** Section 15 must turn over materially every run. Before writing it, pull the
+prior report's sports items and treat them as *already covered* — restating them is the
+failure mode, not the baseline. Search explicitly for developments dated within the last
+24-72 hours.
+
+**Escalation ladder when Alabama football is quiet — follow it in order:**
+1. **Fresh Alabama news** (roster/injury/depth-chart move, QB battle movement, ranking or
+   odds shift, schedule/TV update, game result, coaching development) → lead 15A with it at
+   full depth.
+2. **Nothing new on Alabama?** Say so in one or two lines — *never* pad 15A with restated
+   old information, speculation, or filler — then **fill the freed depth with the most
+   newsworthy SEC development instead**, from any SEC program: a coaching move, a major
+   injury to a star player, a QB battle resolving elsewhere, poll/odds movement, NIL or
+   transfer news, scheduling/media-rights/CFP-format news, a suspension or legal matter.
+   Aim for 2-3 substantive non-Alabama SEC items. 15A is the *Alabama and SEC* slot — an
+   Alabama lull is not an excuse for a thin section, it's a cue to widen to the conference.
+3. Only after 15A is genuinely served does surplus depth roll into 15B.
+
+### 15B formatting — bullets, one event each (do NOT revert this to the old table)
+15B is a **stack of per-sport panels with `<ul class="blist">` bullet lists**, not a table.
+Two rules, both requested directly by the user on 2026-08-14:
+
+- **One bullet = one event.** Never chain unrelated developments together with semicolons
+  into a single run-on cell. If a sport had three things happen, that is three bullets.
+  (The old table produced dense blobs like *"Walker injured; team signed Sample; Tua named
+  starter; Penix cleared"* — exactly what to avoid.)
+- **No "Alabama/Atlanta Relevance" column or field.** It was pure filler — the reader can
+  see that a Falcons item is Atlanta-relevant. It has been removed from
+  `report_template.html`; do not reintroduce it.
+
+Each panel carries a `.plbl` sport label, the `.blist` bullets, and a single `.nx` footer
+line with next event + confidence. Drop a sport entirely if it had no fresh development
+this cycle — an honest omission beats a restated one. The dedicated-attention rule (extra
+detail on Alabama MBB, extra attention to the Falcons/Braves) still applies within whichever
+sports do appear.
 
 
 

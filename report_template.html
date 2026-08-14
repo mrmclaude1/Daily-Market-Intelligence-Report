@@ -232,6 +232,16 @@
   .note.src { font-size: 11.5px; color: var(--label); }
   .pills-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
 
+  /* Bulleted item lists — used in Section 15B so each news event reads as its
+     own discrete item instead of running together into one paragraph. */
+  .blist { margin: 0; padding-left: 17px; display: grid; gap: 7px; }
+  .blist li { font-size: 13px; color: var(--muted); line-height: 1.6; }
+  .blist li::marker { color: var(--gold-dim); }
+  .blist li b, .blist li strong { color: var(--text); font-weight: 600; }
+  .nx { margin: 11px 0 0; font-family: var(--mono); font-size: 10.5px;
+    letter-spacing: .04em; color: var(--label); }
+  .nx b { color: var(--muted); font-weight: 600; }
+
   footer { margin-top: 60px; padding-top: 18px; border-top: 1px solid var(--gold); border-top-color: color-mix(in srgb, var(--gold) 40%, transparent); }
   .fmeta { display: flex; flex-wrap: wrap; gap: 6px 24px; font-family: var(--mono);
     font-size: 11px; color: var(--gold); letter-spacing: .03em; margin-bottom: 12px; }
@@ -727,17 +737,62 @@
     <p class="note"><b>Alabama Outlook:</b> Analysts describe the Tide as "flying under the radar" for 2026 given QB and OL uncertainty; oddsmakers explicitly advise against betting Alabama to win the SEC this year. <b>Biggest strength:</b> secondary (Bray Hubbard, Keon Sabb, Zabien Brown — graded 2nd-best nationally by one analyst) and defensive line (SEC's 5th-best). <b>Biggest unresolved weakness:</b> offensive line cohesion under new coach Adrian Klemm (~61st nationally) compounding the open QB competition (~38th). <b>SEC/CFP implications:</b> a 41.3% CFP probability and 8.5-win sportsbook total put Alabama solidly in playoff-contention range but well behind Georgia/Texas as conference favorites. <b>Confidence:</b> Medium — roster uncertainty (QB, OL) is the swing factor and won't resolve until fall camp reps are graded.</p>
 
     <h3 class="sub">15B. Other Sports Snapshot</h3>
-    <div class="tw">
-      <table style="min-width:860px">
-        <thead><tr><th>Sport</th><th>Top Development</th><th>Why It Matters</th><th>Atlanta/Alabama Relevance</th><th>Next Event</th><th>Confidence</th></tr></thead>
-        <tbody>
-          <tr><td>NFL</td><td>Falcons' Michael Penix Jr. (ACL, ~4 wks from clearance) vs. Tua Tagovailoa (back flare-up) QB competition; RT Kaleb McGary carted off camp with leg injury; RB Bijan Robinson not practicing amid contract talks</td><td>QB1 uncertainty entering the season; McGary injury threatens O-line stability</td><td>Direct — Atlanta Falcons</td><td>Preseason opener</td><td class="up">High</td></tr>
-          <tr><td>Basketball</td><td>Alabama MBB lost Labaron Philon (NBA Draft), Latrell Wrightsell; added transfers Brandon Garrison (Kentucky), Jamarion Davis-Fleming (Miss St), Cole Cloer (NC State); NBA: Giannis traded MIL→MIA</td><td>Bama needs a lead guard; Aden Holloway legal matter/Amari Allen draft decision unresolved</td><td>Direct — Alabama MBB</td><td>Nov season tip-off</td><td style="color:var(--amber)">Medium</td></tr>
-          <tr><td>Baseball</td><td>MLB trade deadline Aug 3, 6pm ET; Tarik Skubal top chip; Braves seeking SP help, Waldrep velocity scare, Strider injury concern, Acuña Jr. return announced</td><td>Deadline activity will reshape NL/AL contender fields</td><td>Direct — Atlanta Braves</td><td>Aug 3 deadline</td><td class="up">High</td></tr>
-          <tr><td>Golf</td><td>Ryan Fox won The Open at Royal Birkdale (Jul 16-19); FedEx Cup Playoffs ahead (St. Jude Aug 13-16, BMW Aug 20-23, Tour Championship Aug 27-30 at East Lake, Atlanta, $25M bonus)</td><td>Tour Championship lands in Atlanta in late August</td><td>Direct — East Lake, Atlanta</td><td>FedEx St. Jude, Aug 13</td><td class="up">High</td></tr>
-          <tr><td>Soccer</td><td>2026 World Cup concluded Jul 19 — Spain beat Argentina 1-0 at MetLife; Atlanta United signed CB Paulo Díaz &amp; F Sergio Santos, traded Saba Lobjanidze to RSL</td><td>Confirms Spain's global favorite status; ATL UTD retooling roster before Sept 2 transfer deadline</td><td>Direct — Atlanta United</td><td>Transfer window closes Sep 2</td><td class="up">High</td></tr>
-        </tbody>
-      </table>
+    <p class="note" style="margin-top:0"><b>One bullet = one event.</b> Never chain unrelated
+    developments together with semicolons — if a sport had three things happen, that is three
+    bullets. Priority order: NFL, Basketball, Baseball, Golf, Soccer, then anything else only
+    when genuinely major. Drop a sport entirely if it had no fresh development this cycle —
+    an honest omission beats a restated one.</p>
+    <div class="cards">
+
+      <div class="panel">
+        <div class="plbl">NFL</div>
+        <ul class="blist">
+          <li><b>Falcons QB1 unresolved:</b> Michael Penix Jr. is ~4 weeks from ACL clearance; Tua Tagovailoa is managing a back flare-up.</li>
+          <li><b>RT Kaleb McGary carted off</b> camp with a leg injury — threatens O-line stability entering the season.</li>
+          <li><b>RB Bijan Robinson not practicing</b> amid contract negotiations.</li>
+        </ul>
+        <p class="nx"><b>Next:</b> Preseason opener · <b>Confidence:</b> High</p>
+      </div>
+
+      <div class="panel">
+        <div class="plbl">Basketball</div>
+        <ul class="blist">
+          <li><b>Alabama MBB losses:</b> Labaron Philon (NBA Draft) and Latrell Wrightsell are gone from the rotation.</li>
+          <li><b>Portal adds:</b> Brandon Garrison (Kentucky), Jamarion Davis-Fleming (Miss St), Cole Cloer (NC State) — but the team still lacks a proven lead guard.</li>
+          <li><b>NBA:</b> Giannis Antetokounmpo traded Milwaukee → Miami.</li>
+        </ul>
+        <p class="nx"><b>Next:</b> November season tip-off · <b>Confidence:</b> Medium</p>
+      </div>
+
+      <div class="panel">
+        <div class="plbl">Baseball</div>
+        <ul class="blist">
+          <li><b>MLB trade deadline Aug 3, 6pm ET</b> — Tarik Skubal is the top available chip.</li>
+          <li><b>Braves seeking starting pitching</b> ahead of the deadline; Waldrep velocity scare and Strider injury concern are the drivers.</li>
+          <li><b>Ronald Acuña Jr. return announced</b> — a direct lineup upgrade for the stretch run.</li>
+        </ul>
+        <p class="nx"><b>Next:</b> Aug 3 deadline · <b>Confidence:</b> High</p>
+      </div>
+
+      <div class="panel">
+        <div class="plbl">Golf</div>
+        <ul class="blist">
+          <li><b>Ryan Fox won The Open</b> at Royal Birkdale (Jul 16-19).</li>
+          <li><b>FedEx Cup Playoffs ahead:</b> St. Jude Aug 13-16, BMW Aug 20-23, Tour Championship Aug 27-30 at East Lake, Atlanta ($25M bonus).</li>
+        </ul>
+        <p class="nx"><b>Next:</b> FedEx St. Jude, Aug 13 · <b>Confidence:</b> High</p>
+      </div>
+
+      <div class="panel">
+        <div class="plbl">Soccer</div>
+        <ul class="blist">
+          <li><b>2026 World Cup concluded Jul 19</b> — Spain beat Argentina 1-0 at MetLife.</li>
+          <li><b>Atlanta United signed</b> CB Paulo Díaz and F Sergio Santos.</li>
+          <li><b>Atlanta United traded</b> Saba Lobjanidze to Real Salt Lake.</li>
+        </ul>
+        <p class="nx"><b>Next:</b> Transfer window closes Sep 2 · <b>Confidence:</b> High</p>
+      </div>
+
     </div>
 
     <h3 class="sub">15C. Sports Change Log and Watchlist</h3>

@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-13",
-    "report_count": 48,
+    "last_report_date": "2026-08-14",
+    "report_count": 49,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 63610.0,
-    "btc_change_24h_pct": -0.81,
-    "eth_usd": 1883.1,
-    "eth_change_24h_pct": -1.51,
-    "xrp_usd": 1.0071,
-    "xrp_change_24h_pct": -1.45,
-    "btc_24h_high": 64520.95,
-    "btc_24h_low": 63297.72,
-    "eth_24h_high": 1926.59,
-    "xrp_24h_high": 1.0264
+    "btc_usd": 62855.85,
+    "btc_change_24h_pct": -1.21,
+    "eth_usd": 1876.28,
+    "eth_change_24h_pct": -0.38,
+    "xrp_usd": 1.0027,
+    "xrp_change_24h_pct": -0.5,
+    "btc_24h_high": 64006.72,
+    "btc_24h_low": 62686.29,
+    "eth_24h_high": 1897.67,
+    "xrp_24h_high": 1.0141
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -22,23 +22,23 @@
     "pce_inflation_2026_pct": 2.5,
     "may_cpi_yoy_pct": 3.5,
     "prime_rate": 6.75,
-    "rate_hike_on_table": false,
+    "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "stable"
+    "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7748.5,
-    "sp500_change_24h_pct": 0.26,
-    "nasdaq_level": 26588.49,
-    "nasdaq_change_24h_pct": 0.54,
+    "sp500_level": 7798.99,
+    "sp500_change_24h_pct": 0.65,
+    "nasdaq_level": 26803.03,
+    "nasdaq_change_24h_pct": 0.81,
     "nasdaq_consecutive_down_days": 0,
-    "vix": 15.3,
+    "vix": 14.45,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.69,
+    "mortgage_30yr_fixed_pct": 6.67,
     "housing_inventory_yoy_pct": 3.6,
     "listing_price_yoy_pct": -2.2
   },
@@ -48,23 +48,23 @@
     "eth_etf_weekly_flow_bn": 0.245
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 20.0,
+    "clarity_act_polymarket_odds_pct": 21.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Fed Sept odds flip to ~63% hold after weak jobs (-23K) and in-line July CPI",
-    "BTC falls below 200-week MA for second time this cycle",
-    "SEC schedules Aug 14 vote on Regulation Crypto as CLARITY Act stalls to Sept 15",
-    "XRP ETF flows collapse 93% w/w to $1.01M even as Ripple deepens XRPL institutional infrastructure",
-    "AMD reverses prior selloff on Anthropic/OpenAI deals while Altman calls AI a bubble"
+    "Oil +6pct on unresolved Hormuz blockade into Aug 17 Iran ceasefire deadline",
+    "XRP breaks below 1.00 for first time since Nov 2024 (low 0.9984)",
+    "SEC votes Aug 14 on Regulation Crypto as CLARITY Act stalls to Sept 14 at ~21pct odds",
+    "SP500 and Nasdaq post record closes as Sept hike odds fall and VIX hits 7-month low",
+    "Nvidia forms 500B private-capital AI financing alliance as data-center power becomes the binding constraint"
   ],
   "elevated_risks": [
-    "BTC 200wk MA breakdown with thin volume plus elevated open interest raises liquidation risk",
-    "Office CMBS delinquencies hit record 12.34pct worse than 2008 GFC",
-    "Weak jobs report being priced as purely dovish though it is also a growth risk",
-    "Strait of Hormuz shipping still disrupted despite repeated de-escalation headlines",
-    "XRP ETF demand collapse may signal broader altcoin-ETF disappointment"
+    "Iran Hormuz escalation into Aug 17 deadline could revive Fed hike odds via energy CPI shock",
+    "BTC gap below 200wk MA widened to ~914 dollars while Strategy has not bought in 5 weeks",
+    "XRP break below 1.00 opens path to 0.95 downside target",
+    "Record equities on Shiller CAPE 42.32 and Buffett Indicator 237pct with decelerating breadth",
+    "Office CMBS delinquency at record 12.3pct and overall CMBS +51bps to 7.86pct in July"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,14 +76,14 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Technology/Mega-Cap",
-      "Consumer/Industrial",
-      "Defense"
+      "Mega-Cap Tech",
+      "Defense/Aerospace",
+      "Consumer/Leisure"
     ],
     "notable_tickers": [
-      "GOOGL",
-      "NVDA",
-      "PLTR"
+      "BWXT",
+      "PLTR",
+      "NVDA"
     ],
     "pattern_flags": [
       "Rep. Lisa McClain (spouse) bought private defense firm Saronic Technologies 1 day before TX announced its $3.25B shipyard for the company",
@@ -94,12 +94,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 4.3,
-    "macro": 4.5,
-    "public_markets": 6.3,
-    "ai_sector": 5.4,
-    "defense": 8.2,
-    "real_estate": 3.2,
-    "business_acquisitions": 7.0
+    "crypto": 4.2,
+    "macro": 4.8,
+    "public_markets": 7.0,
+    "ai_sector": 5.3,
+    "defense": 7.8,
+    "real_estate": 3.0,
+    "business_acquisitions": 6.8
   }
 }

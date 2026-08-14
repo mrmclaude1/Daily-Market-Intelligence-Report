@@ -288,7 +288,29 @@ report — do not repeat it.
    posture), all 7 sector scores, the alert callout, and all 19 sections. Update
    `<title>` to `Daily Market Intelligence — <Month DD, YYYY>`. Keep the structure, class
    names, and dark theme intact — only the content changes.
-3. **Publish with the `Artifact` tool, passing the stable URL above as the `url`
+3. **⚠️ MANDATORY — `WebFetch` the stable Artifact URL BEFORE calling `Artifact`.**
+   Do this every run, without exception. Every scheduled run is a brand-new session that
+   has never viewed the artifact, so the *first* publish attempt will otherwise fail with:
+
+   > `This session hasn't viewed the latest version of the artifact. Read it first
+   > (WebFetch the URL), reapply your edits, then publish.`
+
+   This is a **stale-version guard, not a permission prompt** — but it is what has been
+   interrupting the run each day and getting misread as "approve the artifact again."
+   Confirmed root cause on 2026-08-14: the publish failed with exactly this error, a single
+   `WebFetch` of the artifact URL cleared it, and the very next `Artifact` call published
+   with **no approval prompt at all**. One `WebFetch` up front removes the interruption.
+
+   ```
+   WebFetch(url: "https://claude.ai/code/artifact/44d3813a-980b-4964-a58e-53e52744bb21",
+            prompt: "What report date and report number does this page show?")
+   ```
+
+   (`WebFetch` runs server-side at Anthropic and *can* read `claude.ai/code/artifact/…`
+   URLs via the account's own login — do **not** substitute `curl`, which gets the SPA
+   shell or a Cloudflare 403.)
+
+4. **Publish with the `Artifact` tool, passing the stable URL above as the `url`
    parameter.** This updates the existing artifact in place and keeps the same link.
 
    > ⚠️ If you omit `url`, a scheduled/fresh session that did not originally publish this
@@ -302,7 +324,7 @@ report — do not repeat it.
    - `description`: `Daily Market Intelligence Report for <Month DD, YYYY> …`
    - `label`: a short date tag, e.g. `jul-11-2026`
 
-4. **Confirm** the tool response echoes the same `44d3813a…` URL. If it returns a
+5. **Confirm** the tool response echoes the same `44d3813a…` URL. If it returns a
    *different* URL, you minted a new artifact by mistake — do not leave it; re-publish
    with the `url` parameter set.
 
@@ -313,11 +335,21 @@ one going forward, and update this file with the new ID.
 **If the layout/design ever needs to change,** edit `report_template.html` — it is the
 single source of truth for how the report looks.
 
-### Known issue: daily "approve artifact" prompt — this is NOT a `.claude/settings.json` problem
-`.claude/settings.json` already has `"permissions": {"defaultMode": "bypassPermissions", "allow":
-["Artifact"]}` (set 2026-07-21, expanded 2026-07-22). **Do not re-edit this file to chase the
-daily-approval prompt again** — it was already maxed out two weeks before this note was written
-and the prompt kept recurring, which is the proof that the repo file isn't the lever:
+### The daily "approve artifact" interruption — RESOLVED 2026-08-14 (read this first)
+**Primary cause found and fixed: it was the stale-version guard, not a permission prompt.**
+On 2026-08-14 the `Artifact` publish failed with *"This session hasn't viewed the latest version
+of the artifact. Read it first (WebFetch the URL)…"*. A single `WebFetch` of the artifact URL
+cleared it, and the next `Artifact` call published **with no approval prompt whatsoever**.
+
+Because every scheduled run is a brand-new session that has never viewed the artifact, this guard
+fired on the first publish attempt of *every single run* — which is what has been stopping the
+routine daily and reading as "approve the artifact again." **Step 3 of the publish procedure above
+now makes the `WebFetch` mandatory and removes the interruption.** Do not delete that step.
+
+If — and only if — a genuine permission prompt still appears *after* the `WebFetch` step has run,
+the notes below apply. Do not go re-editing `.claude/settings.json`; that lever is already maxed:
+`"permissions": {"defaultMode": "bypassPermissions", "allow": ["Artifact"]}` (set 2026-07-21,
+expanded 2026-07-22), and it kept recurring anyway, which is the proof the repo file isn't it:
 
 - `bypassPermissions` is the most permissive mode this file can request, and the explicit
   `Artifact` allow-list entry is redundant on top of it. If the prompt still appears with both

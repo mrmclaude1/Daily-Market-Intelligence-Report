@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-16",
-    "report_count": 51,
+    "last_report_date": "2026-08-17",
+    "report_count": 52,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 63002.0,
-    "btc_change_24h_pct": -0.02,
-    "eth_usd": 1880.49,
-    "eth_change_24h_pct": 0.04,
-    "xrp_usd": 1.0,
-    "xrp_change_24h_pct": -0.29,
-    "btc_24h_high": 63178.97,
-    "btc_24h_low": 62940.39,
-    "eth_24h_high": 1886.45,
-    "xrp_24h_high": 1.0067
+    "btc_usd": 63544.36,
+    "btc_change_24h_pct": 0.86,
+    "eth_usd": 1902.98,
+    "eth_change_24h_pct": 1.20,
+    "xrp_usd": 1.0002,
+    "xrp_change_24h_pct": 0.01,
+    "btc_24h_high": 63717.04,
+    "btc_24h_low": 62712.26,
+    "eth_24h_high": 1912.69,
+    "xrp_24h_high": 1.0073
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -33,19 +33,19 @@
     "sp500_change_24h_pct": -0.17,
     "nasdaq_level": 26729.16,
     "nasdaq_change_24h_pct": -0.28,
-    "nasdaq_consecutive_down_days": 1,
-    "vix": 14.3,
+    "nasdaq_consecutive_down_days": 0,
+    "vix": 14.25,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.67,
-    "housing_inventory_yoy_pct": 3.6,
-    "listing_price_yoy_pct": -2.2
+    "mortgage_30yr_fixed_pct": 6.54,
+    "housing_inventory_yoy_pct": -0.6,
+    "listing_price_yoy_pct": 1.9
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.388,
-    "btc_spot_etf_total_outflow_4wk_bn": 0.133,
-    "eth_etf_weekly_flow_bn": 0.0496
+    "btc_spot_etf_weekly_flow_bn": -0.3897,
+    "btc_spot_etf_total_outflow_4wk_bn": 0.464,
+    "eth_etf_weekly_flow_bn": -0.00226
   },
   "regulation": {
     "clarity_act_polymarket_odds_pct": 18.0,
@@ -53,18 +53,18 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Hormuz active ship attacks plus Trump territorial claim escalate hours before MOU expiry",
-    "BTC ETF outflow streak extends to 5th session as Strategy mNAV falls below 1x",
-    "Fed hawkish 3-way dissent plus July retail sales miss create conflicting Sept16 FOMC signal",
-    "Golden Dome clears first SBI milestone even as Oct1 funding cliff remains unresolved",
-    "CFTC first Innovation Advisory Committee meets Aug20 as SEC Regulation Crypto stays stalled"
+    "Hormuz MOU formally expired Aug16/17 with no deal as Iran claims a parallel, unconfirmed Oman shipping route",
+    "BTC ETF outflows post their largest weekly total in six weeks as ETH ETF snaps a five-week inflow streak",
+    "SEC pulls its Aug14 Regulation Crypto vote at the last minute even as the rulemaking survives via OIRA",
+    "Fed Sept hike odds retreat toward a third as consumer sentiment craters to 51.0 and retail sales miss",
+    "Boeing and RTX sign a 7-year SM-3 production framework as Golden Dome Oct1 funding cliff stays unresolved"
   ],
   "elevated_risks": [
-    "Hormuz escalation risks an oil and energy-CPI shock into the Sept FOMC",
-    "Crypto institutional demand keeps reversing across BTC ETF flows and MSTR mNAV",
-    "Coldcard hardware wallet exploit grows past 116 million across 5000-plus addresses",
-    "Existing home sales and Case-Shiller decelerate while GA foreclosures and delinquencies sit at multi-year highs",
-    "Golden Dome Oct1 funding cliff remains unresolved with no congressional fix"
+    "Hormuz remains unresolved post-MOU-expiry with no confirmed reopening or ceasefire",
+    "Crypto institutional demand reversal broadens from BTC into ETH ETF flows and SEC rulemaking process",
+    "Consumer sentiment collapse and soft retail sales raise genuine growth-slowdown risk into big-box earnings",
+    "Golden Dome Oct1 funding cliff remains unresolved with no congressional fix after the Huntsville symposium",
+    "Georgia foreclosure and delinquency rates plus rising homeowners insurance costs compound real estate distress"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,30 +76,30 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
+      "Defense / AI Autonomous Systems",
       "Technology",
-      "Private/Non-Public Equity",
-      "Defense"
+      "Private / Pre-IPO Equity"
     ],
     "notable_tickers": [
-      "AAPL",
-      "MSTR",
-      "META"
+      "PLTR",
+      "LHX",
+      "SPCX"
     ],
     "pattern_flags": [
-      "Rep. Julie Johnson disclosed 76 late trades (Dec'25-May'25 trade dates) worth up to $1.14M in Aug 2026, a clear STOCK Act violation; drew only the $200 statutory minimum fine",
-      "Palantir (PLTR) is the standout cluster this cycle - roughly half of all Congress members' defense-stock buys were PLTR, spanning Ro Khanna, Gil Cisneros, MTG, James Comer, Julie Johnson, plus a Hickenlooper-family sale",
-      "Rep. Lisa McClain (spouse) bought private defense firm Saronic Technologies one day before TX announced its $3.25B shipyard for the company; also holds a Dec 2025 xAI stake",
-      "Sen. David McCormick continues holding a large Bitwise spot BTC ETF (BITB) position (~$1M cumulative 2025) while serving on Senate Banking's Digital Assets subcommittee",
-      "Rep. Rich McCormick bought L3Harris again Jun 12 2026, continuing a repeat in-and-out pattern while sitting on Armed Services"
+      "Rep. April McClain Delaney (D-MD) emerged as a new high-volume filer with 62 trades in a single week, second only to Julie Johnson's 77",
+      "Rep. Michael Rulli (R-OH) disclosed 32 trades Aug7, 22 of them past the 45-day deadline, some dating nearly two years",
+      "Rep. Lisa McClain's (spouse) Saronic Technologies buy is now confirmed dated exactly one day before Texas announced Saronic's $3.25B shipyard",
+      "Sen. David McCormick's Bitwise BTC ETF (BITB) position confirmed near $1M cumulative for 2025, the largest crypto exposure in Congress",
+      "Rep. Ro Khanna's Palantir buys now confirmed at 12 total since joining Armed Services, largest single buy up to $50,000"
     ]
   },
   "sector_scores": {
-    "crypto": 3.7,
-    "macro": 4.2,
-    "public_markets": 6.7,
-    "ai_sector": 5.2,
-    "defense": 7.4,
-    "real_estate": 2.7,
-    "business_acquisitions": 6.3
+    "crypto": 3.5,
+    "macro": 4.0,
+    "public_markets": 6.8,
+    "ai_sector": 5.3,
+    "defense": 7.5,
+    "real_estate": 2.9,
+    "business_acquisitions": 6.4
   }
 }

@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-18",
-    "report_count": 53,
+    "last_report_date": "2026-08-19",
+    "report_count": 54,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64206.77,
-    "btc_change_24h_pct": 1.01,
-    "eth_usd": 1898.07,
-    "eth_change_24h_pct": -0.28,
-    "xrp_usd": 0.9959,
-    "xrp_change_24h_pct": -0.43,
-    "btc_24h_high": 64637.6,
-    "btc_24h_low": 63430.96,
-    "eth_24h_high": 1918.88,
-    "xrp_24h_high": 1.0086
+    "btc_usd": 64420.0,
+    "btc_change_24h_pct": 0.34,
+    "eth_usd": 1919.0,
+    "eth_change_24h_pct": 1.11,
+    "xrp_usd": 1.0042,
+    "xrp_change_24h_pct": 0.86,
+    "btc_24h_high": 65061.81,
+    "btc_24h_low": 64041.98,
+    "eth_24h_high": 1930.31,
+    "xrp_24h_high": 1.0096
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -29,23 +29,23 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7745.06,
-    "sp500_change_24h_pct": -0.5,
-    "nasdaq_level": 26644.91,
-    "nasdaq_change_24h_pct": -0.3,
+    "sp500_level": 7785.76,
+    "sp500_change_24h_pct": -0.17,
+    "nasdaq_level": 26729.16,
+    "nasdaq_change_24h_pct": -0.28,
     "nasdaq_consecutive_down_days": 1,
-    "vix": 15.19,
-    "market_posture": "mixed-risk-off"
+    "vix": 15.84,
+    "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.67,
+    "mortgage_30yr_fixed_pct": 6.71,
     "housing_inventory_yoy_pct": -0.6,
     "listing_price_yoy_pct": 1.9
   },
   "crypto_etf": {
     "btc_spot_etf_weekly_flow_bn": -0.3897,
     "btc_spot_etf_total_outflow_4wk_bn": 0.0,
-    "eth_etf_weekly_flow_bn": -0.00226
+    "eth_etf_weekly_flow_bn": 0.0067
   },
   "regulation": {
     "clarity_act_polymarket_odds_pct": 20.0,
@@ -53,22 +53,22 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Iran's ceasefire/MOU lapses with no deal; Trump threatens to bomb Oman and a tanker is struck in Hormuz",
-    "30-year Treasury yield hits a 19-year high (~5.30%) on heavy issuance and term-premium repricing",
-    "XRP breaks below its $1.00 key support as its 7 ETFs see weekly inflows collapse 93% to $1.01M",
-    "RTX confirms a $22.9B 7-year Tomahawk contract while the Golden Dome Oct1 funding cliff stays unresolved",
-    "Alabama debuts at AP Preseason No. 13 - first time outside the Top 10 to open a season since 2008"
+    "SOX correction hits 20% in under a month as Samsung/SK Hynix fall over 7% overnight",
+    "BTC reclaims 200-week MA after first break below it since 2022; XRP retakes $1.00",
+    "Golden Dome Oct1 funding cliff quantified: 97% of $17.5B FY27 request depends on stalled reconciliation",
+    "RTX confirms $22.9B 7-year Tomahawk contract alongside Northrop/Lockheed $3B interceptor deals",
+    "House Ethics Committee Chairman Michael Guest discloses his own 6-month-late STOCK Act violation"
   ],
   "elevated_risks": [
-    "Strait of Hormuz re-escalation - ceasefire lapsed with no deal, fresh tanker strike, throughput collapsed",
-    "Golden Dome Oct1 funding cliff unresolved - Guetlein warns 'there is no Golden Dome' without a 2nd reconciliation bill",
-    "30-year Treasury yield spike compounds mortgage and CRE refinancing risk",
-    "XRP ETF demand collapse (-93% w/w) alongside the $1.00 support break",
-    "Georgia real estate distress accelerating - foreclosures +52% YoY, insurance costs rising, mortgage back to 6.67%"
+    "Golden Dome Oct1 funding cliff - $21B in contracts and 20-company industrial base at risk",
+    "Semiconductor correction (SOX -20%) could broaden beyond chips into the wider AI-capex complex",
+    "BTC/XRP technical reclaims fail to hold through FOMC-minutes-driven volatility",
+    "Georgia real estate distress accelerating - foreclosures +52% YoY alongside rising insurance costs",
+    "Iran/Hormuz risk remains unresolved with an unconfirmed fresh UAE missile-threat headline"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
-    "btc_200wk_ma_status": "below",
+    "btc_200wk_ma_status": "above",
     "xrp_key_support": 1.0,
     "xrp_downside_target": 0.95,
     "ascendex_warning_active": null
@@ -76,30 +76,30 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Big Tech",
+      "Big Tech/AI",
       "Defense/dual-use privates",
-      "Aviation"
+      "Financials"
     ],
     "notable_tickers": [
       "PLTR",
-      "GOOGL",
-      "xAI"
+      "NVDA",
+      "SpaceX"
     ],
     "pattern_flags": [
-      "Rep. Lisa McClain (spouse) bought pre-IPO xAI one week before the Pentagon-Grok/GenAI.mil integration announcement, and separately bought Saronic Technologies (autonomous vessels) in July - two defense/AI-adjacent private stakes in one filer",
-      "Rep. Michael Rulli (R-OH) disclosed 32 trades Aug 7, 22 of them past the 45-day STOCK Act deadline, some dating nearly two years",
-      "Sen. Tim Sheehy (R-MT) disclosed 5 private-company trades Aug 13, including a $500K-$1M Ansett Holdings (aviation) sale",
-      "Rep. Julie Johnson (D-TX) fined $200 for a STOCK Act violation on trades dated May-Dec 2025",
-      "Defense/dual-use private-stake pattern (SpaceX, xAI, Saronic, Palantir) now spans at least 8 members across the July-August window - a two-month structural trend, not a one-off"
+      "Rep. Michael Guest (R-MS), who chairs the House Ethics Committee, disclosed Aug 17 a 6+ month late STOCK Act violation via his wife's family trust (CVX/ABNB/ELF sales dated Dec 16, 2025) - the highest-irony disclosure of the cycle",
+      "Rep. Michael Rulli (R-OH) disclosed 32 trades, 22 of them past the 45-day STOCK Act deadline, some dating nearly two years; Rep. Tracey Mann (R-KS) disclosed 10 tech trades ~2 years late",
+      "Rep. Julie Johnson (D-TX) fined $200 for a STOCK Act violation; a House bill to bar members from individual-stock trading is advancing, likely driving a wave of 'last trades before the ban' late filings",
+      "Sen. John Boozman (R-AR) filed a same-window (non-late) 7-ticker disclosure Aug 17 (PYPL, CBOE, JPM, TRV, HD, EL, TRADR 2x SPY)",
+      "Defense/dual-use private-stake pattern (SpaceX, xAI, Saronic, Palantir) remains the highest-quality committee-overlap signal, spanning 8+ members across the July-August window"
     ]
   },
   "sector_scores": {
-    "crypto": 3.4,
-    "macro": 3.6,
-    "public_markets": 6.1,
-    "ai_sector": 5.5,
-    "defense": 7.6,
-    "real_estate": 2.7,
+    "crypto": 4.0,
+    "macro": 4.1,
+    "public_markets": 5.0,
+    "ai_sector": 4.4,
+    "defense": 7.9,
+    "real_estate": 2.6,
     "business_acquisitions": 6.3
   }
 }

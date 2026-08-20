@@ -1,25 +1,25 @@
 {
   "meta": {
-    "last_report_date": "2026-08-19",
-    "report_count": 54,
+    "last_report_date": "2026-08-20",
+    "report_count": 55,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 64420.0,
-    "btc_change_24h_pct": 0.34,
-    "eth_usd": 1919.0,
-    "eth_change_24h_pct": 1.11,
-    "xrp_usd": 1.0042,
-    "xrp_change_24h_pct": 0.86,
-    "btc_24h_high": 65061.81,
-    "btc_24h_low": 64041.98,
-    "eth_24h_high": 1930.31,
-    "xrp_24h_high": 1.0096
+    "btc_usd": 71847.93,
+    "btc_change_24h_pct": 11.56,
+    "eth_usd": 2286.17,
+    "eth_change_24h_pct": 19.17,
+    "xrp_usd": 1.1591,
+    "xrp_change_24h_pct": 15.43,
+    "btc_24h_high": 72488.58,
+    "btc_24h_low": 64397.88,
+    "eth_24h_high": 2336.25,
+    "xrp_24h_high": 1.1667
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.3,
+    "pce_inflation_2026_pct": 2.2,
     "may_cpi_yoy_pct": 3.4,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
@@ -29,42 +29,42 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7785.76,
-    "sp500_change_24h_pct": -0.17,
-    "nasdaq_level": 26729.16,
-    "nasdaq_change_24h_pct": -0.28,
-    "nasdaq_consecutive_down_days": 1,
+    "sp500_level": 7709.91,
+    "sp500_change_24h_pct": 0.24,
+    "nasdaq_level": 26331.09,
+    "nasdaq_change_24h_pct": 0.15,
+    "nasdaq_consecutive_down_days": 0,
     "vix": 15.84,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.71,
+    "mortgage_30yr_fixed_pct": 6.67,
     "housing_inventory_yoy_pct": -0.6,
     "listing_price_yoy_pct": 1.9
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.3897,
-    "btc_spot_etf_total_outflow_4wk_bn": 0.0,
+    "btc_spot_etf_weekly_flow_bn": -0.39,
+    "btc_spot_etf_total_outflow_4wk_bn": 0.46,
     "eth_etf_weekly_flow_bn": 0.0067
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 20.0,
+    "clarity_act_polymarket_odds_pct": 24.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "SOX correction hits 20% in under a month as Samsung/SK Hynix fall over 7% overnight",
-    "BTC reclaims 200-week MA after first break below it since 2022; XRP retakes $1.00",
-    "Golden Dome Oct1 funding cliff quantified: 97% of $17.5B FY27 request depends on stalled reconciliation",
-    "RTX confirms $22.9B 7-year Tomahawk contract alongside Northrop/Lockheed $3B interceptor deals",
-    "House Ethics Committee Chairman Michael Guest discloses his own 6-month-late STOCK Act violation"
+    "BTC/ETH/XRP squeeze 11-19pct on Treasury bond-buyback surprise",
+    "Golden Dome Oct1 funding cliff escalates - program director publicly warns of halt",
+    "Aug19 FOMC minutes confirm broad hawkish Fed sentiment beyond 3 dissenters",
+    "GD 71.6bn submarine deal plus 3bn-plus THAAD/PAC-3 production expansion",
+    "SOX fresh -5.6pct drop on AI memory supercycle crack fears (Samsung/SK Hynix)"
   ],
   "elevated_risks": [
-    "Golden Dome Oct1 funding cliff - $21B in contracts and 20-company industrial base at risk",
-    "Semiconductor correction (SOX -20%) could broaden beyond chips into the wider AI-capex complex",
-    "BTC/XRP technical reclaims fail to hold through FOMC-minutes-driven volatility",
-    "Georgia real estate distress accelerating - foreclosures +52% YoY alongside rising insurance costs",
-    "Iran/Hormuz risk remains unresolved with an unconfirmed fresh UAE missile-threat headline"
+    "Golden Dome Oct1 funding cliff - program director public warning 6 weeks out",
+    "Crypto rally is squeeze-driven not trend reversal - H1 ETF flows still -5.4bn",
+    "Iran/Hormuz escalating despite Polymarket pricing 65pct ceasefire-by-Aug31 odds",
+    "Aug26 core PCE print risk after hot core PPI - could hit rally-driven assets",
+    "Georgia foreclosures worsening to 77.8pct YoY on insurance-driven spiral"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,14 +76,14 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Big Tech/AI",
-      "Defense/dual-use privates",
-      "Financials"
+      "Big Tech/Mag7",
+      "Defense/dual-use tech (Palantir cluster)",
+      "Cybersecurity"
     ],
     "notable_tickers": [
       "PLTR",
       "NVDA",
-      "SpaceX"
+      "GOOGL"
     ],
     "pattern_flags": [
       "Rep. Michael Guest (R-MS), who chairs the House Ethics Committee, disclosed Aug 17 a 6+ month late STOCK Act violation via his wife's family trust (CVX/ABNB/ELF sales dated Dec 16, 2025) - the highest-irony disclosure of the cycle",
@@ -94,12 +94,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 4.0,
-    "macro": 4.1,
-    "public_markets": 5.0,
-    "ai_sector": 4.4,
-    "defense": 7.9,
-    "real_estate": 2.6,
-    "business_acquisitions": 6.3
+    "crypto": 6.5,
+    "macro": 4.5,
+    "public_markets": 5.3,
+    "ai_sector": 4.6,
+    "defense": 7.6,
+    "real_estate": 2.5,
+    "business_acquisitions": 6.5
   }
 }

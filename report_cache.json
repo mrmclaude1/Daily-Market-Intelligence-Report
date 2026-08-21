@@ -1,50 +1,50 @@
 {
   "meta": {
-    "last_report_date": "2026-08-20",
-    "report_count": 55,
+    "last_report_date": "2026-08-21",
+    "report_count": 56,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 71847.93,
-    "btc_change_24h_pct": 11.56,
-    "eth_usd": 2286.17,
-    "eth_change_24h_pct": 19.17,
-    "xrp_usd": 1.1591,
-    "xrp_change_24h_pct": 15.43,
-    "btc_24h_high": 72488.58,
-    "btc_24h_low": 64397.88,
-    "eth_24h_high": 2336.25,
-    "xrp_24h_high": 1.1667
+    "btc_usd": 77769.0,
+    "btc_change_24h_pct": 8.29,
+    "eth_usd": 2397.84,
+    "eth_change_24h_pct": 5.0,
+    "xrp_usd": 1.376,
+    "xrp_change_24h_pct": 18.86,
+    "btc_24h_high": 79525.99,
+    "btc_24h_low": 71118.58,
+    "eth_24h_high": 2448.6,
+    "xrp_24h_high": 1.43
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 2.2,
+    "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": 3.4,
     "prime_rate": 6.75,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
-    "iran_ceasefire_confirmed": false,
+    "iran_ceasefire_confirmed": true,
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7709.91,
-    "sp500_change_24h_pct": 0.24,
-    "nasdaq_level": 26331.09,
-    "nasdaq_change_24h_pct": 0.15,
-    "nasdaq_consecutive_down_days": 0,
-    "vix": 15.84,
+    "sp500_level": 7655.0,
+    "sp500_change_24h_pct": -0.7,
+    "nasdaq_level": 26140.0,
+    "nasdaq_change_24h_pct": -0.6,
+    "nasdaq_consecutive_down_days": 3,
+    "vix": 15.85,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.67,
+    "mortgage_30yr_fixed_pct": 6.65,
     "housing_inventory_yoy_pct": -0.6,
     "listing_price_yoy_pct": 1.9
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.39,
-    "btc_spot_etf_total_outflow_4wk_bn": 0.46,
+    "btc_spot_etf_weekly_flow_bn": 0.19,
+    "btc_spot_etf_total_outflow_4wk_bn": -0.6,
     "eth_etf_weekly_flow_bn": 0.0067
   },
   "regulation": {
@@ -53,24 +53,24 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "BTC/ETH/XRP squeeze 11-19pct on Treasury bond-buyback surprise",
-    "Golden Dome Oct1 funding cliff escalates - program director publicly warns of halt",
-    "Aug19 FOMC minutes confirm broad hawkish Fed sentiment beyond 3 dissenters",
-    "GD 71.6bn submarine deal plus 3bn-plus THAAD/PAC-3 production expansion",
-    "SOX fresh -5.6pct drop on AI memory supercycle crack fears (Samsung/SK Hynix)"
+    "Crypto rallies 2nd day while equities fall 3rd of 4 sessions - BTC 77.8K XRP 1.38",
+    "JPMorgan flips to expecting 25bp Sept hike - Polymarket 53pct vs futures 32-45pct",
+    "Samsung -7.8pct SK Hynix -9.75pct single-day AI memory crash ahead of NVDA Aug26",
+    "Iran ceasefire extended Aug11 Islamabad MOU even as Bessent threatens toughest sanctions in history",
+    "CLARITY Act odds flat ~24pct but Senate procedural vote now dated Sept15 same week as FOMC"
   ],
   "elevated_risks": [
-    "Golden Dome Oct1 funding cliff - program director public warning 6 weeks out",
-    "Crypto rally is squeeze-driven not trend reversal - H1 ETF flows still -5.4bn",
-    "Iran/Hormuz escalating despite Polymarket pricing 65pct ceasefire-by-Aug31 odds",
-    "Aug26 core PCE print risk after hot core PPI - could hit rally-driven assets",
-    "Georgia foreclosures worsening to 77.8pct YoY on insurance-driven spiral"
+    "September FOMC hike risk hardening after JPM shift and Polymarket 53pct",
+    "Crypto/equity decoupling reversal risk in either direction",
+    "AI memory selloff spreading into NVDA Aug26 earnings",
+    "Iran sanctions escalation despite ceasefire extension",
+    "Golden Dome Oct1 funding cliff unresolved six weeks out"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
     "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.0,
-    "xrp_downside_target": 0.95,
+    "xrp_key_support": 1.16,
+    "xrp_downside_target": 1.0,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
@@ -90,16 +90,17 @@
       "Rep. Michael Rulli (R-OH) disclosed 32 trades, 22 of them past the 45-day STOCK Act deadline, some dating nearly two years; Rep. Tracey Mann (R-KS) disclosed 10 tech trades ~2 years late",
       "Rep. Julie Johnson (D-TX) fined $200 for a STOCK Act violation; a House bill to bar members from individual-stock trading is advancing, likely driving a wave of 'last trades before the ban' late filings",
       "Sen. John Boozman (R-AR) filed a same-window (non-late) 7-ticker disclosure Aug 17 (PYPL, CBOE, JPM, TRV, HD, EL, TRADR 2x SPY)",
-      "Defense/dual-use private-stake pattern (SpaceX, xAI, Saronic, Palantir) remains the highest-quality committee-overlap signal, spanning 8+ members across the July-August window"
+      "Defense/dual-use private-stake pattern (SpaceX, xAI, Saronic, Palantir) remains the highest-quality committee-overlap signal, spanning 8+ members across the July-August window",
+      "Rep. Scott Franklin (R-FL) separately reported to have failed to disclose 31 trades on time (added Aug 21 pass) - consistent with the broader August wave of late-filing violations"
     ]
   },
   "sector_scores": {
-    "crypto": 6.5,
-    "macro": 4.5,
-    "public_markets": 5.3,
-    "ai_sector": 4.6,
-    "defense": 7.6,
-    "real_estate": 2.5,
-    "business_acquisitions": 6.5
+    "crypto": 7.2,
+    "macro": 4.0,
+    "public_markets": 4.6,
+    "ai_sector": 4.3,
+    "defense": 7.7,
+    "real_estate": 2.6,
+    "business_acquisitions": 6.7
   }
 }

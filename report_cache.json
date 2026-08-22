@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-21",
-    "report_count": 56,
+    "last_report_date": "2026-08-22",
+    "report_count": 57,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 77769.0,
-    "btc_change_24h_pct": 8.29,
-    "eth_usd": 2397.84,
-    "eth_change_24h_pct": 5.0,
-    "xrp_usd": 1.376,
-    "xrp_change_24h_pct": 18.86,
-    "btc_24h_high": 79525.99,
-    "btc_24h_low": 71118.58,
-    "eth_24h_high": 2448.6,
-    "xrp_24h_high": 1.43
+    "btc_usd": 76987.0,
+    "btc_change_24h_pct": -0.9,
+    "eth_usd": 2409.0,
+    "eth_change_24h_pct": 0.6,
+    "xrp_usd": 1.484,
+    "xrp_change_24h_pct": 8.0,
+    "btc_24h_high": 78832.0,
+    "btc_24h_low": 76238.0,
+    "eth_24h_high": 2548.0,
+    "xrp_24h_high": 1.7
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -25,16 +25,16 @@
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
-    "iran_ceasefire_confirmed": true,
+    "iran_ceasefire_confirmed": false,
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7655.0,
-    "sp500_change_24h_pct": -0.7,
-    "nasdaq_level": 26140.0,
-    "nasdaq_change_24h_pct": -0.6,
-    "nasdaq_consecutive_down_days": 3,
-    "vix": 15.85,
+    "sp500_level": 7674.37,
+    "sp500_change_24h_pct": 0.43,
+    "nasdaq_level": 26180.45,
+    "nasdaq_change_24h_pct": 0.43,
+    "nasdaq_consecutive_down_days": 0,
+    "vix": 16.01,
     "market_posture": "mixed"
   },
   "real_estate": {
@@ -43,64 +43,66 @@
     "listing_price_yoy_pct": 1.9
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.19,
-    "btc_spot_etf_total_outflow_4wk_bn": -0.6,
-    "eth_etf_weekly_flow_bn": 0.0067
+    "btc_spot_etf_weekly_flow_bn": 1.5,
+    "btc_spot_etf_total_outflow_4wk_bn": 1.5,
+    "eth_etf_weekly_flow_bn": 0.51
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 24.0,
+    "clarity_act_polymarket_odds_pct": 18.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Crypto rallies 2nd day while equities fall 3rd of 4 sessions - BTC 77.8K XRP 1.38",
-    "JPMorgan flips to expecting 25bp Sept hike - Polymarket 53pct vs futures 32-45pct",
-    "Samsung -7.8pct SK Hynix -9.75pct single-day AI memory crash ahead of NVDA Aug26",
-    "Iran ceasefire extended Aug11 Islamabad MOU even as Bessent threatens toughest sanctions in history",
-    "CLARITY Act odds flat ~24pct but Senate procedural vote now dated Sept15 same week as FOMC"
+    "Treasury bond-buyback ignites crypto's best week since 2024 - BTC +22pct XRP +40pct week",
+    "Iran ceasefire MOU expired Aug17 with no renewal - naval blockade reimposed",
+    "Fed Sept hike odds collapse ~53pct to ~28-32pct after weak July jobs miss",
+    "CLARITY Act sinks to 16-20pct ahead of Sept15 cloture - zero Dem crossovers confirmed",
+    "NVDA earnings Aug26 - next binary test of AI capex ROI debate"
   ],
   "elevated_risks": [
-    "September FOMC hike risk hardening after JPM shift and Polymarket 53pct",
-    "Crypto/equity decoupling reversal risk in either direction",
-    "AI memory selloff spreading into NVDA Aug26 earnings",
-    "Iran sanctions escalation despite ceasefire extension",
-    "Golden Dome Oct1 funding cliff unresolved six weeks out"
+    "Iran ceasefire lapsed and materially underpriced across risk assets",
+    "CLARITY Act failure risk now the base case not tail case",
+    "Fed Sept odds swing needs live verification - could reverse on hot Aug CPI",
+    "Golden Dome funding cliff dated to Oct1 by programs own leadership",
+    "BTC exchange reserves rising even as price rallies - latent overhead supply"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
     "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.16,
-    "xrp_downside_target": 1.0,
+    "xrp_key_support": 1.35,
+    "xrp_downside_target": 1.16,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Big Tech/Mag7",
-      "Defense/dual-use tech (Palantir cluster)",
-      "Cybersecurity"
+      "Technology/AI",
+      "Healthcare",
+      "Financials"
     ],
     "notable_tickers": [
-      "PLTR",
+      "MSFT",
+      "META",
+      "AAPL",
       "NVDA",
       "GOOGL"
     ],
     "pattern_flags": [
-      "Rep. Michael Guest (R-MS), who chairs the House Ethics Committee, disclosed Aug 17 a 6+ month late STOCK Act violation via his wife's family trust (CVX/ABNB/ELF sales dated Dec 16, 2025) - the highest-irony disclosure of the cycle",
+      "Rep. Julia Letlow (R-LA) signed an NDA with a Meta shell company (Jun 2024) covering a $50B LA data center, then bought Meta/Nvidia stock undisclosed for 1+ year - strongest conflict-of-interest signal to date",
+      "Sen. John Boozman (R-AR) was the most frequent August filer - 3 separate disclosure batches (Aug 17, 18, 20), one containing lots ~485-499 days late",
       "Rep. Michael Rulli (R-OH) disclosed 32 trades, 22 of them past the 45-day STOCK Act deadline, some dating nearly two years; Rep. Tracey Mann (R-KS) disclosed 10 tech trades ~2 years late",
-      "Rep. Julie Johnson (D-TX) fined $200 for a STOCK Act violation; a House bill to bar members from individual-stock trading is advancing, likely driving a wave of 'last trades before the ban' late filings",
-      "Sen. John Boozman (R-AR) filed a same-window (non-late) 7-ticker disclosure Aug 17 (PYPL, CBOE, JPM, TRV, HD, EL, TRADR 2x SPY)",
-      "Defense/dual-use private-stake pattern (SpaceX, xAI, Saronic, Palantir) remains the highest-quality committee-overlap signal, spanning 8+ members across the July-August window",
-      "Rep. Scott Franklin (R-FL) separately reported to have failed to disclose 31 trades on time (added Aug 21 pass) - consistent with the broader August wave of late-filing violations"
+      "Rep. Shri Thanedar (D-MI) disclosed his 3rd STOCK Act violation this cycle (AAPL/MSTR sales)",
+      "Sen. Tommy Tuberville (R-AL, Senate Agriculture) disclosed ~$250,000 in wheat/corn/soy/cattle futures trades while shaping the ag policy those commodities are exposed to",
+      "Heavy cluster of very-late STOCK Act disclosures surfaced in the same August window (Thanedar, Rulli, Letlow, Mann) - possible compliance-sweep news cycle or pre-trading-ban rush"
     ]
   },
   "sector_scores": {
-    "crypto": 7.2,
-    "macro": 4.0,
-    "public_markets": 4.6,
-    "ai_sector": 4.3,
-    "defense": 7.7,
-    "real_estate": 2.6,
-    "business_acquisitions": 6.7
+    "crypto": 7.8,
+    "macro": 3.8,
+    "public_markets": 5.0,
+    "ai_sector": 4.5,
+    "defense": 7.3,
+    "real_estate": 2.5,
+    "business_acquisitions": 6.6
   }
 }

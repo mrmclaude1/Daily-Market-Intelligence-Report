@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-23",
-    "report_count": 58,
+    "last_report_date": "2026-08-24",
+    "report_count": 59,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 76881.0,
-    "btc_change_24h_pct": -0.1,
-    "eth_usd": 2417.0,
-    "eth_change_24h_pct": 0.3,
-    "xrp_usd": 1.491,
-    "xrp_change_24h_pct": 0.4,
-    "btc_24h_high": 77572.0,
-    "btc_24h_low": 75551.0,
-    "eth_24h_high": 2445.0,
-    "xrp_24h_high": 1.53
+    "btc_usd": 79680.38,
+    "btc_change_24h_pct": 3.09,
+    "eth_usd": 2520.2,
+    "eth_change_24h_pct": 3.33,
+    "xrp_usd": 1.5188,
+    "xrp_change_24h_pct": 0.43,
+    "btc_24h_high": 79842.35,
+    "btc_24h_low": 76660.61,
+    "eth_24h_high": 2532.19,
+    "xrp_24h_high": 1.5466
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -29,12 +29,12 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7674.37,
-    "sp500_change_24h_pct": 0.43,
-    "nasdaq_level": 26180.46,
-    "nasdaq_change_24h_pct": 0.43,
-    "nasdaq_consecutive_down_days": 0,
-    "vix": 15.13,
+    "sp500_level": 7654.0,
+    "sp500_change_24h_pct": -0.27,
+    "nasdaq_level": 26002.0,
+    "nasdaq_change_24h_pct": -0.68,
+    "nasdaq_consecutive_down_days": 1,
+    "vix": 15.1,
     "market_posture": "mixed"
   },
   "real_estate": {
@@ -43,28 +43,28 @@
     "listing_price_yoy_pct": 1.9
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 1.9,
+    "btc_spot_etf_weekly_flow_bn": 1.61,
     "btc_spot_etf_total_outflow_4wk_bn": 2.6,
-    "eth_etf_weekly_flow_bn": 0.51
+    "eth_etf_weekly_flow_bn": 0.7
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 25.0,
+    "clarity_act_polymarket_odds_pct": 24.5,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Iran conflict escalates to declaration-of-war rhetoric - Hormuz claimed as US territory",
-    "Crypto weekend flash crash liquidates $1.35-1.7B - XRP -37% intraday then recovers",
-    "BTC+ETH ETF flows hit $2.6B combined weekly - best since Oct 2025",
-    "SEC proposes Regulation Crypto Assets - new bespoke crypto offering regime",
-    "NVDA + CRWD both report Aug 26 - compounded by fresh memory-cost shock"
+    "BTC nears $80K/ETH tops $2500 on record $2.6B combined weekly ETF inflows",
+    "Iran ceasefire MOU lapses Aug17 - Hormuz strikes resume - fresh sanctions expected",
+    "NVDA+CRWD earnings Aug26 then Warsh first Jackson Hole keynote as Fed Chair Aug28",
+    "30yr Treasury hits 19-year high (~5.33%) even as DXY at 3-month low",
+    "CLARITY Act stuck ~24-25% - blocked by Warren-led ethics amendment - Sep15 vote"
   ],
   "elevated_risks": [
-    "Iran escalation structurally underpriced - equities closed VIX falling into Monday sanctions",
-    "BTC 7-year overbought RSI pre-crash - second leverage unwind plausible",
-    "Golden Dome Oct1 funding cliff confirmed - 95pct FY26 obligated no resolution path",
-    "XRP ETF inflows collapsed 96pct since launch despite approved status",
-    "30yr yield 19-year high alongside 3-month-low dollar - no clean macro narrative"
+    "Iran MOU lapse sits under complacent VIX(~15) and historic-tight HY spreads(~275bp)",
+    "Crypto leverage/funding-rate buildup could repeat Sat's -37% XRP flash crash",
+    "Golden Dome Oct1 funding cliff - ~90pct FY26 obligated - no resolution path 5wks out",
+    "FHA delinquency 11.9pct highest since Q2 2020 - housing stress leading indicator",
+    "Three-day catalyst pileup (NVDA/CRWD earnings + Jackson Hole) risks compounding shock"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,33 +76,33 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Mega-cap Tech",
-      "AI/Defense-adjacent",
-      "Diversified/Private Markets"
+      "Mega-cap Tech/AI",
+      "AI/Defense-adjacent (PLTR/NVDA)",
+      "Diversified/Consumer"
     ],
     "notable_tickers": [
-      "AAPL",
-      "MSFT",
       "NVDA",
-      "PLTR"
+      "PLTR",
+      "GOOGL",
+      "AMZN",
+      "AAPL"
     ],
     "pattern_flags": [
-      "Rep. Michael Rulli (R-OH) disclosed 32 trades, 22 of them late (STOCK Act violation) across PLTR/GOOGL/AMZN/AAPL/META/MSFT/NVDA",
-      "Rep. Julie Johnson (D-TX) disclosed dozens of trades totaling up to $1.1M, several 8-12 months late-filed",
-      "Sen. Tim Sheehy (R-MT) disclosed trades in 5 private companies Aug 13, incl. a $500K-$1M Ansett Holdings sale",
-      "Rep. Tracey Mann (R-KS) disclosed ~2-year-late spouse trades in AAPL/GOOGL/MSFT/META/NVDA",
-      "Rep. Cleo Fields (D-LA, Financial Services Cmte) bought GOOGL/PLTR/CoreWeave/Figma/Iris Energy - committee-overlap flag given AI/fintech regulatory jurisdiction",
-      "Rep. Scott Franklin (R-FL) failed to disclose 31 trades on time",
-      "Dominant August theme is a wave of STOCK Act late-filing violations rather than fresh informed trading"
+      "Rep. Michael Guest (R-MS, House Ethics Cmte Chair) disclosed his 2nd career STOCK Act violation - 6+ months late on wife's family-trust sales of CVX/ABNB/ELF",
+      "Rep. Michael Rulli (R-OH) disclosed 32 trades, 22 of them late (STOCK Act violation) across PLTR/GOOGL/AMZN/AAPL/META/MSFT/NVDA/ORCL/KO/LLY/GEV/PRU",
+      "Rep. Julie Johnson (D-TX) filed 77 of 147 total congressional trades logged Jul31-Aug7, all late (LTH/CHRW/FWONK/PLTR/MRK)",
+      "Dominant August theme: an unusually dense cluster of STOCK Act violations, including the Ethics Committee's own chair, reviving momentum behind a congressional stock-trading ban",
+      "NVDA remains the most broadly held single ticker across the chamber (820 disclosed trades YTD, 17 members, net-buy tilt)",
+      "PLTR appears across Rulli and Johnson this window, continuing the AI/defense-policy-adjacent pattern flagged in prior reports"
     ]
   },
   "sector_scores": {
-    "crypto": 7.4,
-    "macro": 3.3,
-    "public_markets": 5.1,
-    "ai_sector": 4.4,
-    "defense": 7.4,
-    "real_estate": 2.6,
-    "business_acquisitions": 6.7
+    "crypto": 7.9,
+    "macro": 3.4,
+    "public_markets": 5.0,
+    "ai_sector": 4.2,
+    "defense": 7.3,
+    "real_estate": 2.8,
+    "business_acquisitions": 6.8
   }
 }

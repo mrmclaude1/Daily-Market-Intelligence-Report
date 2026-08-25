@@ -400,6 +400,60 @@ expanded 2026-07-22), and it kept recurring anyway, which is the proof the repo 
   this repo (or a `gh-pages`/static-hosting target) each run instead, so the daily output is
   reachable without a human approval step.
 
+### NEW FAILURE MODE — 2026-08-25: publish stuck in a WebFetch→Read→Artifact loop that never clears
+Report #60 (Aug 25) could **not** be published — this is the first fully-confirmed case of the
+Artifact stale-version/dedup guard failing to clear even after doing everything the guide above
+says. `report_cache.json` **was** successfully updated on `main` (commit `408abf5`, report_count
+60) — only the visual Artifact is stuck on report #59 (Aug 24).
+
+**Exact sequence observed, in order:**
+1. `WebFetch` the stable URL (per Step 3 above) → succeeded, returned the "Read every line of the
+   saved file first" instruction as normal.
+2. Read the saved file in full (every line, confirmed via multiple `Read` calls covering the whole
+   ~914-line document) → completed.
+3. `Artifact` publish (file_path = today's new HTML, url = stable URL) → **refused**: *"You hadn't
+   viewed the live version of this artifact... that version counts as viewed once you have Read
+   every line of that file"* — i.e. step 2 did not register as satisfying the guard.
+4. Repeated steps 1–2 exactly (fresh `WebFetch`, fresh full `Read`) → `Artifact` publish again →
+   **refused with a different message this time**: *"this is the identical content already refused
+   against the newer version ... resent unchanged... re-Reading a file an earlier refusal handed
+   you does not count"* — even though the `WebFetch`+`Read` cycle had just been redone from scratch
+   immediately beforehand.
+5. Made a small genuine content edit (updated the "Generated ~HH:MM UTC" timestamp in the file) to
+   rule out a pure dedup-hash false positive → `Artifact` publish → refusal reverted **back** to the
+   step-3 message ("hadn't viewed"), i.e. changing the content reset the "viewed" flag rather than
+   letting the new content through.
+6. Repeated the full `WebFetch`+`Read` cycle a third time against the now-edited file → `Artifact`
+   publish → same "identical content, resent unchanged" refusal as step 4, plus a harness warning
+   that the call had now been rejected 3+ times and to stop retrying.
+
+**Read this as: the "viewed" flag and the "is this a resend" dedup check do not appear to be
+tracking correctly against each other in this failure case** — `WebFetch`+full-`Read` no longer
+reliably clears the guard the way it did on 2026-08-14, and changing the submitted content does not
+help either (it just flips which of the two refusal messages you get). This is different from the
+2026-08-14 issue (which was a one-time missing-`WebFetch` problem, fixed by Step 3 above) — Step 3
+was followed correctly every time this session and the guard still didn't clear.
+
+**What to do if this recurs:**
+- Don't loop more than ~3 times total (`WebFetch` → full `Read` → `Artifact`) — each cycle is
+  expensive (the saved file is 100KB+ and a full read costs tens of thousands of tokens per pass)
+  and, per this session's experience, does not converge by repetition alone.
+- After ~3 refusals, the harness itself will tell you to stop calling `Artifact` for this target —
+  respect that instead of continuing to retry.
+- **Always finish the cache push (`report_cache.json` → `main`) first, independent of the Artifact
+  step** — that part of the pipeline is unaffected by this bug and at least keeps Section 2 diffs
+  working for the next run, even when the Artifact publish fails.
+- Notify the user that the Artifact could not be updated this cycle (report_cache.json is current,
+  but the visible report is still showing the prior day) rather than silently leaving it stale with
+  no indication anything went wrong.
+- If this becomes a **recurring** (not one-off) failure across multiple future runs, treat it the
+  same way the 2026-08-14 note treats a persistent permission-prompt case: the durable fix is to
+  stop routing the daily publish through the `Artifact` tool entirely (e.g. commit the rendered
+  HTML into this repo or a static-hosting target instead), since no amount of WebFetch/Read
+  ordering fixed it this cycle.
+- **Do not use `force:true`** to push past this — that requires explicit user confirmation per the
+  tool's own contract, which an unattended scheduled session cannot obtain.
+
 ---
 
 ## GitHub Cache Details

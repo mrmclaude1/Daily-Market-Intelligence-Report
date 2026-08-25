@@ -1,41 +1,41 @@
 {
   "meta": {
-    "last_report_date": "2026-08-24",
-    "report_count": 59,
+    "last_report_date": "2026-08-25",
+    "report_count": 60,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 79680.38,
-    "btc_change_24h_pct": 3.09,
-    "eth_usd": 2520.2,
-    "eth_change_24h_pct": 3.33,
-    "xrp_usd": 1.5188,
-    "xrp_change_24h_pct": 0.43,
-    "btc_24h_high": 79842.35,
-    "btc_24h_low": 76660.61,
-    "eth_24h_high": 2532.19,
-    "xrp_24h_high": 1.5466
+    "btc_usd": 79257.0,
+    "btc_change_24h_pct": 1.69,
+    "eth_usd": 2477.0,
+    "eth_change_24h_pct": 0.04,
+    "xrp_usd": 1.481,
+    "xrp_change_24h_pct": -0.32,
+    "btc_24h_high": 81271.0,
+    "btc_24h_low": 77442.0,
+    "eth_24h_high": 2533.0,
+    "xrp_24h_high": 1.55
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
     "pce_inflation_2026_pct": 3.0,
     "may_cpi_yoy_pct": 3.4,
-    "prime_rate": 7.5,
+    "prime_rate": 6.75,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "rising"
+    "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7654.0,
-    "sp500_change_24h_pct": -0.27,
-    "nasdaq_level": 26002.0,
-    "nasdaq_change_24h_pct": -0.68,
-    "nasdaq_consecutive_down_days": 1,
-    "vix": 15.1,
-    "market_posture": "mixed"
+    "sp500_level": 7652.86,
+    "sp500_change_24h_pct": -0.28,
+    "nasdaq_level": 25980.19,
+    "nasdaq_change_24h_pct": -0.76,
+    "nasdaq_consecutive_down_days": 2,
+    "vix": 15.13,
+    "market_posture": "mixed-risk-off"
   },
   "real_estate": {
     "mortgage_30yr_fixed_pct": 6.65,
@@ -43,49 +43,47 @@
     "listing_price_yoy_pct": 1.9
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 1.61,
+    "btc_spot_etf_weekly_flow_bn": 1.918,
     "btc_spot_etf_total_outflow_4wk_bn": 2.6,
-    "eth_etf_weekly_flow_bn": 0.7
+    "eth_etf_weekly_flow_bn": 0.697
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 24.5,
+    "clarity_act_polymarket_odds_pct": 17.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "BTC nears $80K/ETH tops $2500 on record $2.6B combined weekly ETF inflows",
-    "Iran ceasefire MOU lapses Aug17 - Hormuz strikes resume - fresh sanctions expected",
-    "NVDA+CRWD earnings Aug26 then Warsh first Jackson Hole keynote as Fed Chair Aug28",
-    "30yr Treasury hits 19-year high (~5.33%) even as DXY at 3-month low",
-    "CLARITY Act stuck ~24-25% - blocked by Warren-led ethics amendment - Sep15 vote"
+    "Fed Sept hike odds cross 50pct first time 2026 (Polymarket 53pct vs CME 32pct)",
+    "CLARITY Act odds crater 24.5pct to 17pct ahead of Sept15 cloture-only vote",
+    "NVDA 7th straight down day into earnings on hyperscaler AI-server price-hike letter",
+    "Treasury unveils sweeping new Iran sanctions Operation Economic Outcast no ceasefire",
+    "BTC/ETH ETF inflows hit 2.615B combined best week of 2026 despite XRP flash crash"
   ],
   "elevated_risks": [
-    "Iran MOU lapse sits under complacent VIX(~15) and historic-tight HY spreads(~275bp)",
-    "Crypto leverage/funding-rate buildup could repeat Sat's -37% XRP flash crash",
-    "Golden Dome Oct1 funding cliff - ~90pct FY26 obligated - no resolution path 5wks out",
-    "FHA delinquency 11.9pct highest since Q2 2020 - housing stress leading indicator",
-    "Three-day catalyst pileup (NVDA/CRWD earnings + Jackson Hole) risks compounding shock"
+    "Fed hike odds crossing 50pct into Warsh first Jackson Hole speech Aug28",
+    "CLARITY Act ethics dispute unresolved Sept15 needs 7 Dem crossovers",
+    "XRP leverage fragility after Aug22 37pct flash crash 500M liquidated",
+    "NVDA/CRWD/MRVL earnings week concentrates AI capex-cost risk",
+    "Iran sanctions escalation plus new US-Canada tariff war stack two geopolitical risks"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
     "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.35,
-    "xrp_downside_target": 1.16,
+    "xrp_key_support": 1.38,
+    "xrp_downside_target": 1.28,
     "ascendex_warning_active": null
   },
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Mega-cap Tech/AI",
-      "AI/Defense-adjacent (PLTR/NVDA)",
-      "Diversified/Consumer"
+      "Logistics",
+      "Media",
+      "Consumer Staples"
     ],
     "notable_tickers": [
-      "NVDA",
-      "PLTR",
-      "GOOGL",
-      "AMZN",
-      "AAPL"
+      "CHRW",
+      "FWONK",
+      "LTH"
     ],
     "pattern_flags": [
       "Rep. Michael Guest (R-MS, House Ethics Cmte Chair) disclosed his 2nd career STOCK Act violation - 6+ months late on wife's family-trust sales of CVX/ABNB/ELF",
@@ -97,12 +95,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 7.9,
-    "macro": 3.4,
-    "public_markets": 5.0,
-    "ai_sector": 4.2,
-    "defense": 7.3,
-    "real_estate": 2.8,
-    "business_acquisitions": 6.8
+    "crypto": 7.6,
+    "macro": 2.9,
+    "public_markets": 4.7,
+    "ai_sector": 3.7,
+    "defense": 7.4,
+    "real_estate": 3.0,
+    "business_acquisitions": 6.6
   }
 }

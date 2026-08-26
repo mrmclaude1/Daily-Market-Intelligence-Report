@@ -463,6 +463,35 @@ help either (it just flipped which of the two refusal messages came back). This 
 the 2026-08-14 issue (which was a one-time missing-`WebFetch` problem, fixed by Step 3 above) — Step
 3 was followed correctly every time this session and the guard still didn't clear on its own.
 
+### RECURRENCE — 2026-08-26: same guard-stuck failure, ran the documented playbook, still stuck
+Report #61 (Aug 26) hit the **identical** failure mode again, on a fully unattended scheduled run.
+`report_cache.json` updated to `main` successfully throughout (commit `65deba4`, report_count 61) —
+only the visual Artifact was affected, stuck on report #60 (Aug 25).
+
+**Sequence, following the "Updated guidance" above exactly:**
+1. `WebFetch` the stable URL → succeeded, standard "Read every line" instruction.
+2. Read the saved file in full (every line, across multiple `Read` calls) → completed.
+3. `Artifact` publish → refused: *"hadn't viewed the live version"*.
+4. Repeated a fresh `WebFetch` (same version id returned — no new version existed to view) + full
+   `Read` of that fetch's saved file → `Artifact` publish again → refused: *"identical content
+   already refused... resent unchanged"*.
+5. Made a small genuine content edit (updated the "Generated ~HH:MM UTC" timestamp) → `Artifact`
+   publish → refusal flipped back to *"hadn't viewed"*, exactly as documented above.
+6. Repeated the full `WebFetch`+`Read` cycle a third time against the edited file → `Artifact`
+   publish → same *"identical content, resent unchanged"* refusal a second time.
+7. Stopped at 3 refusals per the documented guidance (did **not** attempt `force:true`, since this
+   was an unattended run with no user present to confirm it), confirmed the cache push had already
+   landed on `main`, and sent a push notification summarizing today's report content and flagging
+   that the Artifact publish needs a live "force publish" confirmation from the user.
+
+**Takeaway:** the "Updated guidance" from the 2026-08-25 incident holds up — the stop-after-3 +
+notify path worked cleanly as designed. But the underlying guard itself is now confirmed to get
+stuck on **at least two separate occasions a day apart**, not a one-off fluke — treat this as a
+recurring, not resolved, failure mode. If it keeps recurring, the durable fix suggested in the
+"RESOLVED 2026-08-14" section above (stop routing the daily publish through `Artifact` entirely,
+e.g. commit the rendered HTML into this repo or a static-hosting target) is worth revisiting rather
+than continuing to absorb a ~50% Artifact-publish failure rate on scheduled runs.
+
 ---
 
 ## GitHub Cache Details

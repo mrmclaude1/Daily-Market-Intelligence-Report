@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-27",
-    "report_count": 62,
+    "last_report_date": "2026-08-28",
+    "report_count": 63,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 79497.85,
-    "btc_change_24h_pct": 1.08,
-    "eth_usd": 2503.56,
-    "eth_change_24h_pct": 1.84,
-    "xrp_usd": 1.4221,
-    "xrp_change_24h_pct": 0.24,
-    "btc_24h_high": 80529.3,
-    "btc_24h_low": 77618.97,
-    "eth_24h_high": 2566.99,
-    "xrp_24h_high": 1.4543
+    "btc_usd": 79314.0,
+    "btc_change_24h_pct": -0.32,
+    "eth_usd": 2493.41,
+    "eth_change_24h_pct": -0.5,
+    "xrp_usd": 1.4136,
+    "xrp_change_24h_pct": -0.74,
+    "btc_24h_high": 81484.26,
+    "btc_24h_low": 78901.64,
+    "eth_24h_high": 2535.0,
+    "xrp_24h_high": 1.474
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -22,23 +22,23 @@
     "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": 3.4,
     "prime_rate": 6.75,
-    "rate_hike_on_table": true,
+    "rate_hike_on_table": false,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
     "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7676.0,
-    "sp500_change_24h_pct": -0.02,
-    "nasdaq_level": 26130.0,
-    "nasdaq_change_24h_pct": -0.08,
+    "sp500_level": 7730.99,
+    "sp500_change_24h_pct": 0.72,
+    "nasdaq_level": 26541.35,
+    "nasdaq_change_24h_pct": 1.57,
     "nasdaq_consecutive_down_days": 0,
     "vix": 15.21,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.65,
+    "mortgage_30yr_fixed_pct": 6.66,
     "housing_inventory_yoy_pct": 2.8,
     "listing_price_yoy_pct": -2.2
   },
@@ -48,23 +48,23 @@
     "eth_etf_weekly_flow_bn": 0.697
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 14.0,
+    "clarity_act_polymarket_odds_pct": 14.5,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "NVDA/CRWD/CRM triple beat sends Nasdaq futures +1%",
-    "Weak August jobs report (+22K NFP/4.3% unemployment) signals labor slowdown",
-    "Crypto ETF inflows hit best week since Oct 2025 (2.71B USD)",
-    "CLARITY Act stuck at 14% floor after Thune skips cloture",
-    "Canada Sept 8 retaliatory tariffs loom with talks collapsed"
+    "PayPal's $53B Stripe/Advent buyout collapses on valuation/financing/regulatory concerns",
+    "Marvell falls 7.6% AH despite record revenue as AI-semis valuation discipline emerges",
+    "BTC tags fresh 50WMA test at $81484 before fading",
+    "Fed Sept-hold odds firm to 68% on Polymarket",
+    "Canada Sept 8 retaliatory tariffs 11 days out with zero negotiation track"
   ],
   "elevated_risks": [
-    "August jobs report confirms real labor-market deterioration",
-    "Canada Sept 8 tariff retaliation with no negotiation track",
-    "CLARITY Act pushed past midterms toward 2027",
-    "BTC repeatedly rejected at 50wk MA into thin liquidity",
-    "Iran/Hormuz unresolved despite Oman de-escalation signal"
+    "PayPal deal collapse signals tighter mega-deal financing conditions",
+    "AI-semis valuation discipline could broaden beyond Marvell",
+    "Canada Sept 8 tariff retaliation still unresolved",
+    "CLARITY Act frozen until Senate returns Sept 15",
+    "BTC repeatedly rejected at 50wk MA into thin liquidity"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,14 +76,14 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Technology mega-caps",
-      "AI-power infrastructure",
-      "Healthcare/Pharma"
+      "Technology/AI",
+      "Aerospace/Defense",
+      "Energy/Industrials"
     ],
     "notable_tickers": [
-      "AAPL",
       "NVDA",
-      "BE"
+      "PLTR",
+      "SpaceX"
     ],
     "pattern_flags": [
       "Rep. Michael Guest (R-MS, House Ethics Cmte Chair) disclosed his 2nd career STOCK Act violation - 6+ months late on wife's family-trust sales of CVX/ABNB/ELF",
@@ -95,12 +95,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 7.4,
-    "macro": 3.8,
-    "public_markets": 5.9,
-    "ai_sector": 5.8,
+    "crypto": 7.2,
+    "macro": 4.0,
+    "public_markets": 6.0,
+    "ai_sector": 6.1,
     "defense": 7.7,
     "real_estate": 3.0,
-    "business_acquisitions": 6.9
+    "business_acquisitions": 6.7
   }
 }

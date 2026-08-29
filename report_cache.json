@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-28",
-    "report_count": 63,
+    "last_report_date": "2026-08-29",
+    "report_count": 64,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 79314.0,
-    "btc_change_24h_pct": -0.32,
-    "eth_usd": 2493.41,
-    "eth_change_24h_pct": -0.5,
-    "xrp_usd": 1.4136,
-    "xrp_change_24h_pct": -0.74,
-    "btc_24h_high": 81484.26,
-    "btc_24h_low": 78901.64,
-    "eth_24h_high": 2535.0,
-    "xrp_24h_high": 1.474
+    "btc_usd": 77724.94,
+    "btc_change_24h_pct": -2.02,
+    "eth_usd": 2436.91,
+    "eth_change_24h_pct": -2.3,
+    "xrp_usd": 1.3864,
+    "xrp_change_24h_pct": -1.92,
+    "btc_24h_high": 79838.66,
+    "btc_24h_low": 76864.09,
+    "eth_24h_high": 2526.05,
+    "xrp_24h_high": 1.4411
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -22,23 +22,23 @@
     "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": 3.4,
     "prime_rate": 6.75,
-    "rate_hike_on_table": false,
+    "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
     "oil_trend": "falling"
   },
   "markets": {
-    "sp500_level": 7730.99,
-    "sp500_change_24h_pct": 0.72,
-    "nasdaq_level": 26541.35,
-    "nasdaq_change_24h_pct": 1.57,
-    "nasdaq_consecutive_down_days": 0,
-    "vix": 15.21,
-    "market_posture": "mixed"
+    "sp500_level": 7711.76,
+    "sp500_change_24h_pct": -0.25,
+    "nasdaq_level": 26402.42,
+    "nasdaq_change_24h_pct": -0.52,
+    "nasdaq_consecutive_down_days": 1,
+    "vix": 14.35,
+    "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.66,
+    "mortgage_30yr_fixed_pct": 6.6,
     "housing_inventory_yoy_pct": 2.8,
     "listing_price_yoy_pct": -2.2
   },
@@ -48,23 +48,23 @@
     "eth_etf_weekly_flow_bn": 0.697
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 14.5,
+    "clarity_act_polymarket_odds_pct": 14.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "PayPal's $53B Stripe/Advent buyout collapses on valuation/financing/regulatory concerns",
-    "Marvell falls 7.6% AH despite record revenue as AI-semis valuation discipline emerges",
-    "BTC tags fresh 50WMA test at $81484 before fading",
-    "Fed Sept-hold odds firm to 68% on Polymarket",
-    "Canada Sept 8 retaliatory tariffs 11 days out with zero negotiation track"
+    "Fed Chair Warsh's hawkish Jackson Hole speech spikes Sept hike odds from ~30-35% to near coin-flip in 48 hours",
+    "PayPal-Stripe/Advent $53-60B buyout officially dead; PYPL fell up to 16%",
+    "Nvidia blows past estimates (+106% YoY revenue; FY28 growth guide 70%); stock +8.7% best day since Apr 2025",
+    "BTC loses $80K and XRP briefly breaches $1.38 key support amid broad crypto selloff ($600M+ liquidations)",
+    "Navy awards RTX $22.9B Tomahawk contract; Pentagon awards LMT/NOC combined $3B+ THAAD/PAC-3 deal"
   ],
   "elevated_risks": [
-    "PayPal deal collapse signals tighter mega-deal financing conditions",
-    "AI-semis valuation discipline could broaden beyond Marvell",
-    "Canada Sept 8 tariff retaliation still unresolved",
-    "CLARITY Act frozen until Senate returns Sept 15",
-    "BTC repeatedly rejected at 50wk MA into thin liquidity"
+    "Fed hike now a genuine live scenario for Sept 15-16 FOMC reversing the rate-cut narrative markets had priced",
+    "Marvell's ~23% cumulative post-earnings drawdown despite record revenue signals AI-semis valuation discipline broadening",
+    "Iran war active with no ceasefire; US naval blockade in effect 345 casualties since July collapse",
+    "Canada Sept 8 retaliatory tariffs on ~$27.6B US goods now locked in after US tariffs took effect Aug 22",
+    "CLARITY Act frozen at cycle-low ~14% odds with no Senate action until Sept 14-15"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,31 +76,31 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "Technology/AI",
-      "Aerospace/Defense",
-      "Energy/Industrials"
+      "AI/Semiconductors",
+      "Financials/Structured Products",
+      "Crypto-Adjacent ETFs"
     ],
     "notable_tickers": [
-      "NVDA",
-      "PLTR",
-      "SpaceX"
+      "BE",
+      "INTC",
+      "GS"
     ],
     "pattern_flags": [
-      "Rep. Michael Guest (R-MS, House Ethics Cmte Chair) disclosed his 2nd career STOCK Act violation - 6+ months late on wife's family-trust sales of CVX/ABNB/ELF",
-      "Rep. Michael Rulli (R-OH) disclosed 32 trades, 22 of them late (STOCK Act violation) across PLTR/GOOGL/AMZN/AAPL/META/MSFT/NVDA/ORCL/KO/LLY/GEV/PRU",
-      "Rep. Julie Johnson (D-TX) filed 77 of 147 total congressional trades logged Jul31-Aug7, all late (LTH/CHRW/FWONK/PLTR/MRK)",
-      "Dominant August theme: an unusually dense cluster of STOCK Act violations, including the Ethics Committee's own chair, reviving momentum behind a congressional stock-trading ban",
-      "NVDA remains the most broadly held single ticker across the chamber (820 disclosed trades YTD, 17 members, net-buy tilt)",
-      "PLTR appears across Rulli and Johnson this window, continuing the AI/defense-policy-adjacent pattern flagged in prior reports"
+      "Rep. Nancy Pelosi (via spouse) disclosed first-ever Bloom Energy position (AI-power bet) plus an Intel add-on, Jul 24/28 trades disclosed Aug 21",
+      "Sen. David McCormick (R-PA) continues highest-frequency trading pattern (249 lifetime trades, ~$56.8M volume), latest batch: Goldman Sachs structured notes disclosed Aug 27",
+      "Sen. Christopher Coons (D-DE) disclosed a W.L. Gore & Associates sale, Aug 10 trade disclosed Aug 27",
+      "Rep. Suzan DelBene (D-WA) disclosed a $100k-250k buy Aug 28; ticker unresolved in available secondary sources - flagged unconfirmed",
+      "No confirmed 3+ member ticker cluster identified this window given Capitol Trades/Unusual Whales access limits",
+      "STOCK Act 45-day lag reminder: all trades above reflect decisions made in mid-to-late July, predating this week's Fed/CLARITY Act news"
     ]
   },
   "sector_scores": {
-    "crypto": 7.2,
-    "macro": 4.0,
-    "public_markets": 6.0,
-    "ai_sector": 6.1,
-    "defense": 7.7,
-    "real_estate": 3.0,
-    "business_acquisitions": 6.7
+    "crypto": 6.3,
+    "macro": 3.5,
+    "public_markets": 5.7,
+    "ai_sector": 6.3,
+    "defense": 8.0,
+    "real_estate": 3.1,
+    "business_acquisitions": 6.6
   }
 }

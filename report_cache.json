@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-08-29",
-    "report_count": 64,
+    "last_report_date": "2026-08-30",
+    "report_count": 65,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 77724.94,
-    "btc_change_24h_pct": -2.02,
-    "eth_usd": 2436.91,
-    "eth_change_24h_pct": -2.3,
-    "xrp_usd": 1.3864,
-    "xrp_change_24h_pct": -1.92,
-    "btc_24h_high": 79838.66,
-    "btc_24h_low": 76864.09,
-    "eth_24h_high": 2526.05,
-    "xrp_24h_high": 1.4411
+    "btc_usd": 78067.85,
+    "btc_change_24h_pct": 0.52,
+    "eth_usd": 2456.34,
+    "eth_change_24h_pct": 0.83,
+    "xrp_usd": 1.3893,
+    "xrp_change_24h_pct": 0.3,
+    "btc_24h_high": 78338.54,
+    "btc_24h_low": 77499.98,
+    "eth_24h_high": 2468.05,
+    "xrp_24h_high": 1.4038
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -26,7 +26,7 @@
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "falling"
+    "oil_trend": "rising"
   },
   "markets": {
     "sp500_level": 7711.76,
@@ -34,16 +34,16 @@
     "nasdaq_level": 26402.42,
     "nasdaq_change_24h_pct": -0.52,
     "nasdaq_consecutive_down_days": 1,
-    "vix": 14.35,
+    "vix": 14.4,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.6,
+    "mortgage_30yr_fixed_pct": 6.62,
     "housing_inventory_yoy_pct": 2.8,
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 1.92,
+    "btc_spot_etf_weekly_flow_bn": 0.19,
     "btc_spot_etf_total_outflow_4wk_bn": 5.5,
     "eth_etf_weekly_flow_bn": 0.697
   },
@@ -53,18 +53,18 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Fed Chair Warsh's hawkish Jackson Hole speech spikes Sept hike odds from ~30-35% to near coin-flip in 48 hours",
-    "PayPal-Stripe/Advent $53-60B buyout officially dead; PYPL fell up to 16%",
-    "Nvidia blows past estimates (+106% YoY revenue; FY28 growth guide 70%); stock +8.7% best day since Apr 2025",
-    "BTC loses $80K and XRP briefly breaches $1.38 key support amid broad crypto selloff ($600M+ liquidations)",
-    "Navy awards RTX $22.9B Tomahawk contract; Pentagon awards LMT/NOC combined $3B+ THAAD/PAC-3 deal"
+    "Fed Chair Warsh's hawkish Jackson Hole turn keeps Sept 15-16 hike odds near 28-29%",
+    "Pentagon gives contractors 21 days to submit accelerated production plans amid 65%+ munitions depletion",
+    "XRP spot ETFs post 2026's best week ($110.49M) as Ripple launches a Wall Street Delta One swap desk",
+    "Nvidia whipsaws from an 8.7% post-earnings surge to a 3%+ Friday pullback",
+    "Iran and Oman reach a Strait of Hormuz revenue-sharing agreement in the first tangible de-escalation step in weeks"
   ],
   "elevated_risks": [
-    "Fed hike now a genuine live scenario for Sept 15-16 FOMC reversing the rate-cut narrative markets had priced",
-    "Marvell's ~23% cumulative post-earnings drawdown despite record revenue signals AI-semis valuation discipline broadening",
-    "Iran war active with no ceasefire; US naval blockade in effect 345 casualties since July collapse",
-    "Canada Sept 8 retaliatory tariffs on ~$27.6B US goods now locked in after US tariffs took effect Aug 22",
-    "CLARITY Act frozen at cycle-low ~14% odds with no Senate action until Sept 14-15"
+    "Sept 15-16 FOMC hike remains a live scenario (~28-29% odds) landing the same week as the CLARITY Act cloture vote",
+    "CLARITY Act frozen at a cycle-low ~14% odds with only 14 Senate working days before October recess",
+    "Iran war remains technically active with no durable ceasefire despite the Hormuz revenue-sharing progress",
+    "AI-semis valuation sensitivity confirmed by NVDA's 3%+ pullback the day after an 8.7% earnings-driven surge",
+    "Canada's Sept 8 retaliatory tariffs on ~$27.6B of US goods remain locked in"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -81,24 +81,24 @@
       "Crypto-Adjacent ETFs"
     ],
     "notable_tickers": [
+      "GS",
       "BE",
-      "INTC",
-      "GS"
+      "INTC"
     ],
     "pattern_flags": [
-      "Rep. Nancy Pelosi (via spouse) disclosed first-ever Bloom Energy position (AI-power bet) plus an Intel add-on, Jul 24/28 trades disclosed Aug 21",
-      "Sen. David McCormick (R-PA) continues highest-frequency trading pattern (249 lifetime trades, ~$56.8M volume), latest batch: Goldman Sachs structured notes disclosed Aug 27",
+      "Sen. David McCormick (spouse) disclosed Goldman Sachs buys ($100,001-$250,000) from Aug 10 & 12 trades, disclosed Aug 27 - continues his highest-frequency trading pattern (249 lifetime trades, ~$56.8M volume)",
       "Sen. Christopher Coons (D-DE) disclosed a W.L. Gore & Associates sale, Aug 10 trade disclosed Aug 27",
       "Rep. Suzan DelBene (D-WA) disclosed a $100k-250k buy Aug 28; ticker unresolved in available secondary sources - flagged unconfirmed",
+      "Rep. Nancy Pelosi (via spouse) disclosed first-ever Bloom Energy position (AI-power bet) plus an Intel add-on, Jul 24/28 trades disclosed Aug 21 - now 30+ days stale relative to trade date",
       "No confirmed 3+ member ticker cluster identified this window given Capitol Trades/Unusual Whales access limits",
-      "STOCK Act 45-day lag reminder: all trades above reflect decisions made in mid-to-late July, predating this week's Fed/CLARITY Act news"
+      "STOCK Act 45-day lag reminder: several August-disclosed trades reflect decisions made in mid-to-late July, predating this month's Fed/CLARITY Act news"
     ]
   },
   "sector_scores": {
-    "crypto": 6.3,
-    "macro": 3.5,
+    "crypto": 6.5,
+    "macro": 3.6,
     "public_markets": 5.7,
-    "ai_sector": 6.3,
+    "ai_sector": 6.4,
     "defense": 8.0,
     "real_estate": 3.1,
     "business_acquisitions": 6.6

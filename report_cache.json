@@ -1,27 +1,27 @@
 {
   "meta": {
-    "last_report_date": "2026-08-30",
-    "report_count": 65,
+    "last_report_date": "2026-08-31",
+    "report_count": 66,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 78067.85,
-    "btc_change_24h_pct": 0.52,
-    "eth_usd": 2456.34,
-    "eth_change_24h_pct": 0.83,
-    "xrp_usd": 1.3893,
-    "xrp_change_24h_pct": 0.3,
-    "btc_24h_high": 78338.54,
-    "btc_24h_low": 77499.98,
-    "eth_24h_high": 2468.05,
-    "xrp_24h_high": 1.4038
+    "btc_usd": 78454.83,
+    "btc_change_24h_pct": 0.49,
+    "eth_usd": 2449.28,
+    "eth_change_24h_pct": -0.29,
+    "xrp_usd": 1.3738,
+    "xrp_change_24h_pct": -1.12,
+    "btc_24h_high": 79408.51,
+    "btc_24h_low": 76988.42,
+    "eth_24h_high": 2534.89,
+    "xrp_24h_high": 1.4335
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
     "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": 3.4,
-    "prime_rate": 6.75,
+    "prime_rate": 7.5,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
@@ -38,13 +38,13 @@
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.62,
+    "mortgage_30yr_fixed_pct": 6.66,
     "housing_inventory_yoy_pct": 2.8,
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.19,
-    "btc_spot_etf_total_outflow_4wk_bn": 5.5,
+    "btc_spot_etf_weekly_flow_bn": 1.0,
+    "btc_spot_etf_total_outflow_4wk_bn": 3.0,
     "eth_etf_weekly_flow_bn": 0.697
   },
   "regulation": {
@@ -53,18 +53,18 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Fed Chair Warsh's hawkish Jackson Hole turn keeps Sept 15-16 hike odds near 28-29%",
-    "Pentagon gives contractors 21 days to submit accelerated production plans amid 65%+ munitions depletion",
-    "XRP spot ETFs post 2026's best week ($110.49M) as Ripple launches a Wall Street Delta One swap desk",
-    "Nvidia whipsaws from an 8.7% post-earnings surge to a 3%+ Friday pullback",
-    "Iran and Oman reach a Strait of Hormuz revenue-sharing agreement in the first tangible de-escalation step in weeks"
+    "Iran conflict re-escalates: US strikes Larak Island rocket launchers near Strait of Hormuz",
+    "September FOMC hike odds nearly double to ~50-55% on hawkish Warsh Jackson Hole tone and hot core PCE",
+    "BTC/ETH/XRP ETF flows all turn decisively positive - BTC best month of 2026 at $3B+",
+    "NVDA post-earnings pop reverses into a $153B single-session pullback on circular-financing worries",
+    "SBA SOP 50 10 8.1 tightens acquisition-lending rules effective Oct 1"
   ],
   "elevated_risks": [
-    "Sept 15-16 FOMC hike remains a live scenario (~28-29% odds) landing the same week as the CLARITY Act cloture vote",
-    "CLARITY Act frozen at a cycle-low ~14% odds with only 14 Senate working days before October recess",
-    "Iran war remains technically active with no durable ceasefire despite the Hormuz revenue-sharing progress",
-    "AI-semis valuation sensitivity confirmed by NVDA's 3%+ pullback the day after an 8.7% earnings-driven surge",
-    "Canada's Sept 8 retaliatory tariffs on ~$27.6B of US goods remain locked in"
+    "Iran retaliation follow-through could escalate into a genuine Hormuz shipping/oil shock",
+    "Sept FOMC hike odds near coin-flip landing same week as Iran-driven oil strength",
+    "AI-infra valuation sensitivity confirmed again by NVDA's 153B single-session swing",
+    "XRP testing its 1.38 key support level after mid-August spike",
+    "SBA lending-rule tightening compresses the acquisition-financing window ahead of Oct 1"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,14 +76,14 @@
   "congressional_trades": {
     "month": "August 2026",
     "most_traded_sectors": [
-      "AI/Semiconductors",
-      "Financials/Structured Products",
-      "Crypto-Adjacent ETFs"
+      "Technology",
+      "Healthcare/Biotech",
+      "Energy/Defense"
     ],
     "notable_tickers": [
-      "GS",
       "BE",
-      "INTC"
+      "INTC",
+      "CRWD"
     ],
     "pattern_flags": [
       "Sen. David McCormick (spouse) disclosed Goldman Sachs buys ($100,001-$250,000) from Aug 10 & 12 trades, disclosed Aug 27 - continues his highest-frequency trading pattern (249 lifetime trades, ~$56.8M volume)",
@@ -95,12 +95,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 6.5,
-    "macro": 3.6,
-    "public_markets": 5.7,
-    "ai_sector": 6.4,
-    "defense": 8.0,
-    "real_estate": 3.1,
-    "business_acquisitions": 6.6
+    "crypto": 6.7,
+    "macro": 3.0,
+    "public_markets": 5.4,
+    "ai_sector": 6.1,
+    "defense": 8.3,
+    "real_estate": 3.2,
+    "business_acquisitions": 6.3
   }
 }

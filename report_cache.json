@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-09-01",
-    "report_count": 67,
+    "last_report_date": "2026-09-02",
+    "report_count": 68,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 78129.31,
-    "btc_change_24h_pct": -0.35,
-    "eth_usd": 2461.31,
-    "eth_change_24h_pct": 0.54,
-    "xrp_usd": 1.3779,
-    "xrp_change_24h_pct": 0.37,
-    "btc_24h_high": 79257.4,
-    "btc_24h_low": 77690.0,
-    "eth_24h_high": 2490.0,
-    "xrp_24h_high": 1.3967
+    "btc_usd": 76561.46,
+    "btc_change_24h_pct": -1.93,
+    "eth_usd": 2366.11,
+    "eth_change_24h_pct": -3.81,
+    "xrp_usd": 1.3192,
+    "xrp_change_24h_pct": -4.16,
+    "btc_24h_high": 78425.56,
+    "btc_24h_low": 76400.60,
+    "eth_24h_high": 2464.03,
+    "xrp_24h_high": 1.3876
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -29,79 +29,76 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7686.14,
-    "sp500_change_24h_pct": -0.33,
-    "nasdaq_level": 26370.89,
-    "nasdaq_change_24h_pct": -0.12,
-    "nasdaq_consecutive_down_days": 0,
-    "vix": 14.9,
-    "market_posture": "mixed-risk-off"
+    "sp500_level": 7631.47,
+    "sp500_change_24h_pct": -0.71,
+    "nasdaq_level": 26099.77,
+    "nasdaq_change_24h_pct": -1.03,
+    "nasdaq_consecutive_down_days": 2,
+    "vix": 16.8,
+    "market_posture": "risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.66,
+    "mortgage_30yr_fixed_pct": 6.68,
     "housing_inventory_yoy_pct": 2.8,
     "listing_price_yoy_pct": -2.2
   },
   "crypto_etf": {
     "btc_spot_etf_weekly_flow_bn": 0.9245,
     "btc_spot_etf_total_outflow_4wk_bn": 3.0,
-    "eth_etf_weekly_flow_bn": 0.225
+    "eth_etf_weekly_flow_bn": 0.824
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 15.0,
+    "clarity_act_polymarket_odds_pct": 14.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Iran conflict re-escalates: fresh US strike on Larak Island (Aug 30) and Iranian retaliation on US bases in Jordan/UAE (Aug 31)",
-    "September FOMC hike odds jump to ~58-66% on Warsh's hawkish Jackson Hole speech",
-    "NVDA Q2 beat and strong Q3 guide erase the $153B circular-financing selloff - stock +8.7% in a session",
-    "BTC/ETH/XRP ETF flows all confirm broad simultaneous institutional accumulation (BTC best month of 2026)",
-    "SBA SOP 50 10 8.1 mechanics fully confirmed - 1.25x DSCR floor and mandatory QoE effective Oct 1"
+    "Fresh US strikes near the Strait of Hormuz (Sep 1) with Iran warning of a response 'many times greater' - oil to a six-week high",
+    "September FOMC hike odds break to 60-69pct (CME/Kalshi/Polymarket) - new cycle high on Warsh's hawkish Jackson Hole message",
+    "10-year Treasury yield hits 4.80pct, highest since Jan 2025, on a global bond sell-off compounding oil-driven equity weakness",
+    "Crypto ETF flows post the strongest buying week since the October flash crash even as BTC/ETH/XRP spot prices pull back 2-4pct",
+    "Alabama names Keelon Russell starting QB for the Sep 5 season opener, resolving the offseason's biggest roster question"
   ],
   "elevated_risks": [
-    "Iran/Hormuz re-escalation is a genuine tail risk to oil supply and shipping not yet fully priced",
-    "Sept FOMC hike odds near 60-66pct - highest of this cycle - lands during a seasonally weak September",
-    "BTC exchange reserves at a 2026 high (685000 BTC) diverging bearishly against strong ETF inflows",
-    "AI circular-financing structure remains structurally unresolved despite NVDA's earnings beat",
-    "SBA SOP tightening compresses acquisition financing right where capital is already scarcest (below $5M EBITDA)"
+    "Iran/Hormuz escalation compounds for a third straight report with no de-escalation path visible",
+    "Sept FOMC hike odds at a cycle high (60-69pct) land in a seasonally weak month alongside a bond sell-off",
+    "Two consecutive down equity/crypto sessions on the same combined oil+yield driver",
+    "BTC exchange reserves at a 2026 high (~687000 BTC) diverging bearishly against strong ETF inflows",
+    "SBA SOP tightening (mandatory QoE, 1.25x DSCR floor) effective Oct 1 compresses financing right where capital is scarcest"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
     "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.36,
+    "xrp_key_support": 1.30,
     "xrp_downside_target": 1.28,
     "ascendex_warning_active": false
   },
   "congressional_trades": {
     "month": "September 2026",
     "most_traded_sectors": [
-      "Technology",
-      "Healthcare/Biotech",
-      "Energy/Defense"
+      "AI/Semiconductors",
+      "Defense-adjacent Technology",
+      "Aerospace/Defense"
     ],
     "notable_tickers": [
-      "BE",
-      "INTC",
-      "GS"
+      "NVDA",
+      "PLTR"
     ],
     "pattern_flags": [
-      "H.R. 7008 (Stop Insider Trading Act) passed House 232-198 Jul 22; still needs Senate action, Sen. Ossoff reports bipartisan Senate-side progress",
-      "Rep. Nancy Pelosi household disclosed first-ever Bloom Energy position (15,000 sh + 200 calls) plus an Intel add-on (10,000 sh + 50 calls), Jul 24/28 trades disclosed Aug 21 - both AI-power-demand plays, ~30-40 days stale relative to trade date",
-      "Sen. David McCormick disclosed GS-linked structured note buys ($50K-$500K), Aug 12-19 trades disclosed Aug 27 - continues his highest-frequency trading pattern (249 lifetime trades, ~$56.8M volume)",
-      "Sen. Christopher Coons disclosed a W.L. Gore & Associates sale ($250K-$500K), Aug 10 trade disclosed Aug 27",
-      "No confirmed 3+ member single-ticker cluster identified this window given Capitol Trades/Unusual Whales/Quiver Quantitative access limits",
-      "Sen. Alan Armstrong's 700+ trades ($3.24M-$16M), disclosed ~2 months past the 45-day STOCK Act deadline, remain the year's most significant timeliness violation - unresolved, carried from prior windows",
-      "STOCK Act 45-day lag reminder: the Pelosi trades above are the clearest example this window of disclosures that are already weeks stale relative to trade date"
+      "Capitol Trades and Unusual Whales again blocked server-side access this cycle; newest confirmed disclosure-index entry remains ~Aug 19, roughly two weeks stale",
+      "No specific new 24-72h trade could be verified against a primary source (disclosures.house.gov / efts.senate.gov) this cycle",
+      "Trailing pattern carried forward: NVDA has 146 congressional purchases over the trailing year ($5.4M+ cumulative) - broad sentiment signal, not committee-specific",
+      "Rep. Gilbert Cisneros (Armed Services) remains a recurring PLTR trader (3 buys/4 sells over 6 months); Sen. John Boozman also disclosed a PLTR buy",
+      "STOCK Act 45-day lag reminder applies to all of the above - treat as historical sentiment, not fresh trading signal"
     ]
   },
   "sector_scores": {
-    "crypto": 6.8,
-    "macro": 2.7,
-    "public_markets": 5.6,
-    "ai_sector": 6.8,
-    "defense": 8.5,
-    "real_estate": 3.3,
-    "business_acquisitions": 6.0
+    "crypto": 6.3,
+    "macro": 2.2,
+    "public_markets": 5.0,
+    "ai_sector": 6.9,
+    "defense": 8.7,
+    "real_estate": 3.2,
+    "business_acquisitions": 5.9
   }
 }

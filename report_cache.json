@@ -1,70 +1,70 @@
 {
   "meta": {
-    "last_report_date": "2026-09-03",
-    "report_count": 69,
+    "last_report_date": "2026-09-04",
+    "report_count": 70,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 77513.0,
-    "btc_change_24h_pct": 1.21,
-    "eth_usd": 2392.23,
-    "eth_change_24h_pct": 1.06,
-    "xrp_usd": 1.3602,
-    "xrp_change_24h_pct": 3.08,
-    "btc_24h_high": 78179.28,
-    "btc_24h_low": 76255.53,
-    "eth_24h_high": 2419.82,
-    "xrp_24h_high": 1.3795
+    "btc_usd": 81059.27,
+    "btc_change_24h_pct": 4.61,
+    "eth_usd": 2526.4,
+    "eth_change_24h_pct": 5.65,
+    "xrp_usd": 1.4466,
+    "xrp_change_24h_pct": 6.39,
+    "btc_24h_high": 82303.83,
+    "btc_24h_low": 77447.79,
+    "eth_24h_high": 2546.74,
+    "xrp_24h_high": 1.4844
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
     "pce_inflation_2026_pct": 3.3,
     "may_cpi_yoy_pct": 3.3,
-    "prime_rate": 8.5,
-    "rate_hike_on_table": true,
+    "prime_rate": 6.75,
+    "rate_hike_on_table": false,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7666.6,
-    "sp500_change_24h_pct": 0.5,
-    "nasdaq_level": 26217.83,
-    "nasdaq_change_24h_pct": 0.5,
+    "sp500_level": 7747.71,
+    "sp500_change_24h_pct": 1.06,
+    "nasdaq_level": 26584.06,
+    "nasdaq_change_24h_pct": 1.4,
     "nasdaq_consecutive_down_days": 0,
-    "vix": 15.2,
+    "vix": 14.32,
     "market_posture": "mixed"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.7,
-    "housing_inventory_yoy_pct": 2.8,
-    "listing_price_yoy_pct": -2.2
+    "mortgage_30yr_fixed_pct": 6.71,
+    "housing_inventory_yoy_pct": -1.0,
+    "listing_price_yoy_pct": -1.3
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.2365,
+    "btc_spot_etf_weekly_flow_bn": -0.236,
     "btc_spot_etf_total_outflow_4wk_bn": 3.28,
-    "eth_etf_weekly_flow_bn": 0.824
+    "eth_etf_weekly_flow_bn": 0.011
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 14.5,
+    "clarity_act_polymarket_odds_pct": 16.5,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Kalshi vs Polymarket Fed-hike odds diverge ~30pts (58-70pct vs 31pct) ahead of Sep 4 jobs report",
-    "Iran/Hormuz conflict enters 7th month - Sep 2 strikes hit ~100 IRGC targets and 2 tankers",
-    "BTC/ETH/XRP and equities rebound together while BTC spot ETFs post first outflow (-236.5M) since Augusts 3.52B inflow month",
-    "CLARITY Act cloture vote hard-dated for Sep 15 - one day before FOMC - odds pinned near 14-15pct",
-    "Nvidia guides supply-constrained FY28 as Broadcom AI semi revenue seen +200pct YoY"
+    "Aug jobs report shock (NFP +22K) flips Fed odds to ~74-75pct hold from ~55-66pct hike pre-report",
+    "BTC/ETH/XRP rally 4.5-6.5pct together on Fed-hold repricing plus a 400M-USD+ short squeeze",
+    "Iran strikes 2 Iranian govt tankers directly (Sep 2) - first of this conflict - no ceasefire at ~day 187",
+    "Broadcom AI semi revenue +221pct YoY beats but stock falls ~6pct on softer margin guidance",
+    "CLARITY Act cloture odds slide to ~15-18pct two weeks before Sep 15 vote"
   ],
   "elevated_risks": [
-    "Fed-odds cross-platform gap resolves violently after Sep 4 jobs report",
-    "Iran/Hormuz escalates further with no diplomatic off-ramp visible",
+    "Hot Sep 11 CPI print could reverse todays Fed-hold repricing",
+    "Iran/Hormuz war escalates further with no ceasefire in sight",
     "CLARITY Act cloture fails Sep 15 extending crypto regulatory vacuum",
-    "BTC ETF outflow (Sep 1) could mark start of a flow reversal",
-    "Sep 30 government funding deadline risks a shutdown compounding FOMC/CLARITY week"
+    "AI-semis margin compression broadens beyond Broadcom",
+    "Mortgage rates drift higher while housing inventory flips negative YoY"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -83,22 +83,23 @@
     "notable_tickers": [
       "BE",
       "INTC",
-      "BigBear.ai"
+      "BBAI"
     ],
     "pattern_flags": [
-      "Pelosi household (spouse) disclosed new Bloom Energy position + added Intel, filed Aug 21 2026",
-      "Capitol Trades and Unusual Whales again blocked server-side access this cycle",
-      "No specific new 24-72h trade could be verified against a primary source (disclosures.house.gov / efts.senate.gov) this cycle",
+      "Wave of STOCK Act violation disclosures this cycle: Reps. Rulli (R-OH, 22 late trades), Julie Johnson (D-TX, 77 of 147 txns late), Scott Franklin (R-FL, 31 trades ~2yrs late)",
+      "Rep. Eugene Vindman (D-VA) introduced H.R. 10199 Sep 3 2026 (Sell Your Stocks or Step Down Act) to ban Congress + President stock trading, a direct response to the violation wave",
+      "Pelosi household Bloom Energy position refined: 15,000 shares + 200 calls, disclosed Aug 24 2026 (not Aug 21) - AI-power-infrastructure thesis, BE/FCEL/PLUG rallied on disclosure",
+      "Capitol Trades and Unusual Whales again blocked server-side access this cycle; no ticker-level trade dated exactly Sep 1-4 2026 could be verified against a primary source",
       "STOCK Act 45-day lag reminder applies to all of the above - treat as historical sentiment, not fresh trading signal"
     ]
   },
   "sector_scores": {
-    "crypto": 6.6,
-    "macro": 2.4,
-    "public_markets": 5.6,
-    "ai_sector": 7.1,
-    "defense": 8.4,
-    "real_estate": 3.3,
-    "business_acquisitions": 5.7
+    "crypto": 7.4,
+    "macro": 3.2,
+    "public_markets": 6.3,
+    "ai_sector": 7.0,
+    "defense": 8.3,
+    "real_estate": 3.0,
+    "business_acquisitions": 5.8
   }
 }

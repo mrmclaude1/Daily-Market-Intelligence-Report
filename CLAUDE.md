@@ -492,6 +492,26 @@ recurring, not resolved, failure mode. If it keeps recurring, the durable fix su
 e.g. commit the rendered HTML into this repo or a static-hosting target) is worth revisiting rather
 than continuing to absorb a ~50% Artifact-publish failure rate on scheduled runs.
 
+### DECISION — 2026-09-04: stay on the Artifact; GitHub Pages fallback is written up, not enabled
+Report #70 (Sep 4) published cleanly on the first `Artifact` call after the mandatory
+`WebFetch` + full `Read` — no prompt, no `force:true`. The user then asked whether the
+approval prompt could be put in an "Always Allow" state. It **cannot** — verified this session:
+
+- `.claude/settings.json` is already `bypassPermissions` + `allow: ["Artifact"]` (maxed).
+- The routine's own UI (claude.ai/code/routines/…) has only three tabs: **Connectors**
+  (MCP write access — already not-ask), **Behavior** (a single "Auto-fix pull requests"
+  toggle, irrelevant here), **Notifications**. There is no permission/approval-mode setting.
+- The prompt is the `Artifact` tool's stale-version guard needing `force:true`, which is a
+  conflict-protection check requiring a live human "yes" — not a permission, so no setting
+  removes it. It is intermittent (glitched Aug 25–26; clean Sep 4).
+
+**User's decision: keep Option 1 (Artifact, current behavior) for now.** On a glitch day, the
+run still pushes the cache, stops after ~3 refusals, and notifies; the user replies "force it."
+**Option 2 (commit rendered HTML → GitHub Pages, guaranteed no-approval) is fully specified in
+`PUBLISH_FALLBACK_GITHUB_PAGES.md` at the repo root** — one-time user step in GitHub Settings →
+Pages, one-time agent seed, and a per-run block to paste into the publish procedure. Do not
+enable it unless the user asks; do read it if the guard gets stuck again so you can offer it.
+
 ---
 
 ## GitHub Cache Details

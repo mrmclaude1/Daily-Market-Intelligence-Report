@@ -1,41 +1,41 @@
 {
   "meta": {
-    "last_report_date": "2026-09-04",
-    "report_count": 70,
+    "last_report_date": "2026-09-05",
+    "report_count": 71,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 81059.27,
-    "btc_change_24h_pct": 4.61,
-    "eth_usd": 2526.4,
-    "eth_change_24h_pct": 5.65,
-    "xrp_usd": 1.4466,
-    "xrp_change_24h_pct": 6.39,
-    "btc_24h_high": 82303.83,
-    "btc_24h_low": 77447.79,
-    "eth_24h_high": 2546.74,
-    "xrp_24h_high": 1.4844
+    "btc_usd": 79612.29,
+    "btc_change_24h_pct": -1.69,
+    "eth_usd": 2454.90,
+    "eth_change_24h_pct": -2.73,
+    "xrp_usd": 1.4045,
+    "xrp_change_24h_pct": -2.88,
+    "btc_24h_high": 81414.67,
+    "btc_24h_low": 78633.06,
+    "eth_24h_high": 2532.07,
+    "xrp_24h_high": 1.4563
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
     "pce_inflation_2026_pct": 3.3,
-    "may_cpi_yoy_pct": 3.3,
+    "may_cpi_yoy_pct": 3.4,
     "prime_rate": 6.75,
-    "rate_hike_on_table": false,
+    "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7747.71,
-    "sp500_change_24h_pct": 1.06,
-    "nasdaq_level": 26584.06,
-    "nasdaq_change_24h_pct": 1.4,
-    "nasdaq_consecutive_down_days": 0,
-    "vix": 14.32,
-    "market_posture": "mixed"
+    "sp500_level": 7718.60,
+    "sp500_change_24h_pct": -0.38,
+    "nasdaq_level": 26506.99,
+    "nasdaq_change_24h_pct": -0.29,
+    "nasdaq_consecutive_down_days": 1,
+    "vix": 14.53,
+    "market_posture": "mixed-risk-off"
   },
   "real_estate": {
     "mortgage_30yr_fixed_pct": 6.71,
@@ -43,28 +43,28 @@
     "listing_price_yoy_pct": -1.3
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": -0.236,
-    "btc_spot_etf_total_outflow_4wk_bn": 3.28,
-    "eth_etf_weekly_flow_bn": 0.011
+    "btc_spot_etf_weekly_flow_bn": 0.9867,
+    "btc_spot_etf_total_outflow_4wk_bn": 3.8,
+    "eth_etf_weekly_flow_bn": 0.24
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 16.5,
+    "clarity_act_polymarket_odds_pct": 15.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Aug jobs report shock (NFP +22K) flips Fed odds to ~74-75pct hold from ~55-66pct hike pre-report",
-    "BTC/ETH/XRP rally 4.5-6.5pct together on Fed-hold repricing plus a 400M-USD+ short squeeze",
-    "Iran strikes 2 Iranian govt tankers directly (Sep 2) - first of this conflict - no ceasefire at ~day 187",
-    "Broadcom AI semi revenue +221pct YoY beats but stock falls ~6pct on softer margin guidance",
-    "CLARITY Act cloture odds slide to ~15-18pct two weeks before Sep 15 vote"
+    "Aug NFP shock: BLS confirms +162K (not +22K as an earlier ADP-sourced figure implied), reviving Fed hike odds to ~58-62pct for Sep 15-16 FOMC",
+    "BTC/ETH/XRP reverse -1.7 to -2.9pct as the Sep 3-4 squeeze rally unwinds on the hot jobs data",
+    "BTC spot ETF flows post their strongest 3-week stretch of 2026 (3.8B total) even as spot price pulls back",
+    "CLARITY Act odds slide further to 13-18pct; Kalshi prices 91pct odds a vote happens but only 22pct odds it passes",
+    "Correction: it was the US (not Iran) that struck 2 Iranian govt tankers Sep 2 under a new tanker-for-tanker retaliation policy"
   ],
   "elevated_risks": [
-    "Hot Sep 11 CPI print could reverse todays Fed-hold repricing",
-    "Iran/Hormuz war escalates further with no ceasefire in sight",
-    "CLARITY Act cloture fails Sep 15 extending crypto regulatory vacuum",
-    "AI-semis margin compression broadens beyond Broadcom",
-    "Mortgage rates drift higher while housing inventory flips negative YoY"
+    "Sep 15 FOMC decision and CLARITY Act cloture vote collide on the same day, doubling event risk",
+    "Iran/Hormuz war escalation continues with no ceasefire; direct US-Iran strike exchanges underway",
+    "BIS and US Treasury both flag AI-capex bubble/dot-com-parallel risk for the first time",
+    "Aug CPI (Sep 11) could push Fed-hike odds even higher just before the FOMC decision",
+    "Mortgage/housing affordability pressure building beneath a headline-flat rate; GA foreclosures +52pct YoY H1 2026"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,30 +76,30 @@
   "congressional_trades": {
     "month": "September 2026",
     "most_traded_sectors": [
-      "AI/Semiconductors",
-      "Defense-AI",
-      "Energy"
+      "Tech/AI Semiconductors",
+      "Defense/Aerospace",
+      "Financials"
     ],
     "notable_tickers": [
-      "BE",
-      "INTC",
-      "BBAI"
+      "NVDA",
+      "GS",
+      "ISRG"
     ],
     "pattern_flags": [
-      "Wave of STOCK Act violation disclosures this cycle: Reps. Rulli (R-OH, 22 late trades), Julie Johnson (D-TX, 77 of 147 txns late), Scott Franklin (R-FL, 31 trades ~2yrs late)",
-      "Rep. Eugene Vindman (D-VA) introduced H.R. 10199 Sep 3 2026 (Sell Your Stocks or Step Down Act) to ban Congress + President stock trading, a direct response to the violation wave",
-      "Pelosi household Bloom Energy position refined: 15,000 shares + 200 calls, disclosed Aug 24 2026 (not Aug 21) - AI-power-infrastructure thesis, BE/FCEL/PLUG rallied on disclosure",
-      "Capitol Trades and Unusual Whales again blocked server-side access this cycle; no ticker-level trade dated exactly Sep 1-4 2026 could be verified against a primary source",
-      "STOCK Act 45-day lag reminder applies to all of the above - treat as historical sentiment, not fresh trading signal"
+      "No September-dated trades have cleared the STOCK Act's 45-day disclosure window as of Sep 5 2026; newest processed trade date across trackers is Aug 19, filed ~Sep 1",
+      "Rep. Gil Cisneros (D-CA, Armed Services + oversight subcommittee) disclosed further defense-stock buys (StandardAero, Ducommun) alongside existing Palantir/Lockheed holdings - a repeat committee-overlap pattern ('9 defense purchases since Sept 2025')",
+      "Sen. David McCormick (R-PA) bought Goldman Sachs structured notes mid/late Aug 2026, notable because he exited GS common stock entirely on Jan 23 2026",
+      "Base-rate stat: 56pct of disclosed congressional trades (6,170 of 11,016 purchases over a 16-month window) fall in sectors the trading member actively votes on",
+      "Capitol Trades, Unusual Whales, and Quiver Quantitative remain blocked to server-side JS-rendered access; no ticker-level trade dated Sep 1-5 2026 could be verified against a primary source"
     ]
   },
   "sector_scores": {
-    "crypto": 7.4,
-    "macro": 3.2,
-    "public_markets": 6.3,
-    "ai_sector": 7.0,
-    "defense": 8.3,
-    "real_estate": 3.0,
-    "business_acquisitions": 5.8
+    "crypto": 6.8,
+    "macro": 2.7,
+    "public_markets": 5.9,
+    "ai_sector": 6.6,
+    "defense": 8.4,
+    "real_estate": 2.8,
+    "business_acquisitions": 5.5
   }
 }

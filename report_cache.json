@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-09-05",
-    "report_count": 71,
+    "last_report_date": "2026-09-06",
+    "report_count": 72,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 79612.29,
-    "btc_change_24h_pct": -1.69,
-    "eth_usd": 2454.90,
-    "eth_change_24h_pct": -2.73,
-    "xrp_usd": 1.4045,
-    "xrp_change_24h_pct": -2.88,
-    "btc_24h_high": 81414.67,
-    "btc_24h_low": 78633.06,
-    "eth_24h_high": 2532.07,
-    "xrp_24h_high": 1.4563
+    "btc_usd": 79988.28,
+    "btc_change_24h_pct": 0.48,
+    "eth_usd": 2499.18,
+    "eth_change_24h_pct": 1.85,
+    "xrp_usd": 1.4188,
+    "xrp_change_24h_pct": 1.05,
+    "btc_24h_high": 80214.98,
+    "btc_24h_low": 79544.6,
+    "eth_24h_high": 2524.31,
+    "xrp_24h_high": 1.4326
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -29,7 +29,7 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7718.60,
+    "sp500_level": 7718.6,
     "sp500_change_24h_pct": -0.38,
     "nasdaq_level": 26506.99,
     "nasdaq_change_24h_pct": -0.29,
@@ -43,28 +43,28 @@
     "listing_price_yoy_pct": -1.3
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.9867,
+    "btc_spot_etf_weekly_flow_bn": 0.9869,
     "btc_spot_etf_total_outflow_4wk_bn": 3.8,
     "eth_etf_weekly_flow_bn": 0.24
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 15.0,
+    "clarity_act_polymarket_odds_pct": 13.5,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Aug NFP shock: BLS confirms +162K (not +22K as an earlier ADP-sourced figure implied), reviving Fed hike odds to ~58-62pct for Sep 15-16 FOMC",
-    "BTC/ETH/XRP reverse -1.7 to -2.9pct as the Sep 3-4 squeeze rally unwinds on the hot jobs data",
-    "BTC spot ETF flows post their strongest 3-week stretch of 2026 (3.8B total) even as spot price pulls back",
-    "CLARITY Act odds slide further to 13-18pct; Kalshi prices 91pct odds a vote happens but only 22pct odds it passes",
-    "Correction: it was the US (not Iran) that struck 2 Iranian govt tankers Sep 2 under a new tanker-for-tanker retaliation policy"
+    "Iran/Hormuz war escalates into Kuwait, Bahrain, and Jordan, driving Brent up 8-9pct for the week toward $97 ahead of Sep 11 CPI and Sep 15-16 FOMC",
+    "Fed Sept hike odds climb to ~59-68pct (Kalshi/CME) on the hot Aug jobs report (+162K vs ~53K consensus)",
+    "Oracle's debt-funded AI buildout ($43B new debt for $56B FY26 capex) becomes the first visible credit-market crack in the AI-capex-bubble thesis; Barclays flags a possible Nov cash crunch",
+    "BTC/ETH/XRP bounce +0.5 to +1.9pct while ETF inflow streaks stay intact (BTC 3wk $3.8B, ETH 12-day, XRP 11-day)",
+    "Alabama opens season 48-10 over East Carolina behind new starting QB Keelon Russell (342 total yards)"
   ],
   "elevated_risks": [
-    "Sep 15 FOMC decision and CLARITY Act cloture vote collide on the same day, doubling event risk",
-    "Iran/Hormuz war escalation continues with no ceasefire; direct US-Iran strike exchanges underway",
-    "BIS and US Treasury both flag AI-capex bubble/dot-com-parallel risk for the first time",
-    "Aug CPI (Sep 11) could push Fed-hike odds even higher just before the FOMC decision",
-    "Mortgage/housing affordability pressure building beneath a headline-flat rate; GA foreclosures +52pct YoY H1 2026"
+    "Iran/Hormuz escalation (strikes reaching Kuwait, Bahrain, Jordan) collides directly with Sep 11 CPI and Sep 15-16 FOMC",
+    "Fed hike odds above 60pct now diverge from consensus economists who still lean hold",
+    "Oracle-style debt-funded AI infrastructure credit stress could broaden beyond a single name",
+    "CLARITY Act odds plateaued at 13-14pct with the Sep 15 cloture vote landing the same day as the FOMC decision",
+    "GA foreclosure starts confirmed +52pct YoY H1 2026 per ATTOM; mortgage rate at a 13-month high (6.71pct)"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -82,24 +82,25 @@
     ],
     "notable_tickers": [
       "NVDA",
-      "GS",
-      "ISRG"
+      "AAPL",
+      "LRCX"
     ],
     "pattern_flags": [
-      "No September-dated trades have cleared the STOCK Act's 45-day disclosure window as of Sep 5 2026; newest processed trade date across trackers is Aug 19, filed ~Sep 1",
-      "Rep. Gil Cisneros (D-CA, Armed Services + oversight subcommittee) disclosed further defense-stock buys (StandardAero, Ducommun) alongside existing Palantir/Lockheed holdings - a repeat committee-overlap pattern ('9 defense purchases since Sept 2025')",
-      "Sen. David McCormick (R-PA) bought Goldman Sachs structured notes mid/late Aug 2026, notable because he exited GS common stock entirely on Jan 23 2026",
-      "Base-rate stat: 56pct of disclosed congressional trades (6,170 of 11,016 purchases over a 16-month window) fall in sectors the trading member actively votes on",
-      "Capitol Trades, Unusual Whales, and Quiver Quantitative remain blocked to server-side JS-rendered access; no ticker-level trade dated Sep 1-5 2026 could be verified against a primary source"
+      "As of Sep 6 2026, the newest trade date cleared by any tracker was still Aug 28 2026; no September-dated trade has cleared the STOCK Act's 45-day disclosure window",
+      "Sen. Sheldon Whitehouse (D-RI) disclosed sales of NVDA, LRCX, and AMGN (all trade-dated Aug 12-13, filed Sep 2) - trimming AI-adjacent/semiconductor and biotech exposure",
+      "Rep. John McGuire (R-VA-5, House Cybersecurity/IT/Gov't Innovation Subcommittee) sold AAPL and bought NVDA in the same Aug 18 window - sold ~2 weeks before Apple's Cook-to-Ternus CEO transition and bought around Nvidia's Hugging Face acquisition announcement; circumstantial, not proven committee-driven",
+      "Rep. Cleo Fields (D-LA-6) bought AAPL again (3rd 2026 buy, >$1M cumulative, zero sales in 2 years)",
+      "New compliance-failure flag: Rep. Michael Rulli (R-OH) disclosed 32 trades in one August filing, 22 of them filed past the 45-day deadline (some dating to Nov 2024) - a straightforward STOCK Act violation distinct from timing-around-legislation concerns; NOTUS reports similar late-filing issues for at least 2 other members this cycle",
+      "Capitol Trades, Unusual Whales, and Quiver Quantitative remain blocked to server-side access; all figures reconstructed from secondary coverage of primary PTR filings"
     ]
   },
   "sector_scores": {
-    "crypto": 6.8,
-    "macro": 2.7,
-    "public_markets": 5.9,
-    "ai_sector": 6.6,
-    "defense": 8.4,
-    "real_estate": 2.8,
-    "business_acquisitions": 5.5
+    "crypto": 7.0,
+    "macro": 2.5,
+    "public_markets": 5.6,
+    "ai_sector": 6.2,
+    "defense": 8.3,
+    "real_estate": 2.7,
+    "business_acquisitions": 5.6
   }
 }

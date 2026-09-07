@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-09-06",
-    "report_count": 72,
+    "last_report_date": "2026-09-07",
+    "report_count": 73,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 79988.28,
-    "btc_change_24h_pct": 0.48,
-    "eth_usd": 2499.18,
-    "eth_change_24h_pct": 1.85,
-    "xrp_usd": 1.4188,
-    "xrp_change_24h_pct": 1.05,
-    "btc_24h_high": 80214.98,
-    "btc_24h_low": 79544.6,
-    "eth_24h_high": 2524.31,
-    "xrp_24h_high": 1.4326
+    "btc_usd": 79396.12,
+    "btc_change_24h_pct": -0.74,
+    "eth_usd": 2488.75,
+    "eth_change_24h_pct": -0.41,
+    "xrp_usd": 1.399,
+    "xrp_change_24h_pct": -1.42,
+    "btc_24h_high": 80562.59,
+    "btc_24h_low": 78983.12,
+    "eth_24h_high": 2536.44,
+    "xrp_24h_high": 1.4311
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -45,26 +45,27 @@
   "crypto_etf": {
     "btc_spot_etf_weekly_flow_bn": 0.9869,
     "btc_spot_etf_total_outflow_4wk_bn": 3.8,
-    "eth_etf_weekly_flow_bn": 0.24
+    "eth_etf_weekly_flow_bn": 0.2153
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 13.5,
+    "clarity_act_polymarket_odds_pct": 16.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Iran/Hormuz war escalates into Kuwait, Bahrain, and Jordan, driving Brent up 8-9pct for the week toward $97 ahead of Sep 11 CPI and Sep 15-16 FOMC",
-    "Fed Sept hike odds climb to ~59-68pct (Kalshi/CME) on the hot Aug jobs report (+162K vs ~53K consensus)",
-    "Oracle's debt-funded AI buildout ($43B new debt for $56B FY26 capex) becomes the first visible credit-market crack in the AI-capex-bubble thesis; Barclays flags a possible Nov cash crunch",
-    "BTC/ETH/XRP bounce +0.5 to +1.9pct while ETF inflow streaks stay intact (BTC 3wk $3.8B, ETH 12-day, XRP 11-day)",
-    "Alabama opens season 48-10 over East Carolina behind new starting QB Keelon Russell (342 total yards)"
+    "Iran declares Hormuz restricted-zone threat after weekend tanker strikes on both sides",
+    "Brent to $97.39 ahead of Sept 11 CPI",
+    "Fed Sept hike odds hit a coin-flip (~52-59%) even as 90% of 104 economists polled by Reuters expect a hold",
+    "Oracle's Sept 9 earnings become decisive test of AI-capex-debt thesis now broadening to Alphabet (negative FCF) and Amazon (debt +81%)",
+    "NVIDIA agrees to acquire Hugging Face for ~$12.9B in AI infrastructure consolidation",
+    "Braves extend NL East lead to 5 games (magic number 14) after Sept 6 comeback win"
   ],
   "elevated_risks": [
-    "Iran/Hormuz escalation (strikes reaching Kuwait, Bahrain, Jordan) collides directly with Sep 11 CPI and Sep 15-16 FOMC",
-    "Fed hike odds above 60pct now diverge from consensus economists who still lean hold",
-    "Oracle-style debt-funded AI infrastructure credit stress could broaden beyond a single name",
-    "CLARITY Act odds plateaued at 13-14pct with the Sep 15 cloture vote landing the same day as the FOMC decision",
-    "GA foreclosure starts confirmed +52pct YoY H1 2026 per ATTOM; mortgage rate at a 13-month high (6.71pct)"
+    "Iran Hormuz restricted-zone declaration risks an insurance/shipping shock feeding directly into Sept 11 CPI",
+    "Fed hike-odds coin-flip vs 90% economist-consensus hold is one of the widest market-vs-consensus gaps this cycle",
+    "AI-capex credit stress broadening beyond Oracle to Alphabet and Amazon balance sheets",
+    "BTC testing $79000 near-term support with exchange reserves at a 2026 high",
+    "CLARITY Act still needs 7 Senate crossover votes ahead of Sept 15 cloture"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -76,14 +77,14 @@
   "congressional_trades": {
     "month": "September 2026",
     "most_traded_sectors": [
-      "Tech/AI Semiconductors",
-      "Defense/Aerospace",
-      "Financials"
+      "Technology",
+      "Defense/Energy",
+      "Crypto-adjacent Financials"
     ],
     "notable_tickers": [
       "NVDA",
       "AAPL",
-      "LRCX"
+      "BITB"
     ],
     "pattern_flags": [
       "As of Sep 6 2026, the newest trade date cleared by any tracker was still Aug 28 2026; no September-dated trade has cleared the STOCK Act's 45-day disclosure window",
@@ -95,12 +96,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 7.0,
-    "macro": 2.5,
-    "public_markets": 5.6,
-    "ai_sector": 6.2,
-    "defense": 8.3,
-    "real_estate": 2.7,
-    "business_acquisitions": 5.6
+    "crypto": 6.7,
+    "macro": 2.3,
+    "public_markets": 5.3,
+    "ai_sector": 6.0,
+    "defense": 8.5,
+    "real_estate": 2.6,
+    "business_acquisitions": 5.5
   }
 }

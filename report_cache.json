@@ -1,27 +1,27 @@
 {
   "meta": {
-    "last_report_date": "2026-09-07",
-    "report_count": 73,
+    "last_report_date": "2026-09-08",
+    "report_count": 74,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 79396.12,
-    "btc_change_24h_pct": -0.74,
-    "eth_usd": 2488.75,
-    "eth_change_24h_pct": -0.41,
-    "xrp_usd": 1.399,
-    "xrp_change_24h_pct": -1.42,
-    "btc_24h_high": 80562.59,
-    "btc_24h_low": 78983.12,
-    "eth_24h_high": 2536.44,
-    "xrp_24h_high": 1.4311
+    "btc_usd": 78696.29,
+    "btc_change_24h_pct": -0.91,
+    "eth_usd": 2485.83,
+    "eth_change_24h_pct": -0.14,
+    "xrp_usd": 1.3999,
+    "xrp_change_24h_pct": 0.01,
+    "btc_24h_high": 79646.24,
+    "btc_24h_low": 78158.02,
+    "eth_24h_high": 2511.46,
+    "xrp_24h_high": 1.4137
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
-    "pce_inflation_2026_pct": 3.3,
+    "pce_inflation_2026_pct": 3.7,
     "may_cpi_yoy_pct": 3.4,
-    "prime_rate": 6.75,
+    "prime_rate": 7.5,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
@@ -29,12 +29,12 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7718.6,
-    "sp500_change_24h_pct": -0.38,
-    "nasdaq_level": 26506.99,
-    "nasdaq_change_24h_pct": -0.29,
+    "sp500_level": 7707.0,
+    "sp500_change_24h_pct": -0.15,
+    "nasdaq_level": 26430.0,
+    "nasdaq_change_24h_pct": -0.3,
     "nasdaq_consecutive_down_days": 1,
-    "vix": 14.53,
+    "vix": 15.3,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
@@ -48,43 +48,42 @@
     "eth_etf_weekly_flow_bn": 0.2153
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 16.0,
+    "clarity_act_polymarket_odds_pct": 18.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Iran declares Hormuz restricted-zone threat after weekend tanker strikes on both sides",
-    "Brent to $97.39 ahead of Sept 11 CPI",
-    "Fed Sept hike odds hit a coin-flip (~52-59%) even as 90% of 104 economists polled by Reuters expect a hold",
-    "Oracle's Sept 9 earnings become decisive test of AI-capex-debt thesis now broadening to Alphabet (negative FCF) and Amazon (debt +81%)",
-    "NVIDIA agrees to acquire Hugging Face for ~$12.9B in AI infrastructure consolidation",
-    "Braves extend NL East lead to 5 games (magic number 14) after Sept 6 comeback win"
+    "Iran declares Hormuz restricted zone after US strikes 3 Iranian tankers Sept 5",
+    "Fed Sept hike odds surge to coin-flip after Warsh Jackson Hole speech (52-60%)",
+    "BTC spot ETFs post strongest 3-week inflow stretch of 2026 (+$3.8B) reversing prior outflow",
+    "Oracle Sept 9-10 earnings become decisive test of AI-capex-debt thesis (capex guide risk to $80-100B)",
+    "NVIDIA confirms $12.9B Hugging Face acquisition — antitrust scrutiny emerges"
   ],
   "elevated_risks": [
-    "Iran Hormuz restricted-zone declaration risks an insurance/shipping shock feeding directly into Sept 11 CPI",
-    "Fed hike-odds coin-flip vs 90% economist-consensus hold is one of the widest market-vs-consensus gaps this cycle",
-    "AI-capex credit stress broadening beyond Oracle to Alphabet and Amazon balance sheets",
-    "BTC testing $79000 near-term support with exchange reserves at a 2026 high",
-    "CLARITY Act still needs 7 Senate crossover votes ahead of Sept 15 cloture"
+    "Iran/Hormuz kinetic escalation colliding with Sept 11 CPI",
+    "Fed hike odds near coin-flip ahead of FOMC Sept 15-16",
+    "AI capex debt stress broadening (Oracle Sept 9-10 test)",
+    "BTC testing $78K support with leveraged longs still being flushed",
+    "CLARITY Act odds remain depressed (~17-20%) despite scheduled Sept 15 cloture vote"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
     "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.3,
-    "xrp_downside_target": 1.28,
+    "xrp_key_support": 1.35,
+    "xrp_downside_target": 1.2,
     "ascendex_warning_active": false
   },
   "congressional_trades": {
     "month": "September 2026",
     "most_traded_sectors": [
-      "Technology",
-      "Defense/Energy",
-      "Crypto-adjacent Financials"
+      "Tech/AI",
+      "Defense",
+      "Energy"
     ],
     "notable_tickers": [
+      "PLTR",
       "NVDA",
-      "AAPL",
-      "BITB"
+      "BE"
     ],
     "pattern_flags": [
       "As of Sep 6 2026, the newest trade date cleared by any tracker was still Aug 28 2026; no September-dated trade has cleared the STOCK Act's 45-day disclosure window",
@@ -96,12 +95,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 6.7,
-    "macro": 2.3,
-    "public_markets": 5.3,
-    "ai_sector": 6.0,
-    "defense": 8.5,
-    "real_estate": 2.6,
-    "business_acquisitions": 5.5
+    "crypto": 6.6,
+    "macro": 2.0,
+    "public_markets": 5.0,
+    "ai_sector": 5.8,
+    "defense": 8.6,
+    "real_estate": 2.5,
+    "business_acquisitions": 5.4
   }
 }

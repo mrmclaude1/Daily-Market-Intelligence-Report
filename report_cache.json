@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-09-09",
-    "report_count": 75,
+    "last_report_date": "2026-09-10",
+    "report_count": 76,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 79098.96,
-    "btc_change_24h_pct": 0.51,
-    "eth_usd": 2490.66,
-    "eth_change_24h_pct": 0.22,
-    "xrp_usd": 1.4244,
-    "xrp_change_24h_pct": 1.84,
-    "btc_24h_high": 79763.98,
-    "btc_24h_low": 77615.68,
-    "eth_24h_high": 2523.42,
-    "xrp_24h_high": 1.4508
+    "btc_usd": 77932.61,
+    "btc_change_24h_pct": -1.51,
+    "eth_usd": 2467.26,
+    "eth_change_24h_pct": -1.03,
+    "xrp_usd": 1.3747,
+    "xrp_change_24h_pct": -3.51,
+    "btc_24h_high": 79678.28,
+    "btc_24h_low": 77755.79,
+    "eth_24h_high": 2521.75,
+    "xrp_24h_high": 1.4396
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -29,42 +29,42 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7673.52,
-    "sp500_change_24h_pct": -0.58,
-    "nasdaq_level": 26421.41,
-    "nasdaq_change_24h_pct": -0.32,
-    "nasdaq_consecutive_down_days": 1,
-    "vix": 15.3,
+    "sp500_level": 7636.36,
+    "sp500_change_24h_pct": -0.48,
+    "nasdaq_level": 26253.34,
+    "nasdaq_change_24h_pct": -0.64,
+    "nasdaq_consecutive_down_days": 3,
+    "vix": 15.72,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.73,
+    "mortgage_30yr_fixed_pct": 6.71,
     "housing_inventory_yoy_pct": -1.0,
     "listing_price_yoy_pct": -1.3
   },
   "crypto_etf": {
     "btc_spot_etf_weekly_flow_bn": 0.9869,
     "btc_spot_etf_total_outflow_4wk_bn": 3.8,
-    "eth_etf_weekly_flow_bn": 0.2153
+    "eth_etf_weekly_flow_bn": 0.2184
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 14.0,
+    "clarity_act_polymarket_odds_pct": 17.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Iran-US tanker war escalates sharply: CENTCOM destroys 5+ Iranian tankers; IRGC fires missiles at a US warship; oil nearing $100",
-    "Fed Sept hike odds hold near coin-flip (48-60%) with Fed genuinely split ahead of Sept 11 CPI",
-    "CLARITY Act odds slide further to ~14% (from 18%) as House cancels session weeks before Sept 15 cloture vote",
-    "Oracle FY2027 Q1 earnings (Sept 10 after close) looms as decisive AI-capex-debt test - $638B RPO backlog already disclosed",
-    "NVIDIA/Hugging Face $12.9B deal triggers first full antitrust review of an Nvidia AI acquisition"
+    "Iran-Hormuz war escalates further as Brent tops $101 for the first time since May; US claims a 5-tanker strike and Iran counter-hits a US-allied base in Jordan",
+    "Fed Sept 15-16 hike odds swing wildly across sources this week (~25% to ~66% hike probability) ahead of tomorrow's CPI print; the 10yr Treasury hits a fresh multi-year high near 4.86%",
+    "NVIDIA faces a second antitrust front as DOJ reportedly probes the $20B Groq licensing deal for HSR evasion on top of the mandatory Hugging Face merger review",
+    "Oracle's FY2027 Q1 earnings (after close tonight) remains the decisive AI-capex-debt test - $638B RPO backlog already disclosed - result still pending",
+    "Congressional STOCK Act compliance wave broadens as House Ethics Committee Chair Michael Guest discloses late trades alongside Rep. Gil Cisneros's 50+ late Palantir-heavy filings"
   ],
   "elevated_risks": [
-    "Iran/Hormuz kinetic escalation intensifying: tanker war has grown from 3 to 5+ vessels struck in a week; oil approaching $100",
-    "10yr Treasury testing 4.8% and mortgage rates ticking back up (6.71% to ~6.73-6.81%) on oil-driven inflation fears",
-    "Fed hike odds remain elevated (48-60%) heading into Sept 11 CPI and Sept 15-16 FOMC",
-    "XRP ETF inflows collapse 83% week-over-week ($110.5M to $19M) even as CLARITY Act odds keep falling",
-    "Liquid Network $320M Bitcoin sidechain exploit raises fresh crypto-infrastructure security concerns"
+    "Iran/Hormuz kinetic escalation intensifying again - US claims 5 tankers destroyed; Iran hits a US-allied Jordan base and claims a 2nd warship attack; Strait transit collapsed to 2-10 ships/day vs over 130/day normal",
+    "Fed policy uncertainty at an extreme - hike-odds readings spanned roughly 25% to 66% this week across venues; a genuinely unresolved binary event days away",
+    "10-year Treasury hit a fresh ~4.86% intraday high on heavy bond supply plus oil-driven inflation fears; pressuring mortgages and rate-sensitive equities simultaneously",
+    "NVIDIA's ecosystem-control strategy now faces two simultaneous antitrust fronts - the Hugging Face HSR/EU review and a new DOJ probe into the Groq deal's structure",
+    "Foreclosure filings up 21% YoY in H1 2026 and Georgia homeowners-insurance premiums projected up over 10% in 2026 compound real-estate affordability pressure alongside still-elevated mortgage rates"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -83,24 +83,24 @@
     "notable_tickers": [
       "PLTR",
       "NVDA",
-      "AAPL"
+      "BE"
     ],
     "pattern_flags": [
-      "As of Sep 6 2026, the newest trade date cleared by any tracker was still Aug 28 2026; no September-dated trade has cleared the STOCK Act's 45-day disclosure window",
-      "Sen. Sheldon Whitehouse (D-RI) disclosed sales of NVDA, LRCX, and AMGN (all trade-dated Aug 12-13, filed Sep 2) - trimming AI-adjacent/semiconductor and biotech exposure",
-      "Rep. John McGuire (R-VA-5, House Cybersecurity/IT/Gov't Innovation Subcommittee) sold AAPL and bought NVDA in the same Aug 18 window - sold ~2 weeks before Apple's Cook-to-Ternus CEO transition and bought around Nvidia's Hugging Face acquisition announcement; circumstantial, not proven committee-driven",
-      "Rep. Cleo Fields (D-LA-6) bought AAPL again (3rd 2026 buy, >$1M cumulative, zero sales in 2 years)",
-      "New compliance-failure flag: Rep. Michael Rulli (R-OH) disclosed 32 trades in one August filing, 22 of them filed past the 45-day deadline (some dating to Nov 2024) - a straightforward STOCK Act violation distinct from timing-around-legislation concerns; NOTUS reports similar late-filing issues for at least 2 other members this cycle",
+      "Rep. Gil Cisneros (D-CA, Armed Services Intel & Special Ops Subcommittee) disclosed 50+ late trades ($95K-$900K combined) including Palantir, Microsoft, MTSI, SPXC, and Nvidia; also made 9 defense-stock purchases since last September, nearly half in PLTR",
+      "Rep. Michael Guest (R-MS), who chairs the House Ethics Committee that enforces the STOCK Act, disclosed 3 late sales (Chevron, Airbnb, e.l.f. Beauty) via his wife's trust, roughly 6+ months late - a notable irony",
+      "Paul Pelosi (spouse of Rep. Nancy Pelosi) bought $3M-$12M of Bloom Energy (BE) shares and calls on Jul 24 and 28, days before a Q2 earnings beat and a later S&P 500 inclusion announcement; stock up ~53% since - the cycle's most signal-shaped trade, though within the 45-day disclosure window",
+      "Sen. Hickenlooper and Sen. Rounds both disclosed roughly one-year-late trades (a dependent-child Palantir sale; a spouse's Liberty Broadband sale)",
+      "Rep. Daniel Webster (FL) disclosed a Rexford Industrial Realty sale 13+ months late - his 2nd violation in 3 years; Rep. Scott Franklin (FL) disclosed 31 trades from Jan-Sept 2024 only in the past week",
       "Capitol Trades, Unusual Whales, and Quiver Quantitative remain blocked to server-side access; all figures reconstructed from secondary coverage of primary PTR filings"
     ]
   },
   "sector_scores": {
-    "crypto": 6.3,
-    "macro": 1.7,
-    "public_markets": 4.6,
-    "ai_sector": 5.6,
-    "defense": 8.8,
-    "real_estate": 2.4,
-    "business_acquisitions": 5.3
+    "crypto": 5.8,
+    "macro": 1.5,
+    "public_markets": 4.2,
+    "ai_sector": 5.2,
+    "defense": 8.9,
+    "real_estate": 2.6,
+    "business_acquisitions": 5.4
   }
 }

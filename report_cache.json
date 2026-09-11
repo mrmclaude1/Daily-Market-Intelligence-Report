@@ -1,20 +1,20 @@
 {
   "meta": {
-    "last_report_date": "2026-09-10",
-    "report_count": 76,
+    "last_report_date": "2026-09-11",
+    "report_count": 77,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 77932.61,
-    "btc_change_24h_pct": -1.51,
-    "eth_usd": 2467.26,
-    "eth_change_24h_pct": -1.03,
-    "xrp_usd": 1.3747,
-    "xrp_change_24h_pct": -3.51,
-    "btc_24h_high": 79678.28,
-    "btc_24h_low": 77755.79,
-    "eth_24h_high": 2521.75,
-    "xrp_24h_high": 1.4396
+    "btc_usd": 77056.0,
+    "btc_change_24h_pct": -1.1,
+    "eth_usd": 2466.08,
+    "eth_change_24h_pct": -0.03,
+    "xrp_usd": 1.3399,
+    "xrp_change_24h_pct": -2.52,
+    "btc_24h_high": 78057.21,
+    "btc_24h_low": 76450.3,
+    "eth_24h_high": 2484.45,
+    "xrp_24h_high": 1.3834
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
@@ -29,16 +29,16 @@
     "oil_trend": "rising"
   },
   "markets": {
-    "sp500_level": 7636.36,
-    "sp500_change_24h_pct": -0.48,
-    "nasdaq_level": 26253.34,
-    "nasdaq_change_24h_pct": -0.64,
-    "nasdaq_consecutive_down_days": 3,
-    "vix": 15.72,
+    "sp500_level": 7591.0,
+    "sp500_change_24h_pct": -0.59,
+    "nasdaq_level": 26081.73,
+    "nasdaq_change_24h_pct": -0.65,
+    "nasdaq_consecutive_down_days": 4,
+    "vix": 17.84,
     "market_posture": "mixed-risk-off"
   },
   "real_estate": {
-    "mortgage_30yr_fixed_pct": 6.71,
+    "mortgage_30yr_fixed_pct": 6.76,
     "housing_inventory_yoy_pct": -1.0,
     "listing_price_yoy_pct": -1.3
   },
@@ -48,29 +48,29 @@
     "eth_etf_weekly_flow_bn": 0.2184
   },
   "regulation": {
-    "clarity_act_polymarket_odds_pct": 17.0,
+    "clarity_act_polymarket_odds_pct": 18.0,
     "clarity_act_prior_peak_odds_pct": 82.0,
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Iran-Hormuz war escalates further as Brent tops $101 for the first time since May; US claims a 5-tanker strike and Iran counter-hits a US-allied base in Jordan",
-    "Fed Sept 15-16 hike odds swing wildly across sources this week (~25% to ~66% hike probability) ahead of tomorrow's CPI print; the 10yr Treasury hits a fresh multi-year high near 4.86%",
-    "NVIDIA faces a second antitrust front as DOJ reportedly probes the $20B Groq licensing deal for HSR evasion on top of the mandatory Hugging Face merger review",
-    "Oracle's FY2027 Q1 earnings (after close tonight) remains the decisive AI-capex-debt test - $638B RPO backlog already disclosed - result still pending",
-    "Congressional STOCK Act compliance wave broadens as House Ethics Committee Chair Michael Guest discloses late trades alongside Rep. Gil Cisneros's 50+ late Palantir-heavy filings"
+    "Brent crude breaks to $106.11 as the Iran-Hormuz war remains unresolved - a fresh cycle high still rising",
+    "Fed hike odds diverge sharply by venue heading into Sept 15-16 FOMC - CME ~69-72pct vs Polymarket ~52-53pct",
+    "Oracle beats on both lines (EPS $1.92 vs $1.73 est; revenue $19.3B) but AI-capex-financing debate remains unresolved",
+    "NVIDIA's Groq deal draws a formal DOJ antitrust investigation - upgraded from a reported probe",
+    "XRP ETFs post an 11-day positive-inflow streak totaling $1.68B even as spot price tests $1.33-1.36 support"
   ],
   "elevated_risks": [
-    "Iran/Hormuz kinetic escalation intensifying again - US claims 5 tankers destroyed; Iran hits a US-allied Jordan base and claims a 2nd warship attack; Strait transit collapsed to 2-10 ships/day vs over 130/day normal",
-    "Fed policy uncertainty at an extreme - hike-odds readings spanned roughly 25% to 66% this week across venues; a genuinely unresolved binary event days away",
-    "10-year Treasury hit a fresh ~4.86% intraday high on heavy bond supply plus oil-driven inflation fears; pressuring mortgages and rate-sensitive equities simultaneously",
-    "NVIDIA's ecosystem-control strategy now faces two simultaneous antitrust fronts - the Hugging Face HSR/EU review and a new DOJ probe into the Groq deal's structure",
-    "Foreclosure filings up 21% YoY in H1 2026 and Georgia homeowners-insurance premiums projected up over 10% in 2026 compound real-estate affordability pressure alongside still-elevated mortgage rates"
+    "Oil-driven inflation risk collides with next week's FOMC - Brent $106.11 and WTI $102.59 both fresh cycle highs",
+    "August CPI actual print could not be independently confirmed against BLS primary data this pass",
+    "Mortgage rates (6.76pct) and the 10yr Treasury (~4.94-4.95pct) both sit at fresh multi-year/1-year highs simultaneously",
+    "NVIDIA's regulatory overhang deepens from a reported inquiry to a formal DOJ investigation into the Groq deal",
+    "XRP price weakness diverges from ETF-flow strength - testing $1.33-1.36 support despite an 11-day inflow streak"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
     "btc_200wk_ma_status": "above",
-    "xrp_key_support": 1.35,
-    "xrp_downside_target": 1.2,
+    "xrp_key_support": 1.33,
+    "xrp_downside_target": 1.24,
     "ascendex_warning_active": false
   },
   "congressional_trades": {
@@ -83,7 +83,7 @@
     "notable_tickers": [
       "PLTR",
       "NVDA",
-      "BE"
+      "MTSI"
     ],
     "pattern_flags": [
       "Rep. Gil Cisneros (D-CA, Armed Services Intel & Special Ops Subcommittee) disclosed 50+ late trades ($95K-$900K combined) including Palantir, Microsoft, MTSI, SPXC, and Nvidia; also made 9 defense-stock purchases since last September, nearly half in PLTR",
@@ -95,12 +95,12 @@
     ]
   },
   "sector_scores": {
-    "crypto": 5.8,
-    "macro": 1.5,
-    "public_markets": 4.2,
-    "ai_sector": 5.2,
-    "defense": 8.9,
-    "real_estate": 2.6,
-    "business_acquisitions": 5.4
+    "crypto": 5.4,
+    "macro": 1.6,
+    "public_markets": 3.9,
+    "ai_sector": 4.8,
+    "defense": 9.0,
+    "real_estate": 2.4,
+    "business_acquisitions": 5.3
   }
 }

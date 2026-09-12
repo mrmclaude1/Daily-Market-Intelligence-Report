@@ -1,41 +1,41 @@
 {
   "meta": {
-    "last_report_date": "2026-09-11",
-    "report_count": 77,
+    "last_report_date": "2026-09-12",
+    "report_count": 78,
     "schema_version": "1.0"
   },
   "prices": {
-    "btc_usd": 77056.0,
-    "btc_change_24h_pct": -1.1,
-    "eth_usd": 2466.08,
-    "eth_change_24h_pct": -0.03,
-    "xrp_usd": 1.3399,
-    "xrp_change_24h_pct": -2.52,
-    "btc_24h_high": 78057.21,
-    "btc_24h_low": 76450.3,
-    "eth_24h_high": 2484.45,
-    "xrp_24h_high": 1.3834
+    "btc_usd": 77351.01,
+    "btc_change_24h_pct": 0.38,
+    "eth_usd": 2531.5,
+    "eth_change_24h_pct": 2.65,
+    "xrp_usd": 1.3709,
+    "xrp_change_24h_pct": 2.31,
+    "btc_24h_high": 79899.99,
+    "btc_24h_low": 76027.67,
+    "eth_24h_high": 2667.86,
+    "xrp_24h_high": 1.4329
   },
   "macro": {
     "fed_funds_rate_upper": 3.75,
     "fed_funds_rate_lower": 3.5,
     "pce_inflation_2026_pct": 3.7,
     "may_cpi_yoy_pct": 3.4,
-    "prime_rate": 7.5,
+    "prime_rate": 6.75,
     "rate_hike_on_table": true,
     "cuts_projected_2026": 0,
     "iran_war_active": true,
     "iran_ceasefire_confirmed": false,
-    "oil_trend": "rising"
+    "oil_trend": "volatile-elevated"
   },
   "markets": {
-    "sp500_level": 7591.0,
-    "sp500_change_24h_pct": -0.59,
-    "nasdaq_level": 26081.73,
-    "nasdaq_change_24h_pct": -0.65,
-    "nasdaq_consecutive_down_days": 4,
-    "vix": 17.84,
-    "market_posture": "mixed-risk-off"
+    "sp500_level": 7656.98,
+    "sp500_change_24h_pct": 0.86,
+    "nasdaq_level": 26333.04,
+    "nasdaq_change_24h_pct": 0.96,
+    "nasdaq_consecutive_down_days": 0,
+    "vix": 15.84,
+    "market_posture": "mixed"
   },
   "real_estate": {
     "mortgage_30yr_fixed_pct": 6.76,
@@ -43,8 +43,8 @@
     "listing_price_yoy_pct": -1.3
   },
   "crypto_etf": {
-    "btc_spot_etf_weekly_flow_bn": 0.9869,
-    "btc_spot_etf_total_outflow_4wk_bn": 3.8,
+    "btc_spot_etf_weekly_flow_bn": -0.45,
+    "btc_spot_etf_total_outflow_4wk_bn": -3.8,
     "eth_etf_weekly_flow_bn": 0.2184
   },
   "regulation": {
@@ -53,18 +53,18 @@
     "xrp_etf_approved": true
   },
   "top_signals": [
-    "Brent crude breaks to $106.11 as the Iran-Hormuz war remains unresolved - a fresh cycle high still rising",
-    "Fed hike odds diverge sharply by venue heading into Sept 15-16 FOMC - CME ~69-72pct vs Polymarket ~52-53pct",
-    "Oracle beats on both lines (EPS $1.92 vs $1.73 est; revenue $19.3B) but AI-capex-financing debate remains unresolved",
-    "NVIDIA's Groq deal draws a formal DOJ antitrust investigation - upgraded from a reported probe",
-    "XRP ETFs post an 11-day positive-inflow streak totaling $1.68B even as spot price tests $1.33-1.36 support"
+    "Fed hike becomes the prediction-market base case for the Sept 15-16 FOMC (CME ~69-70%, Kalshi ~57-59%) after hot August CPI (core +0.3% m/m) and PPI (+5.4% YoY) - diverging from economists who still expect a hold",
+    "CLARITY Act's Senate floor vote now lands on Sept 15 - the same day as the FOMC decision - after House GOP canceled its Sept 21/28 voting weeks, compressing the 2026 passage window further",
+    "Houthi rebels seize the Yemeni port of Mokha and a strategic Bab el-Mandeb island (Sept 10), their biggest territorial gain since 2022, spiking Brent to a fresh $107.63 high before a Friday pullback to $104.61",
+    "NVIDIA-Groq DOJ antitrust probe gains structural detail: the ~$17-20B deal's non-exclusive-license-plus-acquihire structure is under formal CID scrutiny as a maneuver to dodge merger review",
+    "BTC spot ETF flows reverse into a ~$450M net outflow over Sept 8-11 even as XRP ETFs extend an 11-day, $1.68B inflow streak - a clear crypto-rotation divergence"
   ],
   "elevated_risks": [
-    "Oil-driven inflation risk collides with next week's FOMC - Brent $106.11 and WTI $102.59 both fresh cycle highs",
-    "August CPI actual print could not be independently confirmed against BLS primary data this pass",
-    "Mortgage rates (6.76pct) and the 10yr Treasury (~4.94-4.95pct) both sit at fresh multi-year/1-year highs simultaneously",
-    "NVIDIA's regulatory overhang deepens from a reported inquiry to a formal DOJ investigation into the Groq deal",
-    "XRP price weakness diverges from ETF-flow strength - testing $1.33-1.36 support despite an 11-day inflow streak"
+    "Fed decision and CLARITY Act vote both land on Sept 15 - a double-catalyst risk event for rates and crypto regulation simultaneously",
+    "Houthi Red Sea escalation reopens a shipping-risk front independent of the Hormuz standoff, even after Friday's oil pullback",
+    "$320M Liquid Network Bitcoin-sidechain hack (Sept 7) remains unresolved - no funds returned despite attackers' 'white-hat' claim",
+    "Daily mortgage-rate index (Mortgage News Daily) climbed to 7.07% by Sept 11, diverging from the flat 6.76% weekly Freddie Mac print heading into the Fed decision",
+    "NVIDIA-Groq DOJ probe deepens - an adverse finding threatens the broader AI-infrastructure acquihire-via-license dealmaking playbook"
   ],
   "watchlist": {
     "btc_200wk_ma_level": 63770.0,
@@ -83,24 +83,29 @@
     "notable_tickers": [
       "PLTR",
       "NVDA",
-      "MTSI"
+      "MTSI",
+      "OTIS"
     ],
     "pattern_flags": [
-      "Rep. Gil Cisneros (D-CA, Armed Services Intel & Special Ops Subcommittee) disclosed 50+ late trades ($95K-$900K combined) including Palantir, Microsoft, MTSI, SPXC, and Nvidia; also made 9 defense-stock purchases since last September, nearly half in PLTR",
-      "Rep. Michael Guest (R-MS), who chairs the House Ethics Committee that enforces the STOCK Act, disclosed 3 late sales (Chevron, Airbnb, e.l.f. Beauty) via his wife's trust, roughly 6+ months late - a notable irony",
-      "Paul Pelosi (spouse of Rep. Nancy Pelosi) bought $3M-$12M of Bloom Energy (BE) shares and calls on Jul 24 and 28, days before a Q2 earnings beat and a later S&P 500 inclusion announcement; stock up ~53% since - the cycle's most signal-shaped trade, though within the 45-day disclosure window",
+      "Rep. Gil Cisneros (D-CA, Armed Services Intel & Special Ops Subcommittee) - now confirmed (NOTUS Sept 8, Breitbart Sept 9) at 50+ late trades ($95K-$900K) incl. Palantir, Microsoft, MTSI, SPXC, Nvidia; also 9 defense-stock purchases since Sept 2025 including StandardAero (SOCOM contractor - direct committee overlap) and Ducommun",
+      "Rep. Michael Guest (R-MS), House Ethics Committee chair, disclosed 3 late sales (Chevron, Airbnb, e.l.f. Beauty) via his wife's trust, roughly 6+ months late",
+      "Paul Pelosi (spouse of Rep. Nancy Pelosi) bought $3M-$12M of Bloom Energy (BE) shares/calls on Jul 24 and 28, days before a Q2 beat and S&P 500 inclusion; stock up ~53% since",
+      "NEW: Sen. John Boozman (R-AR) bought Otis Worldwide (OTIS) and sold IVV, both executed Aug 27 and filed Sept 11, $1K-$15K each",
+      "NEW: Rep. Mike Kelly (R-PA) disclosed a $50K-$100K NJ state municipal bond purchase (Aug 28 trade, filed Sept 8)",
+      "NEW: Rep. Michael Rulli (R-OH) disclosed 22-32 late-filed trades spanning Nov 2024 through Aug 2026 - a fresh STOCK Act timeliness violation",
       "Sen. Hickenlooper and Sen. Rounds both disclosed roughly one-year-late trades (a dependent-child Palantir sale; a spouse's Liberty Broadband sale)",
-      "Rep. Daniel Webster (FL) disclosed a Rexford Industrial Realty sale 13+ months late - his 2nd violation in 3 years; Rep. Scott Franklin (FL) disclosed 31 trades from Jan-Sept 2024 only in the past week",
-      "Capitol Trades, Unusual Whales, and Quiver Quantitative remain blocked to server-side access; all figures reconstructed from secondary coverage of primary PTR filings"
+      "Rep. Daniel Webster (FL) disclosed a Rexford Industrial Realty sale 13+ months late - his 2nd violation in 3 years; Rep. Scott Franklin (FL) disclosed 31 trades from Jan-Sept 2024 only recently",
+      "Legislative context: House stock-trading ban bill advanced Jul 22; Sen. Ricketts' Stop Insider Trading Act moving in Senate; Rep. Anna Paulina Luna pushed a trading ban at the Sept 9 RNC midterm convention even as Trump's own disclosed trades (NVDA, HOOD, PLTR, SpaceX) draw scrutiny",
+      "Capitol Trades, Unusual Whales, and Quiver Quantitative remain blocked to server-side access; all figures reconstructed from secondary coverage (NOTUS, Breitbart, Yahoo, CNBC) of primary PTR/EFD filings"
     ]
   },
   "sector_scores": {
-    "crypto": 5.4,
-    "macro": 1.6,
-    "public_markets": 3.9,
-    "ai_sector": 4.8,
-    "defense": 9.0,
-    "real_estate": 2.4,
-    "business_acquisitions": 5.3
+    "crypto": 5.6,
+    "macro": 1.7,
+    "public_markets": 4.6,
+    "ai_sector": 4.9,
+    "defense": 9.1,
+    "real_estate": 2.5,
+    "business_acquisitions": 5.4
   }
 }
